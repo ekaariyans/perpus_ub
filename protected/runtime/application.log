@@ -32,3 +32,47 @@ REQUEST_URI=/perpus_ub/
 in C:\xampp\htdocs\perpus_ub\protected\views\site\contact.php (38)
 in C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php (32)
 in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/20 10:49:44 [error] [php] include(Controller1.php): failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(4): spl_autoload_call()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(354): require()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=site/index
+in C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php (4)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/20 10:50:41 [error] [php] include(Controller1.php): failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(4): spl_autoload_call()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(354): require()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=site/index
+in C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php (4)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/20 10:50:49 [error] [php] include(Controller1.php): failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(4): spl_autoload_call()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(354): require()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=site/index
+in C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php (4)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/20 10:50:50 [error] [php] include(Controller1.php): failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(4): spl_autoload_call()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(354): require()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(276): CWebApplication->createController()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=site/index
+in C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php (4)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
