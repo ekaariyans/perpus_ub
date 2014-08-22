@@ -1294,3 +1294,87 @@ Stack trace:
 REQUEST_URI=/perpus_ub/index.php?r=anggota/create
 HTTP_REFERER=http://localhost/perpus_ub/index.php?r=pengolahan/daftarpermintaan
 ---
+2014/08/22 18:58:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Permintaan".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('Permintaan')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('Permintaan')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/Perm...')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/Permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan
+---
+2014/08/22 18:59:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "Permintaan".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('Permintaan')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('Permintaan')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/Perm...')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/Permintaan
+---
+2014/08/22 19:01:27 [warning] [application] Failed to set unsafe attribute "keterangan" of "Permintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (48)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/22 19:25:41 [error] [php] require(C:\xampp\htdocs\perpus_ub\protected\views\fileUpload\uploadForm.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\web\form\CFormElement.php:120)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\form\CForm.php(170): CForm->__construct()
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(71): CForm->__construct()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionUpload()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/upload
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (71)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/22 19:30:30 [error] [php] require(C:\xampp\htdocs\perpus_ub\protected\views\fileUpload\uploadForm.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\web\form\CFormElement.php:120)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\form\CForm.php(170): CForm->__construct()
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(71): CForm->__construct()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionUpload()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/upload
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (71)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/22 19:30:32 [error] [php] require(C:\xampp\htdocs\perpus_ub\protected\views\fileUpload\uploadForm.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\web\form\CFormElement.php:120)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\form\CForm.php(170): CForm->__construct()
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(71): CForm->__construct()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionUpload()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/upload
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (71)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/22 19:30:44 [error] [php] require(C:\xampp\htdocs\perpus_ub\protected\views\fileUpload\uploadForm.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\web\form\CFormElement.php:120)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\form\CForm.php(170): CForm->__construct()
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(71): CForm->__construct()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionUpload()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/upload
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (71)
+in C:\xampp\htdocs\perpus_ub\index.php (13)

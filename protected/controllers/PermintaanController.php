@@ -59,10 +59,25 @@ class PermintaanController extends Controller {
                 $model->isbn = $_POST['Permintaan']['isbn'];
                 $model->keterangan = $_POST['Permintaan']['keterangan'];
                 $model->save();
+                $this->redirect(array('Permintaan/Index'));
                 return;
             }
         }
         $this->render('f_permintaan', array('model' => $model));
+    }
+    
+     public function actionUpload() {
+        $model = new FileUpload();
+    $form = new CForm('application.views.fileUpload.uploadForm', $model);
+        if ($form->submitted('submit') && $form->validate()) {
+            $form->model->image = CUploadedFile::getInstance($form->model, 'image');
+            //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            //do something with your image here
+            //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            Yii::app()->user->setFlash('success', 'File Uploaded');
+            $this->redirect(array('upload'));
+        }
+        $this->render('upload', array('form' => $form));
     }
 
 }

@@ -28,13 +28,14 @@ class Permintaan extends CActiveRecord
 
 	/**
 	 * @return array validation rules for model attributes.
+	 judul, jenis, pengarang, penerbit, tahun_terbit, kota, edisi, isbn, keterangan
 	 */
 	public function rules()
 	{
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_anggota, judul, jenis, pengarang, penerbit, tahun_terbit, kota, edisi, isbn, keterangan', 'required'),
+			array('id_anggota', 'required'),
 			array('tahun_terbit', 'numerical', 'integerOnly'=>true),
 			array('id_anggota, jenis, kota', 'length', 'max'=>20),
 			array('judul, pengarang, penerbit, isbn', 'length', 'max'=>50),
