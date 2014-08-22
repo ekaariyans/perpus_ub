@@ -1,9 +1,11 @@
 <?php /* @var $this Controller */ ?>
-<?php $this->beginContent('//layouts/main'); ?>
+<?php $this->beginContent('//layouts/main2'); ?>
 <div class="span-19">
-	<div id="content">
-		<?php echo $content; ?>
-	</div><!-- content -->
+	
+<section class="content">
+
+   <?php echo $content; ?>                 
+</section><!-- /.content -->
 </div>
 <div class="span-5 last">
 	<div id="sidebar">

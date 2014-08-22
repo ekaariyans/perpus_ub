@@ -322,9 +322,17 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="anggota_baru.html"><i class="fa fa-angle-double-right"></i> Anggota Baru</a></li>
-                                <li><a href="daftar_anggota.html"><i class="fa fa-angle-double-right"></i> Daftar Anggota</a></li>
-                                <li><a href="pages/charts/inline.html"><i class="fa fa-angle-double-right"></i> Inline charts</a></li>
+							
+                                <?php echo "<li><i class=\"fa fa-angle-double-right\">";
+								$this->widget('zii.widgets.CMenu',array(
+									'items'=>array(
+										array('label'=>'Anggota Baru', 'url'=>array('/anggota/formanggota'), 'class'=>'fa fa-angle-double-right'),
+										array('label'=>'Pendaftaran Anggota', 'url'=>array('/site/pendaftaran', 'view'=>'about')),
+										
+									),
+								)); 
+								echo "</i></li>"?>
+								
                             </ul>
                         </li>
                         <li class="treeview">
@@ -439,7 +447,7 @@
                 <!-- Main content -->
                 <section class="content">
 
-                    
+                <?php echo $content; ?>    
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->

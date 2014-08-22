@@ -332,3 +332,738 @@ REQUEST_URI=/perpus_ub/
 in C:\xampp\htdocs\perpus_ub\protected\views\layouts\form-login.php (28)
 in C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php (32)
 in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/22 03:34:23 [error] [php] include(.php): failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWidgetFactory.php(146): import()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(146): CWidgetFactory->createWidget()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(172): SiteController->createWidget()
+#3 C:\xampp\htdocs\perpus_ub\protected\views\layouts\main2.php(331): SiteController->widget()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(784): SiteController->renderFile()
+#7 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(32): SiteController->render()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): SiteController->runAction()
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): SiteController->run()
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/
+in C:\xampp\htdocs\perpus_ub\protected\views\layouts\main2.php (331)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php (32)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/22 04:40:14 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "login".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(103): CController->render('login', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('login')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=site/login&view=about
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=site/baru
+---
+2014/08/22 04:40:20 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "login".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(103): CController->render('login', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('login')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=site/login
+---
+2014/08/22 05:14:14 [error] [exception.CException] exception 'CException' with message 'Property "Anggota.namalengkap" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(145): CComponent->__get('namalengkap')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('namalengkap')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Anggota), 'namalengkap')
+#3 C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Anggota), 'namalengkap', Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Anggota), 'namalengkap', Array)
+#5 C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php(24): CActiveForm->textField(Object(Anggota), 'namalengkap')
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('formanggota', Array, true)
+#10 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(37): CController->render('formanggota', Array)
+#11 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('formanggota')
+#16 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('anggota/formang...')
+#17 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=site/baru
+---
+2014/08/22 05:14:37 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "dropdown".' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php(36): CComponent->__call('dropdown', Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php(36): CActiveForm->dropdown(Object(Anggota), 'kode_fakultas')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('formanggota', Array, true)
+#6 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(37): CController->render('formanggota', Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('formanggota')
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('anggota/formang...')
+#13 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=site/baru
+---
+2014/08/22 05:15:23 [error] [php] Missing argument 3 for CActiveForm::dropDownList(), called in C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php on line 36 and defined (C:\xampp\htdocs\perpus_ub\framework\web\widgets\CActiveForm.php:845)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): AnggotaController->renderInternal()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): AnggotaController->renderFile()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): AnggotaController->renderPartial()
+#3 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(37): AnggotaController->render()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): AnggotaController->runAction()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): AnggotaController->runActionWithFilters()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): AnggotaController->run()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+in C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php (36)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php (37)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/22 05:42:37 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "getFakultas".' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php(36): CComponent->__call('getFakultas', Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php(36): CActiveForm->getFakultas()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('formanggota', Array, true)
+#6 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(37): CController->render('formanggota', Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('formanggota')
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('anggota/formang...')
+#13 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+HTTP_REFERER=http://localhost/perpus_ub/
+---
+2014/08/22 05:43:59 [error] [php] Invalid argument supplied for foreach() (C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php:2325)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php(36): CActiveForm->dropDownList()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): AnggotaController->renderInternal()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): AnggotaController->renderFile()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): AnggotaController->renderPartial()
+#5 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(37): AnggotaController->render()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): AnggotaController->runAction()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): AnggotaController->runActionWithFilters()
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): AnggotaController->run()
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+in C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php (36)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php (37)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/22 05:48:11 [error] [exception.CException] exception 'CException' with message 'Property "Anggota.getFakultas" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(145): CComponent->__get('getFakultas')
+#1 C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php(36): CActiveRecord->__get('getFakultas')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('formanggota', Array, true)
+#6 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(37): CController->render('formanggota', Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('formanggota')
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('anggota/formang...')
+#13 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+HTTP_REFERER=http://localhost/perpus_ub/
+---
+2014/08/22 05:58:34 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "listData".' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php(37): CComponent->__call('listData', Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php(37): CActiveForm->listData(Array, 'kode_fakultas', 'nama_fakultas')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('formanggota', Array, true)
+#6 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(37): CController->render('formanggota', Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('formanggota')
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('anggota/formang...')
+#13 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+HTTP_REFERER=http://localhost/perpus_ub/
+---
+2014/08/22 05:58:59 [error] [exception.CException] exception 'CException' with message 'CActiveForm and its behaviors do not have a method or closure named "listData".' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php(37): CComponent->__call('listData', Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php(37): CActiveForm->listData(Array, 'kode_fakultas', 'nama_fakultas')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('formanggota', Array, true)
+#6 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(37): CController->render('formanggota', Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('formanggota')
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('anggota/formang...')
+#13 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+HTTP_REFERER=http://localhost/perpus_ub/
+---
+2014/08/22 06:03:41 [error] [php] Array to string conversion (C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php:2181)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php(1801): resolveNameID()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\widgets\CActiveForm.php(847): activeDropDownList()
+#2 C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php(38): CActiveForm->dropDownList()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): AnggotaController->renderInternal()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): AnggotaController->renderFile()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): AnggotaController->renderPartial()
+#7 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(37): AnggotaController->render()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): AnggotaController->runAction()
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): AnggotaController->runActionWithFilters()
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): AnggotaController->run()
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+in C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php (38)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php (37)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/22 06:04:03 [error] [php] Array to string conversion (C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php:2181)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php(1801): resolveNameID()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\widgets\CActiveForm.php(847): activeDropDownList()
+#2 C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php(38): CActiveForm->dropDownList()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): AnggotaController->renderInternal()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): AnggotaController->renderFile()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): AnggotaController->renderPartial()
+#7 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(37): AnggotaController->render()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): AnggotaController->runAction()
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): AnggotaController->runActionWithFilters()
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): AnggotaController->run()
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+in C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php (38)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php (37)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/22 06:14:29 [error] [php] Undefined variable: fakultas (C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php:37)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): AnggotaController->renderFile()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): AnggotaController->renderPartial()
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(37): AnggotaController->render()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): AnggotaController->runAction()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): AnggotaController->runActionWithFilters()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): AnggotaController->run()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+in C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php (37)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php (37)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/22 06:18:32 [error] [php] Use of undefined constant fakultas - assumed 'fakultas' (C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php:36)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): AnggotaController->renderFile()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): AnggotaController->renderPartial()
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(37): AnggotaController->render()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): AnggotaController->runAction()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): AnggotaController->runActionWithFilters()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): AnggotaController->run()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+in C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php (36)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php (37)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/22 06:24:59 [error] [php] include(fakultas.php): failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\models\Anggota.php(105): spl_autoload_call()
+#1 C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php(36): Anggota->getFakultas()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): AnggotaController->renderInternal()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): AnggotaController->renderFile()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): AnggotaController->renderPartial()
+#6 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(37): AnggotaController->render()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): AnggotaController->runAction()
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): AnggotaController->runActionWithFilters()
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): AnggotaController->run()
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+in C:\xampp\htdocs\perpus_ub\protected\models\Anggota.php (105)
+in C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php (36)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php (37)
+2014/08/22 06:25:53 [error] [php] include(fakultas.php): failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\models\Anggota.php(105): spl_autoload_call()
+#1 C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php(36): Anggota->getFakultas()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): AnggotaController->renderInternal()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): AnggotaController->renderFile()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): AnggotaController->renderPartial()
+#6 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(37): AnggotaController->render()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): AnggotaController->runAction()
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): AnggotaController->runActionWithFilters()
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): AnggotaController->run()
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+in C:\xampp\htdocs\perpus_ub\protected\models\Anggota.php (105)
+in C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php (36)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php (37)
+2014/08/22 06:26:08 [error] [php] include(fakultas.php): failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\models\Anggota.php(105): spl_autoload_call()
+#1 C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php(36): Anggota->getFakultas()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): AnggotaController->renderInternal()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): AnggotaController->renderFile()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): AnggotaController->renderPartial()
+#6 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(37): AnggotaController->render()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): AnggotaController->runAction()
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): AnggotaController->runActionWithFilters()
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): AnggotaController->run()
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+in C:\xampp\htdocs\perpus_ub\protected\models\Anggota.php (105)
+in C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php (36)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php (37)
+2014/08/22 06:27:56 [error] [php] include(Fakultas.php): failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\models\Anggota.php(105): spl_autoload_call()
+#1 C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php(36): Anggota->getFakultas()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): AnggotaController->renderInternal()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): AnggotaController->renderFile()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): AnggotaController->renderPartial()
+#6 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(37): AnggotaController->render()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): AnggotaController->runAction()
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): AnggotaController->runActionWithFilters()
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): AnggotaController->run()
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+in C:\xampp\htdocs\perpus_ub\protected\models\Anggota.php (105)
+in C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php (36)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php (37)
+2014/08/22 06:30:20 [error] [exception.CException] exception 'CException' with message 'Anggota and its behaviors do not have a method or closure named "getFakultasOption".' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getFakultasOpti...', Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php(36): CActiveRecord->__call('getFakultasOpti...', Array)
+#2 C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php(36): Anggota->getFakultasOption()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('formanggota', Array, true)
+#7 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(37): CController->render('formanggota', Array)
+#8 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('formanggota')
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('anggota/formang...')
+#14 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+HTTP_REFERER=http://localhost/perpus_ub/
+---
+2014/08/22 09:11:26 [error] [exception.CException] exception 'CException' with message 'Anggota and its behaviors do not have a method or closure named "getFakultasOption".' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getFakultasOpti...', Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php(36): CActiveRecord->__call('getFakultasOpti...', Array)
+#2 C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php(36): Anggota->getFakultasOption()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('formanggota', Array, true)
+#7 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(37): CController->render('formanggota', Array)
+#8 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('formanggota')
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('anggota/formang...')
+#14 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+HTTP_REFERER=http://localhost/perpus_ub/
+---
+2014/08/22 09:11:29 [error] [exception.CException] exception 'CException' with message 'Anggota and its behaviors do not have a method or closure named "getFakultasOption".' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getFakultasOpti...', Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php(36): CActiveRecord->__call('getFakultasOpti...', Array)
+#2 C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php(36): Anggota->getFakultasOption()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('formanggota', Array, true)
+#7 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(37): CController->render('formanggota', Array)
+#8 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('formanggota')
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('anggota/formang...')
+#14 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+HTTP_REFERER=http://localhost/perpus_ub/
+---
+2014/08/22 09:14:56 [error] [php] Undefined variable: controller (C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php:36)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): AnggotaController->renderFile()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): AnggotaController->renderPartial()
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(37): AnggotaController->render()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): AnggotaController->runAction()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): AnggotaController->runActionWithFilters()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): AnggotaController->run()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+in C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php (36)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php (37)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/22 09:21:49 [error] [php] include(Codelookup.php): failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php(36): spl_autoload_call()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): AnggotaController->renderInternal()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): AnggotaController->renderFile()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): AnggotaController->renderPartial()
+#5 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(37): AnggotaController->render()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): AnggotaController->runAction()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): AnggotaController->runActionWithFilters()
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): AnggotaController->run()
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+in C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php (36)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php (37)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/22 09:22:05 [error] [php] Non-static method Anggota::getFakultas() should not be called statically, assuming $this from incompatible context (C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php:36)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): AnggotaController->renderFile()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): AnggotaController->renderPartial()
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(37): AnggotaController->render()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): AnggotaController->runAction()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): AnggotaController->runActionWithFilters()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): AnggotaController->run()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+in C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php (36)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php (37)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/22 09:24:29 [error] [php] include(Country.php): failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php(36): spl_autoload_call()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): AnggotaController->renderInternal()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): AnggotaController->renderFile()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): AnggotaController->renderPartial()
+#5 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(37): AnggotaController->render()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): AnggotaController->runAction()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): AnggotaController->runActionWithFilters()
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): AnggotaController->run()
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+in C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php (36)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php (37)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/22 09:33:10 [error] [php] include(KodeFakultas.php): failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php(37): spl_autoload_call()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): AnggotaController->renderInternal()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): AnggotaController->renderFile()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): AnggotaController->renderPartial()
+#5 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(37): AnggotaController->render()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): AnggotaController->runAction()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): AnggotaController->runActionWithFilters()
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): AnggotaController->run()
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+in C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php (37)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php (37)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/22 09:36:07 [error] [php] include(Fakultas.php): failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php(37): spl_autoload_call()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): AnggotaController->renderInternal()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): AnggotaController->renderFile()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): AnggotaController->renderPartial()
+#5 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(37): AnggotaController->render()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): AnggotaController->runAction()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): AnggotaController->runActionWithFilters()
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): AnggotaController->run()
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+in C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php (37)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php (37)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/22 10:04:15 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`library`.`anggota`, CONSTRAINT `anggota_ibfk_1` FOREIGN KEY (`k_fakultas`) REFERENCES `fakultas` (`k_fakultas`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `anggota` (`nama`, `nim`, `k_fakultas`, `k_prodi`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php (33)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/22 10:04:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`library`.`anggota`, CONSTRAINT `anggota_ibfk_1` FOREIGN KEY (`k_fakultas`) REFERENCES `fakultas` (`k_fakultas`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `anggota` (`nama`, `nim`, `k_fakultas`, `k_prodi`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(33): CActiveRecord->save()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('formanggota')
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('anggota/formang...')
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=anggota/formanggota
+---
+2014/08/22 10:04:43 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`library`.`anggota`, CONSTRAINT `anggota_ibfk_1` FOREIGN KEY (`k_fakultas`) REFERENCES `fakultas` (`k_fakultas`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `anggota` (`nama`, `nim`, `k_fakultas`, `k_prodi`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php (33)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/22 10:04:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`library`.`anggota`, CONSTRAINT `anggota_ibfk_1` FOREIGN KEY (`k_fakultas`) REFERENCES `fakultas` (`k_fakultas`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `anggota` (`nama`, `nim`, `k_fakultas`, `k_prodi`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(33): CActiveRecord->save()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('formanggota')
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('anggota/formang...')
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=anggota/formanggota
+---
+2014/08/22 10:07:29 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`library`.`anggota`, CONSTRAINT `anggota_ibfk_2` FOREIGN KEY (`k_prodi`) REFERENCES `prodi` (`k_prodi`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `anggota` (`nama`, `nim`, `k_fakultas`, `k_prodi`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php (33)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/22 10:07:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`library`.`anggota`, CONSTRAINT `anggota_ibfk_2` FOREIGN KEY (`k_prodi`) REFERENCES `prodi` (`k_prodi`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `anggota` (`nama`, `nim`, `k_fakultas`, `k_prodi`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(33): CActiveRecord->save()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('formanggota')
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('anggota/formang...')
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=anggota/formanggota
+---
+2014/08/22 10:10:17 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`library`.`anggota`, CONSTRAINT `anggota_ibfk_2` FOREIGN KEY (`k_prodi`) REFERENCES `prodi` (`k_prodi`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `anggota` (`nama`, `nim`, `k_fakultas`, `k_prodi`) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php (33)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/22 10:10:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`library`.`anggota`, CONSTRAINT `anggota_ibfk_2` FOREIGN KEY (`k_prodi`) REFERENCES `prodi` (`k_prodi`) ON DELETE CASCADE ON UPDATE CASCADE). The SQL statement executed was: INSERT INTO `anggota` (`nama`, `nim`, `k_fakultas`, `k_prodi`) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(33): CActiveRecord->save()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('formanggota')
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('anggota/formang...')
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=anggota/formanggota
+---
+2014/08/22 10:27:13 [error] [exception.CException] exception 'CException' with message 'Property "Anggota.jenjang" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(145): CComponent->__get('jenjang')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('jenjang')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(Anggota), 'jenjang')
+#3 C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(Anggota), 'jenjang', Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(Anggota), 'jenjang', Array)
+#5 C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php(54): CActiveForm->textField(Object(Anggota), 'jenjang')
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('formanggota', Array, true)
+#10 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(38): CController->render('formanggota', Array)
+#11 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('formanggota')
+#16 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('anggota/formang...')
+#17 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+HTTP_REFERER=http://localhost/perpus_ub/
+---
+2014/08/22 10:31:16 [error] [exception.CException] exception 'CException' with message 'Alias "zii.widget.jui.CJuiDatePicker" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\xampp\htdocs\perpus_ub\framework\YiiBase.php:322
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWidgetFactory.php(146): YiiBase::import('zii.widget.jui....', true)
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AnggotaController), 'zii.widget.jui....', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widget.jui....', Array)
+#3 C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php(89): CBaseController->widget('zii.widget.jui....', Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('formanggota', Array, true)
+#8 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(41): CController->render('formanggota', Array)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('formanggota')
+#14 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('anggota/formang...')
+#15 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+HTTP_REFERER=http://localhost/perpus_ub/
+---
+2014/08/22 10:41:04 [error] [php] include(C:\xampp\htdocs\perpus_ub\protected\extensions\CJuiDateTimePicker\CJuiDateTimePicker.php): failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\YiiBase.php:401)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWidgetFactory.php(146): import()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(146): CWidgetFactory->createWidget()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(172): AnggotaController->createWidget()
+#3 C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php(84): AnggotaController->widget()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): AnggotaController->renderInternal()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): AnggotaController->renderFile()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): AnggotaController->renderPartial()
+#8 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(41): AnggotaController->render()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): AnggotaController->runAction()
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): AnggotaController->runActionWithFilters()
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): AnggotaController->run()
+#14 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+in C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php (84)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php (41)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/22 10:56:19 [error] [exception.CException] exception 'CException' with message 'Property "Anggota.date_mutation" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(145): CComponent->__get('date_mutation')
+#1 C:\xampp\htdocs\perpus_ub\protected\views\anggota\formanggota.php(70): CActiveRecord->__get('date_mutation')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('formanggota', Array, true)
+#6 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(41): CController->render('formanggota', Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionFormanggota()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('formanggota')
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('anggota/formang...')
+#13 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/perpus_ub/index.php?r=anggota/formanggota
+HTTP_REFERER=http://localhost/perpus_ub/
+---
