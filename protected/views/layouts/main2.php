@@ -378,7 +378,7 @@
                                 $this->widget('zii.widgets.CMenu', array(
                                     'items' => array(
                                         array('label' => 'MAHASISWA', 'url' => array('/permintaan/f_permintaan')),
-                                        array('label' => 'FAKULATAS', 'url' => array('/permintaan/f_permintaan')),
+                                        array('label' => 'FAKULATAS', 'url' => array('/permintaan/f_permintaan_f')),
                                     ),
                                 ));
                                 ?>
