@@ -1763,3 +1763,14 @@ REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan
 in C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_permintaan.php (145)
 in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (66)
 in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/23 02:14:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "f_permintaan_f".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('f_permintaan_f')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan
+---
