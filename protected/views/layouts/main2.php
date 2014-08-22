@@ -377,7 +377,8 @@
                                 <?php
                                 $this->widget('zii.widgets.CMenu', array(
                                     'items' => array(
-                                        array('label' => 'Daftar Permintaan Buku', 'url' => array('/permintaan/f_permintaan')),
+                                        array('label' => 'MAHASISWA', 'url' => array('/permintaan/f_permintaan')),
+                                        array('label' => 'FAKULATAS', 'url' => array('/permintaan/f_permintaan')),
                                     ),
                                 ));
                                 ?>

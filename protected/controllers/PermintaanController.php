@@ -63,7 +63,9 @@ class PermintaanController extends Controller {
                 return;
             }
         }
-        $this->render('f_permintaan', array('model' => $model));
+        $data = Permintaan::model()->findAll();
+		//$this->render('listPermintaan',array('data'=>$data));
+        $this->render('f_permintaan', array('model' => $model,'data'=>$data));
     }
     
      public function actionUpload() {
@@ -79,5 +81,6 @@ class PermintaanController extends Controller {
         }
         $this->render('upload', array('form' => $form));
     }
+    
 
 }

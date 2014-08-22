@@ -1,9 +1,4 @@
- <section class="content">
-
-				<div class="box">
-                                <div class="box-header">
-                                    <h3 class="box-title">Daftar Anggota</h3>                                    
-                                </div><!-- /.box-header -->	
+<div class="box">
     <h2>Daftar Permintaan Buku</h2>
 <?php    
 	
@@ -41,7 +36,7 @@
     <?php endforeach; ?>
     </tbody>
 	</table>
-             
+  </div>           
          <!-- jQuery 2.0.2 -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         <!-- page script -->
@@ -59,5 +54,4 @@
             });
         </script>
 
-    </body>
-</html>
+   

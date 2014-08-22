@@ -17,8 +17,8 @@
 
 	
 <ul class="nav nav-tabs" role="tablist">
-  <li class="active"><a href="#Buku" role="tab" data-toggle="tab">MAHASISWA</a></li>
-  <li><a href="#Fakultas" role="tab" data-toggle="tab">FAKULTAS</a></li>
+  <li class="active"><a href="#Buku" role="tab" data-toggle="tab">FORM</a></li>
+  <li><a href="#Fakultas" role="tab" data-toggle="tab">LIST PERMINTAAN</a></li>
 </ul>
 
 <!-- Tab panes -->
@@ -116,36 +116,75 @@
     </div>
     </div>
     
-  <div class="tab-pane" id="Fakultas">
+    <div class="tab-pane" id="Fakultas">
   <div class="box box-primary">
         <div class="box-header">
-            <h4 class="box-title">PERMINTAAN BUKU BARU</h4>
-        </div>
-  <?php echo $form->errorSummary($model); ?>
+            <h4 class="box-title">lIST PERMINTAAN BUKU</h4>
+            <div class="box">
+    <h2>Daftar Permintaan Buku</h2>
+<?php    
 	
-	<div class="form-group">
-		<?php echo $form->labelEx($model,'id_anggota',array('class' => 'col-sm-2 control-label')); ?>
-		<div class="col-sm-10">
-		<?php echo $form->textField($model,'id_anggota',array('class' => 'form-control','placeholder' => 'id_anggota')); ?>
-		<?php echo $form->error($model,'id_anggota'); ?>
-		</div>
-	</div>
-    
-    <div class="form-group">
-        <div class="col-sm-2 control-label"><b>Masukkan Data Excel</b></div>
-        <div class="col-sm-10">
-        <?php echo $form->fileField($model,'filee',array('size'=>60, 'maxlength'=>200,'class' => 'btn btn-default')); ?>
-       </div>
-           
-	<div class="form-group">
-	<div class="col-sm-2 control-label">
-		<?php echo CHtml::submitButton('Submit',array('class' => 'btn btn-default')); ?>
-	</div>
-    </div>
+	echo CHtml::link('Cetak dokumen',array('cetak/cetak'));
+?>
+	<table id="example2" class="table table-bordered table-striped">
+    <thead>
+                                            <tr>
+                                                <th>ID Anggota</th>
+    <th>Judul</th>
+    <th>Jenis</th>
+    <th>Pengarang</th>
+    <th>Penerbit</th>
+    <th>Tahun Terbit</th>
+    <th>Kota</th>
+    <th>Edisi</th>
+    <th>ISBN</th>
+    <th>Keterangan</th>
+                                            </tr>
+                                        </thead>
+                                         <tbody>
+    <?php foreach ($data as $model): ?>
+    <tr>
+    <td><?php echo $model->id_anggota; ?></td>
+    <td><?php echo $model->judul; ?></td>
+    <td><?php echo $model->jenis; ?></td>
+    <td><?php echo $model->pengarang; ?></td>
+    <td><?php echo $model->penerbit; ?></td>
+    <td><?php echo $model->tahun_terbit; ?></td>
+    <td><?php echo $model->kota; ?></td>
+    <td><?php echo $model->edisi; ?></td>
+    <td><?php echo $model->isbn; ?></td>
+    <td><?php echo $model->keterangan; ?></td>
+    </tr>
+    <?php endforeach; ?>
+    </tbody>
+	</table>
+  </div>           
+         <!-- jQuery 2.0.2 -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <!-- page script -->
+        <script type="text/javascript">
+            $(function() {
+                $("#example1").dataTable();
+                $('#example2').dataTable({
+                    "bPaginate": true,
+                    "bLengthChange": true,
+                    "bFilter": false,
+                    "bSort": true,
+                    "bInfo": false,
+                    "bAutoWidth": false
+                });
+            });
+        </script>
+
+   
+        </div>
+  
     
     </div>
   </div>
   </div>
+    
+  
 </div>
 	
 
