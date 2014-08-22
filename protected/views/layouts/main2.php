@@ -63,7 +63,7 @@
                                             <a href="#">
                                                 <div class="pull-left">
                                                     <img src="<?php echo Yii::app()->request->baseUrl; ?>/assets/img/avatar3.png" class="img-circle" alt="User Image"/>
-                                                   
+
                                                 </div>
                                                 <h4>
                                                     Support Team
@@ -279,7 +279,7 @@
                 </div>
             </nav>
         </header>
-        
+
         <div class="wrapper row-offcanvas row-offcanvas-left">
             <!-- Left side column. contains the logo and sidebar -->
             <aside class="left-side sidebar-offcanvas">
@@ -313,24 +313,24 @@
                                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                             </a>
                         </li>
-                        
-                        
+
+
                         <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-edit"></i>
                                 <span>KEANGGOTAAN</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
-                           <ul class="treeview-menu">
-							
-                                <?php			$this->widget('zii.widgets.CMenu',array(
-									'items'=>array(
-										array('label'=>'Daftar Perminataan Buku', 'url'=>array('/pengolahan/dafrat'), 'class'=>'fa fa-angle-double-right'),
-										array('label'=>'Pendaftaran Anggota', 'url'=>array('/site/pendaftaran', 'view'=>'about')),
-										
-									),
-								)); 
-								?>
+                            <ul class="treeview-menu">
+
+                                <?php
+                                $this->widget('zii.widgets.CMenu', array(
+                                    'items' => array(
+                                        array('label' => 'Daftar Perminataan Buku', 'url' => array('/pengolahan/dafrat'), 'class' => 'fa fa-angle-double-right'),
+                                        array('label' => 'Pendaftaran Anggota', 'url' => array('/site/pendaftaran', 'view' => 'about')),
+                                    ),
+                                ));
+                                ?>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -351,84 +351,101 @@
                                 <span>PENGOLAHAN</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
-							<ul class="treeview-menu">
-                            <?php			$this->widget('zii.widgets.CMenu',array(
-									'items'=>array(
-										array('label'=>'Daftar Permintaan Buku', 'url'=>array('/pengolahan/daftarpermintaan')),
-										array('label'=>'Registrasi dan Pemlabelan', 'url'=>array('/pengolahan/barangdatang')),
-										array('label'=>'Validasi Buku', 'url'=>array('/pengolahan/validasi')),
-										array('label'=>'Laporan', 'url'=>array('/pengolahan/laporan')),
-										array('label'=>'Inventarisasi', 'url'=>array('/pengolahan/inventarisasi')),
-									),
-								)); 
-								?>
-								</ul>
-                        </li>
-<!--
-                        <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-laptop"></i>
-                                <span>UI Elements</span>
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/UI/general.html"><i class="fa fa-angle-double-right"></i> General</a></li>
-                                <li><a href="pages/UI/icons.html"><i class="fa fa-angle-double-right"></i> Icons</a></li>
-                                <li><a href="pages/UI/buttons.html"><i class="fa fa-angle-double-right"></i> Buttons</a></li>
-                                <li><a href="pages/UI/sliders.html"><i class="fa fa-angle-double-right"></i> Sliders</a></li>
-                                <li><a href="pages/UI/timeline.html"><i class="fa fa-angle-double-right"></i> Timeline</a></li>
+                                <?php
+                                $this->widget('zii.widgets.CMenu', array(
+                                    'items' => array(
+                                        array('label' => 'Daftar Permintaan Buku', 'url' => array('/pengolahan/daftarpermintaan')),
+                                        array('label' => 'Registrasi dan Pemlabelan', 'url' => array('/pengolahan/barangdatang')),
+                                        array('label' => 'Validasi Buku', 'url' => array('/pengolahan/validasi')),
+                                        array('label' => 'Laporan', 'url' => array('/pengolahan/laporan')),
+                                        array('label' => 'Inventarisasi', 'url' => array('/pengolahan/inventarisasi')),
+                                    ),
+                                ));
+                                ?>
                             </ul>
                         </li>
                         <li class="treeview">
                             <a href="#">
-                                <i class="fa fa-edit"></i> <span>Forms</span>
+                                <i class="fa fa-folder"></i>
+                                <span>PERMINTAAN</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="pages/forms/general.html"><i class="fa fa-angle-double-right"></i> General Elements</a></li>
-                                <li><a href="pages/forms/advanced.html"><i class="fa fa-angle-double-right"></i> Advanced Elements</a></li>
-                                <li><a href="pages/forms/editors.html"><i class="fa fa-angle-double-right"></i> Editors</a></li>
+                                <?php
+                                $this->widget('zii.widgets.CMenu', array(
+                                    'items' => array(
+                                        array('label' => 'Daftar Permintaan Buku', 'url' => array('/permintaan/f_permintaan')),
+                                    ),
+                                ));
+                                ?>
                             </ul>
                         </li>
-                        <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-table"></i> <span>Tables</span>
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="pages/tables/simple.html"><i class="fa fa-angle-double-right"></i> Simple tables</a></li>
-                                <li><a href="pages/tables/data.html"><i class="fa fa-angle-double-right"></i> Data tables</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="pages/calendar.html">
-                                <i class="fa fa-calendar"></i> <span>Calendar</span>
-                                <small class="badge pull-right bg-red">3</small>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="pages/mailbox.html">
-                                <i class="fa fa-envelope"></i> <span>Mailbox</span>
-                                <small class="badge pull-right bg-yellow">12</small>
-                            </a>
-                        </li>
-                        <li class="treeview">
-                            <a href="#">
-                                <i class="fa fa-folder"></i> <span>Examples</span>
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="pages/examples/invoice.html"><i class="fa fa-angle-double-right"></i> Invoice</a></li>
-                                <li><a href="pages/examples/login.html"><i class="fa fa-angle-double-right"></i> Login</a></li>
-                                <li><a href="pages/examples/register.html"><i class="fa fa-angle-double-right"></i> Register</a></li>
-                                <li><a href="pages/examples/lockscreen.html"><i class="fa fa-angle-double-right"></i> Lockscreen</a></li>
-                                <li><a href="pages/examples/404.html"><i class="fa fa-angle-double-right"></i> 404 Error</a></li>
-                                <li><a href="pages/examples/500.html"><i class="fa fa-angle-double-right"></i> 500 Error</a></li>
-                                <li><a href="pages/examples/blank.html"><i class="fa fa-angle-double-right"></i> Blank Page</a></li>
-                            </ul>
-                        </li>
+                        <!--
+                                                <li class="treeview">
+                                                    <a href="#">
+                                                        <i class="fa fa-laptop"></i>
+                                                        <span>UI Elements</span>
+                                                        <i class="fa fa-angle-left pull-right"></i>
+                                                    </a>
+                                                    <ul class="treeview-menu">
+                                                        <li><a href="pages/UI/general.html"><i class="fa fa-angle-double-right"></i> General</a></li>
+                                                        <li><a href="pages/UI/icons.html"><i class="fa fa-angle-double-right"></i> Icons</a></li>
+                                                        <li><a href="pages/UI/buttons.html"><i class="fa fa-angle-double-right"></i> Buttons</a></li>
+                                                        <li><a href="pages/UI/sliders.html"><i class="fa fa-angle-double-right"></i> Sliders</a></li>
+                                                        <li><a href="pages/UI/timeline.html"><i class="fa fa-angle-double-right"></i> Timeline</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="treeview">
+                                                    <a href="#">
+                                                        <i class="fa fa-edit"></i> <span>Forms</span>
+                                                        <i class="fa fa-angle-left pull-right"></i>
+                                                    </a>
+                                                    <ul class="treeview-menu">
+                                                        <li><a href="pages/forms/general.html"><i class="fa fa-angle-double-right"></i> General Elements</a></li>
+                                                        <li><a href="pages/forms/advanced.html"><i class="fa fa-angle-double-right"></i> Advanced Elements</a></li>
+                                                        <li><a href="pages/forms/editors.html"><i class="fa fa-angle-double-right"></i> Editors</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="treeview">
+                                                    <a href="#">
+                                                        <i class="fa fa-table"></i> <span>Tables</span>
+                                                        <i class="fa fa-angle-left pull-right"></i>
+                                                    </a>
+                                                    <ul class="treeview-menu">
+                                                        <li><a href="pages/tables/simple.html"><i class="fa fa-angle-double-right"></i> Simple tables</a></li>
+                                                        <li><a href="pages/tables/data.html"><i class="fa fa-angle-double-right"></i> Data tables</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="pages/calendar.html">
+                                                        <i class="fa fa-calendar"></i> <span>Calendar</span>
+                                                        <small class="badge pull-right bg-red">3</small>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="pages/mailbox.html">
+                                                        <i class="fa fa-envelope"></i> <span>Mailbox</span>
+                                                        <small class="badge pull-right bg-yellow">12</small>
+                                                    </a>
+                                                </li>
+                                                <li class="treeview">
+                                                    <a href="#">
+                                                        <i class="fa fa-folder"></i> <span>Examples</span>
+                                                        <i class="fa fa-angle-left pull-right"></i>
+                                                    </a>
+                                                    <ul class="treeview-menu">
+                                                        <li><a href="pages/examples/invoice.html"><i class="fa fa-angle-double-right"></i> Invoice</a></li>
+                                                        <li><a href="pages/examples/login.html"><i class="fa fa-angle-double-right"></i> Login</a></li>
+                                                        <li><a href="pages/examples/register.html"><i class="fa fa-angle-double-right"></i> Register</a></li>
+                                                        <li><a href="pages/examples/lockscreen.html"><i class="fa fa-angle-double-right"></i> Lockscreen</a></li>
+                                                        <li><a href="pages/examples/404.html"><i class="fa fa-angle-double-right"></i> 404 Error</a></li>
+                                                        <li><a href="pages/examples/500.html"><i class="fa fa-angle-double-right"></i> 500 Error</a></li>
+                                                        <li><a href="pages/examples/blank.html"><i class="fa fa-angle-double-right"></i> Blank Page</a></li>
+                                                    </ul>
+                                                </li>
                         -->
-                        
+
                     </ul>
                 </section>
                 <!-- /.sidebar -->
@@ -448,11 +465,11 @@
                     </ol>
                 </section>
 
-                
+
                 <!-- Main content -->
                 <section class="content">
 
-                <?php echo $content; ?>    
+<?php echo $content; ?>    
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
@@ -487,10 +504,10 @@
 
         <!-- AdminLTE App -->
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/js/AdminLTE/app.js" type="text/javascript"></script>
-        
+
         <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/js/AdminLTE/dashboard.js" type="text/javascript"></script>     
-        
+
         <!-- AdminLTE for demo purposes -->
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/js/AdminLTE/demo.js" type="text/javascript"></script>
 
