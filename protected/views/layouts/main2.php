@@ -321,18 +321,16 @@
                                 <span>KEANGGOTAAN</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
-                            <ul class="treeview-menu">
+                           <ul class="treeview-menu">
 							
-                                <?php echo "<li><i class=\"fa fa-angle-double-right\">";
-								$this->widget('zii.widgets.CMenu',array(
+                                <?php			$this->widget('zii.widgets.CMenu',array(
 									'items'=>array(
-										array('label'=>'Anggota Baru', 'url'=>array('/anggota/formanggota'), 'class'=>'fa fa-angle-double-right'),
+										array('label'=>'Daftar Perminataan Buku', 'url'=>array('/pengolahan/dafrat'), 'class'=>'fa fa-angle-double-right'),
 										array('label'=>'Pendaftaran Anggota', 'url'=>array('/site/pendaftaran', 'view'=>'about')),
 										
 									),
 								)); 
-								echo "</i></li>"?>
-								
+								?>
                             </ul>
                         </li>
                         <li class="treeview">
@@ -353,11 +351,18 @@
                                 <span>PENGOLAHAN</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
-                            <ul class="treeview-menu">
-                                <li><a href="pages/charts/morris.html"><i class="fa fa-angle-double-right"></i> Morris</a></li>
-                                <li><a href="pages/charts/flot.html"><i class="fa fa-angle-double-right"></i> Flot</a></li>
-                                <li><a href="pages/charts/inline.html"><i class="fa fa-angle-double-right"></i> Inline charts</a></li>
-                            </ul>
+							<ul class="treeview-menu">
+                            <?php			$this->widget('zii.widgets.CMenu',array(
+									'items'=>array(
+										array('label'=>'Daftar Permintaan Buku', 'url'=>array('/pengolahan/daftarpermintaan')),
+										array('label'=>'Registrasi dan Pemlabelan', 'url'=>array('/pengolahan/barangdatang')),
+										array('label'=>'Validasi Buku', 'url'=>array('/pengolahan/validasi')),
+										array('label'=>'Laporan', 'url'=>array('/pengolahan/laporan')),
+										array('label'=>'Inventarisasi', 'url'=>array('/pengolahan/inventarisasi')),
+									),
+								)); 
+								?>
+								</ul>
                         </li>
 <!--
                         <li class="treeview">

@@ -65,26 +65,16 @@
         <tr>
 		<td><?php echo $form->labelEx($model,'tgl_lahir'); ?></td>
         <td width="10">:</td>
-		<td><?php $this->widget('zii.widgets.jui.CJuiDatePicker',
-		array('attribute' => 'tgl_lahir',  
-              'language' => Yii::app()->language,  
-              'model' => $model,  
-              'options' => array(  
-                    'mode' => 'focus',  
-                    'dateFormat' => 'yy/mm/dd',  
-                    'showAnim' => 'slideDown',
-					'showOn' => 'focus',
-					'yearRange' => '+10:+50',
-					'changeYear' => 'true',
-					'changeMonth' => 'true',
-					'duration' => 'fast'),  
-               'htmlOptions' => array(
-			   'size' => 30, 
-			   'class' => 'input-medium', 
-			   'placeholder'=>Yii::t('main','TbDatePicker'),
-			   'readonly'=>'readonly',),  
-               )  
-            );  
+		<td><?php $this->widget('zii.widgets.jui.CJuiDatePicker',array(
+    'name'=>'publishDate',
+    // additional javascript options for the date picker plugin
+    'options'=>array(
+        'showAnim'=>'fold',
+    ),
+    'htmlOptions'=>array(
+        'style'=>'height:20px;'
+    ),
+)); 
 
 		 ?></td>
 		<?php echo $form->error($model,'tgl_lahir'); ?>
