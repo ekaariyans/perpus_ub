@@ -3138,3 +3138,94 @@ Stack trace:
 REQUEST_URI=/perpus_ub/index.php?r=site/login
 in C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php (104)
 in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/24 07:16:22 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php:101) (C:\xampp\htdocs\perpus_ub\framework\web\CHttpRequest.php:803)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(104): SiteController->redirect()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): SiteController->runAction()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): SiteController->run()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=site/login
+in C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php (104)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/24 07:17:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "permintaan".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('permintaan')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('permintaan')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('site/permintaan')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=site/permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=site/login
+---
+2014/08/24 07:17:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "permintaan".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('permintaan')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('permintaan')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('site/permintaan')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=site/permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=site/login
+---
+2014/08/24 07:18:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "permintaan".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('permintaan')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('permintaan')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('site/permintaan')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=site/permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=site/login
+---
+2014/08/24 07:22:46 [error] [exception.CDbException] exception 'CDbException' with message 'The table "anggota" for active record class "Anggota" cannot be found in the database.' in C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php:2362
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Anggota))
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(79): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(65): CActiveRecord->__construct()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionCreate()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\perpus_ub\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\perpus_ub\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\perpus_ub\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('anggota/create')
+#14 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/perpus_ub/index.php?r=anggota/create
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=pengolahan/daftarpermintaan
+---
+2014/08/24 07:22:57 [error] [exception.CDbException] exception 'CDbException' with message 'The table "anggota" for active record class "Anggota" cannot be found in the database.' in C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php:2362
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Anggota))
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(79): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(65): CActiveRecord->__construct()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionCreate()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\perpus_ub\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\perpus_ub\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\perpus_ub\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('anggota/create')
+#14 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/perpus_ub/index.php?r=anggota/create
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=pengolahan/daftarpermintaan
+---

@@ -2,7 +2,7 @@
 
 class SiteController extends Controller
 {
-	//public $layout='//layouts/column3';
+	public $layout='//layouts/column3';
 	/**
 	 * Declares class-based actions.
 	 */
@@ -98,10 +98,10 @@ class SiteController extends Controller
 				//$layout='//layouts/main2';
 				
 				Yii::app()->session['username'] = $_POST['LoginForm']['username'];
-				echo "Halo session ".Yii::app()->session['username'];
-				unset(Yii::app()->session['username']);
-				//$this->redirect('permintaan');
-				$this->redirect($this->createUrl('permintaan'));
+				//echo "Halo session ".Yii::app()->session['username'];
+				//unset(Yii::app()->session['username']);
+				$this->redirect('index.php?r=permintaan');
+				//$this->redirect($this->createUrl('permintaan'));
 				
 
 
