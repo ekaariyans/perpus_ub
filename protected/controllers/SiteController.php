@@ -2,6 +2,7 @@
 
 class SiteController extends Controller
 {
+	//public $layout='//layouts/column3';
 	/**
 	 * Declares class-based actions.
 	 */
@@ -29,12 +30,8 @@ class SiteController extends Controller
 	{
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('tes');
-	}
-	
-	public function actionBaru()
-	{
-		$this->render('baru');	
+		//$this->render('login');
+		$this->redirect('index.php?r=site/login');
 	}
 
 	/**
@@ -96,8 +93,22 @@ class SiteController extends Controller
 		{
 			$model->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login())
-				$this->redirect(Yii::app()->user->returnUrl);
+			if($model->validate() && $model->login()){
+				//$this->redirect(Yii::app()->user->returnUrl);
+				//$layout='//layouts/main2';
+				
+				Yii::app()->session['username'] = $_POST['LoginForm']['username'];
+				echo "Halo session ".Yii::app()->session['username'];
+				unset(Yii::app()->session['username']);
+				//$this->redirect('permintaan');
+				$this->redirect($this->createUrl('permintaan'));
+				
+
+
+			
+			}
+				//echo "Halo ".$_POST['LoginForm']['username'];
+		//		
 		}
 		// display the login form
 		$this->render('login',array('model'=>$model));

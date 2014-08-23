@@ -1,9 +1,10 @@
 <?php
 
 class PermintaanController extends Controller {
-
+	//public $layout='//layouts/main2';
     public function actionIndex() {
-        $this->render('index');
+        //$this->render('index');
+        echo "Selamat datang di controller Permintaan";
     }
 
     // Uncomment the following methods and override them if needed

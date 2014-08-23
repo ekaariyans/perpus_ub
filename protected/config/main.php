@@ -54,11 +54,14 @@ return array(
 		// uncomment the following to use a MySQL database
 		*/
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=library',
-			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '',
-			'charset' => 'utf8',
+			//'connectionString' => 'mysql:host=localhost;dbname=library',
+			'connectionString' => 'sqlsrv:Server=excelent01;Database=library',
+			//'emulatePrepare' => true,
+			'username' => 'sa',
+			'password' => 'supersemar',
+			'charset' => 'GB2312',
+      		'tablePrefix' => 'tbl_',
+			//'charset' => 'utf8',
 		),
 		
 		'errorHandler'=>array(

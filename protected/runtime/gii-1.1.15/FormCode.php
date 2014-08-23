@@ -1,5 +1,5 @@
 <?php
 return array (
   'template' => 'default',
-  'viewPath' => 'application.views.upload',
+  'viewPath' => 'application.views.login',
 );
