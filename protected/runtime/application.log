@@ -1199,3 +1199,98 @@ Stack trace:
 REQUEST_URI=/perpus_ub/index.php?r=pengolahan/barangdatang
 HTTP_REFERER=http://localhost/perpus_ub/index.php?r=Pengolahan/DaftarPermintaan
 ---
+2014/08/25 06:17:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "dafrat".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('dafrat')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('dafrat')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('pengolahan/dafr...')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=pengolahan/dafrat
+HTTP_REFERER=http://localhost/perpus_ub/
+---
+2014/08/25 06:18:12 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'library.permintaan' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `permintaan`.
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PengolahanController.php (12)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 06:18:12 [error] [exception.CDbException] exception 'CDbException' with message 'The table "permintaan" for active record class "Pengolahan" cannot be found in the database.' in C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php:2362
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Pengolahan))
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1350): CActiveRecord->getTableSchema()
+#3 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#4 C:\xampp\htdocs\perpus_ub\protected\controllers\PengolahanController.php(12): CActiveRecord->findAll()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PengolahanController->actionDaftarPermintaan()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('daftarpermintaa...')
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('pengolahan/daft...')
+#11 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/perpus_ub/index.php?r=pengolahan/daftarpermintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=pengolahan/dafrat
+---
+2014/08/25 06:27:00 [error] [exception.CException] exception 'CException' with message 'Anggota and its behaviors do not have a method or closure named "getFakultas".' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getFakultas', Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\views\anggota\_form.php(51): CActiveRecord->__call('getFakultas', Array)
+#2 C:\xampp\htdocs\perpus_ub\protected\views\anggota\_form.php(51): Anggota->getFakultas()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\perpus_ub\protected\views\anggota\create.php(17): CController->renderPartial('_form', Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#11 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(79): CController->render('create', Array)
+#12 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionCreate()
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\xampp\htdocs\perpus_ub\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 C:\xampp\htdocs\perpus_ub\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\perpus_ub\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\xampp\htdocs\perpus_ub\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('create')
+#22 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('anggota/create')
+#23 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#24 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/perpus_ub/index.php?r=anggota/create
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=pengolahan/daftarpermintaan
+---
+2014/08/25 06:27:42 [error] [exception.CException] exception 'CException' with message 'Anggota and its behaviors do not have a method or closure named "getFakultas".' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getFakultas', Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\views\anggota\_form.php(51): CActiveRecord->__call('getFakultas', Array)
+#2 C:\xampp\htdocs\perpus_ub\protected\views\anggota\_form.php(51): Anggota->getFakultas()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\perpus_ub\protected\views\anggota\create.php(17): CController->renderPartial('_form', Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#11 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(79): CController->render('create', Array)
+#12 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionCreate()
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\xampp\htdocs\perpus_ub\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 C:\xampp\htdocs\perpus_ub\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\perpus_ub\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\xampp\htdocs\perpus_ub\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('create')
+#22 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('anggota/create')
+#23 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#24 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/perpus_ub/index.php?r=anggota/create
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=pengolahan/daftarpermintaan
+---

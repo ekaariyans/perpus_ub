@@ -326,8 +326,8 @@
                                 <?php
                                 $this->widget('zii.widgets.CMenu', array(
                                     'items' => array(
-                                        array('label' => 'Daftar Perminataan Buku', 'url' => array('/pengolahan/dafrat'), 'class' => 'fa fa-angle-double-right'),
-                                        array('label' => 'Pendaftaran Anggota', 'url' => array('/site/pendaftaran', 'view' => 'about')),
+                                        array('label' => 'Pendaftaran Anggota Baru', 'url' => array('/anggota/create')),
+                                        array('label' => 'Daftar anggota', 'url' => array('/anggota/view')),
                                     ),
                                 ));
                                 ?>
