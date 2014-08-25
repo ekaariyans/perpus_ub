@@ -20,7 +20,7 @@
     </div><!--TAB FORM-->
 
 
-    <div class="tab-pane" id="upload">Upload
+    <div class="tab-pane" id="upload">
         <div class="form">
             <?php
             $form = $this->beginWidget('CActiveForm', array(
@@ -36,16 +36,12 @@
             ?>
 
             <p class="note">Fields with <span class="required">*</span> are required.</p>
-
-            <?php echo $form->errorSummary($model); ?>
-
-
-            <div class="form-group">
-                <label class="col-sm-2 control-label">Masukkan Data Excel :</label>
-                <div class="col-sm-10">
-                <?php echo $form->fileField($model, 'filee', array('size' => 60, 'maxlength' => 200)); ?>
-                </div>
-            </div>
+				
+           <div class="form-group">
+                <label class="col-sm-2 control-label">Select</label>
+                  	<?php echo CHtml::dropDownList('K_JENIS', $select, array('1'=>'1', '2'=>'2', '3'=>'3')); ?>
+                  	<?php echo $form->error($model, 'K_JENIS'); ?>
+             </div>
 
             <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
@@ -58,9 +54,7 @@
     </div><!--UPLOAD-->
 
 
-    <div class="tab-pane" id="list">LISt
-
-
+    <div class="tab-pane" id="list">
         <div class="box box-primary">
             <div class="box-header">
                 <h4 class="box-title">lIST PERMINTAAN BUKU</h4>
@@ -73,24 +67,30 @@
                         <thead>
                             <tr>
                                 <th>ID Anggota</th>
+                                <th>Tgl.Permintaan</th>
                                 <th>Judul</th>
-                                <th>Jenis</th>
                                 <th>Pengarang</th>
+                                <th>ISBN</th>
+                                <th>Jenis</th>
                                 <th>Penerbit</th>
                                 <th>Tahun Terbit</th>
-                
+                				<th>Harga</th>
+                            	<th>Link Website</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php foreach ($data as $model): ?>
                                 <tr>
-                                    <td><?php echo $model->id_anggota; ?></td>
-                                    <td><?php echo $model->judul; ?></td>
-                                    <td><?php echo $model->jenis; ?></td>
-                                    <td><?php echo $model->pengarang; ?></td>
-                                    <td><?php echo $model->penerbit; ?></td>
-                                    <td><?php echo $model->tahun_terbit; ?></td>
-                            
+                                    <td><?php echo $model['ID_ANGGOTA']; ?></td>
+                                    <td><?php echo $model['TGL_PERMINTAAN']; ?></td>
+                                    <td><?php echo $model['JUDUL']; ?></td>
+                                    <td><?php echo $model['PENGARANG']; ?></td>
+                                    <td><?php echo $model['ISBN']; ?></td>
+                                    <td><?php echo $model['JENIS']; ?></td>
+                            		<td><?php echo $model['PENERBIT']; ?></td>
+                                	<td><?php echo $model['TAHUN_TERBIT']; ?></td>
+                                	<td><?php echo $model['HARGA']; ?></td>
+                                	<td><?php echo $model['LINK_WEBSITE']; ?></td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>

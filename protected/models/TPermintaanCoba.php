@@ -15,7 +15,7 @@
  * @property string $HARGA
  * @property string $LINK_WEBSITE
  */
-class TPermintaanBuku extends CActiveRecord
+class TPermintaanCoba extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
@@ -33,12 +33,10 @@ class TPermintaanBuku extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			//array('K_PERMINTAAN', 'required'),
+			array('K_PERMINTAAN', 'required'),
 			array('K_PERMINTAAN, TAHUN_TERBIT', 'numerical', 'integerOnly'=>true),
 			array('JUDUL, PENGARANG, ISBN, JENIS, BAHASA, PENERBIT, HARGA', 'length', 'max'=>50),
 			array('LINK_WEBSITE', 'length', 'max'=>250),
-			array('filee','file','types'=>'xls,xlsx','allowEmpty' => true),
-			array('filee','safe','on'=>'excel'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('K_PERMINTAAN, JUDUL, PENGARANG, ISBN, JENIS, BAHASA, PENERBIT, TAHUN_TERBIT, HARGA, LINK_WEBSITE', 'safe', 'on'=>'search'),
@@ -113,7 +111,7 @@ class TPermintaanBuku extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return TPermintaanBuku the static model class
+	 * @return TPermintaanCoba the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

@@ -33,17 +33,9 @@ class PermintaanController extends Controller {
       );
       }
      */
+     /*
     public function actionF_permintaan() {
         $model = new Permintaan;
-
-        // uncomment the following code to enable ajax-based validation
-        /*
-          if(isset($_POST['ajax']) && $_POST['ajax']==='permintaan-f_permintaan-form')
-          {
-          echo CActiveForm::validate($model);
-          Yii::app()->end();
-          }
-         */
 
         if (isset($_POST['Permintaan'])) {
             $model->attributes = $_POST['Permintaan'];
@@ -68,7 +60,7 @@ class PermintaanController extends Controller {
         $data = Permintaan::model()->findAll();
 		//$this->render('listPermintaan',array('data'=>$data));
         $this->render('f_permintaan', array('model' => $model,'data'=>$data));
-    }
+    }*/
     
      public function actionUpload() {
         $model = new FileUpload();
@@ -84,13 +76,31 @@ class PermintaanController extends Controller {
         $this->render('upload', array('form' => $form));
     }
     
+    
     public function actionF_permintaan_f(){
 		Yii::import('ext.phpexcelreader.JPhpExcelReader');
-    	$model = new Permintaan;
-
-        if (isset($_POST['Permintaan'])) {
-			//$model = new Upload2;
-            $model->attributes = $_POST['Permintaan'];
+    	
+    	$model = new TPermintaan;
+        
+        if (isset($_POST['TPermintaan'])) {
+        	$model->attributes = $_POST['TPermintaan'];
+            
+            if ($model->validate()) {
+            	//Input Data ke Tabel TPermintaan
+				$model->ID_ANGGOTA=Yii::app()->session['username'];
+				//$model->K_PERMINTAAN='';
+				//$model->ID_ANGGOTA=001;
+				$model->K_JENIS = $_POST['TPermintaan']['K_JENIS'];
+				$model->TGL_PERMINTAAN=date('Y-m-d');
+				//Yii::app()->user->setFlash('success', 'jenis: '.$model->K_JENIS);
+				//echo Yii::app()->user->getFlash('success');
+				$model->save();
+				//$k_permintaan = $model->K_PERMINTAAN;
+				
+			}         
+            
+            /*
+            $model->attributes = $_POST['TPermintaanBuku'];
 			
 			$fileUpload=CUploadedFile::getInstance($model,'filee');
 			$path=Yii::getPathOfAlias('webroot').'/upload/'.$fileUpload;
@@ -115,13 +125,13 @@ class PermintaanController extends Controller {
 				$tahun=$data->val($i, 7);
 				$harga=$data->val($i, 8);
 				$link=$data->val($i, 9);
-				$tgl=date('Y-m-d');
+				
 
 		
 				$command = Yii::app()->db->createCommand();
-				$command->insert('Permintaan', array(
+				$command->insert('TPermintaanBuku', array(
 					 //'id_permintaan'=>'',
-					 'id_anggota'=>Yii::app()->session['username'],
+					 
 					 'judul'=>$judul,
 					 'pengarang'=>$pengarang,
 					 'ISBN'=>$isbn,
@@ -141,10 +151,21 @@ class PermintaanController extends Controller {
 			 echo "Jumlah data yang gagal diimport : ".$gagal."</p>";
 			 
 			 unlink($path);
+        
+        */
         }
-        $data = Permintaan::model()->findAll();
-		//$this->render('listPermintaan',array('data'=>$data));
+
+        $command = Yii::app()->db->createCommand('[dbo].[permintaan_bk]');
+    	/*print_r($command->queryAll());
+    	
+		foreach ($command->queryAll() as $row) {
+			echo $row['ID_ANGGOTA'];
+			echo $row['JUDUL'];
+		}
+		*/
+        $data=$command->queryAll();
         $this->render('f_permintaan_f', array('model' => $model,'data'=>$data));
+    
 	}
     
 

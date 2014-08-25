@@ -27,8 +27,8 @@ class TPermintaan extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('ID_ANGGOTA', 'required'),
-			array('K_JENIS', 'numerical', 'integerOnly'=>true),
+			//array('ID_ANGGOTA', 'required'),
+			//array('K_JENIS', 'numerical', 'integerOnly'=>true),
 			array('ID_ANGGOTA', 'length', 'max'=>20),
 			array('TGL_PERMINTAAN', 'safe'),
 			// The following rule is used by search().
@@ -45,6 +45,7 @@ class TPermintaan extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			
 		);
 	}
 

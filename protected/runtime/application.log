@@ -4264,3 +4264,537 @@ Stack trace:
 REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
 HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan
 ---
+2014/08/25 12:47:38 [error] [exception.CDbException] exception 'CDbException' with message 'The table "permintaan" for active record class "Permintaan" cannot be found in the database.' in C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php:2362
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Permintaan))
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(79): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(89): CActiveRecord->__construct()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan
+---
+2014/08/25 13:45:40 [error] [exception.CDbException] exception 'CDbException' with message 'The table "permintaan" for active record class "Permintaan" cannot be found in the database.' in C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php:2362
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Permintaan))
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(79): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(89): CActiveRecord->__construct()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan
+---
+2014/08/25 13:49:38 [error] [exception.CDbException] exception 'CDbException' with message 'The table "permintaan" for active record class "Permintaan" cannot be found in the database.' in C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php:2362
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Permintaan))
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(79): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(89): CActiveRecord->__construct()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan
+---
+2014/08/25 14:56:39 [error] [exception.CException] exception 'CException' with message 'Property "CDbCommand.execute" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(91): CComponent->__get('execute')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#7 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan
+---
+2014/08/25 15:24:00 [error] [php] Invalid argument supplied for foreach() (C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php:95)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (95)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 15:24:00 [error] [php] Invalid argument supplied for foreach() (C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php:95)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (95)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 15:24:49 [error] [php] Invalid argument supplied for foreach() (C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php:95)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (95)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 15:24:50 [error] [php] Invalid argument supplied for foreach() (C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php:95)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (95)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 15:24:51 [error] [php] Invalid argument supplied for foreach() (C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php:95)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (95)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 15:44:43 [error] [exception.CDbException] exception 'CDbException' with message 'The table "permintaan" for active record class "Permintaan" cannot be found in the database.' in C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php:2362
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Permintaan))
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1350): CActiveRecord->getTableSchema()
+#3 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#4 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(156): CActiveRecord->findAll()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#11 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan
+---
+2014/08/25 15:46:07 [error] [exception.CDbException] exception 'CDbException' with message 'The table "TPermintaan" for active record class "Permintaan" cannot be found in the database.' in C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php:2362
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Permintaan))
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(79): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(91): CActiveRecord->__construct()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan
+---
+2014/08/25 15:47:28 [error] [exception.CException] exception 'CException' with message 'Property "TPermintaan.id_anggota" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(145): CComponent->__get('id_anggota')
+#1 C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_permintaan_f.php(90): CActiveRecord->__get('id_anggota')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('f_permintaan_f', Array, true)
+#6 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(159): CController->render('f_permintaan_f', Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#13 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan
+---
+2014/08/25 17:44:52 [error] [php] Missing argument 3 for CHtml::dropDownList(), called in C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_permintaan_f.php on line 43 and defined (C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php:915)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): PermintaanController->renderInternal()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): PermintaanController->renderFile()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): PermintaanController->renderPartial()
+#3 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(162): PermintaanController->render()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+in C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_permintaan_f.php (43)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (162)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 18:14:25 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaan'.. The SQL statement executed was: INSERT INTO [TPermintaan] ([ID_ANGGOTA], [K_JENIS], [TGL_PERMINTAAN]) VALUES (:ID_ANGGOTA, :K_JENIS, :TGL_PERMINTAAN).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (107)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 18:14:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaan'.. The SQL statement executed was: INSERT INTO [TPermintaan] ([ID_ANGGOTA], [K_JENIS], [TGL_PERMINTAAN]) VALUES (:ID_ANGGOTA, :K_JENIS, :TGL_PERMINTAAN)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(1250): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(107): CDbCommand->insert('TPermintaan', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/08/25 18:15:47 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaan'.. The SQL statement executed was: INSERT INTO [TPermintaan] ([ID_ANGGOTA], [K_JENIS], [TGL_PERMINTAAN]) VALUES (:ID_ANGGOTA, :K_JENIS, :TGL_PERMINTAAN).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (107)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 18:15:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaan'.. The SQL statement executed was: INSERT INTO [TPermintaan] ([ID_ANGGOTA], [K_JENIS], [TGL_PERMINTAAN]) VALUES (:ID_ANGGOTA, :K_JENIS, :TGL_PERMINTAAN)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(1250): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(107): CDbCommand->insert('TPermintaan', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/08/25 18:20:28 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaan'.. The SQL statement executed was: INSERT INTO [TPermintaan] ([ID_ANGGOTA], [K_JENIS], [TGL_PERMINTAAN]) VALUES (:ID_ANGGOTA, :K_JENIS, :TGL_PERMINTAAN).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (107)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 18:20:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaan'.. The SQL statement executed was: INSERT INTO [TPermintaan] ([ID_ANGGOTA], [K_JENIS], [TGL_PERMINTAAN]) VALUES (:ID_ANGGOTA, :K_JENIS, :TGL_PERMINTAAN)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(1250): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(107): CDbCommand->insert('TPermintaan', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/08/25 18:23:11 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaan'.. The SQL statement executed was: INSERT INTO [TPermintaan] ([ID_ANGGOTA], [K_JENIS], [TGL_PERMINTAAN]) VALUES (:ID_ANGGOTA, :K_JENIS, :TGL_PERMINTAAN).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (98)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 18:23:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaan'.. The SQL statement executed was: INSERT INTO [TPermintaan] ([ID_ANGGOTA], [K_JENIS], [TGL_PERMINTAAN]) VALUES (:ID_ANGGOTA, :K_JENIS, :TGL_PERMINTAAN)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(1250): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(98): CDbCommand->insert('TPermintaan', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/08/25 18:26:15 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (88)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 18:26:15 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaan'.. The SQL statement executed was: INSERT INTO [TPermintaan] ([ID_ANGGOTA], [K_JENIS], [TGL_PERMINTAAN]) VALUES (:ID_ANGGOTA, :K_JENIS, :TGL_PERMINTAAN).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (98)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 18:26:15 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaan'.. The SQL statement executed was: INSERT INTO [TPermintaan] ([ID_ANGGOTA], [K_JENIS], [TGL_PERMINTAAN]) VALUES (:ID_ANGGOTA, :K_JENIS, :TGL_PERMINTAAN)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(1250): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(98): CDbCommand->insert('TPermintaan', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/08/25 18:37:49 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (88)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 18:38:24 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (88)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 18:38:24 [error] [exception.CException] exception 'CException' with message 'Property "TPermintaan.tgl_request" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(161): CComponent->__set('tgl_request', '2014-08-25')
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(94): CActiveRecord->__set('tgl_request', '2014-08-25')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/08/25 18:39:00 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (88)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 18:39:06 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (88)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 18:41:06 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (88)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 18:41:43 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (88)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 18:41:49 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (88)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 18:42:05 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (88)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 18:42:37 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (88)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 18:45:39 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (88)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 18:45:44 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (88)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 18:50:12 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (88)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 18:54:16 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Cannot insert explicit value for identity column in table 't_permintaan' when IDENTITY_INSERT is set to OFF.. The SQL statement executed was: INSERT INTO [dbo].[t_permintaan] ([K_JENIS], [K_PERMINTAAN], [ID_ANGGOTA], [TGL_PERMINTAAN]) VALUES (:yp0, :yp1, :yp2, :yp3).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (95)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 18:54:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Cannot insert explicit value for identity column in table 't_permintaan' when IDENTITY_INSERT is set to OFF.. The SQL statement executed was: INSERT INTO [dbo].[t_permintaan] ([K_JENIS], [K_PERMINTAAN], [ID_ANGGOTA], [TGL_PERMINTAAN]) VALUES (:yp0, :yp1, :yp2, :yp3)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(95): CActiveRecord->save()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/08/25 18:55:10 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "anggota". The conflict occurred in database "perpus_yii", table "dbo.t_user_request", column 'ID_ANGGOTA'.. The SQL statement executed was: INSERT INTO [dbo].[t_permintaan] ([K_JENIS], [ID_ANGGOTA], [TGL_PERMINTAAN]) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (95)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 18:55:10 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "anggota". The conflict occurred in database "perpus_yii", table "dbo.t_user_request", column 'ID_ANGGOTA'.. The SQL statement executed was: INSERT INTO [dbo].[t_permintaan] ([K_JENIS], [ID_ANGGOTA], [TGL_PERMINTAAN]) VALUES (:yp0, :yp1, :yp2)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(95): CActiveRecord->save()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/08/25 18:55:16 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (86)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 18:55:16 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "anggota". The conflict occurred in database "perpus_yii", table "dbo.t_user_request", column 'ID_ANGGOTA'.. The SQL statement executed was: INSERT INTO [dbo].[t_permintaan] ([ID_ANGGOTA], [K_JENIS], [TGL_PERMINTAAN]) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (95)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 18:55:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "anggota". The conflict occurred in database "perpus_yii", table "dbo.t_user_request", column 'ID_ANGGOTA'.. The SQL statement executed was: INSERT INTO [dbo].[t_permintaan] ([ID_ANGGOTA], [K_JENIS], [TGL_PERMINTAAN]) VALUES (:yp0, :yp1, :yp2)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(95): CActiveRecord->save()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/08/25 19:00:43 [error] [exception.CException] exception 'CException' with message 'Property "TPermintaan.id" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(145): CComponent->__get('id')
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(96): CActiveRecord->__get('id')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/08/25 19:24:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "f_permintaan".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('f_permintaan')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/08/25 19:37:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "f_permintaan".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('f_permintaan')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/08/25 19:50:07 [error] [php] Object of class TPermintaan could not be converted to string (C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php:2155)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_permintaan_f.php(43): dropDownList()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): PermintaanController->renderInternal()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): PermintaanController->renderFile()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): PermintaanController->renderPartial()
+#5 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(165): PermintaanController->render()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+in C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_permintaan_f.php (43)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (165)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 19:50:44 [error] [php] Object of class TPermintaan could not be converted to string (C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php:2155)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_permintaan_f.php(43): dropDownList()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): PermintaanController->renderInternal()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): PermintaanController->renderFile()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): PermintaanController->renderPartial()
+#5 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(165): PermintaanController->render()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+in C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_permintaan_f.php (43)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (165)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 19:51:00 [error] [php] Object of class TPermintaan could not be converted to string (C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php:2155)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_permintaan_f.php(43): dropDownList()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): PermintaanController->renderInternal()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): PermintaanController->renderFile()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): PermintaanController->renderPartial()
+#5 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(165): PermintaanController->render()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+in C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_permintaan_f.php (43)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (165)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 20:06:12 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (86)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 20:10:09 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (86)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 20:10:57 [error] [php] Missing argument 3 for CHtml::dropDownList(), called in C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_permintaan_f.php on line 42 and defined (C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php:915)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): PermintaanController->renderInternal()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): PermintaanController->renderFile()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): PermintaanController->renderPartial()
+#3 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(167): PermintaanController->render()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+in C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_permintaan_f.php (42)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (167)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/25 20:11:35 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (86)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
