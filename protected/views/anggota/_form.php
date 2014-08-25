@@ -4,19 +4,16 @@
 /* @var $form CActiveForm */
 ?>
 
-<!-- Main content -->
-                
- 
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'anggota-formanggota-form',
+	'id'=>'anggota-form',
 	// Please note: When you enable ajax validation, make sure the corresponding
 	// controller action is handling ajax validation correctly.
-	// See class documentation of CActiveForm for details on this,
-	// you need to use the performAjaxValidation()-method described there.
+	// There is a call to performAjaxValidation() commented in generated controller code.
+	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<div class="box box-primary">
+  <div class="box box-primary">
   	<div class="box-header"><h3 class="box-title">Register Anggota Baru</h3></div>
   	<!-- /.box-header -->
   	<!-- form start -->
@@ -51,10 +48,10 @@
                         <div class="form-group">
                             <tr>
                             <td width="130" class="form-group"><?php echo $form->labelEx($model,'k_fakultas'); ?></td>
-                            <td><?php echo $form->dropDownList($model,'fakultas',$model->getFakultas(),
-							array('class'=>'form-control')
+                            <td><?php echo $form->dropDownList($model,'k_fakultas',$model->getFakultas(),
+							array('maxlength'=>50, 'class'=>'form-control')
                                     ); ?></td>
-                            <?php echo $form->error($model,'fakultas'); ?>
+                            <?php echo $form->error($model,'k_fakultas'); ?>
                             </tr>
                         </div>
                     
@@ -62,7 +59,7 @@
                             <tr>
                             <td width="130" class="form-group"><?php echo $form->labelEx($model,'k_prodi'); ?></td>
                             <td><?php echo $form->dropDownList($model,'k_prodi',$model->getProdi(),
-							array('class'=>'form-control')); ?></td>
+							array('maxlength'=>50, 'class'=>'form-control')); ?></td>
                             <?php echo $form->error($model,'k_prodi'); ?>
                             </tr>
                         </div>
@@ -71,7 +68,7 @@
                             <tr>
                             <td width="130" class="form-group"><?php echo $form->labelEx($model,'k_jenjang'); ?></td>
                             <td><?php echo $form->dropDownList($model,'k_jenjang',$model->getJenjang(),
-							array('class'=>'form-control')); ?></td>
+							array('maxlength'=>50, 'class'=>'form-control')); ?></td>
                             <?php echo $form->error($model,'k_jenjang'); ?>
                             </tr>
                         </div>
