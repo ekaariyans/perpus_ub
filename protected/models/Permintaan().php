@@ -7,21 +7,21 @@
  * @property integer $id_permintaan
  * @property string $id_anggota
  * @property string $judul
- * @property string $pengarang
- * @property string $ISBN
  * @property string $jenis
- * @property string $bahasa
+ * @property string $pengarang
  * @property string $penerbit
  * @property integer $tahun_terbit
- * @property string $harga
- * @property string $link_website
- * @property string $tgl_request
+ * @property string $kota
+ * @property string $edisi
+ * @property string $isbn
+ * @property string $keterangan
  */
 class Permintaan extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
+	 public $filee;
 	public function tableName()
 	{
 		return 'permintaan';
@@ -29,19 +29,18 @@ class Permintaan extends CActiveRecord
 
 	/**
 	 * @return array validation rules for model attributes.
+	 judul, jenis, pengarang, penerbit, tahun_terbit, kota, edisi, isbn, keterangan
 	 */
 	public function rules()
 	{
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('judul, pengarang, ISBN, jenis, bahasa, penerbit, tahun_terbit, harga', 'required'),
-			array('id_permintaan, tahun_terbit', 'numerical', 'integerOnly'=>true),
-			array('id_anggota', 'length', 'max'=>20),
-			array('judul, pengarang, ISBN, jenis, bahasa, penerbit, harga', 'length', 'max'=>50),
-			array('link_website', 'length', 'max'=>250),
-			array('tgl_request', 'safe'),
-			array('filee','file','types'=>'xls,xlsx','allowEmpty' => true),
+			//array('judul, pengarang, ISBN, jenis, bahasa, penerbit, tahun_terbit, harga', 'required'),
+			//array('tahun_terbit', 'numerical', 'integerOnly'=>true),
+			//array('judul, pengarang, ISBN, jenis, bahasa, penerbit', 'length', 'max'=>50),
+			//array('link_website','max'=>250),
+			array('filee','file','types'=>'xls','allowEmpty' => true),
 			array('filee','safe','on'=>'excel'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -70,14 +69,14 @@ class Permintaan extends CActiveRecord
 			'id_anggota' => 'Id Anggota',
 			'judul' => 'Judul',
 			'pengarang' => 'Pengarang',
-			'ISBN' => 'Isbn',
+			'ISBN' => 'ISBN',
 			'jenis' => 'Jenis',
 			'bahasa' => 'Bahasa',
 			'penerbit' => 'Penerbit',
 			'tahun_terbit' => 'Tahun Terbit',
 			'harga' => 'Harga',
 			'link_website' => 'Link Website',
-			'tgl_request' => 'Tgl Request',
+			'tgl_request' => 'Tgl. Request',
 		);
 	}
 
@@ -92,7 +91,7 @@ class Permintaan extends CActiveRecord
 	 *
 	 * @return CActiveDataProvider the data provider that can return the models
 	 * based on the search/filter conditions.
-	 */
+	 
 	public function search()
 	{
 		// @todo Please modify the following code to remove attributes that should not be searched.
@@ -102,21 +101,21 @@ class Permintaan extends CActiveRecord
 		$criteria->compare('id_permintaan',$this->id_permintaan);
 		$criteria->compare('id_anggota',$this->id_anggota,true);
 		$criteria->compare('judul',$this->judul,true);
-		$criteria->compare('pengarang',$this->pengarang,true);
-		$criteria->compare('ISBN',$this->ISBN,true);
 		$criteria->compare('jenis',$this->jenis,true);
-		$criteria->compare('bahasa',$this->bahasa,true);
+		$criteria->compare('pengarang',$this->pengarang,true);
 		$criteria->compare('penerbit',$this->penerbit,true);
 		$criteria->compare('tahun_terbit',$this->tahun_terbit);
-		$criteria->compare('harga',$this->harga,true);
-		$criteria->compare('link_website',$this->link_website,true);
-		$criteria->compare('tgl_request',$this->tgl_request,true);
+		$criteria->compare('kota',$this->kota,true);
+		$criteria->compare('edisi',$this->edisi,true);
+		$criteria->compare('isbn',$this->isbn,true);
+		$criteria->compare('bahasa',$this->bahasa,true);
+		$criteria->compare('keterangan',$this->keterangan,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
 	}
-
+*/
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!

@@ -49,18 +49,19 @@ class PermintaanController extends Controller {
             $model->attributes = $_POST['Permintaan'];
             if ($model->validate()) {
                 // form inputs PERMINTAAN BUKU BARU
-                $model->id_anggota = $_POST['Permintaan']['id_anggota'];
+                $model->id_anggota=Yii::app()->session['username'];
                 $model->judul = $_POST['Permintaan']['judul'];
                 $model->jenis = $_POST['Permintaan']['jenis'];
                 $model->pengarang = $_POST['Permintaan']['pengarang'];
                 $model->penerbit = $_POST['Permintaan']['penerbit'];
                 $model->tahun_terbit = $_POST['Permintaan']['tahun_terbit'];
-                $model->kota = $_POST['Permintaan']['kota'];
-                $model->edisi = $_POST['Permintaan']['edisi'];
-                $model->isbn = $_POST['Permintaan']['isbn'];
-                $model->keterangan = $_POST['Permintaan']['keterangan'];
+                $model->bahasa = $_POST['Permintaan']['bahasa'];
+                $model->harga = $_POST['Permintaan']['harga'];
+                $model->ISBN = $_POST['Permintaan']['ISBN'];
+                $model->link_website = $_POST['Permintaan']['link_website'];
+                $model->tgl_request=date('Y-m-d');
                 $model->save();
-                $this->redirect(array('Permintaan/Index'));
+                $this->redirect(array('Permintaan/f_permintaan#Fakultas'));
                 return;
             }
         }
@@ -106,28 +107,31 @@ class PermintaanController extends Controller {
 			for ($i=2; $i<=$baris; $i++)
 			{
 				$judul = $data->val($i, 1);
-				$jenis = $data->val($i, 2);
-				$pengarang = $data->val($i, 3);
-				$penerbit = $data->val($i, 4);
-				$tahun=$data->val($i, 5);
-				$kota=$data->val($i, 6);
-				$edisi=$data->val($i, 7);
-				$isbn=$data->val($i, 8);
-				$ket=$data->val($i, 9);
-				
+				$pengarang = $data->val($i, 2);
+				$isbn=$data->val($i, 3);
+				$jenis = $data->val($i, 4);
+				$bahasa=$data->val($i, 5);
+				$penerbit = $data->val($i, 6);
+				$tahun=$data->val($i, 7);
+				$harga=$data->val($i, 8);
+				$link=$data->val($i, 9);
+				$tgl=date('Y-m-d');
+
+		
 				$command = Yii::app()->db->createCommand();
 				$command->insert('Permintaan', array(
-					 'id_permintaan'=>'',
-					 'id_anggota'=>$_POST['Permintaan']['id_anggota'],
+					 //'id_permintaan'=>'',
+					 'id_anggota'=>Yii::app()->session['username'],
 					 'judul'=>$judul,
-					 'jenis'=>$jenis,
 					 'pengarang'=>$pengarang,
+					 'ISBN'=>$isbn,
+					 'jenis'=>$jenis,
+					 'bahasa'=>$bahasa,
 					 'penerbit'=>$penerbit,
 					 'tahun_terbit'=>$tahun,
-					 'kota'=>$kota,
-					 'edisi'=>$edisi,
-					 'isbn'=>$isbn,
-					 'keterangan'=>$ket,
+					 'harga'=>$harga,
+					 'link_website'=>$link,
+					 'tgl_request'=>$tgl,
 			 	));
 			 if ($command) $sukses++;
 			 else $gagal++;

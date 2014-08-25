@@ -7,9 +7,16 @@
 
 <!-- Tab panes -->
 <div class="tab-content">
-    <div class="tab-pane active" id="form">FOrm
-
-
+    <div class="tab-pane active" id="form">
+    <br />
+	Form Permintaan Buku Secara Kolektif :
+	<a href="<?php echo Yii::app()->request->baseUrl.'/assets/TemplateForm/FormReqBuku.xls'; ?>" class="btn btn-default btn-flat">Download</a>	
+	<br />
+	Form Permintaan Serial Secara Kolektif :
+	<a href="<?php Yii::app()->request->baseUrl.'/assets/TemplateForm/FormReqSerial.xls'; ?>" class="btn btn-default btn-flat">Download</a>
+    <br />
+	Form Permintaan Jurnal Secara Kolektif :
+	<a href="<?php Yii::app()->request->baseUrl.'/assets/TemplateForm/FormReqJurnal.xls'; ?>" class="btn btn-default btn-flat">Download</a>
     </div><!--TAB FORM-->
 
 
@@ -32,13 +39,6 @@
 
             <?php echo $form->errorSummary($model); ?>
 
-			<div class="form-group">
-				<?php echo $form->labelEx($model, 'id_anggota', array('class' => 'col-sm-2 control-label')); ?>
-				<div class="col-sm-10">
-					<?php echo $form->textField($model, 'id_anggota', array('class' => 'form-control', 'placeholder' => 'ID Anggota')); ?>
-					<?php echo $form->error($model, 'id_anggota'); ?>
-				</div>
-			</div>
 
             <div class="form-group">
                 <label class="col-sm-2 control-label">Masukkan Data Excel :</label>
@@ -78,10 +78,7 @@
                                 <th>Pengarang</th>
                                 <th>Penerbit</th>
                                 <th>Tahun Terbit</th>
-                                <th>Kota</th>
-                                <th>Edisi</th>
-                                <th>ISBN</th>
-                                <th>Keterangan</th>
+                
                             </tr>
                         </thead>
                         <tbody>
@@ -93,10 +90,7 @@
                                     <td><?php echo $model->pengarang; ?></td>
                                     <td><?php echo $model->penerbit; ?></td>
                                     <td><?php echo $model->tahun_terbit; ?></td>
-                                    <td><?php echo $model->kota; ?></td>
-                                    <td><?php echo $model->edisi; ?></td>
-                                    <td><?php echo $model->isbn; ?></td>
-                                    <td><?php echo $model->keterangan; ?></td>
+                            
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>

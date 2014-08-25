@@ -29,26 +29,10 @@
             <h4 class="box-title">PERMINTAAN BUKU BARU</h4>
         </div>
         <div class="form-group">
-            <?php echo $form->labelEx($model, 'id_anggota', array('class' => 'col-sm-2 control-label')); ?>
-            <div class="col-sm-10">
-                <?php echo $form->textField($model, 'id_anggota', array('class' => 'form-control', 'placeholder' => 'ID Anggota')); ?>
-                <?php echo $form->error($model, 'id_anggota'); ?>
-            </div>
-        </div>
-
-        <div class="form-group">
             <?php echo $form->labelEx($model, 'judul', array('class' => 'col-sm-2 control-label')); ?>
             <div class="col-sm-10">
                 <?php echo $form->textField($model, 'judul', array('class' => 'form-control', 'placeholder' => 'Judul Buku')); ?>
                 <?php echo $form->error($model, 'judul'); ?>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <?php echo $form->labelEx($model, 'jenis', array('class' => 'col-sm-2 control-label')); ?>
-            <div class="col-sm-10">
-                <?php echo $form->textField($model, 'jenis', array('class' => 'form-control', 'placeholder' => 'Jenis Bahan Pustaka (\'Buku\', \'Majalah\',...)')); ?>
-                <?php echo $form->error($model, 'jenis'); ?>
             </div>
         </div>
 
@@ -59,7 +43,31 @@
                 <?php echo $form->error($model, 'pengarang'); ?>
             </div>
         </div>
+        
+        <div class="form-group">
+            <?php echo $form->labelEx($model, 'ISBN', array('class' => 'col-sm-2 control-label')); ?>
+            <div class="col-sm-10">
+                <?php echo $form->textField($model, 'ISBN', array('class' => 'form-control', 'placeholder' => 'ISBN Buku')); ?>
+                <?php echo $form->error($model, 'ISBN'); ?>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <?php echo $form->labelEx($model, 'jenis', array('class' => 'col-sm-2 control-label')); ?>
+            <div class="col-sm-10">
+                <?php echo $form->textField($model, 'jenis', array('class' => 'form-control', 'placeholder' => 'Jenis Bahan Pustaka (\'Cetak\', \'Elektronik\')')); ?>
+                <?php echo $form->error($model, 'jenis'); ?>
+            </div>
+        </div>
 
+		<div class="form-group">
+            <?php echo $form->labelEx($model, 'bahasa', array('class' => 'col-sm-2 control-label')); ?>
+            <div class="col-sm-10">
+                <?php echo $form->textField($model, 'bahasa', array('class' => 'form-control', 'placeholder' => 'Bahasa yang Digunakan Buku')); ?>
+                <?php echo $form->error($model, 'bahasa'); ?>
+            </div>
+        </div>
+        
         <div class="form-group">
             <?php echo $form->labelEx($model, 'penerbit', array('class' => 'col-sm-2 control-label')); ?>
             <div class="col-sm-10">
@@ -77,36 +85,20 @@
         </div>
 
         <div class="form-group">
-            <?php echo $form->labelEx($model, 'kota', array('class' => 'col-sm-2 control-label')); ?>
+            <?php echo $form->labelEx($model, 'harga', array('class' => 'col-sm-2 control-label')); ?>
             <div class="col-sm-10">
-                <?php echo $form->textField($model, 'kota', array('class' => 'form-control', 'placeholder' => 'Kota Penerbitan')); ?>
-                <?php echo $form->error($model, 'kota'); ?>
+                <?php echo $form->textField($model, 'harga', array('class' => 'form-control', 'placeholder' => 'Judul Pengarang Buku')); ?>
+                <?php echo $form->error($model, 'harga'); ?>
             </div>
-        </div>
+        </div>       
 
         <div class="form-group">
-            <?php echo $form->labelEx($model, 'edisi', array('class' => 'col-sm-2 control-label')); ?>
+            <?php echo $form->labelEx($model, 'link_website', array('class' => 'col-sm-2 control-label')); ?>
             <div class="col-sm-10">
-                <?php echo $form->textField($model, 'edisi', array('class' => 'form-control', 'placeholder' => 'Edisi Buku(\'Pertama\',\'Kedua\',...)')); ?>
-                <?php echo $form->error($model, 'edisi'); ?>
+                <?php echo $form->textField($model, 'link_website', array('class' => 'form-control', 'placeholder' => 'Link Website Buku')); ?>
+                <?php echo $form->error($model, 'link_website'); ?>
             </div>
-        </div>
-
-        <div class="form-group">
-            <?php echo $form->labelEx($model, 'isbn', array('class' => 'col-sm-2 control-label')); ?>
-            <div class="col-sm-10">
-                <?php echo $form->textField($model, 'isbn', array('class' => 'form-control', 'placeholder' => 'ISBN Buku')); ?>
-                <?php echo $form->error($model, 'isbn'); ?>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <?php echo $form->labelEx($model, 'keterangan', array('class' => 'col-sm-2 control-label')); ?>
-            <div class="col-sm-10">
-                <?php echo $form->textArea($model, 'keterangan', array('class' => 'form-control', 'rows' => '3', 'placeholder' => 'Keterangan, Catatan, dll.')); ?>
-                 <?php echo $form->error($model, 'keterangan'); ?>
-            </div>
-        </div>
+        </div>     
 
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
@@ -131,14 +123,15 @@
     <tr>
     <th>ID Anggota</th>
     <th>Judul</th>
-    <th>Jenis</th>
     <th>Pengarang</th>
+    <th>ISBN</th>
+    <th>Jenis</th>
+    <th>Bahasa</th>
     <th>Penerbit</th>
     <th>Tahun Terbit</th>
-    <th>Kota</th>
-    <th>Edisi</th>
-    <th>ISBN</th>
-    <th>Keterangan</th>
+	<th>Harga</th>
+    <th>Link</th>
+    <th>Tgl. Request</th>
     </tr>
     </thead>
     <tbody>
@@ -146,14 +139,15 @@
     <tr>
     <td><?php echo $model->id_anggota; ?></td>
     <td><?php echo $model->judul; ?></td>
-    <td><?php echo $model->jenis; ?></td>
     <td><?php echo $model->pengarang; ?></td>
+    <td><?php echo $model->ISBN; ?></td>
+    <td><?php echo $model->jenis; ?></td>
+    <td><?php echo $model->bahasa; ?></td>
     <td><?php echo $model->penerbit; ?></td>
     <td><?php echo $model->tahun_terbit; ?></td>
-    <td><?php echo $model->kota; ?></td>
-    <td><?php echo $model->edisi; ?></td>
-    <td><?php echo $model->isbn; ?></td>
-    <td><?php echo $model->keterangan; ?></td>
+	<td><?php echo $model->harga; ?></td>
+    <td><?php echo $model->link_website; ?></td>
+    <td><?php echo $model->tgl_request; ?></td>
     </tr>
     <?php endforeach; ?>
     </tbody>
