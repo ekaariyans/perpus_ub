@@ -1,5 +1,9 @@
 	<h2>Daftar Permintaan Buku</h2>
-<?php    echo CHtml::link('Form Permintaan',array('pengolahan/formPermintaan')); ?>
+<?php    
+	echo CHtml::link('Form Permintaan',array('pengolahan/formPermintaan')); 
+	echo " | ";
+	echo CHtml::link('Form Upload',array('Upload/Upload')); 
+?>
 	<table class="table table-striped">
     <tr>
     <th>ID Anggota</th>

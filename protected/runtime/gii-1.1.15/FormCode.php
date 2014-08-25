@@ -1,5 +1,5 @@
 <?php
 return array (
   'template' => 'default',
-  'viewPath' => 'application.views.pengolahan',
+  'viewPath' => 'application.views.upload',
 );
