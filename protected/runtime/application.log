@@ -1078,3 +1078,124 @@ Stack trace:
 REQUEST_URI=/perpus_ub/index.php?r=pengolahan/daftarpermintaan
 HTTP_REFERER=http://localhost/perpus_ub/
 ---
+2014/08/23 11:40:23 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'library.permintaaan' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `permintaaan`.
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/23 13:41:30 [error] [php] Undefined variable: model (C:\xampp\htdocs\perpus_ub\protected\views\tanggal\tanggal.php:20)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): TanggalController->renderFile()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): TanggalController->renderPartial()
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\TanggalController.php(10): TanggalController->render()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): TanggalController->actionTanggal()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): TanggalController->runAction()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): TanggalController->runActionWithFilters()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): TanggalController->run()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=tanggal/tanggal
+in C:\xampp\htdocs\perpus_ub\protected\views\tanggal\tanggal.php (20)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\TanggalController.php (10)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/23 14:45:37 [error] [php] include(pengolahan.php): failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\controllers\PengolahanController.php(17): spl_autoload_call()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PengolahanController->actionFormPermintaan()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PengolahanController->runAction()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PengolahanController->runActionWithFilters()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PengolahanController->run()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=pengolahan/formPermintaan
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PengolahanController.php (17)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/23 15:27:43 [error] [exception.CException] exception 'CException' with message 'Property "Pengolahan.id_nggota" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(145): CComponent->__get('id_nggota')
+#1 C:\xampp\htdocs\perpus_ub\protected\views\pengolahan\listPermintaan.php(22): CActiveRecord->__get('id_nggota')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('listPermintaan', Array, true)
+#6 C:\xampp\htdocs\perpus_ub\protected\controllers\PengolahanController.php(13): CController->render('listPermintaan', Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PengolahanController->actionDaftarPermintaan()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('daftarpermintaa...')
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('pengolahan/daft...')
+#13 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/perpus_ub/index.php?r=pengolahan/daftarpermintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=pengolahan/formPermintaan
+---
+2014/08/23 16:52:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "barangdatang".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('barangdatang')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('barangdatang')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('pengolahan/bara...')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=pengolahan/barangdatang
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=pengolahan/daftarpermintaan
+---
+2014/08/23 18:35:07 [error] [exception.CException] exception 'CException' with message 'Property "CActiveForm.class" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWidgetFactory.php(161): CComponent->__set('class', 'form-horizontal')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(PengolahanController), 'CActiveForm', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(189): CBaseController->createWidget('CActiveForm', Array)
+#3 C:\xampp\htdocs\perpus_ub\protected\views\pengolahan\formPermintaan.php(17): CBaseController->beginWidget('CActiveForm', Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('formPermintaan', Array, true)
+#8 C:\xampp\htdocs\perpus_ub\protected\controllers\PengolahanController.php(50): CController->render('formPermintaan', Array)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PengolahanController->actionFormPermintaan()
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('formPermintaan')
+#14 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('pengolahan/form...')
+#15 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/perpus_ub/index.php?r=pengolahan/formPermintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=pengolahan/daftarpermintaan
+---
+2014/08/24 04:36:36 [error] [php] Use of undefined constant pengolahan - assumed 'pengolahan' (C:\xampp\htdocs\perpus_ub\protected\controllers\PengolahanController.php:47)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PengolahanController->runAction()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PengolahanController->runActionWithFilters()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PengolahanController->run()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=pengolahan/formPermintaan
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PengolahanController.php (47)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/08/24 08:27:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "barangdatang".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('barangdatang')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('barangdatang')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('pengolahan/bara...')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=pengolahan/barangdatang
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=Pengolahan/DaftarPermintaan
+---
+2014/08/24 08:27:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "barangdatang".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('barangdatang')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('barangdatang')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('pengolahan/bara...')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=pengolahan/barangdatang
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=Pengolahan/DaftarPermintaan
+---
