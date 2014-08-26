@@ -128,8 +128,8 @@
 ?>
 	<table id="example2" class="table table-bordered table-striped">
     <thead>
-                                            <tr>
-                                                <th>ID Anggota</th>
+    <tr>
+    <th>ID Anggota</th>
     <th>Judul</th>
     <th>Jenis</th>
     <th>Pengarang</th>
@@ -139,9 +139,9 @@
     <th>Edisi</th>
     <th>ISBN</th>
     <th>Keterangan</th>
-                                            </tr>
-                                        </thead>
-                                         <tbody>
+    </tr>
+    </thead>
+    <tbody>
     <?php foreach ($data as $model): ?>
     <tr>
     <td><?php echo $model->id_anggota; ?></td>

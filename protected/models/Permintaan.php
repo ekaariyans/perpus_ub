@@ -21,6 +21,7 @@ class Permintaan extends CActiveRecord
 	/**
 	 * @return string the associated database table name
 	 */
+	 public $filee;
 	public function tableName()
 	{
 		return 'permintaan';
@@ -40,6 +41,8 @@ class Permintaan extends CActiveRecord
 			array('id_anggota, jenis, kota', 'length', 'max'=>20),
 			array('judul, pengarang, penerbit, isbn', 'length', 'max'=>50),
 			array('edisi', 'length', 'max'=>10),
+			array('filee','file','types'=>'xls','allowEmpty' => true),
+			array('filee','safe','on'=>'excel'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id_permintaan, id_anggota, judul, jenis, pengarang, penerbit, tahun_terbit, kota, edisi, isbn, keterangan', 'safe', 'on'=>'search'),
