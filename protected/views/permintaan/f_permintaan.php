@@ -132,15 +132,18 @@
 	</div>
     
     <div class="form-group">
+        <div class="col-sm-2 control-label"><b>Masukkan Data Excel</b></div>
         <div class="col-sm-10">
-        <b>Masukkan Data Excel :</b>
-        <?php echo $form->fileField($model,'filee',array('size'=>60,'maxlength'=>200,'class' => 'col-sm-offset-2')); ?>
+        <?php echo $form->fileField($model,'filee',array('size'=>60, 'maxlength'=>200,'class' => 'btn btn-default')); ?>
        </div>
-    </div>
-
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Submit'); ?>
+           
+	<div class="form-group">
+	<div class="col-sm-2 control-label">
+		<?php echo CHtml::submitButton('Submit',array('class' => 'btn btn-default')); ?>
 	</div>
+    </div>
+    
+    </div>
   </div>
   </div>
 </div>
