@@ -2,7 +2,9 @@
 <?php    
 	echo CHtml::link('Form Permintaan',array('pengolahan/formPermintaan')); 
 	echo " | ";
-	echo CHtml::link('Form Upload',array('Upload/Upload')); 
+	echo CHtml::link('Form Upload',array('Upload/Upload'));
+	echo " | "; 
+	echo CHtml::link('Cetak dokumen',array('cetak/cetak'));
 ?>
 	<table class="table table-striped">
     <tr>
