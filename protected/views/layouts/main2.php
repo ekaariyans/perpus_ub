@@ -37,7 +37,7 @@
         <header class="header">
             <a href="index.html" class="logo">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
-                Perpustaan UB
+                Perpustakan UB
             </a>
             <!-- Header Navbar: style can be found in header.less -->
             <nav class="navbar navbar-static-top" role="navigation">
@@ -378,7 +378,7 @@
                                 $this->widget('zii.widgets.CMenu', array(
                                     'items' => array(
                                         array('label' => 'MAHASISWA', 'url' => array('/permintaan/f_permintaan')),
-                                        array('label' => 'FAKULATAS', 'url' => array('/permintaan/f_permintaan_f')),
+                                        array('label' => 'FAKULTAS', 'url' => array('/permintaan/f_permintaan_f')),
                                     ),
                                 ));
                                 ?>
