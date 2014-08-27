@@ -1851,3 +1851,507 @@ Stack trace:
 REQUEST_URI=/perpus_ub/index.php?r=anggota/create
 HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
 ---
+2014/08/27 04:57:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:58:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:58:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:58:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:58:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:58:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:58:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:58:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:58:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:58:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:58:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:58:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:58:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:58:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:58:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:58:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:58:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:58:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:58:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:58:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:58:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:58:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:58:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:58:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:58:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:58:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:58:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:58:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:58:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:59:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:59:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:59:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:59:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:59:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:59:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:59:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:59:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:59:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:59:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:59:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:59:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:59:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:59:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:59:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:59:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:59:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:59:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:59:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:59:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:59:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:59:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 04:59:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 05:01:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 05:01:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 05:01:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 05:01:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 05:01:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 05:01:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 05:01:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 05:01:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 05:01:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 05:01:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
+2014/08/27 05:01:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "site".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/
+---
