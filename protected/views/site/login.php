@@ -92,7 +92,7 @@ $this->breadcrumbs=array(
 		'validateOnSubmit'=>true,
 	),
 )); ?>
-<div class="container" style="margin-top:30px">
+<!-- <div class="container" style="margin-top:30px"> -->
 <div class="col-md-4">
     <div class="panel panel-default">
   <div class="panel-heading"><h3 class="panel-title"><strong>Sign In </strong></h3></div>
@@ -126,11 +126,11 @@ $this->breadcrumbs=array(
       </div>
   </div>
   </div>
-</div>
+<!--</div> -->
 <?php $this->endWidget(); ?>
 </div><!-- form -->
 
-
+<!--
 <div class="col-md-4">
 <div class="login-panel panel panel-default">
                     <div class="panel-heading">
@@ -151,10 +151,11 @@ $this->breadcrumbs=array(
                                     </label>
                                 </div>
                                 <!-- Change this to a button or input when using this as a form -->
-                                <a href="javascript:;" class="btn btn-sm btn-success">Login</a>
+                                <!-- <a href="javascript:;" class="btn btn-sm btn-success">Login</a>
                             </fieldset>
                         </form>
                     </div>
                 </div>
 </div>
 </div>
+-->

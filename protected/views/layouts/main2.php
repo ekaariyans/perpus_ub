@@ -54,14 +54,14 @@
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="glyphicon glyphicon-user"></i>
-                                <span>Faisal P <i class="caret"></i></span>
+                                <span><?php echo Yii::app()->session['username'];?><i class="caret"></i></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header bg-light-blue">
                                     <img src="<?php echo Yii::app()->request->baseUrl; ?>/assets/img/avatar5.png" class="img-circle" alt="User Image" />
                                     <p>
-                                        Faisal P - Web Developer
+                                        <?php echo Yii::app()->session['username'];?> - Web Developer
                                         <small>Member since jul. 2014</small>
                                     </p>
                                 </li>
@@ -83,7 +83,7 @@
                                         <a href="#" class="btn btn-default btn-flat">Profile</a>
                                     </div>
                                     <div class="pull-right">
-                                        <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                        <a href="index.php?r=site/logout" class="btn btn-default btn-flat">Sign out</a>
                                     </div>
                                 </li>
                             </ul>
@@ -104,7 +104,7 @@
                             <img src="<?php echo Yii::app()->request->baseUrl; ?>/assets/img/avatar5.png" class="img-circle" alt="User Image" />
                         </div>
                         <div class="pull-left info">
-                            <p>Hello, Admin</p>
+                            <p>Hello, <?php echo Yii::app()->session['username'];?></p>
 
                             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                         </div>
@@ -139,7 +139,7 @@
                                 <?php
                                 $this->widget('zii.widgets.CMenu', array(
                                     'items' => array(
-                                        array('label' => 'Pendaftaran Anggota Baru', 'url' => array('/anggota/create')),
+                                        array('label' => 'Pendaftaran Anggota Baru', 'url' => array('c')),
                                         array('label' => 'Daftar anggota', 'url' => array('/anggota/view')),
                                     ),
                                 ));
@@ -205,6 +205,7 @@
                                                 <li class="treeview">
                                                     <a href="#">
                                                         <i class="fa fa-laptop"></i>
+														
                                                         <span>UI Elements</span>
                                                         <i class="fa fa-angle-left pull-right"></i>
                                                     </a>

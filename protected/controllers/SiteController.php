@@ -102,10 +102,6 @@ class SiteController extends Controller
 				//unset(Yii::app()->session['username']);
 				$this->redirect('index.php?r=permintaan');
 				//$this->redirect($this->createUrl('permintaan'));
-				
-
-
-			
 			}
 				//echo "Halo ".$_POST['LoginForm']['username'];
 		//		
