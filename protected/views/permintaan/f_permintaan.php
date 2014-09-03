@@ -28,76 +28,12 @@
         <div class="box-header">
             <h4 class="box-title">PERMINTAAN BUKU BARU</h4>
         </div>
-        <div class="form-group">
-            <?php echo $form->labelEx($model, 'judul', array('class' => 'col-sm-2 control-label')); ?>
-            <div class="col-sm-10">
-                <?php echo $form->textField($model, 'judul', array('class' => 'form-control', 'placeholder' => 'Judul Buku')); ?>
-                <?php echo $form->error($model, 'judul'); ?>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <?php echo $form->labelEx($model, 'pengarang', array('class' => 'col-sm-2 control-label')); ?>
-            <div class="col-sm-10">
-                <?php echo $form->textField($model, 'pengarang', array('class' => 'form-control', 'placeholder' => 'Judul Pengarang Buku')); ?>
-                <?php echo $form->error($model, 'pengarang'); ?>
-            </div>
-        </div>
-        
-        <div class="form-group">
-            <?php echo $form->labelEx($model, 'ISBN', array('class' => 'col-sm-2 control-label')); ?>
-            <div class="col-sm-10">
-                <?php echo $form->textField($model, 'ISBN', array('class' => 'form-control', 'placeholder' => 'ISBN Buku')); ?>
-                <?php echo $form->error($model, 'ISBN'); ?>
-            </div>
-        </div>
-        
-        <div class="form-group">
-            <?php echo $form->labelEx($model, 'jenis', array('class' => 'col-sm-2 control-label')); ?>
-            <div class="col-sm-10">
-                <?php echo $form->textField($model, 'jenis', array('class' => 'form-control', 'placeholder' => 'Jenis Bahan Pustaka (\'Cetak\', \'Elektronik\')')); ?>
-                <?php echo $form->error($model, 'jenis'); ?>
-            </div>
-        </div>
-
-		<div class="form-group">
-            <?php echo $form->labelEx($model, 'bahasa', array('class' => 'col-sm-2 control-label')); ?>
-            <div class="col-sm-10">
-                <?php echo $form->textField($model, 'bahasa', array('class' => 'form-control', 'placeholder' => 'Bahasa yang Digunakan Buku')); ?>
-                <?php echo $form->error($model, 'bahasa'); ?>
-            </div>
-        </div>
-        
-        <div class="form-group">
-            <?php echo $form->labelEx($model, 'penerbit', array('class' => 'col-sm-2 control-label')); ?>
-            <div class="col-sm-10">
-                <?php echo $form->textField($model, 'penerbit', array('class' => 'form-control', 'placeholder' => 'Nama Penerbit Buku')); ?>
-                <?php echo $form->error($model, 'penerbit'); ?>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <?php echo $form->labelEx($model, 'tahun_terbit', array('class' => 'col-sm-2 control-label')); ?>
-            <div class="col-sm-10">
-                <?php echo $form->textField($model, 'tahun_terbit', array('class' => 'form-control', 'placeholder' => 'Tahun Terbit Buku')); ?>
-                <?php echo $form->error($model, 'tahun_terbit'); ?>
-            </div>
-        </div>
-
-        <div class="form-group">
-            <?php echo $form->labelEx($model, 'harga', array('class' => 'col-sm-2 control-label')); ?>
-            <div class="col-sm-10">
-                <?php echo $form->textField($model, 'harga', array('class' => 'form-control', 'placeholder' => 'Judul Pengarang Buku')); ?>
-                <?php echo $form->error($model, 'harga'); ?>
-            </div>
-        </div>       
-
-        <div class="form-group">
-            <?php echo $form->labelEx($model, 'link_website', array('class' => 'col-sm-2 control-label')); ?>
-            <div class="col-sm-10">
-                <?php echo $form->textField($model, 'link_website', array('class' => 'form-control', 'placeholder' => 'Link Website Buku')); ?>
-                <?php echo $form->error($model, 'link_website'); ?>
-            </div>
+		
+		<?php echo $form->errorSummary($model); ?>
+            	<div class="form-group">
+                <label class="col-sm-2 control-label">Select</label>
+                  	<?php echo $form->dropDownList($model, 'K_JENIS', array('1'=>'Buku', '2'=>'Jurnal', '3'=>'Serial')); ?>
+                  	<?php echo $form->error($model, 'K_JENIS'); ?>
         </div>     
 
         <div class="form-group">
@@ -119,39 +55,37 @@
 	echo CHtml::link('Cetak dokumen',array('cetak/cetak'));
 ?>
 	<table id="example2" class="table table-bordered table-striped">
-    <thead>
-    <tr>
-    <th>ID Anggota</th>
-    <th>Judul</th>
-    <th>Pengarang</th>
-    <th>ISBN</th>
-    <th>Jenis</th>
-    <th>Bahasa</th>
-    <th>Penerbit</th>
-    <th>Tahun Terbit</th>
-	<th>Harga</th>
-    <th>Link</th>
-    <th>Tgl. Request</th>
-    </tr>
-    </thead>
-    <tbody>
-    <?php foreach ($data as $model): ?>
-    <tr>
-    <td><?php echo $model->id_anggota; ?></td>
-    <td><?php echo $model->judul; ?></td>
-    <td><?php echo $model->pengarang; ?></td>
-    <td><?php echo $model->ISBN; ?></td>
-    <td><?php echo $model->jenis; ?></td>
-    <td><?php echo $model->bahasa; ?></td>
-    <td><?php echo $model->penerbit; ?></td>
-    <td><?php echo $model->tahun_terbit; ?></td>
-	<td><?php echo $model->harga; ?></td>
-    <td><?php echo $model->link_website; ?></td>
-    <td><?php echo $model->tgl_request; ?></td>
-    </tr>
-    <?php endforeach; ?>
-    </tbody>
-	</table>
+                        <thead>
+                            <tr>
+                                <th>ID Anggota</th>
+                                <th>Tgl.Permintaan</th>
+                                <th>Judul</th>
+                                <th>Pengarang</th>
+                                <th>ISBN</th>
+                                <th>Jenis</th>
+                                <th>Penerbit</th>
+                                <th>Tahun Terbit</th>
+                				<th>Harga</th>
+                            	<th>Link Website</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($data as $model): ?>
+                                <tr>
+                                    <td><?php echo $model['ID_ANGGOTA']; ?></td>
+                                    <td><?php echo $model['TGL_PERMINTAAN']; ?></td>
+                                    <td><?php echo $model['JUDUL']; ?></td>
+                                    <td><?php echo $model['PENGARANG']; ?></td>
+                                    <td><?php echo $model['ISBN']; ?></td>
+                                    <td><?php echo $model['JENIS']; ?></td>
+                            		<td><?php echo $model['PENERBIT']; ?></td>
+                                	<td><?php echo $model['TAHUN_TERBIT']; ?></td>
+                                	<td><?php echo $model['HARGA']; ?></td>
+                                	<td><?php echo $model['LINK_WEBSITE']; ?></td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
   </div>           
          <!-- jQuery 2.0.2 -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>

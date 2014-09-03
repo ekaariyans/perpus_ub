@@ -103,7 +103,9 @@
                             <?php endforeach; ?>
                         </tbody>
                     </table>
-                </div>           
+                </div>
+                
+                   
                 <!-- jQuery 2.0.2 -->
                 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
                 <!-- page script -->
@@ -120,6 +122,7 @@
                         });
                     });
                 </script>
+                
 
 
             </div>

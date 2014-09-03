@@ -37,48 +37,28 @@ class PermintaanController extends Controller {
       );
       }
      */
-     /*
+ 
     public function actionF_permintaan() {
-        $model = new Permintaan;
+        $model = new TPermintaan;
 
-        if (isset($_POST['Permintaan'])) {
-            $model->attributes = $_POST['Permintaan'];
+        if (isset($_POST['TPermintaan'])) {
+            $model->attributes = $_POST['TPermintaan'];
             if ($model->validate()) {
                 // form inputs PERMINTAAN BUKU BARU
-                $model->id_anggota=Yii::app()->session['username'];
-                $model->judul = $_POST['Permintaan']['judul'];
-                $model->jenis = $_POST['Permintaan']['jenis'];
-                $model->pengarang = $_POST['Permintaan']['pengarang'];
-                $model->penerbit = $_POST['Permintaan']['penerbit'];
-                $model->tahun_terbit = $_POST['Permintaan']['tahun_terbit'];
-                $model->bahasa = $_POST['Permintaan']['bahasa'];
-                $model->harga = $_POST['Permintaan']['harga'];
-                $model->ISBN = $_POST['Permintaan']['ISBN'];
-                $model->link_website = $_POST['Permintaan']['link_website'];
-                $model->tgl_request=date('Y-m-d');
+                $model->ID_ANGGOTA=Yii::app()->session['username'];
+                $model->K_JENIS = $_POST['Permintaan']['judul'];
+                $model->TGL_PERMINTAAN=date('Y-m-d');
                 $model->save();
                 $this->redirect(array('Permintaan/f_permintaan#Fakultas'));
                 return;
             }
         }
-        $data = Permintaan::model()->findAll();
-		//$this->render('listPermintaan',array('data'=>$data));
+        
+        $command = Yii::app()->db->createCommand("[dbo].[permintaanBuku] @id_anggota ='admin'");
+        $data=$command->queryAll();
         $this->render('f_permintaan', array('model' => $model,'data'=>$data));
-    }*/
-    
-     public function actionUpload() {
-        $model = new FileUpload();
-    $form = new CForm('application.views.fileUpload.uploadForm', $model);
-        if ($form->submitted('submit') && $form->validate()) {
-            $form->model->image = CUploadedFile::getInstance($form->model, 'image');
-            //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            //do something with your image here
-            //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            Yii::app()->user->setFlash('success', 'File Uploaded');
-            $this->redirect(array('upload'));
-        }
-        $this->render('upload', array('form' => $form));
     }
+    
     
     public function BacaPermintaanBuku($path,$namaTabel,$k_permintaan){
     	if( !file_exists( $path ) ) die( 'File could not be found at: ' . $path );
@@ -155,37 +135,64 @@ class PermintaanController extends Controller {
 		 return;
 	}
     
+    public function BacaPermintaanSerial($path,$namaTabel,$k_permintaan){
+    	if( !file_exists( $path ) ) die( 'File could not be found at: ' . $path );
+		$data=new JPhpExcelReader($path);
+
+		$baris = $data->rowcount($sheet_index=0);
+    	$sukses = 0;
+		$gagal = 0;
+				
+		//Baca File Excel
+		for ($i=2; $i<=$baris; $i++)
+		{
+			$judul = $data->val($i, 1);
+			$pengarang = $data->val($i, 2);
+			$jenis = $data->val($i, 3);
+			$bahasa=$data->val($i, 4);
+			$harga=$data->val($i, 5);
+			$link=$data->val($i, 6);
+			//Input Data Excel Ke Database	
+			$command = Yii::app()->db->createCommand();
+			$command->insert($namaTabel, array(
+				 'K_PERMINTAAN'=>$k_permintaan,
+				 'JUDUL'=>$judul,
+				 'VOLUME'=>$volume,
+				 'TAHUN'=>$tahun,
+				 'FREKWENSI'=>$frekwensi,
+				 'JENIS'=>$jenis,
+				 'BAHASA'=>$bahasa,
+				 'HARGA'=>$harga,
+				 'LINK_WEBSITE'=>$link,
+			));
+		 	if ($command) $sukses++;
+		 	else $gagal++;
+		 }//for
+		 return;
+	}
+    
     
     public function actionF_permintaan_f(){
 		Yii::import('ext.phpexcelreader.JPhpExcelReader');
     
 		$model = new TPermintaan;
-	if(isset($_POST['TPermintaan']))
-		{
-	
-        $model->attributes=$_POST['TPermintaan'];
-        
-        $k_jenis = $_POST['TPermintaan']['K_JENIS'];
-        
-        if($k_jenis==1){
-        	//$model2 = new TPermintaanBuku;
-			$tabel2 = 'TPermintaanBuku';
-        	$namaTabel = 't_permintaan_buku';
-        }
-        else if($k_jenis==2){
-        	//$model2 = new TPermintaanJurnal;
-        	$tabel2 = 'TPermintaanJurnal';
-        	$namaTabel = 't_permintaan_jurnal';
-		}
-        else {
-        	//$model2 = new TPermintaanSerial;
-			$tabel2 = 'TPermintaanSerial';
-			$namaTabel = 't_permintaan_serial';
-		}
-        
-        
-        
+		if(isset($_POST['TPermintaan']))
+			{
 
+			$model->attributes=$_POST['TPermintaan'];
+
+			$k_jenis = $_POST['TPermintaan']['K_JENIS'];
+
+			if($k_jenis==1){
+				$namaTabel = 't_permintaan_buku';
+			}
+			else if($k_jenis==2){
+				$namaTabel = 't_permintaan_jurnal';
+			}
+			else {
+				$namaTabel = 't_permintaan_serial';
+			}
+        
 			// validate BOTH $a and $b
 			$valid=$model->validate();
 
@@ -216,62 +223,19 @@ class PermintaanController extends Controller {
 					$this->BacaPermintaanSerial($path, $namaTabel, $k_permintaan);
 				}				 
 				 
-				 echo "<h3>Proses import data selesai.</h3>";
-				 //echo "<p>Jumlah data yang sukses diimport : ".$sukses."<br>";
-				// echo "Jumlah data yang gagal diimport : ".$gagal."</p>";
+				echo "<h3>Proses import data selesai.</h3>";
+				echo "<p>Jumlah data yang sukses diimport : ".$sukses."<br>";
+				echo "Jumlah data yang gagal diimport : ".$gagal."</p>";
 
-				 unlink($path);
+				unlink($path);
 			}
-		}//isset
-     
-        $command = Yii::app()->db->createCommand('[dbo].[permintaan_bk]');
+		}//isset@id_anggota = 'demo'
+     	
+      //  Yii::app()->session['username']
+        $command = Yii::app()->db->createCommand("[dbo].[permintaanBuku] @id_anggota ='admin'");
         $data=$command->queryAll();
         $this->render('f_permintaan_f', array('model' => $model,'data'=>$data));
          
 	}//f_permintaan_f
     
-
 }
-
-
-/*
-if( !file_exists( $path ) ) die( 'File could not be found at: ' . $path );
-				$data=new JPhpExcelReader($path);
-
-				$baris = $data->rowcount($sheet_index=0);
-$sukses = 0;
-				$gagal = 0;
-				
-				//Baca File Excel
-				for ($i=2; $i<=$baris; $i++)
-				{
-					$judul = $data->val($i, 1);
-					$pengarang = $data->val($i, 2);
-					$ISBN=$data->val($i, 3);
-					$jenis = $data->val($i, 4);
-					$bahasa=$data->val($i, 5);
-					$penerbit = $data->val($i, 6);
-					$tahun=$data->val($i, 7);
-					$harga=$data->val($i, 8);
-					$link=$data->val($i, 9);
-					
-					
-					//Input Data Excel Ke Database	
-					$command = Yii::app()->db->createCommand();
-					$command->insert($namaTabel, array(
-						 //'id_permintaan'=>'',
-						 'K_PERMINTAAN'=>$k_permintaan,
-						 'JUDUL'=>$judul,
-						 'PENGARANG'=>$pengarang,
-						 'ISBN'=>$ISBN,
-						 'JENIS'=>$jenis,
-						 'BAHASA'=>$bahasa,
-						 'PENERBIT'=>$penerbit,
-						 'TAHUN_TERBIT'=>$tahun,
-						 'HARGA'=>$harga,
-						 'LINK_WEBSITE'=>$link,
-					));
-				 	if ($command) $sukses++;
-				 	else $gagal++;
-				 }//for
-*/

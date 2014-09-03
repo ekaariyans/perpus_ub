@@ -5874,3 +5874,443 @@ in C:\xampp\htdocs\perpus_ub\index.php (13)
 2014/09/04 05:21:30 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
 in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (166)
 in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 10:42:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "f_permintaan".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('f_permintaan')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 10:56:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "f_permintaan".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('f_permintaan')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 13:31:39 [error] [exception.CException] exception 'CException' with message 'Property "User.password" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(161): CComponent->__set('password', 'd41d8cd98f00b20...')
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(136): CActiveRecord->__set('password', 'd41d8cd98f00b20...')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): SiteController->actionLoginForm()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('loginForm')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginForm')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=site/loginForm
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=site/loginForm
+---
+2014/09/03 13:34:21 [error] [exception.CException] exception 'CException' with message 'Property "User.password" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(161): CComponent->__set('password', 'd41d8cd98f00b20...')
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(136): CActiveRecord->__set('password', 'd41d8cd98f00b20...')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): SiteController->actionLoginForm()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('loginForm')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginForm')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=site/loginForm
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=site/loginForm
+---
+2014/09/03 13:34:51 [error] [exception.CException] exception 'CException' with message 'Property "User.password" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(161): CComponent->__set('password', '21232f297a57a5a...')
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(136): CActiveRecord->__set('password', '21232f297a57a5a...')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): SiteController->actionLoginForm()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('loginForm')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginForm')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=site/loginForm
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=site/loginForm
+---
+2014/09/03 13:37:53 [error] [exception.CException] exception 'CException' with message 'Property "User.password" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(161): CComponent->__set('password', '21232f297a57a5a...')
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(136): CActiveRecord->__set('password', '21232f297a57a5a...')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): SiteController->actionLoginForm()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('loginForm')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginForm')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=site/loginForm
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=site/loginForm
+---
+2014/09/03 13:39:47 [error] [exception.CException] exception 'CException' with message 'Property "User.password" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(161): CComponent->__set('password', '21232f297a57a5a...')
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(136): CActiveRecord->__set('password', '21232f297a57a5a...')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): SiteController->actionLoginForm()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('loginForm')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginForm')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=site/loginForm
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=site/loginForm
+---
+2014/09/03 13:43:20 [error] [exception.CException] exception 'CException' with message 'Property "User.password" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(161): CComponent->__set('password', '21232f297a57a5a...')
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(136): CActiveRecord->__set('password', '21232f297a57a5a...')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): SiteController->actionLoginForm()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('loginForm')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginForm')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=site/loginForm
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=site/loginForm
+---
+2014/09/03 13:44:12 [error] [exception.CException] exception 'CException' with message 'Property "User.password" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(161): CComponent->__set('password', '21232f297a57a5a...')
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(136): CActiveRecord->__set('password', '21232f297a57a5a...')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): SiteController->actionLoginForm()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('loginForm')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginForm')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=site/loginForm
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=site/loginForm
+---
+2014/09/03 13:45:06 [error] [exception.CException] exception 'CException' with message 'Property "User.password" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(161): CComponent->__set('password', '21232f297a57a5a...')
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(136): CActiveRecord->__set('password', '21232f297a57a5a...')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): SiteController->actionLoginForm()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('loginForm')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginForm')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=site/loginForm
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=site/loginForm
+---
+2014/09/03 13:46:40 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Could not find stored procedure 'dbo.permintaan_bk'.. The SQL statement executed was: [dbo].[permintaan_bk].
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (242)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 13:46:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Could not find stored procedure 'dbo.permintaan_bk'.. The SQL statement executed was: [dbo].[permintaan_bk]' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(242): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan
+---
+2014/09/03 13:59:21 [error] [exception.CException] exception 'CException' with message 'Property "SiteController._identity" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(127): CComponent->__get('_identity')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): SiteController->actionLoginForm()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('loginForm')
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginForm')
+#7 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/perpus_ub/index.php?r=site/loginForm
+---
+2014/09/03 14:13:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "f_permintaan".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('f_permintaan')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan
+---
+2014/09/03 14:14:53 [error] [exception.CDbException] exception 'CDbException' with message 'The table "permintaan" for active record class "Permintaan" cannot be found in the database.' in C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php:2362
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Permintaan))
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(79): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(42): CActiveRecord->__construct()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan')
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan
+---
+2014/09/03 14:15:08 [error] [exception.CDbException] exception 'CDbException' with message 'The table "permintaan" for active record class "Permintaan" cannot be found in the database.' in C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php:2362
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Permintaan))
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1350): CActiveRecord->getTableSchema()
+#3 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#4 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(64): CActiveRecord->findAll()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan')
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#11 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan
+---
+2014/09/03 14:15:53 [error] [exception.CException] exception 'CException' with message 'Property "TPermintaan.judul" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(145): CComponent->__get('judul')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('judul')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(TPermintaan), 'judul')
+#3 C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(TPermintaan), 'judul', Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(TPermintaan), 'judul', Array)
+#5 C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_permintaan.php(34): CActiveForm->textField(Object(TPermintaan), 'judul', Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('f_permintaan', Array, true)
+#10 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(66): CController->render('f_permintaan', Array)
+#11 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan()
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan')
+#16 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#17 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan
+---
+2014/09/03 14:19:11 [error] [exception.CException] exception 'CException' with message 'Property "TPermintaan.judul" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(145): CComponent->__get('judul')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('judul')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(TPermintaan), 'judul')
+#3 C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(TPermintaan), 'judul', Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(TPermintaan), 'judul', Array)
+#5 C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_permintaan.php(34): CActiveForm->textField(Object(TPermintaan), 'judul', Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('f_permintaan', Array, true)
+#10 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(66): CController->render('f_permintaan', Array)
+#11 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan()
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan')
+#16 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#17 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 14:26:13 [error] [exception.CException] exception 'CException' with message 'Property "TPermintaan.judul" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(145): CComponent->__get('judul')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('judul')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(TPermintaan), 'judul')
+#3 C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(TPermintaan), 'judul', Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(TPermintaan), 'judul', Array)
+#5 C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_permintaan.php(34): CActiveForm->textField(Object(TPermintaan), 'judul', Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('f_permintaan', Array, true)
+#10 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(66): CController->render('f_permintaan', Array)
+#11 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan()
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan')
+#16 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#17 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 15:06:29 [error] [exception.CException] exception 'CException' with message 'Property "TPermintaan.judul" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(145): CComponent->__get('judul')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('judul')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(TPermintaan), 'judul')
+#3 C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(TPermintaan), 'judul', Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(TPermintaan), 'judul', Array)
+#5 C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_permintaan.php(34): CActiveForm->textField(Object(TPermintaan), 'judul', Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('f_permintaan', Array, true)
+#10 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(66): CController->render('f_permintaan', Array)
+#11 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan()
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan')
+#16 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#17 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 15:07:56 [error] [exception.CException] exception 'CException' with message 'Property "TPermintaan.id_anggota" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(145): CComponent->__get('id_anggota')
+#1 C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_permintaan.php(59): CActiveRecord->__get('id_anggota')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('f_permintaan', Array, true)
+#6 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(66): CController->render('f_permintaan', Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan')
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#13 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan
+---
+2014/09/03 15:11:09 [error] [exception.CException] exception 'CException' with message 'Property "TPermintaan.JUDUL" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(145): CComponent->__get('JUDUL')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CModel.php(596): CActiveRecord->__get('JUDUL')
+#2 C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_permintaan.php(94): CModel->offsetGet('JUDUL')
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('f_permintaan', Array, true)
+#7 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(66): CController->render('f_permintaan', Array)
+#8 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan')
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#14 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan
+---
+2014/09/03 15:22:42 [error] [exception.CException] exception 'CException' with message 'Property "TPermintaan.JUDUL" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(145): CComponent->__get('JUDUL')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CModel.php(596): CActiveRecord->__get('JUDUL')
+#2 C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_permintaan.php(94): CModel->offsetGet('JUDUL')
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('f_permintaan', Array, true)
+#7 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(66): CController->render('f_permintaan', Array)
+#8 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan')
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#14 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 15:25:06 [error] [exception.CException] exception 'CException' with message 'Property "TPermintaan.judul" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(145): CComponent->__get('judul')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('judul')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(TPermintaan), 'judul')
+#3 C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(TPermintaan), 'judul', Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(TPermintaan), 'judul', Array)
+#5 C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_permintaan.php(34): CActiveForm->textField(Object(TPermintaan), 'judul', Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('f_permintaan', Array, true)
+#10 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(66): CController->render('f_permintaan', Array)
+#11 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan()
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan')
+#16 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#17 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 15:31:13 [error] [exception.CException] exception 'CException' with message 'Property "TPermintaan.id_anggota" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(145): CComponent->__get('id_anggota')
+#1 C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_permintaan.php(76): CActiveRecord->__get('id_anggota')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('f_permintaan', Array, true)
+#6 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(58): CController->render('f_permintaan', Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan')
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#13 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan
+---
