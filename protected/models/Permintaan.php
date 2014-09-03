@@ -41,8 +41,6 @@ class Permintaan extends CActiveRecord
 			array('judul, pengarang, ISBN, jenis, bahasa, penerbit, harga', 'length', 'max'=>50),
 			array('link_website', 'length', 'max'=>250),
 			array('tgl_request', 'safe'),
-			array('filee','file','types'=>'xls,xlsx','allowEmpty' => true),
-			array('filee','safe','on'=>'excel'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id_permintaan, id_anggota, judul, pengarang, ISBN, jenis, bahasa, penerbit, tahun_terbit, harga, link_website, tgl_request', 'safe', 'on'=>'search'),

@@ -20,6 +20,7 @@ class TPermintaanBuku extends CActiveRecord
 	/**
 	 * @return string the associated database table name
 	 */
+	public $filee;
 	public function tableName()
 	{
 		return 't_permintaan_buku';

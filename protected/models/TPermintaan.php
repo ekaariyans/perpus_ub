@@ -14,6 +14,7 @@ class TPermintaan extends CActiveRecord
 	/**
 	 * @return string the associated database table name
 	 */
+	  
 	public function tableName()
 	{
 		return 't_permintaan';
@@ -31,6 +32,8 @@ class TPermintaan extends CActiveRecord
 			//array('K_JENIS', 'numerical', 'integerOnly'=>true),
 			array('ID_ANGGOTA', 'length', 'max'=>20),
 			array('TGL_PERMINTAAN', 'safe'),
+			//array('filee','file','types'=>'xls,xlsx','allowEmpty' => true),
+			//array('filee','safe','on'=>'excel'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('K_PERMINTAAN, ID_ANGGOTA, K_JENIS, TGL_PERMINTAAN', 'safe', 'on'=>'search'),

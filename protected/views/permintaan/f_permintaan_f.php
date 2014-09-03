@@ -12,11 +12,11 @@
 	Form Permintaan Buku Secara Kolektif :
 	<a href="<?php echo Yii::app()->request->baseUrl.'/assets/TemplateForm/FormReqBuku.xls'; ?>" class="btn btn-default btn-flat">Download</a>	
 	<br />
-	Form Permintaan Serial Secara Kolektif :
-	<a href="<?php Yii::app()->request->baseUrl.'/assets/TemplateForm/FormReqSerial.xls'; ?>" class="btn btn-default btn-flat">Download</a>
-    <br />
 	Form Permintaan Jurnal Secara Kolektif :
-	<a href="<?php Yii::app()->request->baseUrl.'/assets/TemplateForm/FormReqJurnal.xls'; ?>" class="btn btn-default btn-flat">Download</a>
+	<a href="<?php echo Yii::app()->request->baseUrl.'/assets/TemplateForm/FormReqJurnal.xls'; ?>" class="btn btn-default btn-flat">Download</a>
+    <br />
+	Form Permintaan Serial Secara Kolektif :
+	<a href="<?php echo Yii::app()->request->baseUrl.'/assets/TemplateForm/FormReqSerial.xls'; ?>" class="btn btn-default btn-flat">Download</a>
     </div><!--TAB FORM-->
 
 
@@ -37,11 +37,19 @@
 
             <p class="note">Fields with <span class="required">*</span> are required.</p>
 				
-           <div class="form-group">
+			<?php echo $form->errorSummary($model); ?>
+            	<div class="form-group">
                 <label class="col-sm-2 control-label">Select</label>
-                  	<?php echo CHtml::dropDownList('K_JENIS', $select, array('1'=>'1', '2'=>'2', '3'=>'3')); ?>
+                  	<?php echo $form->dropDownList($model, 'K_JENIS', array('1'=>'Buku', '2'=>'Jurnal', '3'=>'Serial')); ?>
                   	<?php echo $form->error($model, 'K_JENIS'); ?>
              </div>
+			
+			<div class="form-group">
+                <label class="col-sm-2 control-label">Masukkan Data Excel :</label>
+                <div class="col-sm-10">
+                	<?php echo $form->fileField($model2, 'filee', array('maxlength' => 200,'class' => 'form-control')); ?>
+                </div>
+            </div>
 
             <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">

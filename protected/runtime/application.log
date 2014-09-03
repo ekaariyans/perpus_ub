@@ -4798,3 +4798,828 @@ in C:\xampp\htdocs\perpus_ub\index.php (13)
 2014/08/25 20:11:35 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
 in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (86)
 in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 01:38:11 [error] [php] Missing argument 3 for CHtml::dropDownList(), called in C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_permintaan_f.php on line 42 and defined (C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php:915)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): PermintaanController->renderInternal()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): PermintaanController->renderFile()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): PermintaanController->renderPartial()
+#3 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(167): PermintaanController->render()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+in C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_permintaan_f.php (42)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (167)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 02:45:03 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (86)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 02:45:03 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (86)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 02:45:04 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (152)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 02:45:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(1250): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(152): CDbCommand->insert('TPermintaanBuku', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 02:55:26 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 02:55:26 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 02:58:29 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 02:58:29 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 02:58:29 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (156)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 02:58:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(1250): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(156): CDbCommand->insert('TPermintaanBuku', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 03:02:54 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:02:54 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:06:00 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:06:00 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:06:00 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaanBuku".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (97)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:06:00 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaanBuku".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (97)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:07:39 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:07:39 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:08:57 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:08:57 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:08:57 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaanBuku".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (97)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:08:57 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaanBuku".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (97)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:10:34 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:10:34 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:13:29 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:13:29 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:17:40 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:17:40 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:25:11 [error] [exception.CException] exception 'CException' with message 'Property "TPermintaanBuku.K_JENIS" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(145): CComponent->__get('K_JENIS')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('K_JENIS')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(TPermintaanBuku), 'K_JENIS')
+#3 C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(TPermintaanBuku), 'K_JENIS', Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(TPermintaanBuku), 'K_JENIS', Array)
+#5 C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_permintaan_f.php(43): CActiveForm->textField(Object(TPermintaanBuku), 'K_JENIS', Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('f_permintaan_f', Array, true)
+#10 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(235): CController->render('f_permintaan_f', Array)
+#11 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#16 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#17 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan
+---
+2014/09/03 03:25:18 [error] [exception.CException] exception 'CException' with message 'Property "TPermintaanBuku.K_JENIS" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(145): CComponent->__get('K_JENIS')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('K_JENIS')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php(2252): CHtml::resolveValue(Object(TPermintaanBuku), 'K_JENIS')
+#3 C:\xampp\htdocs\perpus_ub\framework\web\helpers\CHtml.php(1434): CHtml::activeInputField('text', Object(TPermintaanBuku), 'K_JENIS', Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\widgets\CActiveForm.php(725): CHtml::activeTextField(Object(TPermintaanBuku), 'K_JENIS', Array)
+#5 C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_permintaan_f.php(43): CActiveForm->textField(Object(TPermintaanBuku), 'K_JENIS', Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('f_permintaan_f', Array, true)
+#10 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(235): CController->render('f_permintaan_f', Array)
+#11 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#16 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#17 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan
+---
+2014/09/03 03:30:51 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:35:02 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:35:21 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:35:24 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:35:48 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:36:43 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:36:43 [error] [exception.CException] exception 'CException' with message 'Property "TPermintaan.filee" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(145): CComponent->__get('filee')
+#1 C:\xampp\htdocs\perpus_ub\framework\validators\CFileValidator.php(166): CActiveRecord->__get('filee')
+#2 C:\xampp\htdocs\perpus_ub\framework\validators\CValidator.php(213): CFileValidator->validateAttribute(Object(TPermintaan), 'filee')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CModel.php(159): CValidator->validate(Object(TPermintaan), NULL)
+#4 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(91): CModel->validate()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#11 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 03:43:22 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:43:22 [error] [exception.CException] exception 'CException' with message 'Property "TPermintaan.filee" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(145): CComponent->__get('filee')
+#1 C:\xampp\htdocs\perpus_ub\framework\validators\CFileValidator.php(166): CActiveRecord->__get('filee')
+#2 C:\xampp\htdocs\perpus_ub\framework\validators\CValidator.php(213): CFileValidator->validateAttribute(Object(TPermintaan), 'filee')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CModel.php(159): CValidator->validate(Object(TPermintaan), NULL)
+#4 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(91): CModel->validate()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#11 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 03:43:55 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:43:55 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:43:55 [error] [exception.CException] exception 'CException' with message 'Property "TPermintaan.filee" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(145): CComponent->__get('filee')
+#1 C:\xampp\htdocs\perpus_ub\framework\validators\CFileValidator.php(166): CActiveRecord->__get('filee')
+#2 C:\xampp\htdocs\perpus_ub\framework\validators\CValidator.php(213): CFileValidator->validateAttribute(Object(TPermintaan), 'filee')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CModel.php(159): CValidator->validate(Object(TPermintaan), NULL)
+#4 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(91): CModel->validate()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#11 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 03:47:06 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:47:06 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:47:06 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (158)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:47:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(1250): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(158): CDbCommand->insert('TPermintaanBuku', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 03:51:59 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:51:59 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:51:59 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (160)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:51:59 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(1250): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(160): CDbCommand->insert('TPermintaanBuku', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 03:58:21 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:58:21 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (160)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 03:58:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(1250): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(160): CDbCommand->insert('TPermintaanBuku', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 04:01:09 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 04:01:47 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 04:01:47 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (160)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 04:01:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(1250): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(160): CDbCommand->insert('TPermintaanBuku', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 04:02:33 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 04:04:34 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 04:04:34 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (160)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 04:04:34 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(1250): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(160): CDbCommand->insert('TPermintaanBuku', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 04:04:45 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 04:04:45 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaan'.. The SQL statement executed was: INSERT INTO [TPermintaan] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (160)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 04:04:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaan'.. The SQL statement executed was: INSERT INTO [TPermintaan] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(1250): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(160): CDbCommand->insert('TPermintaan', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 04:05:06 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 04:05:06 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (160)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 04:05:06 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(1250): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(160): CDbCommand->insert('TPermintaanBuku', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 04:09:18 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 04:09:18 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (160)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 04:09:18 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(1250): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(160): CDbCommand->insert('TPermintaanBuku', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 04:09:34 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 04:10:08 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 04:10:43 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 04:10:43 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (160)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 04:10:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(1250): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(160): CDbCommand->insert('TPermintaanBuku', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 04:17:20 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 04:17:20 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (160)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 04:17:20 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(1250): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(160): CDbCommand->insert('TPermintaanBuku', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 04:19:40 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 04:19:40 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (160)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 04:19:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(1250): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(160): CDbCommand->insert('TPermintaanBuku', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 04:19:50 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 04:19:50 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (160)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 04:19:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(1250): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(160): CDbCommand->insert('TPermintaanBuku', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 04:24:40 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 04:24:41 [error] [exception.CException] exception 'CException' with message 'Property "TPermintaanBuku.atributes" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(161): CComponent->__set('atributes', Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(119): CActiveRecord->__set('atributes', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 04:25:50 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (89)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 04:25:50 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (162)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 04:25:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(1250): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(162): CDbCommand->insert('TPermintaanBuku', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 07:07:33 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (90)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 07:07:33 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaanBuku".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (91)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 07:07:33 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (161)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 07:07:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(1250): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(161): CDbCommand->insert('TPermintaanBuku', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 07:16:16 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (92)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 07:16:16 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaanBuku".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (93)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 07:16:16 [error] [exception.CException] exception 'CException' with message 'Property "TPermintaanBuku.filee" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(145): CComponent->__get('filee')
+#1 C:\xampp\htdocs\perpus_ub\framework\validators\CFileValidator.php(166): CActiveRecord->__get('filee')
+#2 C:\xampp\htdocs\perpus_ub\framework\validators\CValidator.php(213): CFileValidator->validateAttribute(Object(TPermintaanBuku), 'filee')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CModel.php(159): CValidator->validate(Object(TPermintaanBuku), NULL)
+#4 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(97): CModel->validate()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#11 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 07:17:53 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (92)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 07:17:53 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaanBuku".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (93)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 07:17:53 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaanBuku".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (111)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 07:17:53 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (152)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 07:17:53 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Invalid object name 'TPermintaanBuku'.. The SQL statement executed was: INSERT INTO [TPermintaanBuku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(1250): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(152): CDbCommand->insert('TPermintaanBuku', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 07:19:21 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (92)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 07:19:21 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaanBuku".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (93)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 07:19:21 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaanBuku".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (111)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 07:30:19 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (91)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 07:30:19 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaanBuku".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (92)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 07:30:19 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaanBuku".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (110)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 07:31:00 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (91)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 07:31:00 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaanBuku".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (92)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 07:31:00 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaanBuku".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (110)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 07:45:48 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (87)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 07:45:48 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaanBuku".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (108)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 07:46:14 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (87)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 07:46:14 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaanBuku".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (108)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 08:02:42 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (88)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 08:02:42 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaanBuku".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (109)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 08:28:27 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (128)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 08:30:05 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (128)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 08:30:15 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (128)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 08:30:15 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaanBuku".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (149)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 08:30:15 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]An object or column name is missing or empty. For SELECT INTO statements, verify each column has a name. For other statements, look for empty alias names. Aliases defined as "" or [] are not allowed. Change the alias to a valid name.. The SQL statement executed was: INSERT INTO [] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (117)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (179)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 08:30:15 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]An object or column name is missing or empty. For SELECT INTO statements, verify each column has a name. For other statements, look for empty alias names. Aliases defined as "" or [] are not allowed. Change the alias to a valid name.. The SQL statement executed was: INSERT INTO [] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(1250): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(117): CDbCommand->insert(NULL, Array)
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(179): PermintaanController->BacaPermintaanBuku('C:/xampp/htdocs...')
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 08:32:00 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (129)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 08:33:19 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (130)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 08:33:28 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (130)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 08:33:28 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaanBuku".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (151)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 08:33:28 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]An object or column name is missing or empty. For SELECT INTO statements, verify each column has a name. For other statements, look for empty alias names. Aliases defined as "" or [] are not allowed. Change the alias to a valid name.. The SQL statement executed was: INSERT INTO [] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (118)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (181)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 08:33:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]An object or column name is missing or empty. For SELECT INTO statements, verify each column has a name. For other statements, look for empty alias names. Aliases defined as "" or [] are not allowed. Change the alias to a valid name.. The SQL statement executed was: INSERT INTO [] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(1250): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(118): CDbCommand->insert(NULL, Array)
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(181): PermintaanController->BacaPermintaanBuku('C:/xampp/htdocs...')
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 08:35:01 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (129)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 08:35:01 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaanBuku".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (150)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 08:35:01 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Cannot insert the value NULL into column 'K_PERMINTAAN', table 'perpus_yii.dbo.t_permintaan_buku'; column does not allow nulls. INSERT fails.. The SQL statement executed was: INSERT INTO [t_permintaan_buku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (117)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (180)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 08:35:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Cannot insert the value NULL into column 'K_PERMINTAAN', table 'perpus_yii.dbo.t_permintaan_buku'; column does not allow nulls. INSERT fails.. The SQL statement executed was: INSERT INTO [t_permintaan_buku] ([K_PERMINTAAN], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE]) VALUES (:K_PERMINTAAN, :JUDUL, :PENGARANG, :ISBN, :JENIS, :BAHASA, :PENERBIT, :TAHUN_TERBIT, :HARGA, :LINK_WEBSITE)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(1250): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(117): CDbCommand->insert('t_permintaan_bu...', Array)
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(180): PermintaanController->BacaPermintaanBuku('C:/xampp/htdocs...', 't_permintaan_bu...')
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/03 08:36:18 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (129)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 08:36:18 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaanBuku".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (150)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 08:41:35 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (163)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 08:41:35 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaanBuku".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (184)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 08:41:49 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (163)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 08:44:20 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (163)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 08:44:31 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (163)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/03 08:44:31 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaanJurnal".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (184)
+in C:\xampp\htdocs\perpus_ub\index.php (13)

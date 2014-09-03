@@ -16,6 +16,7 @@ class TPermintaanJurnal extends CActiveRecord
 	/**
 	 * @return string the associated database table name
 	 */
+	public $filee;
 	public function tableName()
 	{
 		return 't_permintaan_jurnal';
@@ -29,13 +30,15 @@ class TPermintaanJurnal extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('K_PERMINTAAN', 'required'),
+			//array('K_PERMINTAAN', 'required'),
 			array('K_PERMINTAAN', 'numerical', 'integerOnly'=>true),
 			array('JUDUL, LINK_WEBSITE', 'length', 'max'=>250),
-			array('PENGARANG, BAHASA, HARGA', 'length', 'max'=>50),
+			array('PENGARANG, JENIS, BAHASA, HARGA', 'length', 'max'=>50),
+			array('filee','file','types'=>'xls,xlsx','allowEmpty' => true),
+			array('filee','safe','on'=>'excel'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('K_PERMINTAAN, JUDUL, PENGARANG, BAHASA, HARGA, LINK_WEBSITE', 'safe', 'on'=>'search'),
+			array('K_PERMINTAAN, JUDUL, PENGARANG, JENIS, BAHASA, HARGA, LINK_WEBSITE', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -59,6 +62,7 @@ class TPermintaanJurnal extends CActiveRecord
 			'K_PERMINTAAN' => 'K Permintaan',
 			'JUDUL' => 'Judul',
 			'PENGARANG' => 'Pengarang',
+			'JENIS' => 'Jenis',
 			'BAHASA' => 'Bahasa',
 			'HARGA' => 'Harga',
 			'LINK_WEBSITE' => 'Link Website',
@@ -86,6 +90,7 @@ class TPermintaanJurnal extends CActiveRecord
 		$criteria->compare('K_PERMINTAAN',$this->K_PERMINTAAN);
 		$criteria->compare('JUDUL',$this->JUDUL,true);
 		$criteria->compare('PENGARANG',$this->PENGARANG,true);
+		$criteria->compare('JENIS',$this->JENIS,true);
 		$criteria->compare('BAHASA',$this->BAHASA,true);
 		$criteria->compare('HARGA',$this->HARGA,true);
 		$criteria->compare('LINK_WEBSITE',$this->LINK_WEBSITE,true);
