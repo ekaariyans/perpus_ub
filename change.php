@@ -13,7 +13,7 @@ $(document).ready(function(){
 	
 	if(id=='Buku'){
 		$("div").hide();
-		$("div#buku").show();
+		$("div#Buku").show();
 	}
 	else if(id=='Jurnal'){
 		$("div").hide();
@@ -38,15 +38,15 @@ $(document).ready(function(){
 	</select>
 	
 	<div id="Buku">
-		Buku
+		Ini Buku
 	</div>
 	
 	<div id="Jurnal">
-		Jurnal
+		Ini Jurnal
 	</div>
 	
 	<div id="Serial">
-		Serial
+		Ini Serial
 	</div>
 </body>
 

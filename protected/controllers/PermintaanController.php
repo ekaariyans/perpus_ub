@@ -10,56 +10,98 @@ class PermintaanController extends Controller {
         $this->render('index');
         //echo "Selamat datang di controller Permintaan";
     }
-
-    // Uncomment the following methods and override them if needed
-    /*
-      public function filters()
-      {
-      // return the filter configuration for this controller, e.g.:
-      return array(
-      'inlineFilterName',
-      array(
-      'class'=>'path.to.FilterClass',
-      'propertyName'=>'propertyValue',
-      ),
-      );
-      }
-
-      public function actions()
-      {
-      // return external action classes, e.g.:
-      return array(
-      'action1'=>'path.to.ActionClass',
-      'action2'=>array(
-      'class'=>'path.to.AnotherActionClass',
-      'propertyName'=>'propertyValue',
-      ),
-      );
-      }
-     */
  
     public function actionF_permintaan() {
         $model = new TPermintaan;
-
+		$modelBk = new TPermintaanBuku;
+        $modelJur = new TPermintaanJurnal;
+        $modelSer = new TPermintaanSerial;
+        
         if (isset($_POST['TPermintaan'])) {
             $model->attributes = $_POST['TPermintaan'];
-            if ($model->validate()) {
-                // form inputs PERMINTAAN BUKU BARU
+        	$k_jenis = $_POST['TPermintaan']['K_JENIS'];
+
+			if($k_jenis==1){
+				$model2 = $modelBk;
+				$namaModel = 'TPermintaanBuku';
+			}
+			else if($k_jenis==2){
+				$model2 = $modelJur;
+				$namaModel = 'TPermintaanJurnal';
+			}
+			else {
+				$model2 = $modelSer;
+				$namaModel = 'TPermintaanSerial';
+			}
+        
+			// validate BOTH $a and $b
+			$valid=$model->validate();
+            //&& $model2->validate()
+            if($valid){
+				// form inputs PERMINTAAN BUKU BARU
                 $model->ID_ANGGOTA=Yii::app()->session['username'];
-                $model->K_JENIS = $_POST['Permintaan']['judul'];
+                $model->K_JENIS = $_POST['TPermintaan']['K_JENIS'];
                 $model->TGL_PERMINTAAN=date('Y-m-d');
                 $model->save();
-                $this->redirect(array('Permintaan/f_permintaan#Fakultas'));
+                //ambil id_terakhir
+				$k_permintaan = $model->K_PERMINTAAN;
+                $model2->attributes = $_POST[$namaModel];
+                
+                $valid2=$model2->validate();
+                if($k_jenis==1 && $valid2){
+					$this->inputBukuIndividu($k_permintaan,$model2);
+				}
+				/*else if($k_jenis==2){
+					$this->inputJurnalIndividu($k_permintaan,$model2);
+				}
+				else {
+					$this->inputSerialIndividu($k_permintaan,$model2);
+				}*/
+                
+                $this->redirect(array('Permintaan/f_permintaan'));
                 return;
             }
+                   
         }
         
         $command = Yii::app()->db->createCommand("[dbo].[permintaanBuku] @id_anggota ='admin'");
         $data=$command->queryAll();
-        $this->render('f_permintaan', array('model' => $model,'data'=>$data));
+        $this->render('f_permintaan', array('model' => $model,'modelBk' => $modelBk,'modelJur' => $modelJur,'modelSer' => $modelSer,'data'=>$data));
     }
     
     
+    public function inputBukuIndividu($k_permintaan,$model2){
+		$model2->K_PERMINTAAN=$k_permintaan;
+		$model2->JUDUL=$_POST['TPermintaanBuku']['JUDUL'];
+		$model2->PENGARANG=$_POST['TPermintaanBuku']['PENGARANG'];
+		$model2->ISBN=$_POST['TPermintaanBuku']['ISBN'];
+		$model2->JENIS=$_POST['TPermintaanBuku']['JENIS'];
+		$model2->BAHASA=$_POST['TPermintaanBuku']['BAHASA'];
+		$model2->PENERBIT=$_POST['TPermintaanBuku']['PENERBIT'];
+		$model2->TAHUN_TERBIT=$_POST['TPermintaanBuku']['TAHUN_TERBIT'];
+		$model2->HARGA=$_POST['TPermintaanBuku']['HARGA'];
+		$model2->LINK_WEBSITE=$_POST['TPermintaanBuku']['LINK_WEBSITE'];
+		$model2->save();
+		return;
+	}
+    
+    public function inputJurnalIndividu($k_permintaan,$model2){
+	}
+    	
+    public function inputSerialIndividu($k_permintaan,$model2){
+	}
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
     public function BacaPermintaanBuku($path,$namaTabel,$k_permintaan){
     	if( !file_exists( $path ) ) die( 'File could not be found at: ' . $path );
 		$data=new JPhpExcelReader($path);
