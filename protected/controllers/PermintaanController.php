@@ -158,7 +158,6 @@ class PermintaanController extends Controller {
     
     public function actionF_permintaan_f(){
 		Yii::import('ext.phpexcelreader.JPhpExcelReader');
-    	
     	$model = new TPermintaan;
         $model->attributes=$_POST['TPermintaan'];
         
