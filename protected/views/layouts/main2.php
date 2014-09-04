@@ -294,6 +294,7 @@
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
+        <div class="panel-footer"> <center>&copy; PENGEMBANGAN IT PERPUSTAKAAN UNIVERSITAS BRAWIJAYA</center>
 
         <!-- add new calendar event modal -->
 

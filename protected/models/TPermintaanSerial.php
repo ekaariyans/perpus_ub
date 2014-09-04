@@ -32,7 +32,7 @@ class TPermintaanSerial extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('K_PERMINTAAN', 'required'),
+			array('JUDUL, VOLUME, TAHUN, FREKWENSI, JENIS, BAHASA, HARGA', 'required'),
 			array('K_PERMINTAAN, TAHUN', 'numerical', 'integerOnly'=>true),
 			array('JUDUL', 'length', 'max'=>250),
 			array('VOLUME, FREKWENSI, JENIS, BAHASA, HARGA, LINK_WEBSITE', 'length', 'max'=>50),

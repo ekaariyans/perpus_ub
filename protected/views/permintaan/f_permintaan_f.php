@@ -1,20 +1,21 @@
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
-    <li class="active"><a href="#form" role="tab" data-toggle="tab">FORM</a></li>
-    <li><a href="#upload" role="tab" data-toggle="tab">UPLOAD</a></li>
+    <li class="active"><a href="#form" role="tab" data-toggle="tab">FORM PEMRMINTAAN</a></li>
+    <li><a href="#upload" role="tab" data-toggle="tab">UPLOAD PERMINTAAN</a></li>
     <li><a href="#list" role="tab" data-toggle="tab">DAFTAR PERMINTAAN</a></li>
 </ul>
 
 <!-- Tab panes -->
 <div class="tab-content">
     <div class="tab-pane active" id="form">
-    <br />
+      <h4 class="box-title">Form Permintaan Secara Kolektif</h4>
+       <br/>
 	Form Permintaan Buku Secara Kolektif :
 	<a href="<?php echo Yii::app()->request->baseUrl.'/assets/TemplateForm/FormReqBuku.xls'; ?>" class="btn btn-default btn-flat">Download</a>	
-	<br />
+	<br/><br/>
 	Form Permintaan Jurnal Secara Kolektif :
 	<a href="<?php echo Yii::app()->request->baseUrl.'/assets/TemplateForm/FormReqJurnal.xls'; ?>" class="btn btn-default btn-flat">Download</a>
-    <br />
+    <br/><br/>
 	Form Permintaan Serial Secara Kolektif :
 	<a href="<?php echo Yii::app()->request->baseUrl.'/assets/TemplateForm/FormReqSerial.xls'; ?>" class="btn btn-default btn-flat">Download</a>
     </div><!--TAB FORM-->
@@ -34,23 +35,19 @@
                 'enableAjaxValidation' => false,
             ));
             ?>
-
-            <p class="note">Fields with <span class="required">*</span> are required.</p>
-				
+          <h4 class="box-title">Upload Form Permintaan Secara Kolektif</h4>
+		<br>		
 			<?php echo $form->errorSummary($model); ?>
             	<div class="form-group">
-                <label class="col-sm-2 control-label">Select</label>
+                <label class="col-sm-2 control-label">Kategori      :</label>
                   	<?php echo $form->dropDownList($model, 'K_JENIS', array('1'=>'Buku', '2'=>'Jurnal', '3'=>'Serial')); ?>
                   	<?php echo $form->error($model, 'K_JENIS'); ?>
              </div>
-			
 			<div class="form-group">
                 <label class="col-sm-2 control-label">Masukkan Data Excel :</label>
-                <div class="col-sm-10">
-                	<?php echo $form->fileField($model, 'filee', array('maxlength' => 200,'class' => 'form-control')); ?>
-                </div>
+                	<?php echo $form->fileField($model, 'filee', array('maxlength' => 200)); ?>
             </div>
-
+            <br>
             <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
                 <?php echo CHtml::submitButton('Submit', array('class' => 'btn btn-default')); ?>
@@ -69,7 +66,7 @@
                 <div class="box">
                     <h2>Daftar Permintaan Buku</h2>
                     <?php
-                    echo CHtml::link('Cetak dokumen', array('cetak/cetak'));
+                   // echo CHtml::link('Cetak dokumen', array('cetak/cetak'));
                     ?>
                     <table id="example2" class="table table-bordered table-striped">
                         <thead>

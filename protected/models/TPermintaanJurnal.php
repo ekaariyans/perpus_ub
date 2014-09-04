@@ -30,7 +30,7 @@ class TPermintaanJurnal extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			//array('K_PERMINTAAN', 'required'),
+			array('JUDUL, PENGARANG, JENIS, BAHASA, HARGA', 'required'),
 			array('K_PERMINTAAN', 'numerical', 'integerOnly'=>true),
 			array('JUDUL, LINK_WEBSITE', 'length', 'max'=>250),
 			array('PENGARANG, JENIS, BAHASA, HARGA', 'length', 'max'=>50),

@@ -51,12 +51,12 @@ class PermintaanController extends Controller {
                 if($k_jenis==1 && $valid2){
 					$this->inputBukuIndividu($k_permintaan,$model2);
 				}
-				/*else if($k_jenis==2){
+				else if($k_jenis==2 && $valid2){
 					$this->inputJurnalIndividu($k_permintaan,$model2);
 				}
 				else {
 					$this->inputSerialIndividu($k_permintaan,$model2);
-				}*/
+				}
                 
                 $this->redirect(array('Permintaan/f_permintaan'));
                 return;
@@ -86,20 +86,30 @@ class PermintaanController extends Controller {
 	}
     
     public function inputJurnalIndividu($k_permintaan,$model2){
+    	$model2->K_PERMINTAAN=$k_permintaan;
+		$model2->JUDUL=$_POST['TPermintaanJurnal']['JUDUL'];
+		$model2->PENGARANG=$_POST['TPermintaanJurnal']['PENGARANG'];
+		$model2->JENIS=$_POST['TPermintaanJurnal']['JENIS'];
+		$model2->BAHASA=$_POST['TPermintaanJurnal']['BAHASA'];
+		$model2->HARGA=$_POST['TPermintaanJurnal']['HARGA'];
+		$model2->LINK_WEBSITE=$_POST['TPermintaanJurnal']['LINK_WEBSITE'];
+		$model2->save();
+		return;
 	}
     	
     public function inputSerialIndividu($k_permintaan,$model2){
-	}
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
-    	
+    	$model2->K_PERMINTAAN=$k_permintaan;
+		$model2->JUDUL=$_POST['TPermintaanSerial']['JUDUL'];
+		$model2->VOLUME=$_POST['TPermintaanSerial']['VOLUME'];
+		$model2->TAHUN=$_POST['TPermintaanSerial']['TAHUN'];
+		$model2->FREKWENSI=$_POST['TPermintaanSerial']['FREKWENSI'];
+		$model2->JENIS=$_POST['TPermintaanSerial']['JENIS'];
+		$model2->BAHASA=$_POST['TPermintaanSerial']['BAHASA'];
+		$model2->HARGA=$_POST['TPermintaanSerial']['HARGA'];
+		$model2->LINK_WEBSITE=$_POST['TPermintaanSerial']['LINK_WEBSITE'];
+		$model2->save();
+		return;
+	}   	
     	
     	
     public function BacaPermintaanBuku($path,$namaTabel,$k_permintaan){
