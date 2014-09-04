@@ -4,7 +4,7 @@
  * This is the model class for table "t_user_request".
  *
  * The followings are the available columns in table 't_user_request':
- * @property string $ID_MEMBER
+ * @property string $ID_ANGGOTA
  * @property string $ID_PRIVILEGE
  * @property string $USERNAME
  * @property string $PASSWORD
@@ -27,13 +27,13 @@ class User extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('ID_MEMBER, ID_PRIVILEGE, USERNAME, PASSWORD', 'required'),
-			array('ID_MEMBER', 'length', 'max'=>20),
+			array(' USERNAME, PASSWORD', 'required'),
+			array('ID_ANGGOTA', 'length', 'max'=>20),
 			array('ID_PRIVILEGE', 'length', 'max'=>5),
 			array('USERNAME, PASSWORD', 'length', 'max'=>50),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('ID_MEMBER, ID_PRIVILEGE, USERNAME, PASSWORD', 'safe', 'on'=>'search'),
+			array('ID_ANGGOTA, ID_PRIVILEGE, USERNAME, PASSWORD', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -54,7 +54,7 @@ class User extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'ID_MEMBER' => 'Id Member',
+			'ID_ANGGOTA' => 'Id Anggota',
 			'ID_PRIVILEGE' => 'Id Privilege',
 			'USERNAME' => 'Username',
 			'PASSWORD' => 'Password',
@@ -79,7 +79,7 @@ class User extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('ID_MEMBER',$this->ID_MEMBER,true);
+		$criteria->compare('ID_ANGGOTA',$this->ID_ANGGOTA,true);
 		$criteria->compare('ID_PRIVILEGE',$this->ID_PRIVILEGE,true);
 		$criteria->compare('USERNAME',$this->USERNAME,true);
 		$criteria->compare('PASSWORD',$this->PASSWORD,true);
@@ -88,6 +88,15 @@ class User extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+	protected function afterValidate() 
+	{ 
+	parent::afterValidate(); 
+	$this->PASSWORD = $this->encrypt($this->PASSWORD);
+	//melakukan enkripsi pada data yang di input $this->password = $this->encrypt($this->password); } //membuat sebuah fungsi enkripsi public function encrypt($value){ return md5($value); }
+}
+public function encrypt($value){
+            return md5($value);
+        }
 
 	/**
 	 * Returns the static model of the specified AR class.
@@ -99,19 +108,4 @@ class User extends CActiveRecord
 	{
 		return parent::model($className);
 	}
-	
-	//digunakan untuk memproses data setelah di validasi
-	protected function afterValidate() {
-		 parent::afterValidate();
-
-		 //melakukan enkripsi pada passwod yang di input
-		 $this->password = $this->encrypt($this->password);
-	}
-
-	//membuat sebuah fungsi untuk mengenkripsi data
-	public function encrypt($value){
-		 return md5($value);
-	}
-
-
 }

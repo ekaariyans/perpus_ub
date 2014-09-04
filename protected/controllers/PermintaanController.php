@@ -158,7 +158,11 @@ class PermintaanController extends Controller {
     
     public function actionF_permintaan_f(){
 		Yii::import('ext.phpexcelreader.JPhpExcelReader');
-    	$model = new TPermintaan;
+    
+		$model = new TPermintaan;
+	if(isset($_POST['TPermintaan']))
+		{
+	
         $model->attributes=$_POST['TPermintaan'];
         
         $k_jenis = $_POST['TPermintaan']['K_JENIS'];
@@ -179,15 +183,11 @@ class PermintaanController extends Controller {
 			$namaTabel = 't_permintaan_serial';
 		}
         
-        $model2 = new $tabel2;
-        $model2->attributes=$_POST[$tabel2];
+        
         
 
-		if(isset($_POST['TPermintaan'], $_POST[$tabel2]))
-		{
 			// validate BOTH $a and $b
 			$valid=$model->validate();
-			$valid=$model2->validate() && $valid;
 
 			if($valid)
 			{
@@ -201,7 +201,7 @@ class PermintaanController extends Controller {
 				$k_permintaan = $model->K_PERMINTAAN;
 				
 				//upload file excel			
-				$fileUpload=CUploadedFile::getInstance($model2,'filee');
+				$fileUpload=CUploadedFile::getInstance($model,'filee');
 				$path=Yii::getPathOfAlias('webroot').'/upload/'.$fileUpload;
 				$fileUpload->saveAs($path);
 
@@ -217,16 +217,16 @@ class PermintaanController extends Controller {
 				}				 
 				 
 				 echo "<h3>Proses import data selesai.</h3>";
-				 echo "<p>Jumlah data yang sukses diimport : ".$sukses."<br>";
-				 echo "Jumlah data yang gagal diimport : ".$gagal."</p>";
+				 //echo "<p>Jumlah data yang sukses diimport : ".$sukses."<br>";
+				// echo "Jumlah data yang gagal diimport : ".$gagal."</p>";
 
 				 unlink($path);
 			}
 		}//isset
-        
+     
         $command = Yii::app()->db->createCommand('[dbo].[permintaan_bk]');
         $data=$command->queryAll();
-        $this->render('f_permintaan_f', array('model' => $model, 'model2'=>$model2,'data'=>$data));
+        $this->render('f_permintaan_f', array('model' => $model,'data'=>$data));
          
 	}//f_permintaan_f
     

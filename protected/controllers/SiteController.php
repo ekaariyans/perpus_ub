@@ -31,7 +31,7 @@ class SiteController extends Controller
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
 		//$this->render('login');
-		$this->redirect('index.php?r=site/login');
+		$this->redirect('index.php?r=site/loginForm');
 	}
 
 	/**
@@ -93,11 +93,12 @@ class SiteController extends Controller
 		{
 			$model->attributes=$_POST['LoginForm'];
 			// validate user input and redirect to the previous page if valid
-			if($model->validate() && $model->login()){
+			if($model->validate() && $model->User()){
 				//$this->redirect(Yii::app()->user->returnUrl);
 				//$layout='//layouts/main2';
 				
-				Yii::app()->session['username'] = $_POST['LoginForm']['username'];
+				
+				
 				//echo "Halo session ".Yii::app()->session['username'];
 				//unset(Yii::app()->session['username']);
 				$this->redirect('index.php?r=permintaan');
@@ -109,6 +110,35 @@ class SiteController extends Controller
 		// display the login form
 		$this->render('login',array('model'=>$model));
 	}
+	
+	public function actionLoginForm() 
+{ 
+    $model=new User; 
+
+    // uncomment the following code to enable ajax-based validation 
+    /* 
+    if(isset($_POST['ajax']) && $_POST['ajax']==='user-loginForm-form') 
+    { 
+        echo CActiveForm::validate($model); 
+        Yii::app()->end(); 
+    } 
+    */ 
+
+    if(isset($_POST['User'])) 
+    { 
+        $model->attributes=$_POST['User']; 
+        if($model->validate()) 
+        { 
+            // form inputs are valid, do something here 
+			Yii::app()->session['username'] = $_POST['User']['USERNAME'];
+			$model->USERNAME = $_POST['User']['USERNAME'];
+				$model->PASSWORD = $_POST['User']['PASSWORD'];
+				$this->redirect('index.php?r=permintaan');
+            return; 
+        } 
+    } 
+    $this->render('loginForm',array('model'=>$model)); 
+}
 
 	/**
 	 * Logs out the current user and redirect to homepage.
