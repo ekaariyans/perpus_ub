@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>E-Voting</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+		<!-- jQuery / jQueryMobile Scripts -->
+		<script src="jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="md5.js"></script>
+
+        <script src="login.js"></script>
+
+    </head>
+    <body>
+        
+    <div data-role="page" data-theme='b'>
+
+
+        <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme='b'>
+            <a href="index.html" data-ajax="false"><i class='icon-ellipsis-vertical'></i></a>
+            <h1>Login</h1>
+        </div>
+        
+        <div data-role="content">   
+
+			    
+            <form>
+                <ul data-role="listview" data-inset="true">
+                    <li data-role="fieldcontain">
+                        <label for="username">Username :</label>
+                        <input type="text" name="id" id="username" value="" data-clear-btn="true">
+                       <!-- <label id="labelnoKtp"></label>-->
+                    </li>
+                    <li data-role="fieldcontain">
+                        <label for="password">Password :</label>
+                        <input type="password" name="pwd" id="password" value="" data-clear-btn="true" placeholder="">
+                        <!--<label id="labelPassword"></label>-->
+                    </li>
+                    <li>
+                        <fieldset class="ui-grid-a">
+                                <div class="ui-block-a"><button type="submit" data-theme="b">Cancel</button></div>
+                                <div class="ui-block-b"><button type="button" data-theme="b" id="submit">Submit</button></div>
+                        </fieldset>
+                    </li>
+                </ul>
+            </form>
+	       
+  
+	        <!--<div class='inset'>
+	        	<h2>Code</h2>
+				<div class='message warning'>
+					<i class='icon-warning-sign'></i>
+					<p>The <code>select</code> and <code>multiselect</code> elements are only working fine with <code>data-native-menu='true'</code> on mobile devices.</p>
+				</div>
+				<div class='message info'>
+					<i class='icon-info-sign'></i>
+					<p>For code examples read the official jQueryMobile api. <a href='http://api.jquerymobile.com/category/widgets/' target='_blank'>api.jquerymobile.com</a></p>
+				</div>
+	        </div>-->
+	        
+        </div>
+
+    </div>
+    
+    </body>
+</html>

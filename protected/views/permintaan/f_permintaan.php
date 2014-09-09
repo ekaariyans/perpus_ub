@@ -20,7 +20,6 @@
 <ul class="nav nav-tabs" role="tablist">
   <li class="active"><a href="#Form" role="tab" data-toggle="tab">FORM PERMINTAAN </a></li>
   <li><a href="#Permintaan" role="tab" data-toggle="tab">DAFTAR PERMINTAAN</a></li>
-  <li><a href="#Peminjaman" role="tab" data-toggle="tab">DAFTAR PEMINJAMAN</a></li>
 </ul>
 
 <!-- Tab panes -->
@@ -264,11 +263,21 @@
     <div class="tab-pane" id="Permintaan">
   <div class="box box-primary">
         <div class="box-header">
+            <ul class="nav nav-tabs" role="tablist">
+  <li class="active"><a href="#bk" role="tab" data-toggle="tab">Buku </a></li>
+  <li><a href="#jr" role="tab" data-toggle="tab">Jurnal</a></li>
+  <li><a href="#sr" role="tab" data-toggle="tab">Serial</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="bk">
+   <div class="box-header">
             <h4 class="box-title">DAFTAR PERMINTAAN BUKU</h4>
             <div class="box">
     <h2>Daftar Permintaan Buku</h2>
 <?php    
-	//echo CHtml::link('Cetak dokumen',array('cetak/cetak'));
+	echo CHtml::link('Cetak dokumen',array('cetak/cetak'));
 ?>
 	<table id="example2" class="table table-bordered table-striped">
                         <thead>
@@ -322,69 +331,14 @@
 
    
         </div>
-  
-    
-    </div>
   </div>
-  <div class="tab-pane" id="Peminjaman">
-  <div class="box box-primary">
-        <div class="box-header">
-            <h4 class="box-title">DAFTAR PEMINJAMAN</h4>
-            <div class="box">
-    <h2>Daftar Pmeminjaman Katalog</h2>
-<?php    
-	
-	//echo CHtml::link('Cetak dokumen',array('cetak/cetak'));
-?>
-	<table id="daftar2" class="table table-bordered table-striped">
-                        <thead>
-                            <tr>
-                                <th>ID Anggota</th>
-                                <th>Tgl.Permintaan</th>
-                                <th>Judul</th>
-                                <th>Pengarang</th>
-                                <th>ISBN</th>
-                                <th>Jenis</th>
-                                <th>Penerbit</th>
-                                <th>Tahun Terbit</th>
-                				<th>Harga</th>
-                            	<th>Link Website</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php foreach ($data as $model): ?>
-                                <tr>
-                                    <td><?php echo $model['ID_ANGGOTA']; ?></td>
-                                    <td><?php echo $model['TGL_PERMINTAAN']; ?></td>
-                                    <td><?php echo $model['JUDUL']; ?></td>
-                                    <td><?php echo $model['PENGARANG']; ?></td>
-                                    <td><?php echo $model['ISBN']; ?></td>
-                                    <td><?php echo $model['JENIS']; ?></td>
-                            		<td><?php echo $model['PENERBIT']; ?></td>
-                                	<td><?php echo $model['TAHUN_TERBIT']; ?></td>
-                                	<td><?php echo $model['HARGA']; ?></td>
-                                	<td><?php echo $model['LINK_WEBSITE']; ?></td>
-                                </tr>
-                            <?php endforeach; ?>
-                        </tbody>
-                    </table>
-  </div>           
-         <!-- jQuery 2.0.2 -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-        <!-- page script -->
-        <script type="text/javascript">
-            $(function() {
-                $("#example1").dataTable();
-                $('#daftar2').dataTable({
-                    "bPaginate": true,
-                    "bLengthChange": true,
-                    "bFilter": false,
-                    "bSort": true,
-                    "bInfo": false,
-                    "bAutoWidth": false
-                });
-            });
-        </script>
+  <div class="tab-pane " id="jr">
+  dd
+  </div>
+  <div class="tab-pane " id="sr">
+  dd
+  </div>
+ </div>
 
    
         </div>
@@ -392,11 +346,9 @@
     
     </div>
   </div>
+
   </div>
-    
-  
-</div>
-	
+    	
 
 <?php $this->endWidget(); ?>
 

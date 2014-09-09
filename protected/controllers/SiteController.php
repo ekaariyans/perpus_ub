@@ -114,30 +114,45 @@ class SiteController extends Controller
 	public function actionLoginForm() 
 { 
     $model=new User; 
-
-    // uncomment the following code to enable ajax-based validation 
-    /* 
-    if(isset($_POST['ajax']) && $_POST['ajax']==='user-loginForm-form') 
-    { 
-        echo CActiveForm::validate($model); 
-        Yii::app()->end(); 
-    } 
-    */ 
-
+    $data = null;
     if(isset($_POST['User'])) 
     { 
         $model->attributes=$_POST['User']; 
         if($model->validate()) 
         { 
             // form inputs are valid, do something here 
-			Yii::app()->session['username'] = $_POST['User']['USERNAME'];
-			$model->USERNAME = $_POST['User']['USERNAME'];
-				$model->PASSWORD = $_POST['User']['PASSWORD'];
-				$this->redirect('index.php?r=permintaan');
-            return; 
+			$userid = $_POST['User']['USERNAME'];
+			$password = $_POST['User']['PASSWORD'];
+			$challenge = "123ab";
+			$passport = md5($challenge.$password).'_'.$userid;
+			$appid = "EKS1";
+			$ipaddr = $_SERVER['REMOTE_ADDR'];
+			//$hostname = gethostbyaddr($_SERVER['REMOTE_ADDR']);
+			$url = "https://bais.ub.ac.id/api/login/xmlapi/?";
+			$xml = simplexml_load_file($url.'userid='.$userid.'&passport='.$passport.'&challenge='.$challenge.'&appid='.$appid.'&ipaddr='.$ipaddr);
+
+			$kenal = $xml->CONTENT->AUTHORITY->DIKENAL." </p>";
+			$passwd = $xml->CONTENT->AUTHORITY->PASSWD." </p>";
+
+			if($kenal==1){
+				if($passwd == 1){
+					Yii::app()->session['username'] = $userid;
+					$this->redirect('index.php?r=permintaan');
+				}
+				else {
+					//echo "<h2>Gagal Login!</h2>";
+					//echo "<p>Password Salah!</p>";
+					$data = "Password Salah!";
+				}
+			}
+			else{
+			   //echo "<h2>Gagal Login!</h2>";
+			   //echo "<p>User Tidak Dikenal!</p>";
+			   $data = "User Tidak Dikenal!";
+			}
         } 
     } 
-    $this->render('loginForm',array('model'=>$model)); 
+    $this->render('loginForm',array('model'=>$model, 'data'=>$data)); 
 }
 
 	/**

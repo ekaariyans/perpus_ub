@@ -6,7 +6,7 @@ class AnggotaController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column2';
+	public $layout='//layouts/main2';
 
 	/**
 	 * @return array action filters
@@ -169,5 +169,21 @@ class AnggotaController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+	
+	public function actionFormanggota()
+	{
+		$model=new Anggota;
+
+		if(isset($_POST['Anggota']))
+		{
+			$model->attributes=$_POST['Anggota'];
+			if($model->validate())
+			{
+				// form inputs are valid, do something here
+				return;
+			}
+		}
+		$this->render('Anggota/formanggota',array('model'=>$model));
 	}
 }

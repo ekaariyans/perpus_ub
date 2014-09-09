@@ -88,15 +88,7 @@ class User extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
-	protected function afterValidate() 
-	{ 
-	parent::afterValidate(); 
-	$this->PASSWORD = $this->encrypt($this->PASSWORD);
-	//melakukan enkripsi pada data yang di input $this->password = $this->encrypt($this->password); } //membuat sebuah fungsi enkripsi public function encrypt($value){ return md5($value); }
-}
-public function encrypt($value){
-            return md5($value);
-        }
+	
 
 	/**
 	 * Returns the static model of the specified AR class.

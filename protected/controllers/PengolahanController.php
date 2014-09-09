@@ -2,9 +2,16 @@
 
 class PengolahanController extends Controller
 {
+	public function __construct()
+    {
+        if (empty(Yii::app()->session['username'])){
+			$this->redirect('index.php?r=site/loginForm');	  
+     	}
+     }
+     
 	public function actionIndex()
 	{
-		$this->render('index');
+		$this->render('Pengolahan/index');
 	}
 	
 	public function actionDaftarPermintaan(){

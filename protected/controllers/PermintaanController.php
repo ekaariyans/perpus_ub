@@ -6,11 +6,34 @@ class PermintaanController extends Controller {
     public $sukses;
 	public $gagal;
 
+    public function __construct()
+    {
+        if (empty(Yii::app()->session['username'])){
+			$this->redirect('index.php?r=site/loginForm');	  
+     	}
+     }
+    
     public function actionIndex() {
-        $this->render('index');
-        //echo "Selamat datang di controller Permintaan";
+        $this->render('Permintaan/index');
     }
- 
+    
+ 	public function actionF_laporan_p()
+	{
+		$model=new TPermintaan;
+
+		if(isset($_POST['TPermintaan']))
+		{
+			$model->attributes=$_POST['TPermintaan'];
+			if($model->validate())
+			{
+				// form inputs are valid, do something here
+				return;
+			}
+		}
+		$this->render('Permintaan/f_laporan_p',array('model'=>$model));
+	}
+    
+    
     public function actionF_permintaan() {
         $model = new TPermintaan;
 		$modelBk = new TPermintaanBuku;
@@ -63,10 +86,10 @@ class PermintaanController extends Controller {
             }
                    
         }
-        
-        $command = Yii::app()->db->createCommand("[dbo].[permintaanBuku] @id_anggota ='admin'");
+        $user= Yii::app()->session['username'];
+        $command = Yii::app()->db->createCommand("[dbo].[permintaanBuku] @id_anggota =$user ");
         $data=$command->queryAll();
-        $this->render('f_permintaan', array('model' => $model,'modelBk' => $modelBk,'modelJur' => $modelJur,'modelSer' => $modelSer,'data'=>$data));
+        $this->render('Permintaan/f_permintaan', array('model' => $model,'modelBk' => $modelBk,'modelJur' => $modelJur,'modelSer' => $modelSer,'data'=>$data));
     }
     
     
@@ -283,10 +306,10 @@ class PermintaanController extends Controller {
 			}
 		}//isset@id_anggota = 'demo'
      	
-      //  Yii::app()->session['username']
-        $command = Yii::app()->db->createCommand("[dbo].[permintaanBuku] @id_anggota ='admin'");
+        $user= Yii::app()->session['username'];
+        $command = Yii::app()->db->createCommand("[dbo].[permintaanBuku] @id_anggota =$user");
         $data=$command->queryAll();
-        $this->render('f_permintaan_f', array('model' => $model,'data'=>$data));
+        $this->render('Permintaan/f_permintaan_f', array('model' => $model,'data'=>$data));
          
 	}//f_permintaan_f
     

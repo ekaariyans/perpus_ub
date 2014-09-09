@@ -7018,3 +7018,716 @@ Stack trace:
 REQUEST_URI=/perpus_ub/index.php?r=sirkulsi/peminjaman
 HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan
 ---
+2014/09/04 09:43:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sirkulasi/rfid".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('sirkulasi/rfid')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/index.php?r=sirkulasi/rfid
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan
+---
+2014/09/09 10:45:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "c".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('c')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('c')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/c')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/c
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan
+---
+2014/09/09 10:45:18 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\perpus_ub\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\perpus_ub\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\perpus_ub\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('anggota/view')
+#10 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/perpus_ub/index.php?r=anggota/view
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan
+---
+2014/09/09 10:45:26 [error] [exception.CDbException] exception 'CDbException' with message 'The table "permintaan" for active record class "Pengolahan" cannot be found in the database.' in C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php:2362
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Pengolahan))
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1350): CActiveRecord->getTableSchema()
+#3 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#4 C:\xampp\htdocs\perpus_ub\protected\controllers\PengolahanController.php(12): CActiveRecord->findAll()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PengolahanController->actionDaftarPermintaan()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('daftarpermintaa...')
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('pengolahan/daft...')
+#11 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/perpus_ub/index.php?r=pengolahan/daftarpermintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan
+---
+2014/09/09 11:03:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sirkulasi/rfid".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('sirkulasi/rfid')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/index.php?r=sirkulasi/rfid
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan
+---
+2014/09/09 11:35:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "f_laporan_p".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('f_laporan_p')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_laporan_p')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_la...')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/09 11:35:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "f_laporan_p".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('f_laporan_p')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_laporan_p')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_la...')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/09 11:36:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "f_laporan_p".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('f_laporan_p')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_laporan_p')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_la...')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/
+---
+2014/09/09 11:41:11 [error] [exception.CException] exception 'CException' with message 'PermintaanController cannot find the requested view "Permintaan/f_laporan_p".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('Permintaan/f_la...', NULL, true)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(15): CController->render('Permintaan/f_la...')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_laporan_p()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_laporan_p')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('Permintaan/f_la...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=Permintaan/f_laporan_p
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/
+---
+2014/09/09 11:48:22 [error] [exception.CDbException] exception 'CDbException' with message 'The table "permintaan" for active record class "Pengolahan" cannot be found in the database.' in C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php:2362
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Pengolahan))
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1350): CActiveRecord->getTableSchema()
+#3 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#4 C:\xampp\htdocs\perpus_ub\protected\controllers\PengolahanController.php(12): CActiveRecord->findAll()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PengolahanController->actionDaftarPermintaan()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('daftarpermintaa...')
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('pengolahan/daft...')
+#11 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/perpus_ub/index.php?r=pengolahan/daftarpermintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan
+---
+2014/09/09 12:03:41 [error] [php] Invalid argument supplied for foreach() (C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_laporan_p.php:102)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): PermintaanController->renderFile()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): PermintaanController->renderPartial()
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(36): PermintaanController->render()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_laporan_p()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+in C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_laporan_p.php (102)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (36)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/09 12:43:45 [error] [php] Invalid argument supplied for foreach() (C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_laporan_p.php:108)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): PermintaanController->renderFile()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): PermintaanController->renderPartial()
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(36): PermintaanController->render()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_laporan_p()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+in C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_laporan_p.php (108)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (36)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/09 12:44:06 [error] [exception.CException] exception 'CException' with message 'Property "TPermintaan.JUDUL" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(145): CComponent->__get('JUDUL')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CModel.php(596): CActiveRecord->__get('JUDUL')
+#2 C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_laporan_p.php(112): CModel->offsetGet('JUDUL')
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('f_laporan_p', Array, true)
+#7 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(36): CController->render('f_laporan_p', Array)
+#8 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_laporan_p()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_laporan_p')
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_la...')
+#14 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/09 12:57:04 [error] [exception.CDbException] exception 'CDbException' with message 'The table "permintaan" for active record class "Pengolahan" cannot be found in the database.' in C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php:2362
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Pengolahan))
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1350): CActiveRecord->getTableSchema()
+#3 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#4 C:\xampp\htdocs\perpus_ub\protected\controllers\PengolahanController.php(12): CActiveRecord->findAll()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PengolahanController->actionDaftarPermintaan()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('daftarpermintaa...')
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('pengolahan/daft...')
+#11 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/perpus_ub/index.php?r=pengolahan/daftarpermintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_laporan_p
+---
+2014/09/09 16:27:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sirkulasi/rfid".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('sirkulasi/rfid')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/index.php?r=sirkulasi/rfid
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/09 16:34:22 [error] [exception.CException] exception 'CException' with message 'PermintaanController cannot find the requested view "index".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(17): CController->render('index')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionIndex()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=site/loginForm
+---
+2014/09/09 16:36:14 [error] [exception.CException] exception 'CException' with message 'PermintaanController cannot find the requested view "index".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(17): CController->render('index')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionIndex()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=site/loginForm
+---
+2014/09/09 16:36:15 [error] [exception.CException] exception 'CException' with message 'PermintaanController cannot find the requested view "index".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(17): CController->render('index')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionIndex()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=site/loginForm
+---
+2014/09/09 16:36:50 [error] [exception.CException] exception 'CException' with message 'PermintaanController cannot find the requested view "index".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(12): CController->render('index')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionIndex()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=site/loginForm
+---
+2014/09/09 16:37:39 [error] [exception.CException] exception 'CException' with message 'PermintaanController cannot find the requested view "index".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(12): CController->render('index')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionIndex()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=site/loginForm
+---
+2014/09/09 16:45:51 [error] [exception.CException] exception 'CException' with message 'PermintaanController cannot find the requested view "index".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(12): CController->render('index')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionIndex()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=site/loginForm
+---
+2014/09/09 16:48:15 [error] [exception.CException] exception 'CException' with message 'PermintaanController cannot find the requested view "index".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(12): CController->render('index')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionIndex()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=site/loginForm
+---
+2014/09/09 16:56:40 [error] [exception.CDbException] exception 'CDbException' with message 'The table "permintaan" for active record class "Pengolahan" cannot be found in the database.' in C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php:2362
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Pengolahan))
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1350): CActiveRecord->getTableSchema()
+#3 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#4 C:\xampp\htdocs\perpus_ub\protected\controllers\PengolahanController.php(12): CActiveRecord->findAll()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PengolahanController->actionDaftarPermintaan()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('daftarpermintaa...')
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('pengolahan/daft...')
+#11 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/perpus_ub/index.php?r=pengolahan/daftarpermintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=pengolahan/
+---
+2014/09/09 16:57:35 [error] [exception.CException] exception 'CException' with message 'PermintaanController cannot find the requested view "f_permintaan".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('f_permintaan', Array, true)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(92): CController->render('f_permintaan', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan
+---
+2014/09/09 16:57:51 [error] [exception.CException] exception 'CException' with message 'PermintaanController cannot find the requested view "f_permintaan_f".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('f_permintaan_f', Array, true)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(312): CController->render('f_permintaan_f', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan
+---
+2014/09/09 21:53:42 [error] [php] include(LoginForm.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(82): spl_autoload_call()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): SiteController->runAction()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): SiteController->run()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=site/login
+in C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php (82)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/09 22:07:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "laporan".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('laporan')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('laporan')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('pengolahan/lapo...')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=pengolahan/laporan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_laporan_p
+---
+2014/09/09 23:22:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "c".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('c')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/index.php?r=c
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan
+---
+2014/09/09 23:24:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "c".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('c')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/index.php?r=c
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan
+---
+2014/09/09 23:25:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "c".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('c')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/index.php?r=c
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan
+---
+2014/09/09 23:30:58 [error] [php] include(LoginForm.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(82): spl_autoload_call()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): SiteController->runAction()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): SiteController->run()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=site/login
+in C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php (82)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/09 23:31:46 [error] [exception.CDbException] exception 'CDbException' with message 'The table "anggota" for active record class "Anggota" cannot be found in the database.' in C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php:2362
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Anggota))
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1601): CActiveRecord->getTableSchema()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CActiveDataProvider.php(228): CActiveRecord->count(Object(CDbCriteria))
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CActiveDataProvider.php(178): CDataProvider->getTotalItemCount()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#7 C:\xampp\htdocs\perpus_ub\framework\zii\widgets\CBaseListView.php(111): CDataProvider->getData()
+#8 C:\xampp\htdocs\perpus_ub\framework\zii\widgets\CListView.php(211): CBaseListView->init()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(147): CListView->init()
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#11 C:\xampp\htdocs\perpus_ub\protected\views\anggota\index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#14 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#15 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#16 C:\xampp\htdocs\perpus_ub\protected\controllers\AnggotaController.php(128): CController->render('index', Array)
+#17 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): AnggotaController->actionIndex()
+#18 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#19 C:\xampp\htdocs\perpus_ub\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#20 C:\xampp\htdocs\perpus_ub\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#21 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\perpus_ub\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#23 C:\xampp\htdocs\perpus_ub\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#24 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(291): CFilterChain->run()
+#25 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#26 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('')
+#27 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('anggota')
+#28 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#29 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#30 {main}
+REQUEST_URI=/perpus_ub/index.php?r=anggota
+---
+2014/09/09 23:33:36 [error] [php] include(LoginForm.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(82): spl_autoload_call()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): SiteController->runAction()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): SiteController->run()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=site/login
+in C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php (82)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/09 23:33:56 [error] [php] include(LoginForm.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(82): spl_autoload_call()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): SiteController->runAction()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): SiteController->run()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=site/login
+in C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php (82)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/09 23:34:44 [error] [php] include(LoginForm.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(82): spl_autoload_call()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): SiteController->runAction()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): SiteController->run()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=site/login
+in C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php (82)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/09 23:34:45 [error] [php] include(LoginForm.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(82): spl_autoload_call()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): SiteController->runAction()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): SiteController->run()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=site/login
+in C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php (82)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/09 23:34:45 [error] [php] include(LoginForm.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(82): spl_autoload_call()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): SiteController->runAction()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): SiteController->run()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=site/login
+in C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php (82)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/09 23:36:08 [error] [php] include(LoginForm.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(82): spl_autoload_call()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): SiteController->runAction()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): SiteController->run()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=site/login
+in C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php (82)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/09 23:36:36 [error] [php] include(LoginForm.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(82): spl_autoload_call()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): SiteController->runAction()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): SiteController->run()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=site/login
+in C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php (82)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/09 23:37:22 [error] [php] include(LoginForm.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(82): spl_autoload_call()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): SiteController->runAction()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): SiteController->run()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=site/login
+in C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php (82)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/09 23:40:09 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (44)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/09 23:40:09 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "anggota". The conflict occurred in database "perpus_yii", table "dbo.t_user_request", column 'ID_ANGGOTA'.. The SQL statement executed was: INSERT INTO [dbo].[t_permintaan] ([ID_ANGGOTA], [K_JENIS], [TGL_PERMINTAAN]) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (68)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/09 23:40:09 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "anggota". The conflict occurred in database "perpus_yii", table "dbo.t_user_request", column 'ID_ANGGOTA'.. The SQL statement executed was: INSERT INTO [dbo].[t_permintaan] ([ID_ANGGOTA], [K_JENIS], [TGL_PERMINTAAN]) VALUES (:yp0, :yp1, :yp2)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(68): CActiveRecord->save()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan')
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan
+---
+2014/09/09 23:43:21 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (44)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/10 00:05:30 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Incorrect syntax near '='.. The SQL statement executed was: [dbo].[permintaanBuku] @id_anggota =115090600111037, @jenis =.
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (92)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/10 00:05:30 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Incorrect syntax near '='.. The SQL statement executed was: [dbo].[permintaanBuku] @id_anggota =115090600111037, @jenis =' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(92): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan
+---
+2014/09/10 00:09:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Incorrect syntax near '='.. The SQL statement executed was: [dbo].[permintaanBuku] @id_anggota =115090600111037, @jenis = .
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (92)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/10 00:09:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Incorrect syntax near '='.. The SQL statement executed was: [dbo].[permintaanBuku] @id_anggota =115090600111037, @jenis = ' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(92): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan
+---
+2014/09/10 00:10:04 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Incorrect syntax near '='.. The SQL statement executed was: [dbo].[permintaanBuku] @id_anggota =115090600111037, @jenis = .
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (93)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/10 00:10:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Incorrect syntax near '='.. The SQL statement executed was: [dbo].[permintaanBuku] @id_anggota =115090600111037, @jenis = ' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(93): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan
+---
+2014/09/10 00:10:07 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Incorrect syntax near '='.. The SQL statement executed was: [dbo].[permintaanBuku] @id_anggota =115090600111037, @jenis = .
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (93)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/10 00:10:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Incorrect syntax near '='.. The SQL statement executed was: [dbo].[permintaanBuku] @id_anggota =115090600111037, @jenis = ' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(93): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan
+---
+2014/09/10 00:11:15 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Incorrect syntax near '='.. The SQL statement executed was: [dbo].[permintaanBuku] @id_anggota =115090600111037, @jenis = .
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (93)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/10 00:11:15 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Incorrect syntax near '='.. The SQL statement executed was: [dbo].[permintaanBuku] @id_anggota =115090600111037, @jenis = ' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(93): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan
+---

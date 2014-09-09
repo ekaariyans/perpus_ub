@@ -3,18 +3,7 @@
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Anggotas',
-);
-
-$this->menu=array(
-	array('label'=>'Create Anggota', 'url'=>array('create')),
-	array('label'=>'Manage Anggota', 'url'=>array('admin')),
+	'Anggota',
 );
 ?>
-
-<h1>Anggotas</h1>
-
-<?php $this->widget('zii.widgets.CListView', array(
-	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
-)); ?>
+<h1><?php echo $this->id . '/' . $this->action->id; ?></h1>
