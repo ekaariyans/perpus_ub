@@ -276,9 +276,6 @@
             <h4 class="box-title">DAFTAR PERMINTAAN BUKU</h4>
             <div class="box">
     <h2>Daftar Permintaan Buku</h2>
-<?php    
-	echo CHtml::link('Cetak dokumen',array('cetak/cetak'));
-?>
 	<table id="example2" class="table table-bordered table-striped">
                         <thead>
                             <tr>
@@ -333,10 +330,112 @@
         </div>
   </div>
   <div class="tab-pane " id="jr">
-  dd
+  <div class="box-header">
+            <h4 class="box-title">DAFTAR PERMINTAAN JURNAL</h4>
+            <div class="box">
+    <h2>Daftar Permintaan Jurnal</h2>
+	<table id="example3" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID Anggota</th>
+                                <th>Tgl.Permintaan</th>
+                                <th>Judul</th>
+                                <th>Pengarang</th>
+                                <th>Jenis</th>
+                                <th>Bahasa</th>
+                				<th>Harga</th>
+                            	<th>Link Website</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($dataJur as $modelJur): ?>
+                                <tr>
+                                    <td><?php echo $modelJur['ID_ANGGOTA']; ?></td>
+                                    <td><?php echo $modelJur['TGL_PERMINTAAN']; ?></td>
+                                    <td><?php echo $modelJur['JUDUL']; ?></td>
+                                    <td><?php echo $modelJur['PENGARANG']; ?></td>
+                                    <td><?php echo $modelJur['JENIS']; ?></td>
+                                    <td><?php echo $modelJur['BAHASA']; ?></td>
+                                	<td><?php echo $modelJur['HARGA']; ?></td>
+                                	<td><?php echo $modelJur['LINK_WEBSITE']; ?></td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+  </div>           
+         <!-- jQuery 2.0.2 -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <!-- page script -->
+        <script type="text/javascript">
+            $(function() {
+                $('#example3').dataTable({
+                    "bPaginate": true,
+                    "bLengthChange": true,
+                    "bFilter": false,
+                    "bSort": true,
+                    "bInfo": false,
+                    "bAutoWidth": false
+                });
+            });
+        </script>
+
+   
+        </div>
   </div>
   <div class="tab-pane " id="sr">
-  dd
+  <div class="box-header">
+            <h4 class="box-title">DAFTAR PERMINTAAN BUKU</h4>
+            <div class="box">
+    <h2>Daftar Permintaan Buku</h2>
+	<table id="example4" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID Anggota</th>
+                                <th>Tgl.Permintaan</th>
+                                <th>Judul</th>
+                                <th>Volume</th>
+                                <th>Pengarang</th>
+                                <th>Tahun</th>
+                                <th>Jenis</th>
+                                <th>Bahasa</th>
+                				<th>Harga</th>
+                            	<th>Link Website</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($dataSer as $modelSer): ?>
+                                <tr>
+                                    <td><?php echo $modelSer['ID_ANGGOTA']; ?></td>
+                                    <td><?php echo $modelSer['TGL_PERMINTAAN']; ?></td>
+                                    <td><?php echo $modelSer['JUDUL']; ?></td>
+                                    <td><?php echo $modelSer['VOLUME']; ?></td>
+                                    <td><?php echo $modelSer['PENGARANG']; ?></td>
+                                    <td><?php echo $modelSer['TAHUN']; ?></td>
+                            		<td><?php echo $modelSer['JENIS']; ?></td>
+                                	<td><?php echo $modelSer['BAHASA']; ?></td>
+                                	<td><?php echo $modelSer['HARGA']; ?></td>
+                                	<td><?php echo $modelSer['LINK_WEBSITE']; ?></td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+  </div>           
+         <!-- jQuery 2.0.2 -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <!-- page script -->
+        <script type="text/javascript">
+            $(function() {
+                $('#example4').dataTable({
+                    "bPaginate": true,
+                    "bLengthChange": true,
+                    "bFilter": false,
+                    "bSort": true,
+                    "bInfo": false,
+                    "bAutoWidth": false
+                });
+            });
+        </script>
+
   </div>
  </div>
 

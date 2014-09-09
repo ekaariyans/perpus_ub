@@ -7731,3 +7731,162 @@ Stack trace:
 #10 {main}
 REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan
 ---
+2014/09/10 03:24:59 [error] [php] include(LoginForm.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(82): spl_autoload_call()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): SiteController->runAction()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): SiteController->run()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=site/login
+in C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php (82)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/10 03:25:07 [error] [php] include(LoginForm.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(82): spl_autoload_call()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): SiteController->runAction()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): SiteController->run()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=site/login
+in C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php (82)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/10 03:29:38 [error] [php] simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: php_network_getaddresses: getaddrinfo failed: No such host is known.  (C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php:132)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): SiteController->runAction()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): SiteController->run()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=site/loginForm
+in C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php (132)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/10 04:26:21 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (44)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/10 04:27:18 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (44)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/10 04:44:38 [error] [exception.CException] exception 'CException' with message 'Property "TPermintaan.JUDUL" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(145): CComponent->__get('JUDUL')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CModel.php(596): CActiveRecord->__get('JUDUL')
+#2 C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_laporan_p.php(101): CModel->offsetGet('JUDUL')
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('Permintaan/f_la...', Array, true)
+#7 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(44): CController->render('Permintaan/f_la...', Array)
+#8 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_laporan_p()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_laporan_p')
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_la...')
+#14 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=Permintaan/f_permintaan
+---
+2014/09/10 04:46:17 [error] [exception.CException] exception 'CException' with message 'Property "TPermintaan.JUDUL" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(145): CComponent->__get('JUDUL')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CModel.php(596): CActiveRecord->__get('JUDUL')
+#2 C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_laporan_p.php(101): CModel->offsetGet('JUDUL')
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('Permintaan/f_la...', Array, true)
+#7 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(44): CController->render('Permintaan/f_la...', Array)
+#8 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_laporan_p()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_laporan_p')
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_la...')
+#14 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=Permintaan/f_permintaan
+---
+2014/09/10 04:47:22 [error] [exception.CException] exception 'CException' with message 'Property "TPermintaan.JUDUL" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(145): CComponent->__get('JUDUL')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CModel.php(596): CActiveRecord->__get('JUDUL')
+#2 C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_laporan_p.php(101): CModel->offsetGet('JUDUL')
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('Permintaan/f_la...', Array, true)
+#7 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(44): CController->render('Permintaan/f_la...', Array)
+#8 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_laporan_p()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_laporan_p')
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_la...')
+#14 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=Permintaan/f_permintaan
+---
+2014/09/10 04:47:26 [error] [exception.CException] exception 'CException' with message 'Property "TPermintaan.JUDUL" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(145): CComponent->__get('JUDUL')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CModel.php(596): CActiveRecord->__get('JUDUL')
+#2 C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_laporan_p.php(101): CModel->offsetGet('JUDUL')
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('Permintaan/f_la...', Array, true)
+#7 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(44): CController->render('Permintaan/f_la...', Array)
+#8 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_laporan_p()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_laporan_p')
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_la...')
+#14 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=Permintaan/f_permintaan
+---
+2014/09/10 04:47:28 [error] [exception.CException] exception 'CException' with message 'Property "TPermintaan.JUDUL" is not defined.' in C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(145): CComponent->__get('JUDUL')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CModel.php(596): CActiveRecord->__get('JUDUL')
+#2 C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_laporan_p.php(101): CModel->offsetGet('JUDUL')
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('Permintaan/f_la...', Array, true)
+#7 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(44): CController->render('Permintaan/f_la...', Array)
+#8 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_laporan_p()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_laporan_p')
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_la...')
+#14 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=Permintaan/f_permintaan
+---
+2014/09/10 05:00:39 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (38)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
