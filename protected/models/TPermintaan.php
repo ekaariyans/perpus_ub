@@ -28,10 +28,10 @@ class TPermintaan extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			//array('ID_ANGGOTA', 'required'),
-			//array('K_JENIS', 'numerical', 'integerOnly'=>true),
+			array('K_JENIS', 'required'),
+			array('K_JENIS', 'numerical', 'integerOnly'=>true),
 			array('ID_ANGGOTA', 'length', 'max'=>20),
-			array('TGL_PERMINTAAN', 'safe'),
+			//array('TGL_PERMINTAAN', 'safe'),
 			//array('filee','file','types'=>'xls,xlsx','allowEmpty' => true),
 			//array('filee','safe','on'=>'excel'),
 			// The following rule is used by search().

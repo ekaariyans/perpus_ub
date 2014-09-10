@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application Eka',
+	'name'=>'My Web Application ',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -17,6 +17,7 @@ return array(
 		'application.models.*',
 		'application.components.*',
 	),
+	
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
@@ -36,6 +37,9 @@ return array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
 		),
+		 'msg' => array(
+    	'class' => 'application.extensions.emessage.EMessage'
+    	),
 		// uncomment the following to enable URLs in path-format
 		/*
 		'urlManager'=>array(

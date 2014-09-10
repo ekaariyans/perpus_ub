@@ -27,9 +27,9 @@
   <div class="tab-pane active" id="Form"><?php echo $form->errorSummary($modelJur); ?>
     <div class="box box-primary">
         <div class="box-header">
-            <h4 class="box-title">PERMINTAAN BUKU BARU</h4>
+            <h4 class="box-title">Form Permintaan Katalog</h4>
         </div>
-		
+        
 		<?php echo $form->errorSummary($model); ?>
             	<div class="form-group">
                 <label class="col-sm-2 control-label">Select</label>
@@ -89,7 +89,7 @@
         <div class="form-group">
             <?php echo $form->labelEx($modelBk, 'JENIS', array('class' => 'col-sm-2 control-label')); ?>
             <div class="col-sm-10">
-                <?php echo $form->textField($modelBk, 'JENIS', array('class' => 'form-control', 'placeholder' => 'Jenis Bahan Pustaka (\'Cetak\', \'Elektronik\')')); ?>
+                <?php echo $form->dropDownList($modelBk, 'JENIS', array('Cetak'=>'Cetak', 'Elektronik'=>'Elektronik')); ?>
                 <?php echo $form->error($modelBk, 'JENIS'); ?>
             </div>
         </div>
@@ -140,113 +140,100 @@
         <div class="form-group">
             <?php echo $form->labelEx($modelJur, 'JUDUL', array('class' => 'col-sm-2 control-label')); ?>
             <div class="col-sm-10">
-                <?php echo $form->textField($modelJur, 'JUDUL', array('class' => 'form-control', 'placeholder' => 'Judul Buku')); ?>
+                <?php echo $form->textField($modelJur, 'JUDUL', array('class' => 'form-control', 'placeholder' => 'Judul Jurnal')); ?>
                 <?php echo $form->error($modelJur, 'JUDUL'); ?>
             </div>
         </div>
-
         <div class="form-group">
             <?php echo $form->labelEx($modelJur, 'PENGARANG', array('class' => 'col-sm-2 control-label')); ?>
             <div class="col-sm-10">
-                <?php echo $form->textField($modelJur, 'PENGARANG', array('class' => 'form-control', 'placeholder' => 'Judul Pengarang Buku')); ?>
+                <?php echo $form->textField($modelJur, 'PENGARANG', array('class' => 'form-control', 'placeholder' => 'Pengarang Jurnal')); ?>
                 <?php echo $form->error($modelJur, 'PENGARANG'); ?>
             </div>
         </div>
-
-        
         <div class="form-group">
             <?php echo $form->labelEx($modelJur, 'JENIS', array('class' => 'col-sm-2 control-label')); ?>
             <div class="col-sm-10">
-                <?php echo $form->textField($modelJur, 'JENIS', array('class' => 'form-control', 'placeholder' => 'Jenis Bahan Pustaka (\'Cetak\', \'Elektronik\')')); ?>
+                 <?php echo $form->dropDownList($modelJur, 'JENIS', array('Cetak'=>'Cetak', 'Elektronik'=>'Elektronik')); ?>
                 <?php echo $form->error($modelJur, 'JENIS'); ?>
             </div>
         </div>
-
 		<div class="form-group">
             <?php echo $form->labelEx($modelJur, 'BAHASA', array('class' => 'col-sm-2 control-label')); ?>
             <div class="col-sm-10">
-                <?php echo $form->textField($modelJur, 'BAHASA', array('class' => 'form-control', 'placeholder' => 'Bahasa yang Digunakan Buku')); ?>
+                <?php echo $form->textField($modelJur, 'BAHASA', array('class' => 'form-control', 'placeholder' => 'Bahasa yang Digunakan')); ?>
                 <?php echo $form->error($modelJur, 'BAHASA'); ?>
             </div>
         </div>
-        
-        
-
         <div class="form-group">
             <?php echo $form->labelEx($modelJur, 'HARGA', array('class' => 'col-sm-2 control-label')); ?>
             <div class="col-sm-10">
-                <?php echo $form->textField($modelJur, 'HARGA', array('class' => 'form-control', 'placeholder' => 'Judul Pengarang Buku')); ?>
+                <?php echo $form->textField($modelJur, 'HARGA', array('class' => 'form-control', 'placeholder' => 'Harga Jurnal')); ?>
                 <?php echo $form->error($modelJur, 'HARGA'); ?>
             </div>
         </div>       
-
         <div class="form-group">
             <?php echo $form->labelEx($modelJur, 'LINK_WEBSITE', array('class' => 'col-sm-2 control-label')); ?>
             <div class="col-sm-10">
-                <?php echo $form->textField($modelJur, 'LINK_WEBSITE', array('class' => 'form-control', 'placeholder' => 'Link Website Buku')); ?>
+                <?php echo $form->textField($modelJur, 'LINK_WEBSITE', array('class' => 'form-control', 'placeholder' => 'Link Website Jurnal')); ?>
                 <?php echo $form->error($modelJur, 'LINK_WEBSITE'); ?>
             </div>
         </div>
         </div> <!--Jurnal-->
-        
         <div id="serial">
         <div class="form-group">
             <?php echo $form->labelEx($modelSer, 'JUDUL', array('class' => 'col-sm-2 control-label')); ?>
             <div class="col-sm-10">
-                <?php echo $form->textField($modelSer, 'JUDUL', array('class' => 'form-control', 'placeholder' => 'Judul Buku')); ?>
+                <?php echo $form->textField($modelSer, 'JUDUL', array('class' => 'form-control', 'placeholder' => 'Judul')); ?>
                 <?php echo $form->error($modelSer, 'JUDUL'); ?>
             </div>
         </div>
         <div class="form-group">
             <?php echo $form->labelEx($modelSer, 'VOLUME', array('class' => 'col-sm-2 control-label')); ?>
             <div class="col-sm-10">
-                <?php echo $form->textField($modelSer, 'VOLUME', array('class' => 'form-control', 'placeholder' => 'volom Buku')); ?>
+                <?php echo $form->textField($modelSer, 'VOLUME', array('class' => 'form-control', 'placeholder' => 'Volume')); ?>
                 <?php echo $form->error($modelSer, 'VOLUME'); ?>
             </div>
         </div>
         <div class="form-group">
             <?php echo $form->labelEx($modelSer, 'TAHUN', array('class' => 'col-sm-2 control-label')); ?>
             <div class="col-sm-10">
-                <?php echo $form->textField($modelSer, 'TAHUN', array('class' => 'form-control', 'placeholder' => 'volom Buku')); ?>
+                <?php echo $form->textField($modelSer, 'TAHUN', array('class' => 'form-control', 'placeholder' => 'Tahun')); ?>
                 <?php echo $form->error($modelSer, 'TAHUN'); ?>
             </div>
         </div>
         <div class="form-group">
-            <?php echo $form->labelEx($modelSer, 'FREKWENSI', array('class' => 'col-sm-2 control-label')); ?>
+            <?php echo $form->labelEx($modelSer, 'FREKUENSI', array('class' => 'col-sm-2 control-label')); ?>
             <div class="col-sm-10">
-                <?php echo $form->textField($modelSer, 'FREKWENSI', array('class' => 'form-control', 'placeholder' => 'volom Buku')); ?>
+                <?php echo $form->textField($modelSer, 'FREKWENSI', array('class' => 'form-control', 'placeholder' => 'Frekuensi')); ?>
                 <?php echo $form->error($modelSer, 'FREKWENSI'); ?>
             </div>
         </div>
-        
         <div class="form-group">
             <?php echo $form->labelEx($modelSer, 'JENIS', array('class' => 'col-sm-2 control-label')); ?>
             <div class="col-sm-10">
-                <?php echo $form->textField($modelSer, 'JENIS', array('class' => 'form-control', 'placeholder' => 'Jenis Bahan Pustaka (\'Cetak\', \'Elektronik\')')); ?>
+                <?php echo $form->dropDownList($modelSer, 'JENIS', array('Cetak'=>'Cetak', 'Elektronik'=>'Elektronik')); ?>
                 <?php echo $form->error($modelSer, 'JENIS'); ?>
             </div>
         </div>
-
 		<div class="form-group">
             <?php echo $form->labelEx($modelSer, 'BAHASA', array('class' => 'col-sm-2 control-label')); ?>
             <div class="col-sm-10">
-                <?php echo $form->textField($modelSer, 'BAHASA', array('class' => 'form-control', 'placeholder' => 'Bahasa yang Digunakan Buku')); ?>
+                <?php echo $form->textField($modelSer, 'BAHASA', array('class' => 'form-control', 'placeholder' => 'Bahasa yang Digunakan')); ?>
                 <?php echo $form->error($modelSer, 'BAHASA'); ?>
             </div>
         </div>
-
         <div class="form-group">
             <?php echo $form->labelEx($modelSer, 'HARGA', array('class' => 'col-sm-2 control-label')); ?>
             <div class="col-sm-10">
-                <?php echo $form->textField($modelSer, 'HARGA', array('class' => 'form-control', 'placeholder' => 'Judul Pengarang Buku')); ?>
+                <?php echo $form->textField($modelSer, 'HARGA', array('class' => 'form-control', 'placeholder' => 'Harga')); ?>
                 <?php echo $form->error($modelSer, 'HARGA'); ?>
             </div>
         </div>       
-
         <div class="form-group">
             <?php echo $form->labelEx($modelSer, 'LINK_WEBSITE', array('class' => 'col-sm-2 control-label')); ?>
             <div class="col-sm-10">
-                <?php echo $form->textField($modelSer, 'LINK_WEBSITE', array('class' => 'form-control', 'placeholder' => 'Link Website Buku')); ?>
+                <?php echo $form->textField($modelSer, 'LINK_WEBSITE', array('class' => 'form-control', 'placeholder' => 'Link Website')); ?>
                 <?php echo $form->error($modelSer, 'LINK_WEBSITE'); ?>
             </div>
         </div>
@@ -394,7 +381,6 @@
                                 <th>Tgl.Permintaan</th>
                                 <th>Judul</th>
                                 <th>Volume</th>
-                                <th>Pengarang</th>
                                 <th>Tahun</th>
                                 <th>Jenis</th>
                                 <th>Bahasa</th>
@@ -409,7 +395,6 @@
                                     <td><?php echo $modelSer['TGL_PERMINTAAN']; ?></td>
                                     <td><?php echo $modelSer['JUDUL']; ?></td>
                                     <td><?php echo $modelSer['VOLUME']; ?></td>
-                                    <td><?php echo $modelSer['PENGARANG']; ?></td>
                                     <td><?php echo $modelSer['TAHUN']; ?></td>
                             		<td><?php echo $modelSer['JENIS']; ?></td>
                                 	<td><?php echo $modelSer['BAHASA']; ?></td>

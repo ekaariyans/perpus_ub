@@ -34,7 +34,7 @@ class TPermintaanBuku extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('JUDUL, PENGARANG, ISBN, JENIS, BAHASA, PENERBIT, TAHUN_TERBIT, HARGA', 'required'),
+			array('JUDUL, PENGARANG, JENIS, BAHASA, PENERBIT, TAHUN_TERBIT', 'required'),
 			array('K_PERMINTAAN, TAHUN_TERBIT', 'numerical', 'integerOnly'=>true),
 			array('JUDUL, PENGARANG, ISBN, JENIS, BAHASA, PENERBIT, HARGA', 'length', 'max'=>50),
 			array('LINK_WEBSITE', 'length', 'max'=>250),

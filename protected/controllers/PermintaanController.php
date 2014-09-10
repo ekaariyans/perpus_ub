@@ -20,17 +20,31 @@ class PermintaanController extends Controller {
  	public function actionF_laporan_p()
 	{
 		
+		$model = new TPermintaan;
+		$modelBk = new TPermintaanBuku;
+        $modelJur = new TPermintaanJurnal;
+        $modelSer = new TPermintaanSerial;
+		
 		$user= Yii::app()->session['username'];
-        $command = Yii::app()->db->createCommand("[dbo].[permintaanBuku] @id_anggota =$user ");
-        $data=$command->queryAll();
         
+        if (isset($_POST['TPermintaan'])) {
+			$model->TGL_PERMINTAAN = $_POST['TPermintaan']['TGL_PERMINTAAN'];
+        	$modelBk->BAHASA = $_POST['TPermintaanBuku']['BAHASA'];
+		}
+        	$tanggal=$_POST['TPermintaan']['TGL_PERMINTAAN'];
+        	$bahasa=$_POST['TPermintaanBuku']['BAHASA'];
+
+        
+        $command = Yii::app()->db->createCommand("[dbo].[lap_Buku] @tanggal=:$tanggal, @bahasa=:$bahasa ");
+        $data=$command->queryAll();
+		
          $commandJur = Yii::app()->db->createCommand("[dbo].[permintaanJurnal] @id_anggota =$user ");
         $dataJur=$commandJur->queryAll();
         
         $commandSer = Yii::app()->db->createCommand("[dbo].[permintaanSerial] @id_anggota =$user ");
         $dataSer=$commandSer->queryAll();
                 
-		$this->render('Permintaan/f_laporan_p', array('data'=>$data,'dataJur'=>$dataJur,'dataSer'=>$dataSer));
+		$this->render('Permintaan/f_laporan_p', array('model'=>$model, 'modelBk'=>$modelBk, 'data'=>$data,'dataJur'=>$dataJur,'dataSer'=>$dataSer));
 	}
     
     
@@ -71,16 +85,16 @@ class PermintaanController extends Controller {
                 $model2->attributes = $_POST[$namaModel];
                 
                 $valid2=$model2->validate();
+                
                 if($k_jenis==1 && $valid2){
 					$this->inputBukuIndividu($k_permintaan,$model2);
 				}
 				else if($k_jenis==2 && $valid2){
 					$this->inputJurnalIndividu($k_permintaan,$model2);
 				}
-				else {
+				else if($k_jenis==3 && $valid2) {
 					$this->inputSerialIndividu($k_permintaan,$model2);
 				}
-                
                 $this->redirect(array('Permintaan/f_permintaan'));
                 return;
             }
@@ -313,10 +327,17 @@ class PermintaanController extends Controller {
 			}
 		}//isset@id_anggota = 'demo'
      	
-        $user= Yii::app()->session['username'];
-        $command = Yii::app()->db->createCommand("[dbo].[permintaanBuku] @id_anggota =$user");
+       	$user= Yii::app()->session['username'];
+        $command = Yii::app()->db->createCommand("[dbo].[permintaanBuku] @id_anggota =$user ");
         $data=$command->queryAll();
-        $this->render('Permintaan/f_permintaan_f', array('model' => $model,'data'=>$data));
+        
+        $commandJur = Yii::app()->db->createCommand("[dbo].[permintaanJurnal] @id_anggota =$user ");
+        $dataJur=$commandJur->queryAll();
+        
+        $commandSer = Yii::app()->db->createCommand("[dbo].[permintaanSerial] @id_anggota =$user ");
+        $dataSer=$commandSer->queryAll();
+        
+         $this->render('Permintaan/f_permintaan_f', array('model' => $model,'data'=>$data,'dataJur'=>$dataJur,'dataSer'=>$dataSer));
          
 	}//f_permintaan_f
     

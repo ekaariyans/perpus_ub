@@ -76,7 +76,7 @@ class SiteController extends Controller
 
 	/**
 	 * Displays the login page
-	 */
+	 
 	public function actionLogin()
 	{
 		$model=new LoginForm;
@@ -110,7 +110,7 @@ class SiteController extends Controller
 		// display the login form
 		$this->render('login',array('model'=>$model));
 	}
-	
+	*/
 	public function actionLoginForm() 
 { 
     $model=new User; 
@@ -133,6 +133,7 @@ class SiteController extends Controller
 
 			$kenal = $xml->CONTENT->AUTHORITY->DIKENAL." </p>";
 			$passwd = $xml->CONTENT->AUTHORITY->PASSWD." </p>";
+			$nama = $xml->CONTENT->USER->NAMA." </p>";
 
 			if($kenal==1){
 				if($passwd == 1){
