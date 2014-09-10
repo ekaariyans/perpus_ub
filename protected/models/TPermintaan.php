@@ -31,7 +31,7 @@ class TPermintaan extends CActiveRecord
 			array('K_JENIS', 'required'),
 			array('K_JENIS', 'numerical', 'integerOnly'=>true),
 			array('ID_ANGGOTA', 'length', 'max'=>20),
-			//array('TGL_PERMINTAAN', 'safe'),
+			array('TGL_PERMINTAAN', 'safe'),
 			//array('filee','file','types'=>'xls,xlsx','allowEmpty' => true),
 			//array('filee','safe','on'=>'excel'),
 			// The following rule is used by search().

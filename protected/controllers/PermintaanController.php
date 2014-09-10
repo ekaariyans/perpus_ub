@@ -30,12 +30,12 @@ class PermintaanController extends Controller {
         if (isset($_POST['TPermintaan'])) {
 			$model->TGL_PERMINTAAN = $_POST['TPermintaan']['TGL_PERMINTAAN'];
         	$modelBk->BAHASA = $_POST['TPermintaanBuku']['BAHASA'];
-		}
+		
         	$tanggal=$_POST['TPermintaan']['TGL_PERMINTAAN'];
         	$bahasa=$_POST['TPermintaanBuku']['BAHASA'];
-
+		}
         
-        $command = Yii::app()->db->createCommand("[dbo].[lap_Buku] @tanggal=:$tanggal, @bahasa=:$bahasa ");
+        $command = Yii::app()->db->createCommand("[dbo].[permintaanBuku]  @id_anggota =$user ");
         $data=$command->queryAll();
 		
          $commandJur = Yii::app()->db->createCommand("[dbo].[permintaanJurnal] @id_anggota =$user ");

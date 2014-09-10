@@ -9805,3 +9805,172 @@ Stack trace:
 REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
 HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan
 ---
+2014/09/10 19:50:08 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Incorrect syntax near ':'.. The SQL statement executed was: [dbo].[lap_Buku] @tanggal=:, @bahasa=: .
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (39)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/10 19:50:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Incorrect syntax near ':'.. The SQL statement executed was: [dbo].[lap_Buku] @tanggal=:, @bahasa=: ' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(39): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_laporan_p()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_laporan_p')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_la...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan
+---
+2014/09/10 21:21:04 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Incorrect syntax near ','.. The SQL statement executed was: [dbo].[lap_Buku] @tanggal=, @bahasa= .
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (39)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/10 21:21:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Incorrect syntax near ','.. The SQL statement executed was: [dbo].[lap_Buku] @tanggal=, @bahasa= ' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(39): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_laporan_p()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_laporan_p')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_la...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan
+---
+2014/09/10 21:21:05 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Incorrect syntax near ','.. The SQL statement executed was: [dbo].[lap_Buku] @tanggal=, @bahasa= .
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (39)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/10 21:21:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Incorrect syntax near ','.. The SQL statement executed was: [dbo].[lap_Buku] @tanggal=, @bahasa= ' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(39): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_laporan_p()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_laporan_p')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_la...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan
+---
+2014/09/10 21:21:17 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Incorrect syntax near '='.. The SQL statement executed was: [dbo].[lap_Buku] @tanggal=.
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (39)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/10 21:21:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Incorrect syntax near '='.. The SQL statement executed was: [dbo].[lap_Buku] @tanggal=' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(39): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_laporan_p()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_laporan_p')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_la...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan
+---
+2014/09/10 21:21:37 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Incorrect syntax near '='.. The SQL statement executed was: [dbo].[lap_Buku] @tanggal =.
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (39)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/10 21:21:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Incorrect syntax near '='.. The SQL statement executed was: [dbo].[lap_Buku] @tanggal =' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(39): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_laporan_p()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_laporan_p')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_la...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan
+---
+2014/09/10 21:21:39 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Incorrect syntax near '='.. The SQL statement executed was: [dbo].[lap_Buku] @tanggal =.
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (39)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/10 21:21:39 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Incorrect syntax near '='.. The SQL statement executed was: [dbo].[lap_Buku] @tanggal =' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(39): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_laporan_p()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_laporan_p')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_la...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan
+---
+2014/09/10 21:21:40 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Incorrect syntax near '='.. The SQL statement executed was: [dbo].[lap_Buku] @tanggal =.
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (39)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/10 21:21:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Incorrect syntax near '='.. The SQL statement executed was: [dbo].[lap_Buku] @tanggal =' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(39): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_laporan_p()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_laporan_p')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_la...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan
+---
+2014/09/10 21:21:57 [error] [php] Invalid argument supplied for foreach() (C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_laporan_p.php:92)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): PermintaanController->renderFile()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): PermintaanController->renderPartial()
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(47): PermintaanController->render()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_laporan_p()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+in C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_laporan_p.php (92)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (47)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/10 21:55:01 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Incorrect syntax near ','.. The SQL statement executed was: [dbo].[lap_Buku] @tanggal=, @bahasa=: .
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (39)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/10 21:55:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Incorrect syntax near ','.. The SQL statement executed was: [dbo].[lap_Buku] @tanggal=, @bahasa=: ' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(39): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_laporan_p()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_laporan_p')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_la...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan
+---

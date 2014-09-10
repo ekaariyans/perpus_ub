@@ -24,50 +24,48 @@
         <li><a href="#jurnal" role="tab" data-toggle="tab">PERMINTAAN JURNAL</a></li>
         <li><a href="#serial" role="tab" data-toggle="tab">PERMINTAAN SERIAL</a></li>
     </ul>
+    
+    <div class="box box-primary">
+        <div class="box-header">
+            <ul class="nav nav-tabs" role="tablist">
+  <li class="active"><a href="#bk" role="tab" data-toggle="tab">Belum Terbeli </a></li>
+  <li><a href="#jr" role="tab" data-toggle="tab">Sudah Dibeli</a></li>
+  </ul>
     <!-- Tab panes -->
     <div class="tab-content">
         <div class="tab-pane active" id="buku">
-            <div class="box box-primary">
-                <div class="box-header">
-                    <div class="box">
-                        <h2>Daftar Permintaan Buku</h2>
-                        <div class="box">
+            
+          
+                    
                             <div class="span6">
                                 <form class="well form-inline">
                                     <!-- Date range -->
                                     <!-- Date dd/mm/yyyy -->
-                                    <div class="form-group">
-                                        <label>Dari Tanggal:</label>
-                                        <div class="input-group">
-                                            <div class="input-group-addon">
-                                                <i class="fa fa-calendar"></i>
-                                            </div>
-                                            <?php echo $form->dateField($model, 'TGL_PERMINTAAN', array('class'=>'form-control'));?>
-                                            
-                                        </div><!-- /.input group -->
-                                    </div><!-- /.form group -->
-                                    
-                                    
-                                    <!-- Date dd/mm/yyyy -->
-                                    <div class="form-group">
-                                        <label>Sampai Tanggal:</label>
-                                        <div class="input-group">
-                                            <div class="input-group-addon">
-                                                <i class="fa fa-calendar"></i>
-                                            </div>
-                                            <?php echo $form->dateField($model, 'TGL_PERMINTAAN', array('class'=>'form-control'));?>
-                                        </div><!-- /.input group -->
-                                    </div><!-- /.form group -->
                                     
                                     <!-- select -->
                                     <div class="form-group">
                                         <label>Bahasa</label>
                                         <div class="input-group">
-                                        <?php echo $form->dropDownList($modelBk, 'BAHASA', array('prompt'=>'----- Pilih Bahasa -----','1'=>'Indonesia', '2'=>'Inggris', '3'=>'Lainnya'), array('class'=>'form-control'));?>
+                                        <?php echo $form->dropDownList($modelBk, 'BAHASA', array('prompt'=>'----- Pilih Bahasa -----','1'=>'Indonesia', '2'=>'Inggris', '3'=>'Lainnya'), array('class'=>'form-control', 'onchange'=> '	
+                  							 if(this.value==1)
+											{ 	
+                  								var x=document.getElementById("bahasa").innerHTML;
+                  								if(x=="Indonesia"){
+                  									document.getElementById("bahasa").style.display="block";
+												}                  								}
+                  								elseif(x=="Inggris"){
+                  									document.getElementById("bahasa").style.display="none";
+                  								}
+                  								else{
+                  									document.getElementById("bahasa").style.display="none";	
+                  								}
+                  								
+                  							}
+                  							'
+                  	)); ?>
                                         </div>
                                         <br>
-                                     <div class="form-group"> 
-                                    <button type="submit" class="btn btn-warning">Search</button>
+                                     <div class="form-group">
                                     <a href="<?php echo Yii::app()->request->baseUrl . '/assets/TemplateForm/FormReqBuku.xls'; ?>" class="btn btn-default btn-flat">Download</a>
                                     </div>
                                 </form>
@@ -79,6 +77,7 @@
                                     <th>ID Anggota</th>
                                     <th>Tgl.Permintaan</th>
                                     <th>Judul</th>
+                                    <th>Bahasa</th>
                                     <th>Pengarang</th>
                                     <th>ISBN</th>
                                     <th>Jenis</th>
@@ -89,11 +88,15 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($data as $model): ?>    
-                                    <tr>
+                                <?php foreach ($data as $model): 
+                                    
+                                    ?>    
+                                    
+                                     <tr>
                                         <td><?php echo $model['ID_ANGGOTA']; ?></td>
                                         <td><?php echo $model['TGL_PERMINTAAN']; ?></td>
                                         <td><?php echo $model['JUDUL']; ?></td>
+                                        <td id='bahasa'><?php echo $model['BAHASA']; ?></td>
                                         <td><?php echo $model['PENGARANG']; ?></td>
                                         <td><?php echo $model['ISBN']; ?></td>
                                         <td><?php echo $model['JENIS']; ?></td>
