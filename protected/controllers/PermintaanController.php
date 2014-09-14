@@ -23,6 +23,85 @@ class PermintaanController extends Controller {
 		
 	}
 	
+	public function tes(){
+		echo "halo ".$_POST['dat'];
+	}
+	public function actionKirimemail()
+	{
+    	$mailer = Yii::createComponent('application.extensions.mailer.EMailer');
+     	$mailer->IsSMTP();
+     	$mailer->IsHTML(true);
+     	$mailer->SMTPAuth = true;
+     	$mailer->SMTPSecure = "ssl";
+     	$mailer->Host = "smtp.gmail.com";
+     	$mailer->Port = 465;
+     	$mailer->Username = "experizhal@gmail.com";
+     	$mailer->Password = 'magazine354';
+     	$mailer->From = "Sabit Huraira";
+     	$mailer->FromName = "Percobaan Kirim Email";
+     	$mailer->AddAddress("djoekam_dmc@yahoo.com");
+     	$mailer->Subject = "Percobaan.";
+     	$mailer->Body = "Ini hanya percobaan mengirim email.";
+     	if($mailer->Send()) 
+     	{
+          	echo "Message sent successfully!";
+     	}
+     	else 
+     	{
+          echo "Fail to send your message!";
+     	}
+	}
+	
+ 	public function actionViewdetail(){
+		
+		
+		if(isset($_GET['det'])){
+		$k_permintaan = $_GET['det'];
+		
+		}
+		
+		$command = Yii::app()->db->createCommand("[dbo].[show_lap_buku]  ");
+        $data=$command->queryAll();
+		
+		$this->render('permintaan/viewdetail', array('data'=>$data,'k_permintaan'=>$k_permintaan));
+	}
+	
+	
+	public function actionEditbuku() 
+	{ 
+		$model1=new TPermintaanBuku; 
+	
+		// uncomment the following code to enable ajax-based validation 
+		/* 
+		if(isset($_POST['ajax']) && $_POST['ajax']==='tpermintaan-buku-editbuku-form') 
+		{ 
+			echo CActiveForm::validate($model); 
+			Yii::app()->end(); 
+		} 
+		*/ 
+	
+		if(isset($_POST['TPermintaanBuku'])) 
+		{ 
+			$model1->attributes=$_POST['TPermintaanBuku']; 
+			if($model1->validate()) 
+			{ 
+				// form inputs are valid, do something here 
+				return; 
+			} 
+		} 
+		
+		if(isset($_GET['det'])){
+			$k_permintaan = $_GET['det'];
+			
+			}
+			
+			$command = Yii::app()->db->createCommand("[dbo].[show_lap_buku]  ");
+			$data=$command->queryAll();
+			
+		$this->render('permintaan/editbuku',array('model1'=>$model1, 'data'=>$data, 'k_permintaan'=>$k_permintaan)); 
+	}
+
+ 	
  	public function actionF_laporan_p()
 	{
 		
@@ -34,9 +113,9 @@ class PermintaanController extends Controller {
 		$user= Yii::app()->session['username'];
         
 		if(isset($_GET['kpermintaan'])){
-		$k_permintaan = $_GET['kpermintaan'];
-		$command = Yii::app()->db->createCommand("[dbo].[detailbuku] @k_permintaan=$k_permintaan");
-		$datadetail=$command->queryAll();
+			$k_permintaan = $_GET['kpermintaan'];
+			$command = Yii::app()->db->createCommand("[dbo].[detailbuku] @k_permintaan=$k_permintaan");
+			$datadetail=$command->queryAll();
 		}
         $command = Yii::app()->db->createCommand("[dbo].[show_lap_buku]  ");
         $data=$command->queryAll();
@@ -78,9 +157,8 @@ class PermintaanController extends Controller {
 			}
         
 			// validate BOTH $a and $b
-			$valid=$model->validate();
-            //&& $model2->validate()
-            if($valid){
+			
+            
 				// form inputs PERMINTAAN BUKU BARU
                 $model->ID_ANGGOTA=Yii::app()->session['username'];
                 $model->K_JENIS = $_POST['TPermintaan']['K_JENIS'];
@@ -91,19 +169,20 @@ class PermintaanController extends Controller {
                 $model2->attributes = $_POST[$namaModel];
                 
                 $valid2=$model2->validate();
-                
-                if($k_jenis==1 && $valid2){
+                if($valid2){
+                if($k_jenis==1){
 					$this->inputBukuIndividu($k_permintaan,$model2);
+					
 				}
-				else if($k_jenis==2 && $valid2){
+				else if($k_jenis==2){
 					$this->inputJurnalIndividu($k_permintaan,$model2);
 				}
-				else if($k_jenis==3 && $valid2) {
+				else if($k_jenis==3) {
 					$this->inputSerialIndividu($k_permintaan,$model2);
 				}
                 $this->redirect(array('Permintaan/f_permintaan'));
                 return;
-            }
+            	}
                    
         }
         $user= Yii::app()->session['username'];
@@ -122,6 +201,7 @@ class PermintaanController extends Controller {
     
     public function inputBukuIndividu($k_permintaan,$model2){
 		$model2->K_PERMINTAAN=$k_permintaan;
+		$model2->NAMA_PEMINTA=$_POST['TPermintaanBuku']['NAMA_PEMINTA'];
 		$model2->JUDUL=$_POST['TPermintaanBuku']['JUDUL'];
 		$model2->PENGARANG=$_POST['TPermintaanBuku']['PENGARANG'];
 		$model2->ISBN=$_POST['TPermintaanBuku']['ISBN'];
@@ -131,6 +211,8 @@ class PermintaanController extends Controller {
 		$model2->TAHUN_TERBIT=$_POST['TPermintaanBuku']['TAHUN_TERBIT'];
 		$model2->HARGA=$_POST['TPermintaanBuku']['HARGA'];
 		$model2->LINK_WEBSITE=$_POST['TPermintaanBuku']['LINK_WEBSITE'];
+		$model2->ID_STATUS=0;
+		$model2->ID_PRIORITAS=$_POST['TPermintaanBuku']['ID_PRIORITAS'];
 		$model2->save();
 		return;
 	}
@@ -173,20 +255,29 @@ class PermintaanController extends Controller {
 		//Baca File Excel
 		for ($i=2; $i<=$baris; $i++)
 		{
-			$judul = $data->val($i, 1);
-			$pengarang = $data->val($i, 2);
-			$ISBN=$data->val($i, 3);
-			$jenis = $data->val($i, 4);
-			$bahasa=$data->val($i, 5);
-			$penerbit = $data->val($i, 6);
-			$tahun=$data->val($i, 7);
-			$harga=$data->val($i, 8);
-			$link=$data->val($i, 9);
+			$peminta=$data->val($i,1);
+			$judul = $data->val($i, 2);
+			$pengarang = $data->val($i, 3);
+			$ISBN=$data->val($i, 4);
+			$jenis = $data->val($i, 5);
+			$bahasa=$data->val($i, 6);
+			$penerbit = $data->val($i, 7);
+			$tahun=$data->val($i, 8);
+			$harga=$data->val($i, 9);
+			$link=$data->val($i, 10);
+			$status=0;
+			$prioritas=$data->val($i, 11);
+			if($prioritas=='wajib'){
+			$prioritas=1;
+			}elseif($prioritas=='penunjang'){
+			$prioritas=2;
+			}
 			//Input Data Excel Ke Database	
 			$command = Yii::app()->db->createCommand();
 			$command->insert($namaTabel, array(
 				 //'id_permintaan'=>'',
 				 'K_PERMINTAAN'=>$k_permintaan,
+				 'NAMA_PEMINTA'=>$peminta,
 				 'JUDUL'=>$judul,
 				 'PENGARANG'=>$pengarang,
 				 'ISBN'=>$ISBN,
@@ -196,6 +287,8 @@ class PermintaanController extends Controller {
 				 'TAHUN_TERBIT'=>$tahun,
 				 'HARGA'=>$harga,
 				 'LINK_WEBSITE'=>$link,
+				 'ID_STATUS'=>$status,
+				 'ID_PRIORITAS'=>$prioritas,
 			));
 		 	if ($command) $sukses++;
 		 	else $gagal++;

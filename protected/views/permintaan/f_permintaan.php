@@ -4,7 +4,6 @@
 /* @var $form CActiveForm */
 ?>
 
-
 <div class="form-horizontal" role="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
@@ -30,9 +29,14 @@
             <h4 class="box-title">Form Permintaan Katalog</h4>
         </div>
         
+<?php
+    foreach(Yii::app()->user->getFlashes() as $key => $message) {
+        echo '<div class="flash-' . $key . '">' . $message . "</div>\n";
+    }
+?>
 		<?php echo $form->errorSummary($model); ?>
             	<div class="form-group">
-                <label class="col-sm-2 control-label">Select</label>
+                <label class="col-sm-1 control-label"></label>
                   	<?php echo $form->dropDownList($model, 'K_JENIS', array('prompt'=>'----- Jenis Permintaan -----','1'=>'Buku', '2'=>'Jurnal', '3'=>'Serial'),
                   		array(
                   			'onchange'=> '	
@@ -41,32 +45,42 @@
                   								document.getElementById("buku").style.display="block";
                   								document.getElementById("jurnal").style.display="none";
                   								document.getElementById("serial").style.display="none";
+                  								document.getElementById("button").style.visibility="visible";
                   								}
                   							else if(this.value==2)
 											{ 
                   								document.getElementById("buku").style.display="none";
                   								document.getElementById("jurnal").style.display="block";
                   								document.getElementById("serial").style.display="none";
+                  								document.getElementById("button").style.visibility="visible";
                   								}
                   							else if(this.value==3)
 											{ 
                   								document.getElementById("buku").style.display="none";
                   								document.getElementById("jurnal").style.display="none";
                   								document.getElementById("serial").style.display="block";
+                  								document.getElementById("button").style.visibility="visible";
                   								}
                   							'
                   	)); ?>
-                  	<?php echo $form->error($model, 'K_JENIS'); ?>
+                  	
         </div>     
 
 	
 	
         <div id="buku">
         <div class="form-group">
+            <?php echo $form->labelEx($modelBk, 'NAMA_PEMINTA', array('class' => 'col-sm-2 control-label')); ?>
+            <div class="col-sm-10">
+                <?php echo $form->textField($modelBk, 'NAMA_PEMINTA', array('class' => 'form-control', 'placeholder' => 'Nama Peminta')); ?>
+                <?php echo CHtml::error($modelBk, 'NAMA_PEMINTA'); ?>
+            </div>
+        </div>
+        <div class="form-group">
             <?php echo $form->labelEx($modelBk, 'JUDUL', array('class' => 'col-sm-2 control-label')); ?>
             <div class="col-sm-10">
                 <?php echo $form->textField($modelBk, 'JUDUL', array('class' => 'form-control', 'placeholder' => 'Judul Buku')); ?>
-                <?php echo $form->error($modelBk, 'JUDUL'); ?>
+                <?php echo CHtml::error($modelBk, 'JUDUL'); ?>
             </div>
         </div>
 
@@ -74,7 +88,7 @@
             <?php echo $form->labelEx($modelBk, 'PENGARANG', array('class' => 'col-sm-2 control-label')); ?>
             <div class="col-sm-10">
                 <?php echo $form->textField($modelBk, 'PENGARANG', array('class' => 'form-control', 'placeholder' => 'Judul Pengarang Buku')); ?>
-                <?php echo $form->error($modelBk, 'PENGARANG'); ?>
+                <?php echo CHtml::error($modelBk, 'PENGARANG'); ?>
             </div>
         </div>
         
@@ -82,7 +96,7 @@
             <?php echo $form->labelEx($modelBk, 'ISBN', array('class' => 'col-sm-2 control-label')); ?>
             <div class="col-sm-10">
                 <?php echo $form->textField($modelBk, 'ISBN', array('class' => 'form-control', 'placeholder' => 'ISBN Buku')); ?>
-                <?php echo $form->error($modelBk, 'ISBN'); ?>
+                <?php echo CHtml::error($modelBk, 'ISBN'); ?>
             </div>
         </div>
         
@@ -90,7 +104,7 @@
             <?php echo $form->labelEx($modelBk, 'JENIS', array('class' => 'col-sm-2 control-label')); ?>
             <div class="col-sm-10">
                 <?php echo $form->dropDownList($modelBk, 'JENIS', array('Cetak'=>'Cetak', 'Elektronik'=>'Elektronik')); ?>
-                <?php echo $form->error($modelBk, 'JENIS'); ?>
+                <?php echo CHtml::error($modelBk, 'JENIS'); ?>
             </div>
         </div>
 
@@ -98,7 +112,7 @@
             <?php echo $form->labelEx($modelBk, 'BAHASA', array('class' => 'col-sm-2 control-label')); ?>
             <div class="col-sm-10">
                 <?php echo $form->textField($modelBk, 'BAHASA', array('class' => 'form-control', 'placeholder' => 'Bahasa yang Digunakan Buku')); ?>
-                <?php echo $form->error($modelBk, 'BAHASA'); ?>
+                <?php echo CHtml::error($modelBk, 'BAHASA'); ?>
             </div>
         </div>
         
@@ -106,7 +120,7 @@
             <?php echo $form->labelEx($modelBk, 'PENERBIT', array('class' => 'col-sm-2 control-label')); ?>
             <div class="col-sm-10">
                 <?php echo $form->textField($modelBk, 'PENERBIT', array('class' => 'form-control', 'placeholder' => 'Nama Penerbit Buku')); ?>
-                <?php echo $form->error($modelBk, 'PENERBIT'); ?>
+                <?php echo CHtml::error($modelBk, 'PENERBIT'); ?>
             </div>
         </div>
 
@@ -114,7 +128,7 @@
             <?php echo $form->labelEx($modelBk, 'TAHUN_TERBIT', array('class' => 'col-sm-2 control-label')); ?>
             <div class="col-sm-10">
                 <?php echo $form->textField($modelBk, 'TAHUN_TERBIT', array('class' => 'form-control', 'placeholder' => 'Tahun Terbit Buku')); ?>
-                <?php echo $form->error($modelBk, 'TAHUN_TERBIT'); ?>
+                <?php echo CHtml::error($modelBk, 'TAHUN_TERBIT'); ?>
             </div>
         </div>
 
@@ -122,7 +136,7 @@
             <?php echo $form->labelEx($modelBk, 'HARGA', array('class' => 'col-sm-2 control-label')); ?>
             <div class="col-sm-10">
                 <?php echo $form->textField($modelBk, 'HARGA', array('class' => 'form-control', 'placeholder' => 'Judul Pengarang Buku')); ?>
-                <?php echo $form->error($modelBk, 'HARGA'); ?>
+                <?php echo CHtml::error($modelBk, 'HARGA'); ?>
             </div>
         </div>       
 
@@ -130,9 +144,17 @@
             <?php echo $form->labelEx($modelBk, 'LINK_WEBSITE', array('class' => 'col-sm-2 control-label')); ?>
             <div class="col-sm-10">
                 <?php echo $form->textField($modelBk, 'LINK_WEBSITE', array('class' => 'form-control', 'placeholder' => 'Link Website Buku')); ?>
-                <?php echo $form->error($modelBk, 'LINK_WEBSITE'); ?>
+                <?php echo CHtml::error($modelBk, 'LINK_WEBSITE'); ?>
             </div>
         </div>
+         <div class="form-group">
+            <?php echo $form->labelEx($modelBk, 'PRIORITAS', array('class' => 'col-sm-2 control-label')); ?>
+            <div class="col-sm-10">
+                <?php echo $form->dropDownList($modelBk, 'ID_PRIORITAS', array('1'=>'WAJIB', '2'=>'PENUMJANG')); ?>
+                <?php echo CHtml::error($modelBk, 'ID_PRIORITAS'); ?>
+            </div>
+        </div>
+
         </div> <!--Buku-->
                      
    
@@ -239,7 +261,7 @@
         </div>
         </div> <!--serial-->
 
-        <div class="form-group">
+        <div class="form-group" id="button">
             <div class="col-sm-offset-2 col-sm-10">
                 <?php echo CHtml::submitButton('Submit', array('class' => 'btn btn-default')); ?>
             </div>
@@ -301,6 +323,7 @@
         <!-- page script -->
         <script type="text/javascript">
             $(function() {
+                document.getElementById("button").style.visibility="hidden";
                 $("#example1").dataTable();
                 $('#example2').dataTable({
                     "bPaginate": true,
@@ -364,6 +387,7 @@
                     "bAutoWidth": false
                 });
             });
+            
         </script>
 
    
@@ -371,9 +395,9 @@
   </div>
   <div class="tab-pane " id="sr">
   <div class="box-header">
-            <h4 class="box-title">DAFTAR PERMINTAAN BUKU</h4>
+            <h4 class="box-title">DAFTAR PERMINTAAN SERIAL</h4>
             <div class="box">
-    <h2>Daftar Permintaan Buku</h2>
+    <h2>Daftar Permintaan Serial</h2>
 	<table id="example4" class="table table-bordered table-striped">
                         <thead>
                             <tr>

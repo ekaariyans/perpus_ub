@@ -34,15 +34,15 @@ class TPermintaanBuku extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('JUDUL, PENGARANG, JENIS, BAHASA, PENERBIT, TAHUN_TERBIT', 'required'),
-			array('K_PERMINTAAN, TAHUN_TERBIT', 'numerical', 'integerOnly'=>true),
-			array('JUDUL, PENGARANG, ISBN, JENIS, BAHASA, PENERBIT, HARGA', 'length', 'max'=>50),
+			array('NAMA_PEMINTA,JUDUL, PENGARANG, JENIS, BAHASA, PENERBIT, TAHUN_TERBIT, ID_PRIORITAS', 'required'),
+			array('TAHUN_TERBIT', 'numerical', 'integerOnly'=>true),
+			array('NAMA_PEMINTA,JUDUL, PENGARANG, ISBN, JENIS, BAHASA, PENERBIT, HARGA', 'length', 'max'=>50),
 			array('LINK_WEBSITE', 'length', 'max'=>250),
 			array('filee','file','types'=>'xls,xlsx','allowEmpty' => true),
 			array('filee','safe','on'=>'excel'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('K_PERMINTAAN, JUDUL, PENGARANG, ISBN, JENIS, BAHASA, PENERBIT, TAHUN_TERBIT, HARGA, LINK_WEBSITE', 'safe', 'on'=>'search'),
+			array('K_PERMINTAAN, NAMA_PEMINTA, JUDUL, PENGARANG, ISBN, JENIS, BAHASA, PENERBIT, TAHUN_TERBIT, HARGA, LINK_WEBSITE,ID_PRIORITAS', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,6 +64,7 @@ class TPermintaanBuku extends CActiveRecord
 	{
 		return array(
 			'K_PERMINTAAN' => 'K Permintaan',
+			'NAMA_PEMINTA' => 'Nama Permintaan',
 			'JUDUL' => 'Judul',
 			'PENGARANG' => 'Pengarang',
 			'ISBN' => 'Isbn',
@@ -73,6 +74,7 @@ class TPermintaanBuku extends CActiveRecord
 			'TAHUN_TERBIT' => 'Tahun Terbit',
 			'HARGA' => 'Harga',
 			'LINK_WEBSITE' => 'Link Website',
+			'ID_PRIORITAS' => 'Prioritas',
 		);
 	}
 
@@ -95,6 +97,7 @@ class TPermintaanBuku extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('K_PERMINTAAN',$this->K_PERMINTAAN);
+		$criteria->compare('NAMA_PEMINTA',$this->NAMA_PEMINTA,true);
 		$criteria->compare('JUDUL',$this->JUDUL,true);
 		$criteria->compare('PENGARANG',$this->PENGARANG,true);
 		$criteria->compare('ISBN',$this->ISBN,true);
@@ -104,6 +107,7 @@ class TPermintaanBuku extends CActiveRecord
 		$criteria->compare('TAHUN_TERBIT',$this->TAHUN_TERBIT);
 		$criteria->compare('HARGA',$this->HARGA,true);
 		$criteria->compare('LINK_WEBSITE',$this->LINK_WEBSITE,true);
+		$criteria->compare('ID_PRIORITAS',$this->ID_PRIORITAS,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

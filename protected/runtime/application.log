@@ -13042,3 +13042,383 @@ REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
 in C:\xampp\htdocs\perpus_ub\protected\views\permintaan\viewdetail.php (4)
 in C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_laporan_p.php (175)
 in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (52)
+2014/09/12 04:37:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[08001]: [Microsoft][SQL Server Native Client 10.0]SQL Server Network Interfaces: Error Locating Server/Instance Specified [xFFFFFFFF]. ' in C:\xampp\htdocs\perpus_ub\framework\db\CDbConnection.php:382
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\xampp\htdocs\perpus_ub\framework\db\CDbConnection.php(308): CDbConnection->setActive(true)
+#2 C:\xampp\htdocs\perpus_ub\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(450): CModule->getComponent('db')
+#4 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(634): CApplication->getDb()
+#5 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(2361): CActiveRecord->getDbConnection()
+#6 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(User))
+#7 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(79): CActiveRecord->getMetaData()
+#8 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(116): CActiveRecord->__construct()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): SiteController->actionLoginForm()
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('loginForm')
+#14 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginForm')
+#15 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/perpus_UB/index.php?r=site/loginForm
+---
+2014/09/12 04:37:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=site/login
+---
+2014/09/12 05:54:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loginForm".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('loginForm')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('loginForm')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginForm')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=site/loginForm
+---
+2014/09/12 05:54:55 [error] [php] include(UserWeb.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\YiiBase.php:427)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(79): spl_autoload_call()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): SiteController->runAction()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): SiteController->run()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=site/login
+in C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php (79)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/12 05:55:31 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "login".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(119): CController->render('login', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('login')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=site/login
+---
+2014/09/12 05:55:34 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "login".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CController->renderPartial('login', Array, true)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php(119): CController->render('login', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('login')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('site/login')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=site/login
+---
+2014/09/12 16:17:32 [error] [php] simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: php_network_getaddresses: getaddrinfo failed: No such host is known.  (C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php:95)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): SiteController->runAction()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): SiteController->run()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=site/login
+in C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php (95)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/12 16:35:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loginForm".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('loginForm')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('loginForm')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginForm')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=site/loginForm
+---
+2014/09/12 16:47:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loginForm".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('loginForm')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('loginForm')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginForm')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=site/loginForm
+---
+2014/09/12 16:47:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loginForm".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('loginForm')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('loginForm')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginForm')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=site/loginForm
+---
+2014/09/12 16:47:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loginForm".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('loginForm')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('loginForm')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginForm')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=site/loginForm
+---
+2014/09/12 16:47:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loginForm".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('loginForm')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('loginForm')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginForm')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=site/loginForm
+---
+2014/09/12 17:03:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loginForm".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('loginForm')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('loginForm')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginForm')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=site/loginForm
+---
+2014/09/12 17:09:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loginForm".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('loginForm')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('loginForm')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginForm')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=site/loginForm
+---
+2014/09/12 18:19:46 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__t_permint__K_JEN__239E4DCF". The conflict occurred in database "perpus_yii", table "dbo.t_jenis_permintaan", column 'K_JENIS'.. The SQL statement executed was: INSERT INTO [dbo].[t_permintaan] ([K_JENIS], [ID_ANGGOTA], [TGL_PERMINTAAN]) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (92)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/12 18:19:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__t_permint__K_JEN__239E4DCF". The conflict occurred in database "perpus_yii", table "dbo.t_jenis_permintaan", column 'K_JENIS'.. The SQL statement executed was: INSERT INTO [dbo].[t_permintaan] ([K_JENIS], [ID_ANGGOTA], [TGL_PERMINTAAN]) VALUES (:yp0, :yp1, :yp2)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(92): CActiveRecord->save()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan')
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('Permintaan/f_pe...')
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/perpus_ub/index.php?r=Permintaan/f_permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=Permintaan/f_permintaan
+---
+2014/09/12 18:20:16 [error] [exception.CException] exception 'CException' with message 'TPermintaan has an invalid validation rule. The rule must specify attributes to be validated and the validator name.' in C:\xampp\htdocs\perpus_ub\framework\base\CModel.php:289
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\base\CModel.php(260): CModel->createValidators()
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CModel.php(547): CModel->getValidators()
+#2 C:\xampp\htdocs\perpus_ub\framework\base\CModel.php(468): CModel->getSafeAttributeNames()
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CComponent.php(152): CModel->setAttributes(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(161): CComponent->__set('attributes', Array)
+#5 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(68): CActiveRecord->__set('attributes', Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan')
+#11 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('Permintaan/f_pe...')
+#12 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/perpus_ub/index.php?r=Permintaan/f_permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=Permintaan/f_permintaan
+---
+2014/09/12 18:49:13 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (68)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/12 18:49:21 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (68)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/12 19:25:51 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (68)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/12 19:29:21 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (68)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/12 19:32:22 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (68)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/12 19:33:53 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (68)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/12 19:34:20 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (68)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/12 19:36:36 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (68)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/12 19:41:08 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (68)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/12 19:41:08 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Cannot insert the value NULL into column 'K_PERMINTAAN', table 'perpus_yii.dbo.t_permintaan_buku'; column does not allow nulls. INSERT fails.. The SQL statement executed was: INSERT INTO [dbo].[t_permintaan_buku] ([NAMA_PEMINTA], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE], [ID_PRIORITAS]) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (99)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/12 19:41:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: [Microsoft][SQL Server Native Client 10.0][SQL Server]Cannot insert the value NULL into column 'K_PERMINTAAN', table 'perpus_yii.dbo.t_permintaan_buku'; column does not allow nulls. INSERT fails.. The SQL statement executed was: INSERT INTO [dbo].[t_permintaan_buku] ([NAMA_PEMINTA], [JUDUL], [PENGARANG], [ISBN], [JENIS], [BAHASA], [PENERBIT], [TAHUN_TERBIT], [HARGA], [LINK_WEBSITE], [ID_PRIORITAS]) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6, :yp7, :yp8, :yp9, :yp10)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(99): CActiveRecord->save()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan')
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('Permintaan/f_pe...')
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/perpus_ub/index.php?r=Permintaan/f_permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=Permintaan/f_permintaan
+---
+2014/09/12 20:13:53 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (68)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/12 20:13:53 [error] [exception.CDbException] exception 'CDbException' with message 'Column name must be either a string or an array.' in C:\xampp\htdocs\perpus_ub\framework\db\schema\CDbCommandBuilder.php:828
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\schema\CDbCommandBuilder.php(621): CDbCommandBuilder->createInCondition(Object(CMssqlTableSchema), NULL, Array, NULL)
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1746): CDbCommandBuilder->createPkCriteria(Object(CMssqlTableSchema), NULL, '', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1124): CActiveRecord->updateByPk(NULL, Array)
+#3 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(806): CActiveRecord->update(NULL)
+#4 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(100): CActiveRecord->save()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan')
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('Permintaan/f_pe...')
+#11 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/perpus_ub/index.php?r=Permintaan/f_permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=Permintaan/f_permintaan
+---
+2014/09/14 10:39:38 [error] [php] simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: php_network_getaddresses: getaddrinfo failed: No such host is known.  (C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php:95)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): SiteController->runAction()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): SiteController->run()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=site/login
+in C:\xampp\htdocs\perpus_ub\protected\controllers\SiteController.php (95)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/14 10:42:05 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (294)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/14 10:42:05 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (294)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/14 10:42:06 [error] [php] move_uploaded_file(C:/xampp/htdocs/perpus_ub/upload/FormReqBuku.xls) [<a href='function.move-uploaded-file'>function.move-uploaded-file</a>]: failed to open stream: No such file or directory (C:\xampp\htdocs\perpus_ub\framework\web\CUploadedFile.php:198)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (325)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/14 10:43:29 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (294)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/14 10:43:29 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (294)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/14 11:33:19 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (68)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/14 11:33:19 [error] [exception.CDbException] exception 'CDbException' with message 'Column name must be either a string or an array.' in C:\xampp\htdocs\perpus_ub\framework\db\schema\CDbCommandBuilder.php:828
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\schema\CDbCommandBuilder.php(621): CDbCommandBuilder->createInCondition(Object(CMssqlTableSchema), NULL, Array, NULL)
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1746): CDbCommandBuilder->createPkCriteria(Object(CMssqlTableSchema), NULL, '', Array)
+#2 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1124): CActiveRecord->updateByPk(NULL, Array)
+#3 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(806): CActiveRecord->update(NULL)
+#4 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(100): CActiveRecord->save()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan')
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#11 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan
+---
+2014/09/14 11:43:21 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (68)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/14 11:48:59 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (68)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/14 11:49:38 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (68)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/14 12:17:20 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (93)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/14 12:17:23 [error] [php] Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\perpus_ub\protected\extensions\mailer\phpmailer\class.phpmailer.php:522) (C:\xampp\htdocs\perpus_ub\framework\web\CHttpRequest.php:803)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(133): PermintaanController->redirect()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=Permintaan/f_permintaan
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (133)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/14 12:48:54 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (327)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/14 12:48:54 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (327)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/14 12:50:41 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (327)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/14 12:50:41 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (327)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/14 13:05:30 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (327)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/14 13:05:30 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (327)
+in C:\xampp\htdocs\perpus_ub\index.php (13)

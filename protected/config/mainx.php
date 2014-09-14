@@ -32,12 +32,6 @@ return array(
 
 	// application components
 	'components'=>array(
-		'mailer' => array(
-    	'class' => 'application.extensions.mailer.EMailer',
-    	'pathViews' => 'application.views.email',
-    	'pathLayouts' => 'application.views.email.layouts'
-   		),
-		
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
@@ -102,6 +96,7 @@ return array(
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
 	'params'=>array(
-		'adminEmail'=>'experizhal@gmail.com',
+		// this is used in contact page
+		'adminEmail'=>'webmaster@example.com',
 	),
 );

@@ -127,7 +127,7 @@
                             </a>
                         </li>
 
-						<?php if(Yii::app()->session['bagian'] == '03' || Yii::app()->session['bagian'] == '999'): ?>
+
                         <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-edit"></i>
@@ -147,9 +147,6 @@
                                 ?>
                             </ul>
                         </li>
-                        <?php endif; ?>
-                        
-                        <?php if(Yii::app()->session['bagian'] == '02' || Yii::app()->session['bagian'] == '999'): ?>
                         <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-calendar"></i>
@@ -168,9 +165,6 @@
                                 ?>
                             </ul>
                         </li>
-                        <?php endif; ?>
-                        
-                        <?php if(Yii::app()->session['bagian'] == '01' || Yii::app()->session['bagian'] == '999'): ?>
                         <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-folder"></i>
@@ -191,9 +185,6 @@
                                 ?>
                             </ul>
                         </li>
-                        <?php endif; ?>
-                        
-                        <?php if(Yii::app()->session['bagian'] == '01' || Yii::app()->session['bagian'] == '116' || Yii::app()->session['bagian'] == '999'): ?>
                         <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-folder"></i>
@@ -202,24 +193,16 @@
                             </a>
                             <ul class="treeview-menu">
                                 <?php
-                                if(Yii::app()->session['level'] == '01' || Yii::app()->session['level'] == '999'):
                                 $this->widget('zii.widgets.CMenu', array(
                                     'items' => array(
-                                        array('label' => 'KOLEKTIF', 'url' => array('/permintaan/f_permintaan_f')),
+                                        array('label' => 'MAHASISWA', 'url' => array('/permintaan/f_permintaan')),
+                                        array('label' => 'FAKULTAS', 'url' => array('/permintaan/f_permintaan_f')),
                                         array('label' => 'LAPORAN', 'url' => array('/permintaan/f_laporan_p')),
-                                    ),
-                                ));
-                                endif;
-                                
-                                $this->widget('zii.widgets.CMenu', array(
-                                    'items' => array(
-                                        array('label' => 'INDIVIDU', 'url' => array('/permintaan/f_permintaan')),
                                     ),
                                 ));
                                 ?>
                             </ul>
                         </li>
-                        <?php endif; ?>
                         <!--
                                                 <li class="treeview">
                                                     <a href="#">
@@ -357,8 +340,6 @@
 
         <!-- AdminLTE for demo purposes -->
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/js/AdminLTE/demo.js" type="text/javascript"></script>
-         <!-- alert -->
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/js/alert.js" type="text/javascript"></script>
         
       <script type="text/javascript">
             $(function() {
