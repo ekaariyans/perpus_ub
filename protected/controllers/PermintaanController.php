@@ -255,22 +255,22 @@ class PermintaanController extends Controller {
 		//Baca File Excel
 		for ($i=2; $i<=$baris; $i++)
 		{
-			$peminta=$data->val($i,1);
-			$judul = $data->val($i, 2);
-			$pengarang = $data->val($i, 3);
-			$ISBN=$data->val($i, 4);
-			$jenis = $data->val($i, 5);
-			$bahasa=$data->val($i, 6);
-			$penerbit = $data->val($i, 7);
-			$tahun=$data->val($i, 8);
-			$harga=$data->val($i, 9);
-			$link=$data->val($i, 10);
-			$status=0;
-			$prioritas=$data->val($i, 11);
+			$peminta   =$data->val($i,1);
+			$judul     =$data->val($i,2);
+			$pengarang =$data->val($i,3);
+			$ISBN      =$data->val($i,4);
+			$jenis     =$data->val($i,5);
+			$bahasa    =$data->val($i,6);
+			$penerbit  =$data->val($i,7);
+			$tahun     =$data->val($i,8);
+			$harga     =$data->val($i,9);
+			$link      =$data->val($i,10);
+			$status    =0;
+			$prioritas =$data->val($i,11);
 			if($prioritas=='wajib'){
-			$prioritas=1;
+			$prioritas =1;
 			}elseif($prioritas=='penunjang'){
-			$prioritas=2;
+			$prioritas =2;
 			}
 			//Input Data Excel Ke Database	
 			$command = Yii::app()->db->createCommand();
@@ -278,16 +278,16 @@ class PermintaanController extends Controller {
 				 //'id_permintaan'=>'',
 				 'K_PERMINTAAN'=>$k_permintaan,
 				 'NAMA_PEMINTA'=>$peminta,
-				 'JUDUL'=>$judul,
-				 'PENGARANG'=>$pengarang,
-				 'ISBN'=>$ISBN,
-				 'JENIS'=>$jenis,
-				 'BAHASA'=>$bahasa,
-				 'PENERBIT'=>$penerbit,
+				 'JUDUL'       =>$judul,
+				 'PENGARANG'   =>$pengarang,
+				 'ISBN'        =>$ISBN,
+				 'JENIS'       =>$jenis,
+				 'BAHASA'      =>$bahasa,
+				 'PENERBIT'    =>$penerbit,
 				 'TAHUN_TERBIT'=>$tahun,
-				 'HARGA'=>$harga,
+				 'HARGA'       =>$harga,
 				 'LINK_WEBSITE'=>$link,
-				 'ID_STATUS'=>$status,
+				 'ID_STATUS'   =>$status,
 				 'ID_PRIORITAS'=>$prioritas,
 			));
 		 	if ($command) $sukses++;
@@ -307,22 +307,33 @@ class PermintaanController extends Controller {
 		//Baca File Excel
 		for ($i=2; $i<=$baris; $i++)
 		{
-			$judul = $data->val($i, 1);
-			$pengarang = $data->val($i, 2);
-			$jenis = $data->val($i, 3);
-			$bahasa=$data->val($i, 4);
-			$harga=$data->val($i, 5);
-			$link=$data->val($i, 6);
+			$peminta   =$data->val($i,1);
+			$judul     =$data->val($i,2);
+			$pengarang =$data->val($i,3);
+			$jenis     =$data->val($i,4);
+			$bahasa    =$data->val($i,5);
+			$harga     =$data->val($i,6);
+			$link      =$data->val($i,7);
+			$status    =0;
+			$prioritas =$data->val($i,8);
+			if($prioritas=='wajib'){
+			$prioritas =1;
+			}elseif($prioritas=='penunjang'){
+			$prioritas =2;
+			}
 			//Input Data Excel Ke Database	
 			$command = Yii::app()->db->createCommand();
 			$command->insert($namaTabel, array(
 				 'K_PERMINTAAN'=>$k_permintaan,
-				 'JUDUL'=>$judul,
-				 'PENGARANG'=>$pengarang,
-				 'JENIS'=>$jenis,
-				 'BAHASA'=>$bahasa,
-				 'HARGA'=>$harga,
+				 'NAMA_PEMINTA'=>$peminta,
+				 'JUDUL'       =>$judul,
+				 'PENGARANG'   =>$pengarang,
+				 'JENIS'       =>$jenis,
+				 'BAHASA'      =>$bahasa,
+				 'HARGA'       =>$harga,
 				 'LINK_WEBSITE'=>$link,
+				 'ID_STATUS'   =>$status,
+				 'ID_PRIORITAS'=>$prioritas,
 			));
 		 	if ($command) $sukses++;
 		 	else $gagal++;
@@ -341,24 +352,37 @@ class PermintaanController extends Controller {
 		//Baca File Excel
 		for ($i=2; $i<=$baris; $i++)
 		{
-			$judul = $data->val($i, 1);
-			$pengarang = $data->val($i, 2);
-			$jenis = $data->val($i, 3);
-			$bahasa=$data->val($i, 4);
-			$harga=$data->val($i, 5);
-			$link=$data->val($i, 6);
+			$peminta   =$data->val($i,1);
+			$judul     =$data->val($i,2);
+			$volume    =$data->val($i,3);
+			$tahun     =$data->val($i,4);
+			$frekuwensi=$data->val($i,5);
+			$jenis     =$data->val($i, 6);
+			$bahasa    =$data->val($i, 7);
+			$harga     =$data->val($i, 8);
+			$link      =$data->val($i, 9);
+			$status    =0;
+			$prioritas =$data->val($i,10);
+			if($prioritas=='wajib'){
+			$prioritas =1;
+			}elseif($prioritas=='penunjang'){
+			$prioritas =2;
+			}
 			//Input Data Excel Ke Database	
 			$command = Yii::app()->db->createCommand();
 			$command->insert($namaTabel, array(
 				 'K_PERMINTAAN'=>$k_permintaan,
-				 'JUDUL'=>$judul,
-				 'VOLUME'=>$volume,
-				 'TAHUN'=>$tahun,
-				 'FREKWENSI'=>$frekwensi,
-				 'JENIS'=>$jenis,
-				 'BAHASA'=>$bahasa,
-				 'HARGA'=>$harga,
+				 'NAMA_PEMINTA'=>$peminta,
+				 'JUDUL'       =>$judul,
+				 'VOLUME'      =>$volume,
+				 'TAHUN'       =>$tahun,
+				 'FREKWENSI'   =>$frekwensi,
+				 'JENIS'       =>$jenis,
+				 'BAHASA'      =>$bahasa,
+				 'HARGA'       =>$harga,
 				 'LINK_WEBSITE'=>$link,
+				 'ID_STATUS'   =>$status,
+				 'ID_PRIORITAS'=>$prioritas,
 			));
 		 	if ($command) $sukses++;
 		 	else $gagal++;
