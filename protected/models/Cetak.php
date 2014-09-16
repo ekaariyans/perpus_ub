@@ -1,29 +1,22 @@
 <?php
 
 /**
- * This is the model class for table "permintaan".
+ * This is the model class for table "t_permintaan".
  *
- * The followings are the available columns in table 'permintaan':
- * @property integer $id_permintaan
- * @property string $id_anggota
- * @property string $judul
- * @property string $jenis
- * @property string $pengarang
- * @property string $penerbit
- * @property integer $tahun_terbit
- * @property string $kota
- * @property string $edisi
- * @property string $isbn
- * @property string $keterangan
+ * The followings are the available columns in table 't_permintaan':
+ * @property integer $K_PERMINTAAN
+ * @property string $ID_ANGGOTA
+ * @property integer $K_JENIS
+ * @property string $TGL_PERMINTAAN
  */
-class Cetak extends CActiveRecord
+class cetak extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'cetak';
+		return 't_permintaan';
 	}
 
 	/**
@@ -34,14 +27,13 @@ class Cetak extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id_anggota, judul, jenis, pengarang, penerbit, tahun_terbit, kota, edisi, isbn, keterangan', 'required'),
-			array('tahun_terbit', 'numerical', 'integerOnly'=>true),
-			array('id_anggota, jenis, kota', 'length', 'max'=>20),
-			array('judul, pengarang, penerbit, isbn', 'length', 'max'=>50),
-			array('edisi', 'length', 'max'=>10),
+			array('ID_ANGGOTA', 'required'),
+			array('K_JENIS', 'numerical', 'integerOnly'=>true),
+			array('ID_ANGGOTA', 'length', 'max'=>20),
+			array('TGL_PERMINTAAN', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_permintaan, id_anggota, judul, jenis, pengarang, penerbit, tahun_terbit, kota, edisi, isbn, keterangan', 'safe', 'on'=>'search'),
+			array('K_PERMINTAAN, ID_ANGGOTA, K_JENIS, TGL_PERMINTAAN', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -62,17 +54,10 @@ class Cetak extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id_permintaan' => 'Id Permintaan',
-			'id_anggota' => 'Id Anggota',
-			'judul' => 'Judul',
-			'jenis' => 'Jenis',
-			'pengarang' => 'Pengarang',
-			'penerbit' => 'Penerbit',
-			'tahun_terbit' => 'Tahun Terbit',
-			'kota' => 'Kota',
-			'edisi' => 'Edisi',
-			'isbn' => 'Isbn',
-			'keterangan' => 'Keterangan',
+			'K_PERMINTAAN' => 'K Permintaan',
+			'ID_ANGGOTA' => 'Id Anggota',
+			'K_JENIS' => 'K Jenis',
+			'TGL_PERMINTAAN' => 'Tgl Permintaan',
 		);
 	}
 
@@ -94,17 +79,10 @@ class Cetak extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id_permintaan',$this->id_permintaan);
-		$criteria->compare('id_anggota',$this->id_anggota,true);
-		$criteria->compare('judul',$this->judul,true);
-		$criteria->compare('jenis',$this->jenis,true);
-		$criteria->compare('pengarang',$this->pengarang,true);
-		$criteria->compare('penerbit',$this->penerbit,true);
-		$criteria->compare('tahun_terbit',$this->tahun_terbit);
-		$criteria->compare('kota',$this->kota,true);
-		$criteria->compare('edisi',$this->edisi,true);
-		$criteria->compare('isbn',$this->isbn,true);
-		$criteria->compare('keterangan',$this->keterangan,true);
+		$criteria->compare('K_PERMINTAAN',$this->K_PERMINTAAN);
+		$criteria->compare('ID_ANGGOTA',$this->ID_ANGGOTA,true);
+		$criteria->compare('K_JENIS',$this->K_JENIS);
+		$criteria->compare('TGL_PERMINTAAN',$this->TGL_PERMINTAAN,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -115,7 +93,7 @@ class Cetak extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Cetak the static model class
+	 * @return cetak the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

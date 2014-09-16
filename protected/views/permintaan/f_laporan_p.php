@@ -13,7 +13,7 @@
         // controller action is handling ajax validation correctly.
         // See class documentation of CActiveForm for details on this,
         // you need to use the performAjaxValidation()-method described there.
-        'enableAjaxValidation' => false,
+        'enableAjaxValidation' => true,
     ));
     ?>
  <?php $this->endWidget(); ?>
@@ -28,87 +28,116 @@
     <div class="box box-primary">
         <div class="box-header">
             <ul class="nav nav-tabs" role="tablist">
-  <li class="active"><a href="#bk" role="tab" data-toggle="tab">Belum Terbeli </a></li>
-  <li><a href="#jr" role="tab" data-toggle="tab">Sudah Dibeli</a></li>
-  </ul>
+				<li class="active"><a href="#sd" role="tab" data-toggle="tab">Belum Terbeli </a></li>
+				<li><a href="#bd" role="tab" data-toggle="tab">Sudah Dibeli</a></li>
+			</ul>
     <!-- Tab panes -->
+	
+	
     <div class="tab-content">
-        <div class="tab-pane active" id="buku">
-            
-          
-                    
-                            <div class="span6">
+        <div class="tab-pane active" id="sd">
+			<div class="span6">
                                 <form class="well form-inline">
-                                    <!-- Date range -->
-                                    <!-- Date dd/mm/yyyy -->
-                                    
-                                    <!-- select -->
+
                                     <div class="form-group">
                                         <label>Bahasa</label>
                                         <div class="input-group">
-                                        <?php echo $form->dropDownList($modelBk, 'BAHASA', array('prompt'=>'----- Pilih Bahasa -----','1'=>'Indonesia', '2'=>'Inggris', '3'=>'Lainnya'), array('class'=>'form-control', 'onchange'=> '	
-                  							 if(this.value==1)
-											{ 	
-                  								var x=document.getElementById("bahasa").innerHTML;
-                  								if(x=="Indonesia"){
-                  									document.getElementById("bahasa").style.display="block";
-												}                  								}
-                  								elseif(x=="Inggris"){
-                  									document.getElementById("bahasa").style.display="none";
-                  								}
-                  								else{
-                  									document.getElementById("bahasa").style.display="none";	
-                  								}
-                  								
-                  							}
-                  							'
-                  	)); ?>
+                                        <!--<?php //echo $form->dropDownList($modelBk, 'BAHASA', array('prompt'=>'----- Pilih Bahasa -----','1'=>'Indonesia', '2'=>'Inggris', '3'=>'Lainnya'), array('class'=>'form-control')); ?>-->
+											
+                                            <select id="myselect" class="form-control">
+    <option value="0">Semua Bahasa</option>
+    <option value="1">Indonesia</option>
+    <option value="2">Inggris</option>
+    <option value="3">Lainnya</option>
+</select>
+<br />
+									
+                                            
+										<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+                                            <script>
+                                            $(document).ready(function(){
+                                               var x;
+												$("select").change(function(){
+													x= $( "#myselect option:selected"  ).text();
+													if(x=="Indonesia"){
+														//$("span").text(x);
+														$("tr:not(.heading)").hide();
+														$("tr#" + x).show();
+													}
+													if(x=="Inggris"){
+														//$("span").text(x);
+														$("tr:not(.heading)").hide();
+														$("tr#" + x).show();
+													}
+													if(x=="Semua Bahasa"){
+														//$("span").text(x);
+														//$("tr:not(.heading)").hide();
+														$("tr").show();
+													}
+													var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=cetak/cetak&bhs="+x;
+													//$("span#tes").text(link);
+													$("a#download").attr("href",link);
+												});
+                              
+											});
+											
+                                            </script>
+                                            
+                                            
+
+
                                         </div>
                                         <br>
                                      <div class="form-group">
-                                    <a href="<?php echo Yii::app()->request->baseUrl . '/assets/TemplateForm/FormReqBuku.xls'; ?>" class="btn btn-default btn-flat">Download</a>
+									 
+								   <a id="download" class="btn btn-default btn-flat">Download</a>
+                                    
                                     </div>
                                 </form>
+
                             </div>	
                         </div>                    	
                         <table id="example3" class="table table-bordered table-striped">
                             <thead>
-                                <tr>
+                                <tr class="heading">
                                     <th>ID Anggota</th>
                                     <th>Tgl.Permintaan</th>
+									<th>Nama Peminta</th>
                                     <th>Judul</th>
-                                    <th>Bahasa</th>
-                                    <th>Pengarang</th>
-                                    <th>ISBN</th>
+									<th>Pengarang</th>
+									<th>ISBN</th>
                                     <th>Jenis</th>
+                                    <th>Bahasa</th>
                                     <th>Penerbit</th>
                                     <th>Tahun Terbit</th>
                                     <th>Harga</th>
-                                    <th>Link Website</th>
+                                    <th>Link Website</th>                                    
+                                    <th>Status</th>
+									<th>Prioritas</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach ($data as $model): 
-                                    
-                                    ?>    
-                                    
-                                     <tr>
+                                 echo "<tr id=".$model['BAHASA'].">"; ?>
                                         <td><?php echo $model['ID_ANGGOTA']; ?></td>
                                         <td><?php echo $model['TGL_PERMINTAAN']; ?></td>
+										<td><?php echo $model['NAMA_PEMINTA']; ?></td>
                                         <td><?php echo $model['JUDUL']; ?></td>
-                                        <td id='bahasa'><?php echo $model['BAHASA']; ?></td>
-                                        <td><?php echo $model['PENGARANG']; ?></td>
+										<td><?php echo $model['PENGARANG']; ?></td>
                                         <td><?php echo $model['ISBN']; ?></td>
                                         <td><?php echo $model['JENIS']; ?></td>
+                                        <td><?php echo $model['BAHASA']; ?></td>
                                         <td><?php echo $model['PENERBIT']; ?></td>
                                         <td><?php echo $model['TAHUN_TERBIT']; ?></td>
                                         <td><?php echo $model['HARGA']; ?></td>
                                         <td><?php echo $model['LINK_WEBSITE']; ?></td>
+                                        <td><?php echo $model['STATUS']; ?></td>
+                                        <td><?php echo $model['PRIORITAS']; ?></td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>
                         </table>
-                    </div>
+                    
                     <!-- jQuery 2.0.2 -->
                     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
                     <!-- page script -->
@@ -126,15 +155,132 @@
                         });
                     </script>
                 </div>
-            </div>
-            </div>
+				
+<div class="tab-pane active" id="bd">
+			<div class="span6">
+                                <form class="well form-inline">
+
+                                    <div class="form-group">
+                                        <label>Bahasa</label>
+                                        <div class="input-group">
+                                        <!--<?php //echo $form->dropDownList($modelBk, 'BAHASA', array('prompt'=>'----- Pilih Bahasa -----','1'=>'Indonesia', '2'=>'Inggris', '3'=>'Lainnya'), array('class'=>'form-control')); ?>-->
+											
+                                            <select id="myselect" class="form-control">
+    <option value="0">Semua Bahasa</option>
+    <option value="1">Indonesia</option>
+    <option value="2">Inggris</option>
+    <option value="3">Lainnya</option>
+</select>
+<br />
+									
+                                            
+										<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+                                            <script>
+                                            $(document).ready(function(){
+                                               var x;
+												$("select").change(function(){
+													x= $( "#myselect option:selected"  ).text();
+													if(x=="Indonesia"){
+														//$("span").text(x);
+														$("tr:not(.heading)").hide();
+														$("tr#" + x).show();
+													}
+													if(x=="Inggris"){
+														//$("span").text(x);
+														$("tr:not(.heading)").hide();
+														$("tr#" + x).show();
+													}
+													if(x=="Semua Bahasa"){
+														//$("span").text(x);
+														//$("tr:not(.heading)").hide();
+														$("tr").show();
+													}
+													var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=cetak/cetak&bhs="+x;
+													//$("span#tes").text(link);
+													$("a#download").attr("href",link);
+												});
+                              
+											});
+											
+                                            </script>
+                                            
+                                            
+
+
+                                        </div>
+                                        <br>
+                                     <div class="form-group">
+									 
+								   <a id="download" class="btn btn-default btn-flat">Download</a>
+                                    
+                                    </div>
+                                </form>
+
+                            </div>	
+                        </div>                    	
+                        <table id="example3" class="table table-bordered table-striped">
+                            <thead>
+                                <tr class="heading">
+                                    <th>ID Anggota</th>
+                                    <th>Tgl.Permintaan</th>
+									<th>Nama Peminta</th>
+                                    <th>Judul</th>
+									<th>Pengarang</th>
+									<th>ISBN</th>
+                                    <th>Jenis</th>
+                                    <th>Bahasa</th>
+                                    <th>Penerbit</th>
+                                    <th>Tahun Terbit</th>
+                                    <th>Harga</th>
+                                    <th>Link Website</th>                                    
+                                    <th>Status</th>
+									<th>Prioritas</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($data1 as $model): 
+                                 echo "<tr id=".$model['BAHASA'].">"; ?>
+                                        <td><?php echo $model['ID_ANGGOTA']; ?></td>
+                                        <td><?php echo $model['TGL_PERMINTAAN']; ?></td>
+										<td><?php echo $model['NAMA_PEMINTA']; ?></td>
+                                        <td><?php echo $model['JUDUL']; ?></td>
+										<td><?php echo $model['PENGARANG']; ?></td>
+                                        <td><?php echo $model['ISBN']; ?></td>
+                                        <td><?php echo $model['JENIS']; ?></td>
+                                        <td><?php echo $model['BAHASA']; ?></td>
+                                        <td><?php echo $model['PENERBIT']; ?></td>
+                                        <td><?php echo $model['TAHUN_TERBIT']; ?></td>
+                                        <td><?php echo $model['HARGA']; ?></td>
+                                        <td><?php echo $model['LINK_WEBSITE']; ?></td>
+                                        <td><?php echo $model['STATUS']; ?></td>
+                                        <td><?php echo $model['PRIORITAS']; ?></td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    
+                    <!-- jQuery 2.0.2 -->
+                    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+                    <!-- page script -->
+                    <script type="text/javascript">
+                        $(function() {
+                            $("#example1").dataTable();
+                            $('#example3').dataTable({
+                                "bPaginate": true,
+                                "bLengthChange": true,
+                                "bFilter": false,
+                                "bSort": true,
+                                "bInfo": false,
+                                "bAutoWidth": false
+                            });
+                        });
+                    </script>
+                </div>
             
-        </div><!--Buku-->
+            
+       
         <div class="tab-pane" id="jurnal">
-            <div class="box box-primary">
-                <div class="box-header">
-                    <div class="box">
-                        <h2>Daftar Permintaan Jurnal</h2>
+            
                         <?php
                         // echo CHtml::link('Cetak dokumen', array('cetak/cetak'));
                         ?>
@@ -206,7 +352,7 @@
                                 <?php endforeach; ?>
                             </tbody>
                         </table>
-                    </div>
+                    
                     <!-- jQuery 2.0.2 -->
                     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
                     <!-- page script -->
@@ -223,14 +369,13 @@
                             });
                         });
                     </script>
-                </div>
-            </div>
+                
         </div><!--Jurnal-->
+		
+		
+		
         <div class="tab-pane" id="serial">
-            <div class="box box-primary">
-                <div class="box-header">
-                    <div class="box">
-                        <h2>Daftar Permintaan Serial</h2>
+            
                         <?php
                         // echo CHtml::link('Cetak dokumen', array('cetak/cetak'));
                         ?>
@@ -297,7 +442,6 @@
                                         <td><?php echo $modelSer['TGL_PERMINTAAN']; ?></td>
                                         <td><?php echo $modelSer['JUDUL']; ?></td>
                                         <td><?php echo $modelSer['VOLUME']; ?></td>
-                                        <td><?php echo $modelSer['PENGARANG']; ?></td>
                                         <td><?php echo $modelSer['TAHUN']; ?></td>
                                         <td><?php echo $modelSer['JENIS']; ?></td>
                                         <td><?php echo $modelSer['BAHASA']; ?></td>
@@ -307,7 +451,7 @@
                                 <?php endforeach; ?>
                             </tbody>
                         </table>
-                    </div>
+                   
                     <!-- page script -->
                     <script type="text/javascript">
                         $(function() {
@@ -322,11 +466,11 @@
                             });
                         });
                     </script>
-                </div>
-            </div>
-        </div><!--Serial-->
-    </div><!--LIST-->  
-   
+                 </div><!--Serial-->
+    
+	</div>
+	</div><!--LIST-->  
+   </div>
 <!-- jQuery 2.0.2 -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 <script type="text/javascript">

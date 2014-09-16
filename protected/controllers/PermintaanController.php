@@ -26,17 +26,12 @@ class PermintaanController extends Controller {
         $modelSer = new TPermintaanSerial;
 		
 		$user= Yii::app()->session['username'];
+       
         
-        if (isset($_POST['TPermintaan'])) {
-			$model->TGL_PERMINTAAN = $_POST['TPermintaan']['TGL_PERMINTAAN'];
-        	$modelBk->BAHASA = $_POST['TPermintaanBuku']['BAHASA'];
-		
-        	$tanggal=$_POST['TPermintaan']['TGL_PERMINTAAN'];
-        	$bahasa=$_POST['TPermintaanBuku']['BAHASA'];
-		}
-        
-        $command = Yii::app()->db->createCommand("[dbo].[permintaanBuku]  @id_anggota =$user ");
+        $command = Yii::app()->db->createCommand("[dbo].[show_lap_buku]  ");
         $data=$command->queryAll();
+		$command = Yii::app()->db->createCommand("[dbo].[show_lap_buku1]  ");
+        $data1=$command->queryAll();
 		
          $commandJur = Yii::app()->db->createCommand("[dbo].[permintaanJurnal] @id_anggota =$user ");
         $dataJur=$commandJur->queryAll();
@@ -44,7 +39,7 @@ class PermintaanController extends Controller {
         $commandSer = Yii::app()->db->createCommand("[dbo].[permintaanSerial] @id_anggota =$user ");
         $dataSer=$commandSer->queryAll();
                 
-		$this->render('Permintaan/f_laporan_p', array('model'=>$model, 'modelBk'=>$modelBk, 'data'=>$data,'dataJur'=>$dataJur,'dataSer'=>$dataSer));
+		$this->render('Permintaan/f_laporan_p', array('model'=>$model, 'modelBk'=>$modelBk, 'data'=>$data,'data1'=>$data1,'dataJur'=>$dataJur,'dataSer'=>$dataSer));
 	}
     
     

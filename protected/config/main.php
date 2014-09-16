@@ -58,7 +58,7 @@ return array(
 		*/
 		'db'=>array(
 			//'connectionString' => 'mysql:host=localhost;dbname=library',
-			'connectionString' => 'sqlsrv:Server=DINANTAKA;Database=perpus_yii',
+			'connectionString' => 'sqlsrv:Server=YOGA\SQLEXPRESS;Database=perpus_yii',
 			//'emulatePrepare' => true,
 			'username' => 'sa',
 			'password' => 'kangkungpait21',
