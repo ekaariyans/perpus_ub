@@ -22,4 +22,10 @@ class CetakController extends Controller
 		$this->render('cetak',array('data'=>$data));
 		
 	}
+	public function actionDetail(){
+		$k_permintaan = $_GET['kpermintaan'];
+		$command = Yii::app()->db->createCommand("[dbo].[detailbuku] @k_permintaan=$k_permintaan");
+		$datadetail=$command->queryAll();
+		$this->render('Permintaan/f_laporan_p',array('datadetail'=>$datadetail));
+	}
 }

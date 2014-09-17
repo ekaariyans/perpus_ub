@@ -24,10 +24,15 @@ class PermintaanController extends Controller {
 		$modelBk = new TPermintaanBuku;
         $modelJur = new TPermintaanJurnal;
         $modelSer = new TPermintaanSerial;
+		$datadetail = 0;
 		
 		$user= Yii::app()->session['username'];
-       
         
+		if(isset($_GET['kpermintaan'])){
+		$k_permintaan = $_GET['kpermintaan'];
+		$command = Yii::app()->db->createCommand("[dbo].[detailbuku] @k_permintaan=$k_permintaan");
+		$datadetail=$command->queryAll();
+		}
         $command = Yii::app()->db->createCommand("[dbo].[show_lap_buku]  ");
         $data=$command->queryAll();
 		$command = Yii::app()->db->createCommand("[dbo].[show_lap_buku1]  ");
@@ -39,9 +44,10 @@ class PermintaanController extends Controller {
         $commandSer = Yii::app()->db->createCommand("[dbo].[permintaanSerial] @id_anggota =$user ");
         $dataSer=$commandSer->queryAll();
                 
-		$this->render('Permintaan/f_laporan_p', array('model'=>$model, 'modelBk'=>$modelBk, 'data'=>$data,'data1'=>$data1,'dataJur'=>$dataJur,'dataSer'=>$dataSer));
+		$this->render('Permintaan/f_laporan_p', array('model'=>$model, 'datadetail'=>$datadetail, 'modelBk'=>$modelBk, 'data'=>$data,'data1'=>$data1,'dataJur'=>$dataJur,'dataSer'=>$dataSer));
 	}
     
+	
     
     public function actionF_permintaan() {
         $model = new TPermintaan;

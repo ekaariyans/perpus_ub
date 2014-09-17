@@ -35,6 +35,8 @@
 	
 	
     <div class="tab-content">
+	<div class="tab-pane active" id="buku">
+	<div class="tab-content">
         <div class="tab-pane active" id="sd">
 			<div class="span6">
                                 <form class="well form-inline">
@@ -45,12 +47,12 @@
                                         <!--<?php //echo $form->dropDownList($modelBk, 'BAHASA', array('prompt'=>'----- Pilih Bahasa -----','1'=>'Indonesia', '2'=>'Inggris', '3'=>'Lainnya'), array('class'=>'form-control')); ?>-->
 											
                                             <select id="myselect" class="form-control">
-    <option value="0">Semua Bahasa</option>
-    <option value="1">Indonesia</option>
-    <option value="2">Inggris</option>
-    <option value="3">Lainnya</option>
-</select>
-<br />
+											<option value="0">Semua Bahasa</option>
+											<option value="1">Indonesia</option>
+											<option value="2">Inggris</option>
+											<option value="3">Lainnya</option>
+										</select>
+										<br />
 									
                                             
 										<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -78,7 +80,20 @@
 													//$("span#tes").text(link);
 													$("a#download").attr("href",link);
 												});
-                              
+												
+																						 
+												 
+												$(".glyphicon.glyphicon-list-alt" ).click(function() {
+												//var x = $(this).attr("id");
+												//alert("The paragraph id : "+a);
+												$.session("x", $(this).attr("id"));
+												
+												
+                              					$("span#tes").text(table);
+												
+												
+												
+												})
 											});
 											
                                             </script>
@@ -97,47 +112,64 @@
 
                             </div>	
                         </div>                    	
-                        <table id="example3" class="table table-bordered table-striped">
+                        <table class="table table-bordered table-striped">
                             <thead>
                                 <tr class="heading">
-                                    <th>ID Anggota</th>
+                                   <th>ID Anggota</th>
                                     <th>Tgl.Permintaan</th>
 									<th>Nama Peminta</th>
                                     <th>Judul</th>
 									<th>Pengarang</th>
-									<th>ISBN</th>
-                                    <th>Jenis</th>
                                     <th>Bahasa</th>
-                                    <th>Penerbit</th>
-                                    <th>Tahun Terbit</th>
-                                    <th>Harga</th>
-                                    <th>Link Website</th>                                    
+                                    <th>Penerbit</th>                   
                                     <th>Status</th>
-									<th>Prioritas</th>
+									<th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach ($data as $model): 
+								$cek=1;
                                  echo "<tr id=".$model['BAHASA'].">"; ?>
                                         <td><?php echo $model['ID_ANGGOTA']; ?></td>
                                         <td><?php echo $model['TGL_PERMINTAAN']; ?></td>
 										<td><?php echo $model['NAMA_PEMINTA']; ?></td>
                                         <td><?php echo $model['JUDUL']; ?></td>
 										<td><?php echo $model['PENGARANG']; ?></td>
-                                        <td><?php echo $model['ISBN']; ?></td>
-                                        <td><?php echo $model['JENIS']; ?></td>
                                         <td><?php echo $model['BAHASA']; ?></td>
                                         <td><?php echo $model['PENERBIT']; ?></td>
-                                        <td><?php echo $model['TAHUN_TERBIT']; ?></td>
-                                        <td><?php echo $model['HARGA']; ?></td>
-                                        <td><?php echo $model['LINK_WEBSITE']; ?></td>
                                         <td><?php echo $model['STATUS']; ?></td>
-                                        <td><?php echo $model['PRIORITAS']; ?></td>
-                                    </tr>
+										<td id="aksi"><a href class="glyphicon glyphicon-list-alt" data-toggle="modal" data-target="#myModal" 
+										id="<?php echo $model['K_PERMINTAAN']?>"></a> 
+										&nbsp;&nbsp;&nbsp;<a href class="glyphicon glyphicon-pencil"></a>
+										&nbsp;&nbsp;<a href class="glyphicon glyphicon-remove"></a></td>
+								</tr>
+								<?php $cek++;?>
                                 <?php endforeach; ?>
                             </tbody>
                         </table>
                     
+					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title" id="myModalLabel">Modal title Here</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                       
+										<span id="tes"></span><?php 
+										$a=Yii::app()->session['x'];
+										echo $a;?>
+											
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+					
                     <!-- jQuery 2.0.2 -->
                     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
                     <!-- page script -->
@@ -154,9 +186,9 @@
                             });
                         });
                     </script>
-                </div>
+        </div>
 				
-<div class="tab-pane active" id="bd">
+		<div class="tab-pane" id="bd">
 			<div class="span6">
                                 <form class="well form-inline">
 
@@ -166,13 +198,13 @@
                                         <!--<?php //echo $form->dropDownList($modelBk, 'BAHASA', array('prompt'=>'----- Pilih Bahasa -----','1'=>'Indonesia', '2'=>'Inggris', '3'=>'Lainnya'), array('class'=>'form-control')); ?>-->
 											
                                             <select id="myselect" class="form-control">
-    <option value="0">Semua Bahasa</option>
-    <option value="1">Indonesia</option>
-    <option value="2">Inggris</option>
-    <option value="3">Lainnya</option>
-</select>
-<br />
-									
+												<option value="0">Semua Bahasa</option>
+												<option value="1">Indonesia</option>
+												<option value="2">Inggris</option>
+												<option value="3">Lainnya</option>
+											</select>
+											<br />
+																				
                                             
 										<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
                                             <script>
@@ -218,7 +250,7 @@
 
                             </div>	
                         </div>                    	
-                        <table id="example3" class="table table-bordered table-striped">
+                        <table class="table table-bordered table-striped">
                             <thead>
                                 <tr class="heading">
                                     <th>ID Anggota</th>
@@ -226,15 +258,10 @@
 									<th>Nama Peminta</th>
                                     <th>Judul</th>
 									<th>Pengarang</th>
-									<th>ISBN</th>
-                                    <th>Jenis</th>
                                     <th>Bahasa</th>
-                                    <th>Penerbit</th>
-                                    <th>Tahun Terbit</th>
-                                    <th>Harga</th>
-                                    <th>Link Website</th>                                    
+                                    <th>Penerbit</th>                   
                                     <th>Status</th>
-									<th>Prioritas</th>
+									<th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -245,15 +272,11 @@
 										<td><?php echo $model['NAMA_PEMINTA']; ?></td>
                                         <td><?php echo $model['JUDUL']; ?></td>
 										<td><?php echo $model['PENGARANG']; ?></td>
-                                        <td><?php echo $model['ISBN']; ?></td>
-                                        <td><?php echo $model['JENIS']; ?></td>
                                         <td><?php echo $model['BAHASA']; ?></td>
                                         <td><?php echo $model['PENERBIT']; ?></td>
-                                        <td><?php echo $model['TAHUN_TERBIT']; ?></td>
-                                        <td><?php echo $model['HARGA']; ?></td>
-                                        <td><?php echo $model['LINK_WEBSITE']; ?></td>
                                         <td><?php echo $model['STATUS']; ?></td>
-                                        <td><?php echo $model['PRIORITAS']; ?></td>
+										<td><span class="glyphicon glyphicon-list-alt"></span><span class="glyphicon glyphicon-pencil"></span>
+										<span class="glyphicon glyphicon-remove"></span></td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>
@@ -276,8 +299,8 @@
                         });
                     </script>
                 </div>
-            
-            
+            </div>
+         </div  > 
        
         <div class="tab-pane" id="jurnal">
             

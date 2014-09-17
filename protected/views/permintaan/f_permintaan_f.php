@@ -45,6 +45,7 @@
              </div>
 			<div class="form-group">
                 <label class="col-sm-2 control-label">Masukkan Data Excel :</label>
+                <br /><br />
                 	<?php echo $form->fileField($model, 'filee', array('maxlength' => 200)); ?>
             </div>
             <br>
