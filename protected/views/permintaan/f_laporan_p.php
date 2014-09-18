@@ -84,14 +84,11 @@
 																						 
 												 
 												$(".glyphicon.glyphicon-list-alt" ).click(function() {
-												//var x = $(this).attr("id");
-												//alert("The paragraph id : "+a);
-												$.session("x", $(this).attr("id"));
+												var a = $(this).attr("id");
+												var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=permintaan/detail&det="+a;
+                              					//$("span#tes").text(a);
 												
-												
-                              					$("span#tes").text(table);
-												
-												
+												//$("a#" + a).attr("href",link);
 												
 												})
 											});
@@ -106,12 +103,15 @@
                                      <div class="form-group">
 									 
 								   <a id="download" class="btn btn-default btn-flat">Download</a>
-                                    
+                                    <?php 
+									$tes=0;  
+									echo $tes;?>
                                     </div>
                                 </form>
 
                             </div>	
-                        </div>                    	
+                        </div>    
+                           <?php echo $tes;?>           	
                         <table class="table table-bordered table-striped">
                             <thead>
                                 <tr class="heading">
@@ -138,8 +138,8 @@
                                         <td><?php echo $model['BAHASA']; ?></td>
                                         <td><?php echo $model['PENERBIT']; ?></td>
                                         <td><?php echo $model['STATUS']; ?></td>
-										<td id="aksi"><a href class="glyphicon glyphicon-list-alt" data-toggle="modal" data-target="#myModal" 
-										id="<?php echo $model['K_PERMINTAAN']?>"></a> 
+										<td id="aksi"><a href class="glyphicon glyphicon-list-alt" 
+										id="<?php echo $model['K_PERMINTAAN']?>"><?php echo $model['K_PERMINTAAN']?></a> 
 										&nbsp;&nbsp;&nbsp;<a href class="glyphicon glyphicon-pencil"></a>
 										&nbsp;&nbsp;<a href class="glyphicon glyphicon-remove"></a></td>
 								</tr>
@@ -147,7 +147,19 @@
                                 <?php endforeach; ?>
                             </tbody>
                         </table>
-                    
+                        
+                        <script type="text/javascript">  
+						var a = 0;          
+							function increase(){
+				
+								a=1;
+				
+							}            
+						</script>
+                        
+                    <?php 
+					//$tes = $_GET['a'];
+					echo $tes;?>
 					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
@@ -158,8 +170,11 @@
                                         <div class="modal-body">
                                        
 										<span id="tes"></span><?php 
-										$a=Yii::app()->session['x'];
-										echo $a;?>
+										if($tes==0){
+										echo $tes;
+										$this->renderPartial('//permintaan/viewdetail',array ('data'=>$data));
+										}
+										?>
 											
                                         </div>
                                         <div class="modal-footer">

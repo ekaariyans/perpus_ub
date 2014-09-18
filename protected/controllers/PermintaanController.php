@@ -17,6 +17,12 @@ class PermintaanController extends Controller {
         $this->render('Permintaan/index');
     }
     
+	public function actionDetail(){
+		$detail = $_GET['det'];
+		$this->render('permintaan/viewdetail', array('detail'=>$detail));
+		
+	}
+	
  	public function actionF_laporan_p()
 	{
 		
@@ -24,7 +30,6 @@ class PermintaanController extends Controller {
 		$modelBk = new TPermintaanBuku;
         $modelJur = new TPermintaanJurnal;
         $modelSer = new TPermintaanSerial;
-		$datadetail = 0;
 		
 		$user= Yii::app()->session['username'];
         
@@ -44,7 +49,7 @@ class PermintaanController extends Controller {
         $commandSer = Yii::app()->db->createCommand("[dbo].[permintaanSerial] @id_anggota =$user ");
         $dataSer=$commandSer->queryAll();
                 
-		$this->render('Permintaan/f_laporan_p', array('model'=>$model, 'datadetail'=>$datadetail, 'modelBk'=>$modelBk, 'data'=>$data,'data1'=>$data1,'dataJur'=>$dataJur,'dataSer'=>$dataSer));
+		$this->render('Permintaan/f_laporan_p', array('model'=>$model,  'modelBk'=>$modelBk, 'data'=>$data,'data1'=>$data1,'dataJur'=>$dataJur,'dataSer'=>$dataSer));
 	}
     
 	
