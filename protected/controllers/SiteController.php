@@ -116,7 +116,7 @@ class SiteController extends Controller
 				}
 			} 
 		}//isset
-		else $this->render('login',array('model'=>$model)); 
+		else $this->render('login',array('model'=>$model, 'data'=>$data)); 
     
 	}//function
 

@@ -46,60 +46,6 @@
                                             <option value="3">Lainnya</option>
                                         </select>
                                         <br />
-
-
-                                        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-                                        <script>
-                                            $(document).ready(function() {
-                                                var x;
-                                                $("select").change(function() {
-                                                    x = $("#myselect option:selected").text();
-                                                    if (x == "Indonesia") {
-                                                        //$("span").text(x);
-                                                        $("tr:not(.heading)").hide();
-                                                        $("tr#" + x).show();
-                                                    }
-                                                    if (x == "Inggris") {
-                                                        //$("span").text(x);
-                                                        $("tr:not(.heading)").hide();
-                                                        $("tr#" + x).show();
-                                                    }
-                                                    if (x == "Semua Bahasa") {
-                                                        //$("span").text(x);
-                                                        //$("tr:not(.heading)").hide();
-                                                        $("tr").show();
-                                                    }
-                                                    var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=cetak/cetak&bhs=" + x;
-                                                    //$("span#tes").text(link);
-                                                    $("a#download").attr("href", link);
-                                                });
-
-
-
-                                                $("a.glyphicon.glyphicon-list-alt").click(function() {
-                                                    var a = $(this).attr("id");
-                                                    var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=permintaan/viewdetail&det=" + a;
-                                                    //$("span#tes").text(link);
-
-                                                    $(this).attr("href", link);
-                                                })
-
-                                                $("a.glyphicon.glyphicon-pencil").click(function() {
-                                                    var a = $(this).attr("id");
-                                                    var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=permintaan/editbuku&det=" + a;
-                                                    //$("span#tes").text(link);
-
-                                                    $(this).attr("href", link);
-                                                })
-
-
-                                            });
-
-                                        </script>
-
-
-
-
                                     </div>
                                     <br>
                                     <div class="form-group">
@@ -198,7 +144,28 @@
                 <div class="tab-pane" id="sd">
                     <div class="span6">
                         <form class="well form-inline">
-
+							<!-- Date range -->
+                            <!-- Date dd/mm/yyyy -->
+                            <div class="form-group">
+                                <label>Dari Tanggal:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                    <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
+                                </div><!-- /.input group -->
+                            </div><!-- /.form group -->
+                            <!-- Date dd/mm/yyyy -->
+                            <div class="form-group">
+                                <label>Sampai Tanggal:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                    <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
+                                </div><!-- /.input group -->
+                            </div><!-- /.form group -->
+                    
                             <div class="form-group">
                                 <label>Bahasa</label>
                                 <div class="input-group">
@@ -210,42 +177,6 @@
                                         <option value="2">Inggris</option>
                                         <option value="3">Lainnya</option>
                                     </select>
-                                    <br />
-
-
-                                    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-                                    <script>
-                                            $(document).ready(function() {
-                                                var x;
-                                                $("select").change(function() {
-                                                    x = $("#myselect option:selected").text();
-                                                    if (x == "Indonesia") {
-                                                        //$("span").text(x);
-                                                        $("tr:not(.heading)").hide();
-                                                        $("tr#" + x).show();
-                                                    }
-                                                    if (x == "Inggris") {
-                                                        //$("span").text(x);
-                                                        $("tr:not(.heading)").hide();
-                                                        $("tr#" + x).show();
-                                                    }
-                                                    if (x == "Semua Bahasa") {
-                                                        //$("span").text(x);
-                                                        //$("tr:not(.heading)").hide();
-                                                        $("tr").show();
-                                                    }
-                                                    var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=cetak/cetak&bhs=" + x;
-                                                    //$("span#tes").text(link);
-                                                    $("a#download").attr("href", link);
-                                                });
-
-                                            });
-
-                                    </script>
-
-
-
-
                                 </div>
                                 <br>
                                 <div class="form-group">
@@ -499,7 +430,10 @@
 </div>
 </div><!--LIST-->  
 </div>
-<!-- jQuery 2.0.2 -->
+
+
+
+<!-- SCRIPT AREA -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 <script type="text/javascript">
             $(function() {
@@ -559,4 +493,80 @@
                     showInputs: false
                 });
             });
+</script>
+
+<!-- script buku belum dibeli-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function() {
+    	var x;
+        $("select#myselect").change(function() {
+			x = $("#myselect option:selected").text();
+			if (x == "Indonesia") {
+				$("tr:not(.heading)").hide();
+				$("tr#" + x).show();
+			}
+			if (x == "Inggris") {
+				$("tr:not(.heading)").hide();
+				$("tr#" + x).show();
+			}
+			if (x == "Semua Bahasa") {
+				$("tr").show();
+			}
+			var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=cetak/cetak&bhs=" + x;
+			//$("span#tes").text(link);
+			$("a#download").attr("href", link);
+   		});
+
+		$("a.glyphicon.glyphicon-list-alt").click(function() {
+            var a = $(this).attr("id");
+            var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=permintaan/viewdetail&det=" + a;
+			$(this).attr("href", link);
+        })
+
+        $("a.glyphicon.glyphicon-pencil").click(function() {
+            var a = $(this).attr("id");
+            var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=permintaan/editbuku&det=" + a;
+            $(this).attr("href", link);
+        })
+	});
+</script>
+
+
+<!-- script buku sudah dibeli -->
+<script>
+$(document).ready(function(){
+	$("input,select").change(function() {
+        x = $("#myselect option:selected").text();
+		var start_time  = $("#t1").val(); //2013-09-5
+		var end_time    = $("#t2").val(); //2013-09-10
+		 
+        if (x == "Indonesia") {
+             $("tr:not(.heading)").hide();
+             $("tr#" + x).show();
+			 filter_tgl(start_time,end_time);
+        }
+        if (x == "Inggris") {
+             $("tr:not(.heading)").hide();
+    	     $("tr#" + x).show();
+			 filter_tgl(start_time,end_time);
+        }
+        if (x == "Semua Bahasa") {
+             $("tr").show();
+			 filter_tgl(start_time,end_time);
+        }
+
+    });
+  	
+	function filter_tgl(start_time,end_time){
+		$( "tr.isi" ).filter(function() {
+			return (new Date($(this).attr("name")) < new Date(start_time));
+		}).hide();
+			
+		$( "tr.isi" ).filter(function() {
+			return (new Date($(this).attr("name")) > new Date(end_time));
+		}).hide();
+	}
+
+});
 </script>
