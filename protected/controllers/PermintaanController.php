@@ -356,7 +356,7 @@ class PermintaanController extends Controller {
 			$judul     =$data->val($i,2);
 			$volume    =$data->val($i,3);
 			$tahun     =$data->val($i,4);
-			$frekuwensi=$data->val($i,5);
+			$frekwensi=$data->val($i,5);
 			$jenis     =$data->val($i, 6);
 			$bahasa    =$data->val($i, 7);
 			$harga     =$data->val($i, 8);
@@ -441,11 +441,11 @@ class PermintaanController extends Controller {
 				else {
 					$this->BacaPermintaanSerial($path, $namaTabel, $k_permintaan);
 				}				 
-				 
+				 /*
 				echo "<h3>Proses import data selesai.</h3>";
 				echo "<p>Jumlah data yang sukses diimport : ".$sukses."<br>";
 				echo "Jumlah data yang gagal diimport : ".$gagal."</p>";
-
+*/
 				unlink($path);
 			}
 		}//isset@id_anggota = 'demo'

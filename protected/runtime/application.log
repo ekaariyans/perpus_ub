@@ -14980,3 +14980,74 @@ Stack trace:
 #17 {main}
 REQUEST_URI=/perpus_ub/index.php?r=site/login
 ---
+2014/09/24 04:42:34 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (401)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/24 04:42:34 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (401)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/24 04:42:34 [error] [php] Undefined variable: frekwensi (C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php:379)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (379)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (442)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/24 04:44:14 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (401)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/24 04:44:14 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (401)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/24 04:44:14 [error] [php] Undefined variable: sukses (C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php:446)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (446)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/24 04:46:38 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (401)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/24 04:46:38 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (401)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/24 04:46:38 [error] [php] Undefined variable: sukses (C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php:446)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (446)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/24 04:51:43 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (401)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/24 04:51:43 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (401)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/24 04:52:06 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (401)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/24 04:52:06 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (401)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/24 04:52:16 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (401)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/24 04:52:16 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (401)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
