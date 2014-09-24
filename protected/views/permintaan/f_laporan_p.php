@@ -152,7 +152,10 @@
                                     <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
                                     </div>
-                                    <input name="tanggalsd1" id="t1sd1" type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
+                                    <input name="tanggalsd1" id="t1sd1" type="date" class="form-control" />
+                                    <!--
+                                    <input name="tanggalsd1" id="t1sd1" type="date" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
+                                    -->
                                 </div><!-- /.input group -->
                             </div><!-- /.form group -->
                             <!-- Date dd/mm/yyyy -->
@@ -162,7 +165,10 @@
                                     <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
                                     </div>
-                                    <input name="tanggalsd1" id="t2sd1" type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
+                                    <input name="tanggalsd1" id="t2sd1" type="date" class="form-control" />
+                                    <!--
+                                    <input name="tanggalsd1" id="t2sd1" type="date" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
+ 									-->                               
                                 </div><!-- /.input group -->
                             </div><!-- /.form group -->
                     
@@ -181,7 +187,7 @@
                                 <br>
                                 <div class="form-group">
 
-                                    <a id="download" class="btn btn-default btn-flat">Download</a>
+                                    <a id="downloadsd1" class="btn btn-default btn-flat">Download</a>
 
                                 </div>
                         </form>
@@ -541,26 +547,26 @@ $(document).ready(function(){
         x = $("#selectsd1 option:selected").text();
 		var start_time  = $("#t1sd1").val(); //2013-09-5
 		var end_time    = $("#t2sd1").val(); //2013-09-10
-		var z = $( "table#sd1 tr.isi").attr("name");
-		alert(start_time+" "+z);
-		/*
+		//var z = $( "table#sd1 tr.isi").attr("name");
+		//alert(start_time+" "+z);
+		
         if (x == "Indonesia") {
              $("table#sd1 tr:not(.heading)").hide();
              $("table#sd1 tr#" + x).show();
-			 filter_tgl(start_time,end_time);
+			 filter_tgl(x,start_time,end_time);
         }
         if (x == "Inggris") {
-             $("table#sd1 tr:not(.heading)").hide();
-    	     $("table#sd1 tr#" + x).show();
-			 filter_tgl(start_time,end_time);
+            $("table#sd1 tr:not(.heading)").hide();
+    	    $("table#sd1 tr#" + x).show();
+			filter_tgl(x,start_time,end_time);
         }
         if (x == "Semua Bahasa") {
              $("table#sd1 tr").show();
-			 filter_tgl(start_time,end_time);
-        }*/
+			 filter_tgl(x,start_time,end_time);
+        }
     });
   	
-	function filter_tgl(start_time,end_time){
+	function filter_tgl(x,start_time,end_time){
 		$( "table#sd1 tr.isi" ).filter(function() {
 			return (new Date($(this).attr("name")) < new Date(start_time));
 		}).hide();
@@ -568,6 +574,9 @@ $(document).ready(function(){
 		$( "table#sd1 tr.isi" ).filter(function() {
 			return (new Date($(this).attr("name")) > new Date(end_time));
 		}).hide();
+		//set link
+		var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=cetak/cetak&bhs="+x +"&t1="+start_time +"&t2="+end_time;
+		$("a#downloadsd1").attr("href", link);
 	}
 
 });
