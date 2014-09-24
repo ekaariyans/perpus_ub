@@ -50,7 +50,7 @@
                                     <br>
                                     <div class="form-group">
 
-                                        <a id="download" class="btn btn-default btn-flat">Download</a>
+                                        <a id="downloadbd1" class="btn btn-default btn-flat">Download</a>
                                         <?php $tes = 0; ?>
                                     </div>
                             </form>
@@ -152,7 +152,7 @@
                                     <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
                                     </div>
-                                    <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
+                                    <input name="tanggalsd1" id="t1sd1" type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
                                 </div><!-- /.input group -->
                             </div><!-- /.form group -->
                             <!-- Date dd/mm/yyyy -->
@@ -162,7 +162,7 @@
                                     <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
                                     </div>
-                                    <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
+                                    <input name="tanggalsd1" id="t2sd1" type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
                                 </div><!-- /.input group -->
                             </div><!-- /.form group -->
                     
@@ -171,7 +171,7 @@
                                 <div class="input-group">
                                     <!--<?php //echo $form->dropDownList($modelBk, 'BAHASA', array('prompt'=>'----- Pilih Bahasa -----','1'=>'Indonesia', '2'=>'Inggris', '3'=>'Lainnya'), array('class'=>'form-control'));  ?>-->
 
-                                    <select id="myselect" class="form-control">
+                                    <select id="selectsd1" class="form-control">
                                         <option value="0">Semua Bahasa</option>
                                         <option value="1">Indonesia</option>
                                         <option value="2">Inggris</option>
@@ -204,7 +204,7 @@
                     </thead>
                     <tbody>
                         <?php foreach ($data1 as $model):
-                            echo "<tr id=" . $model['BAHASA'] . ">";
+                            echo "<tr class=\"isi\" id=".$model['BAHASA']." name=".$model['TGL_PERMINTAAN'].">";
                             ?>
                         <td><?php echo $model['ID_ANGGOTA']; ?></td>
                         <td><?php echo $model['TGL_PERMINTAAN']; ?></td>
@@ -503,19 +503,19 @@
         $("select#myselect").change(function() {
 			x = $("#myselect option:selected").text();
 			if (x == "Indonesia") {
-				$("tr:not(.heading)").hide();
-				$("tr#" + x).show();
+				$("table#bd1 tr:not(.heading)").hide();
+				$("table#bd1 tr#" + x).show();
 			}
 			if (x == "Inggris") {
-				$("tr:not(.heading)").hide();
-				$("tr#" + x).show();
+				$("table#bd1 tr:not(.heading)").hide();
+				$("table#bd1 tr#" + x).show();
 			}
 			if (x == "Semua Bahasa") {
-				$("tr").show();
+				$("table#bd1 tr").show();
 			}
 			var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=cetak/cetak&bhs=" + x;
 			//$("span#tes").text(link);
-			$("a#download").attr("href", link);
+			$("a#downloadbd1").attr("href", link);
    		});
 
 		$("a.glyphicon.glyphicon-list-alt").click(function() {
@@ -535,38 +535,41 @@
 
 <!-- script buku sudah dibeli -->
 <script>
+
 $(document).ready(function(){
-	$("input,select").change(function() {
-        x = $("#myselect option:selected").text();
-		var start_time  = $("#t1").val(); //2013-09-5
-		var end_time    = $("#t2").val(); //2013-09-10
-		 
+	$("input[name='tanggalsd1'],select#selectsd1").change(function() {
+        x = $("#selectsd1 option:selected").text();
+		var start_time  = $("#t1sd1").val(); //2013-09-5
+		var end_time    = $("#t2sd1").val(); //2013-09-10
+		var z = $( "table#sd1 tr.isi").attr("name");
+		alert(start_time+" "+z);
+		/*
         if (x == "Indonesia") {
-             $("tr:not(.heading)").hide();
-             $("tr#" + x).show();
+             $("table#sd1 tr:not(.heading)").hide();
+             $("table#sd1 tr#" + x).show();
 			 filter_tgl(start_time,end_time);
         }
         if (x == "Inggris") {
-             $("tr:not(.heading)").hide();
-    	     $("tr#" + x).show();
+             $("table#sd1 tr:not(.heading)").hide();
+    	     $("table#sd1 tr#" + x).show();
 			 filter_tgl(start_time,end_time);
         }
         if (x == "Semua Bahasa") {
-             $("tr").show();
+             $("table#sd1 tr").show();
 			 filter_tgl(start_time,end_time);
-        }
-
+        }*/
     });
   	
 	function filter_tgl(start_time,end_time){
-		$( "tr.isi" ).filter(function() {
+		$( "table#sd1 tr.isi" ).filter(function() {
 			return (new Date($(this).attr("name")) < new Date(start_time));
 		}).hide();
 			
-		$( "tr.isi" ).filter(function() {
+		$( "table#sd1 tr.isi" ).filter(function() {
 			return (new Date($(this).attr("name")) > new Date(end_time));
 		}).hide();
 	}
 
 });
+
 </script>
