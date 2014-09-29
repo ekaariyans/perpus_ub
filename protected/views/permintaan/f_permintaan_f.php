@@ -1,3 +1,13 @@
+<?php
+    foreach(Yii::app()->user->getFlashes() as $key => $message) {
+		if($key == 'success'){
+        echo '<div class="alert alert-success" role="alert' . $key . '"> <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>' . $message . "</div>\n";
+		}
+		elseif($key == 'error'){
+        echo '<div class="alert alert-danger" role="alert' . $key . '"> <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>' . $message . "</div>\n";
+		}
+    }
+?>
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
     <li class="active"><a href="#form" role="tab" data-toggle="tab">FORM PEMRMINTAAN</a></li>

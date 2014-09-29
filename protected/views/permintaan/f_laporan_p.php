@@ -21,15 +21,16 @@
 
 <div class="box box-primary">
     <div class="box-header">
-        <ul class="nav nav-tabs" role="tablist">
-            <li class="active"><a href="#bd" role="tab" data-toggle="tab">Belum Terbeli </a></li>
-            <li><a href="#sd" role="tab" data-toggle="tab">Sudah Dibeli</a></li>
-        </ul>
+	</div>
+        
         <!-- Tab panes -->
-
         <div class="tab-content">
             <div class="tab-pane active" id="buku">
                 <div class="tab-content">
+               <ul class="nav nav-tabs" role="tablist">
+                    <li class="active"><a href="#bd" role="tab" data-toggle="tab">Belum Terbeli</a></li>
+                    <li><a href="#sd" role="tab" data-toggle="tab">Sudah Dibeli</a></li>
+                </ul>
                     <div class="tab-pane active" id="bd">
                         <div class="span6">
                             <form class="well form-inline">
@@ -37,8 +38,6 @@
                                 <div class="form-group">
                                     <label>Bahasa</label>
                                     <div class="input-group">
-                                        <!--<?php //echo $form->dropDownList($modelBk, 'BAHASA', array('prompt'=>'----- Pilih Bahasa -----','1'=>'Indonesia', '2'=>'Inggris', '3'=>'Lainnya'), array('class'=>'form-control'));  ?>-->
-
                                         <select id="myselect" class="form-control">
                                             <option value="0">Semua Bahasa</option>
                                             <option value="1">Indonesia</option>
@@ -60,6 +59,7 @@
                     <table id="bd1" class="table table-bordered table-striped">
                         <thead>
                             <tr class="heading">
+                            	<th></th>
                                 <th>ID Anggota</th>
                                 <th>Tgl.Permintaan</th>
                                 <th>Nama Peminta</th>
@@ -74,9 +74,10 @@
                         <tbody>
                             <?php
                             foreach ($data as $model):
-                                $cek = 1;
+							if($model['ID_STATUS']==0):
                                 echo "<tr id=" . $model['BAHASA'] . ">";
-                                ?>
+                            ?>
+                            <td><input type="checkbox" name="del" value="Yes" /></td>
                             <td><?php echo $model['ID_ANGGOTA']; ?></td>
                             <td><?php echo $model['TGL_PERMINTAAN']; ?></td>
                             <td><?php echo $model['NAMA_PEMINTA']; ?></td>
@@ -86,9 +87,6 @@
                             <td><?php echo $model['PENERBIT']; ?></td>
                             <td><?php echo $model['STATUS']; ?></td>
                             <td>
-
-
-
                                 <a href class="glyphicon glyphicon-list-alt" id="<?php echo $model['K_PERMINTAAN'] ?>"></a>
                                 &nbsp;&nbsp;&nbsp;
                                 <a href class="glyphicon glyphicon-pencil" id="<?php echo $model['K_PERMINTAAN'] ?>"></a>
@@ -96,8 +94,7 @@
                                 <a href class="glyphicon glyphicon-remove" id="<?php echo $model['K_PERMINTAAN'] ?>"></a>
                             </td>
                             </tr>
-                            <?php $cek++; ?>
-<?php endforeach; ?>
+						<?php endif; endforeach; ?>
                         </tbody>
                     </table>
 
@@ -123,22 +120,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- jQuery 2.0.2 -->
-                    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-                    <!-- page script -->
-                    <script type="text/javascript">
-                                            $(function() {
-                                                $('#bd1').dataTable({
-                                                    "bPaginate": true,
-                                                    "bLengthChange": true,
-                                                    "bFilter": false,
-                                                    "bSort": true,
-                                                    "bInfo": false,
-                                                    "bAutoWidth": false
-                                                });
-                                            });
-                    </script>
                 </div>
 
                 <div class="tab-pane" id="sd">
@@ -209,7 +190,8 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($data1 as $model):
+                        <?php foreach ($data as $model):
+						if($model['ID_STATUS']==1):
                             echo "<tr class=\"isi\" id=".$model['BAHASA']." name=".$model['TGL_PERMINTAAN'].">";
                             ?>
                         <td><?php echo $model['ID_ANGGOTA']; ?></td>
@@ -223,204 +205,365 @@
                         <td><span class="glyphicon glyphicon-list-alt"></span><span class="glyphicon glyphicon-pencil"></span>
                             <span class="glyphicon glyphicon-remove"></span></td>
                         </tr>
-<?php endforeach; ?>
+					<?php endif; endforeach; ?>
                     </tbody>
                 </table>
 
-                <!-- jQuery 2.0.2 -->
-                <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-                <!-- page script -->
-                <script type="text/javascript">
-                                            $(function() {
-                                                $('#sd1').dataTable({
-                                                    "bPaginate": true,
-                                                    "bLengthChange": true,
-                                                    "bFilter": false,
-                                                    "bSort": true,
-                                                    "bInfo": false,
-                                                    "bAutoWidth": false
-                                                });
-                                            });
-                </script>
             </div>
         </div>
-    </div  > 
-
+		</div>
+  
+  
+  
+  
+	<!-- JURNAL AREA -->
     <div class="tab-pane" id="jurnal">
-
-        <?php
-        // echo CHtml::link('Cetak dokumen', array('cetak/cetak'));
-        ?>
-        <div class="box">
-
+		<div class="tab-content">
+			<ul class="nav nav-tabs" role="tablist">
+           <li class="active"><a href="#bd2" role="tab" data-toggle="tab">Belum Terbeli</a></li>
+           <li><a href="#sd2" role="tab" data-toggle="tab">Sudah Dibeli</a></li>
+           </ul>
+           
+           <div class="tab-pane active" id="bd2">
             <div class="span6">
-                <form class="well form-inline">
-                    <!-- Date range -->
-                    <!-- Date dd/mm/yyyy -->
+				<form class="well form-inline">
                     <div class="form-group">
-                        <label>Dari Tanggal:</label>
+                        <label>Bahasa</label>
                         <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-calendar"></i>
-                            </div>
-                            <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
-                        </div><!-- /.input group -->
-                    </div><!-- /.form group -->
-                    <!-- Date dd/mm/yyyy -->
-                    <div class="form-group">
-                        <label>Sampai Tanggal:</label>
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-calendar"></i>
-                            </div>
-                            <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
-                        </div><!-- /.input group -->
-                    </div><!-- /.form group -->
-                    <!-- select -->
-                    <div class="form-group">
-                        <label>Bahasa</label><br>
-                        <select class="form-control">
-                            <option>Indonesia</option>
-                            <option>Inggris</option>
-                            <option>Lainnya</option>
-                        </select>
-                    </div>	
-                    &nbsp;&nbsp;&nbsp;
-                    <button type="submit" class="btn btn-warning">Search</button>
-                    <a href="<?php echo Yii::app()->request->baseUrl . '/assets/TemplateForm/FormReqBuku.xls'; ?>" class="btn btn-default btn-flat">Download</a>
+							<select id="selectbd2" class="form-control">
+                                <option value="0">Semua Bahasa</option>
+                                <option value="1">Indonesia</option>
+                                <option value="2">Inggris</option>
+                                <option value="3">Lainnya</option>
+                            </select>
+                            <br />
+						</div>
+                        <br>
+                        <div class="form-group">
+							<a id="downloadbd2" class="btn btn-default btn-flat">Download</a>
+                        </div>
+					</div>
                 </form>
             </div>	
-        </div>   
-        <table id="bd2" class="table table-bordered table-striped">
+        
+        
+           
+        <table id="tbd2" class="table table-bordered table-striped">
             <thead>
-                <tr>
+                <tr class="heading">
                     <th>ID Anggota</th>
                     <th>Tgl.Permintaan</th>
+                    <th>Nama Peminta</th>
                     <th>Judul</th>
-                    <th>Pengarang</th>
                     <th>Jenis</th>
                     <th>Bahasa</th>
-                    <th>Harga</th>
-                    <th>Link Website</th>
+                    <th>Harga</th>                   
+                    <th>Status</th>
+					<th>Prioritas</th>
+                    <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>    
-<?php foreach ($dataJur as $modelJur): ?>
-                    <tr>
-                        <td><?php echo $modelJur['ID_ANGGOTA']; ?></td>
-                        <td><?php echo $modelJur['TGL_PERMINTAAN']; ?></td>
-                        <td><?php echo $modelJur['JUDUL']; ?></td>
-                        <td><?php echo $modelJur['PENGARANG']; ?></td>
-                        <td><?php echo $modelJur['JENIS']; ?></td>
-                        <td><?php echo $modelJur['BAHASA']; ?></td>
-                        <td><?php echo $modelJur['HARGA']; ?></td>
-                        <td><?php echo $modelJur['LINK_WEBSITE']; ?></td>
+				<?php foreach ($dataJur as $modelJur): 
+				if($modelJur['ID_STATUS']==0):
+					echo "<tr id=" . $modelJur['BAHASA'] . ">";
+				?>
+                    <td><?php echo $modelJur['ID_ANGGOTA']; ?></td>
+                    <td><?php echo $modelJur['TGL_PERMINTAAN']; ?></td>
+                    <td><?php echo $modelJur['NAMA_PEMINTA']; ?></td>
+                    <td><?php echo $modelJur['JUDUL']; ?></td>
+                    <td><?php echo $modelJur['JENIS']; ?></td>
+                    <td><?php echo $modelJur['BAHASA']; ?></td>
+                    <td><?php echo $modelJur['HARGA']; ?></td>
+                    <td><?php echo $modelJur['STATUS']; ?></td>
+					<td><?php echo $modelJur['PRIORITAS']; ?></td>
+                    <td>
+						<a href class="glyphicon glyphicon-list-alt" id="<?php echo $model['K_PERMINTAAN'] ?>"></a>
+                        &nbsp;&nbsp;&nbsp;
+                        <a href class="glyphicon glyphicon-pencil" id="<?php echo $model['K_PERMINTAAN'] ?>"></a>
+                        &nbsp;&nbsp;
+                        <a href class="glyphicon glyphicon-remove" id="<?php echo $model['K_PERMINTAAN'] ?>"></a>
+                    </td>
                     </tr>
-<?php endforeach; ?>
+				<?php endif; endforeach; ?>
             </tbody>
         </table>
+		</div><!--tab pane bd2-->
+        
 
-        <!-- jQuery 2.0.2 -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-        <!-- page script -->
-        <script type="text/javascript">
-                                            $(function() {                                                
-                                                $('#bd2').dataTable({
-                                                    "bPaginate": true,
-                                                    "bLengthChange": true,
-                                                    "bFilter": false,
-                                                    "bSort": true,
-                                                    "bInfo": false,
-                                                    "bAutoWidth": false
-                                                });
-                                            });
-        </script>
+         <!-- Tab Pane sd2 -->
+         <div class="tab-pane" id="sd2">
+             <div class="span6"><!-- span6 sd2 -->
+				<form class="well form-inline">
+							<!-- Date range -->
+                            <!-- Date dd/mm/yyyy -->
+                            <div class="form-group">
+                                <label>Dari Tanggal:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                    <input name="tanggalsd2" id="t1sd2" type="date" class="form-control" />
+                                </div><!-- /.input group -->
+                            </div><!-- /.form group -->
+                            <!-- Date dd/mm/yyyy -->
+                            <div class="form-group">
+                                <label>Sampai Tanggal:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                    <input name="tanggalsd2" id="t2sd2" type="date" class="form-control" />                               
+                                </div><!-- /.input group -->
+                            </div><!-- /.form group -->
+                    
+                            <div class="form-group">
+                                <label>Bahasa</label>
+                                <div class="input-group">
+                                    <select id="selectsd2" class="form-control">
+                                        <option value="0">Semua Bahasa</option>
+                                        <option value="1">Indonesia</option>
+                                        <option value="2">Inggris</option>
+                                        <option value="3">Lainnya</option>
+                                    </select>
+                                </div>
+                                <br>
+                                <div class="form-group">
 
-    </div><!--Jurnal-->
+                                    <a id="downloadsd2" class="btn btn-default btn-flat">Download</a>
 
+                                </div>
+							</div>
+                        </form>
+             </div><!-- span6 sd2 -->
+			 
+			 <table id="tsd2" class="table table-bordered table-striped">
+                <thead>
+                <tr class="heading">
+                    <th>ID Anggota</th>
+                    <th>Tgl.Permintaan</th>
+                    <th>Nama Peminta</th>
+                    <th>Judul</th>
+                    <th>Jenis</th>
+                    <th>Bahasa</th>
+                    <th>Harga</th>                   
+                    <th>Status</th>
+					<th>Prioritas</th>
+                    <th>Aksi</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php
+                    foreach ($dataJur as $modelJur):
+					if($modelJur['ID_STATUS']==1):
+                        echo "<tr class=\"isi\" id=".$modelJur['BAHASA']." name=".$modelJur['TGL_PERMINTAAN'].">";
+                ?>
+                    <td><?php echo $modelJur['ID_ANGGOTA']; ?></td>
+                    <td><?php echo $modelJur['TGL_PERMINTAAN']; ?></td>
+                    <td><?php echo $modelJur['NAMA_PEMINTA']; ?></td>
+                    <td><?php echo $modelJur['JUDUL']; ?></td>
+                    <td><?php echo $modelJur['JENIS']; ?></td>
+                    <td><?php echo $modelJur['BAHASA']; ?></td>
+                    <td><?php echo $modelJur['HARGA']; ?></td>
+                    <td><?php echo $modelJur['STATUS']; ?></td>
+					<td><?php echo $modelJur['PRIORITAS']; ?></td>
+                    <td>
+						<a href class="glyphicon glyphicon-list-alt" id="<?php echo $model['K_PERMINTAAN'] ?>"></a>
+                        &nbsp;&nbsp;&nbsp;
+                        <a href class="glyphicon glyphicon-pencil" id="<?php echo $model['K_PERMINTAAN'] ?>"></a>
+                        &nbsp;&nbsp;
+                        <a href class="glyphicon glyphicon-remove" id="<?php echo $model['K_PERMINTAAN'] ?>"></a>
+                    </td>
+                </tr>
+				<?php endif; endforeach; ?>
+                </tbody>
+             </table>
+			 
+         </div><!-- Tab Pane sd2 -->
+               
+	</div><!--box bd2-->
+</div><!--Jurnal-->
+
+		
 
 
     <div class="tab-pane" id="serial">
-
-        <?php
-        // echo CHtml::link('Cetak dokumen', array('cetak/cetak'));
-        ?>
-        <div class="box">
-
+	<div class="tab-content">
+			<ul class="nav nav-tabs" role="tablist">
+           <li class="active"><a href="#bd3" role="tab" data-toggle="tab">Belum Terbeli</a></li>
+           <li><a href="#sd3" role="tab" data-toggle="tab">Sudah Dibeli</a></li>
+           </ul>
+		   
+		<div class="tab-pane active" id="bd3">
             <div class="span6">
-                <form class="well form-inline">
-                    <!-- Date range -->
-                    <!-- Date dd/mm/yyyy -->
+			<form class="well form-inline">
                     <div class="form-group">
-                        <label>Dari Tanggal:</label>
+                        <label>Bahasa</label>
                         <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-calendar"></i>
-                            </div>
-                            <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
-                        </div><!-- /.input group -->
-                    </div><!-- /.form group -->
-                    <!-- Date dd/mm/yyyy -->
-                    <div class="form-group">
-                        <label>Sampai Tanggal:</label>
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-calendar"></i>
-                            </div>
-                            <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
-                        </div><!-- /.input group -->
-                    </div><!-- /.form group -->
-                    <!-- select -->
-                    <div class="form-group">
-                        <label>Bahasa</label><br>
-                        <select class="form-control">
-                            <option>Indonesia</option>
-                            <option>Inggris</option>
-                            <option>Lainnya</option>
-                        </select>
-                    </div>	
-                    &nbsp;&nbsp;&nbsp;
-                    <button type="submit" class="btn btn-warning">Search</button>
-                    <a href="<?php echo Yii::app()->request->baseUrl . '/assets/TemplateForm/FormReqBuku.xls'; ?>" class="btn btn-default btn-flat">Download</a>
-
-                </form>
-            </div>	
-        </div>   
-        <table  class="table table-bordered table-striped">
+							<select id="selectbd3" class="form-control">
+                                <option value="0">Semua Bahasa</option>
+                                <option value="1">Indonesia</option>
+                                <option value="2">Inggris</option>
+                                <option value="3">Lainnya</option>
+                            </select>
+                            <br />
+						</div>
+                        <br>
+                        <div class="form-group">
+							<a id="downloadbd3" class="btn btn-default btn-flat">Download</a>
+                        </div>
+					</div>
+            </form>
+			</div>
+			<!-- tabel bd3 area -->
+			<table id="tbd3" class="table table-bordered table-striped">
             <thead>
-                <tr>
+                <tr class="heading">
                     <th>ID Anggota</th>
                     <th>Tgl.Permintaan</th>
+                    <th>Nama Peminta</th>
                     <th>Judul</th>
                     <th>Volume</th>
-                    <th>Pengarang</th>
-                    <th>Tahun</th>
-                    <th>Jenis</th>
+					<th>Tahun</th>
+					<th>Jenis</th>
                     <th>Bahasa</th>
-                    <th>Harga</th>
-                    <th>Link Website</th>
+					<th>Harga</th>
+                    <th>Prioritas</th>                   
+                    <th>Status</th>
+                    <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
-<?php foreach ($dataSer as $modelSer): ?>
-                    <tr>
-                        <td><?php echo $modelSer['ID_ANGGOTA']; ?></td>
-                        <td><?php echo $modelSer['TGL_PERMINTAAN']; ?></td>
-                        <td><?php echo $modelSer['JUDUL']; ?></td>
-                        <td><?php echo $modelSer['VOLUME']; ?></td>
-                        <td><?php echo $modelSer['TAHUN']; ?></td>
-                        <td><?php echo $modelSer['JENIS']; ?></td>
-                        <td><?php echo $modelSer['BAHASA']; ?></td>
-                        <td><?php echo $modelSer['HARGA']; ?></td>
-                        <td><?php echo $modelSer['LINK_WEBSITE']; ?></td>
-                    </tr>
-<?php endforeach; ?>
+                <?php
+                    foreach ($dataSer as $modelSer):
+					if($modelSer['ID_STATUS']==0):
+                     echo "<tr id=" . $modelSer['BAHASA'] . ">";
+                ?>
+                <td><?php echo $modelSer['ID_ANGGOTA']; ?></td>
+                <td><?php echo $modelSer['TGL_PERMINTAAN']; ?></td>
+                <td><?php echo $modelSer['NAMA_PEMINTA']; ?></td>
+                <td><?php echo $modelSer['JUDUL']; ?></td>
+                <td><?php echo $modelSer['VOLUME']; ?></td>
+				<td><?php echo $modelSer['TAHUN']; ?></td>
+				<td><?php echo $modelSer['JENIS']; ?></td>
+                <td><?php echo $modelSer['BAHASA']; ?></td>
+                <td><?php echo $modelSer['HARGA']; ?></td>
+				<td><?php echo $modelSer['PRIORITAS']; ?></td>
+                <td><?php echo $modelSer['STATUS']; ?></td>
+                <td>
+                    <a href class="glyphicon glyphicon-list-alt" id="<?php echo $model['K_PERMINTAAN'] ?>"></a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a href class="glyphicon glyphicon-pencil" id="<?php echo $model['K_PERMINTAAN'] ?>"></a>
+                    &nbsp;&nbsp;
+                    <a href class="glyphicon glyphicon-remove" id="<?php echo $model['K_PERMINTAAN'] ?>"></a>
+                </td>
+                </tr>
+				<?php endif; endforeach; ?>
             </tbody>
-        </table>
+            </table>
+			
+			
+		</div><!-- tab pane bd3 -->
+		
+		
+		<div class="tab-pane" id="sd3">
+            <div class="span6">
+                <form class="well form-inline">
+				    <div class="form-group">
+					<label>Dari Tanggal:</label>
+                        <div class="input-group">
+                            <div class="input-group-addon">
+								<i class="fa fa-calendar"></i>
+                            </div>
+                            <input name="tanggalsd3" id="t1sd3" type="date" class="form-control" />
+                        </div><!-- /.input group -->
+                    </div><!-- /.form group -->
+   
+                    <div class="form-group">
+                    <label>Sampai Tanggal:</label>
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-calendar"></i>
+                             </div>
+                            <input name="tanggalsd3" id="t2sd3" type="date" class="form-control" />                               
+                        </div><!-- /.input group -->
+                    </div><!-- /.form group -->
+                    
+                    <div class="form-group">
+                    <label>Bahasa</label>
+                        <div class="input-group">
+                            <select id="selectsd3" class="form-control">
+                                <option value="0">Semua Bahasa</option>
+                                <option value="1">Indonesia</option>
+                                <option value="2">Inggris</option>
+                                <option value="3">Lainnya</option>
+                            </select>
+                        </div>
+                        <br>
+                        <div class="form-group">
+							<a id="downloadsd3" class="btn btn-default btn-flat">Download</a>
+                        </div>
+					</div>
+                </form>
+            </div>	<!-- span6 -->
+			
+			<table id="tsd3" class="table table-bordered table-striped">
+            <thead>
+                <tr class="heading">
+                    <th>ID Anggota</th>
+                    <th>Tgl.Permintaan</th>
+                    <th>Nama Peminta</th>
+                    <th>Judul</th>
+                    <th>Volume</th>
+					<th>Tahun</th>
+					<th>Jenis</th>
+                    <th>Bahasa</th>
+					<th>Harga</th>
+                    <th>Prioritas</th>                   
+                    <th>Status</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    foreach ($dataSer as $modelSer):
+					if($modelSer['ID_STATUS']==1):
+                     echo "<tr class=\"isi\" id=".$modelSer['BAHASA']." name=".$modelSer['TGL_PERMINTAAN'].">";
+                ?>
+                    <td><?php echo $modelSer['ID_ANGGOTA']; ?></td>
+					<td><?php echo $modelSer['TGL_PERMINTAAN']; ?></td>
+					<td><?php echo $modelSer['NAMA_PEMINTA']; ?></td>
+					<td><?php echo $modelSer['JUDUL']; ?></td>
+					<td><?php echo $modelSer['VOLUME']; ?></td>
+					<td><?php echo $modelSer['TAHUN']; ?></td>
+					<td><?php echo $modelSer['JENIS']; ?></td>
+					<td><?php echo $modelSer['BAHASA']; ?></td>
+					<td><?php echo $modelSer['HARGA']; ?></td>
+					<td><?php echo $modelSer['PRIORITAS']; ?></td>
+					<td><?php echo $modelSer['STATUS']; ?></td>
+					<td>
+						<a href class="glyphicon glyphicon-list-alt" id="<?php echo $model['K_PERMINTAAN'] ?>"></a>
+						&nbsp;&nbsp;&nbsp;
+						<a href class="glyphicon glyphicon-pencil" id="<?php echo $model['K_PERMINTAAN'] ?>"></a>
+						&nbsp;&nbsp;
+						<a href class="glyphicon glyphicon-remove" id="<?php echo $model['K_PERMINTAAN'] ?>"></a>
+					</td>
+                    </tr>
+			<?php endif; endforeach; ?>
+            </tbody>
+			</table>
+		</div><!-- tab pane sd3 -->
+
+    </div>  <!-- content Serial-->
+	</div>
+		
+		
+		
+        
 
         <!-- page script -->
         <script type="text/javascript">
-            $(function() {
+       /*     $(function() {
                 $('#bd3').dataTable({
                     "bPaginate": true,
                     "bLengthChange": true,
@@ -429,13 +572,13 @@
                     "bInfo": false,
                     "bAutoWidth": false
                 });
-            });
+            });*/
         </script>
     </div><!--Serial-->
 
 </div>
 </div><!--LIST-->  
-</div>
+
 
 
 
@@ -506,6 +649,10 @@
 <script>
 	$(document).ready(function() {
     	var x;
+		x = $("#myselect option:selected").text();
+		var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=cetak/cetak&status=bd1&bhs=" + x;
+		$("a#downloadbd1").attr("href", link);
+		
         $("select#myselect").change(function() {
 			x = $("#myselect option:selected").text();
 			if (x == "Indonesia") {
@@ -519,7 +666,7 @@
 			if (x == "Semua Bahasa") {
 				$("table#bd1 tr").show();
 			}
-			var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=cetak/cetak&bhs=" + x;
+			var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=cetak/cetak&status=bd1&bhs=" + x;
 			//$("span#tes").text(link);
 			$("a#downloadbd1").attr("href", link);
    		});
@@ -541,15 +688,18 @@
 
 <!-- script buku sudah dibeli -->
 <script>
-
 $(document).ready(function(){
+	var x = $("#selectsd1 option:selected").text();
+	var start_time  = $("#t1sd1").val(); //2013-09-5
+	var end_time    = $("#t2sd1").val();
+	var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=cetak/cetak&status=sd1&bhs="+x +"&t1="+start_time +"&t2="+end_time;
+	$("a#downloadsd1").attr("href", link);
+		
 	$("input[name='tanggalsd1'],select#selectsd1").change(function() {
         x = $("#selectsd1 option:selected").text();
-		var start_time  = $("#t1sd1").val(); //2013-09-5
-		var end_time    = $("#t2sd1").val(); //2013-09-10
-		//var z = $( "table#sd1 tr.isi").attr("name");
-		//alert(start_time+" "+z);
-		
+		start_time  = $("#t1sd1").val(); //2013-09-5
+		end_time    = $("#t2sd1").val(); //2013-09-10
+
         if (x == "Indonesia") {
              $("table#sd1 tr:not(.heading)").hide();
              $("table#sd1 tr#" + x).show();
@@ -564,6 +714,9 @@ $(document).ready(function(){
              $("table#sd1 tr").show();
 			 filter_tgl(x,start_time,end_time);
         }
+		//set link
+		var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=cetak/cetak&status=sd1&bhs="+x +"&t1="+start_time +"&t2="+end_time;
+		$("a#downloadsd1").attr("href", link);
     });
   	
 	function filter_tgl(x,start_time,end_time){
@@ -574,11 +727,196 @@ $(document).ready(function(){
 		$( "table#sd1 tr.isi" ).filter(function() {
 			return (new Date($(this).attr("name")) > new Date(end_time));
 		}).hide();
-		//set link
-		var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=cetak/cetak&bhs="+x +"&t1="+start_time +"&t2="+end_time;
-		$("a#downloadsd1").attr("href", link);
 	}
 
 });
+</script>
 
+
+<!-- script jurnal belum dibeli-->
+<script>
+	$(document).ready(function() {
+    	var x;
+		x = $("#selectbd2 option:selected").text();
+		var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=cetak/CetakJurnal&status=bd2&bhs=" + x;
+		$("a#downloadbd2").attr("href", link);
+		
+        $("select#selectbd2").change(function() {
+			x = $("#selectbd2 option:selected").text();
+			if (x == "Indonesia") {
+				$("table#tbd2 tr:not(.heading)").hide();
+				$("table#tbd2 tr#" + x).show();
+			}
+			if (x == "Inggris") {
+				$("table#tbd2 tr:not(.heading)").hide();
+				$("table#tbd2 tr#" + x).show();
+			}
+			if (x == "Semua Bahasa") {
+				$("table#tbd2 tr").show();
+			}
+			var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=cetak/CetakJurnal&status=bd2&bhs=" + x;
+			//$("span#tes").text(link);
+			$("a#downloadbd2").attr("href", link);
+   		});
+
+		$("a.glyphicon.glyphicon-list-alt").click(function() {
+            var a = $(this).attr("id");
+            var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=permintaan/viewdetail&det=" + a;
+			$(this).attr("href", link);
+        })
+
+        $("a.glyphicon.glyphicon-pencil").click(function() {
+            var a = $(this).attr("id");
+            var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=permintaan/editbuku&det=" + a;
+            $(this).attr("href", link);
+        })
+	});
+</script>
+
+<!-- script jurnal sudah dibeli -->
+<script>
+$(document).ready(function(){
+	var x = $("#selectsd2 option:selected").text();
+	var start_time  = $("#t1sd2").val();
+	var end_time    = $("#t2sd2").val();
+	var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=cetak/CetakJurnal&status=sd2&bhs="+x +"&t1="+start_time +"&t2="+end_time;
+	$("a#downloadsd2").attr("href", link);
+		
+	$("input[name='tanggalsd2'],select#selectsd2").change(function() {
+        x = $("#selectsd2 option:selected").text();
+		start_time  = $("#t1sd2").val(); //2013-09-5
+		end_time    = $("#t2sd2").val(); //2013-09-10
+		
+        if (x == "Indonesia") {
+             $("table#tsd2 tr:not(.heading)").hide();
+             $("table#tsd2 tr#" + x).show();
+			 filter_tgl(x,start_time,end_time);
+        }
+        if (x == "Inggris") {
+            $("table#tsd2 tr:not(.heading)").hide();
+    	    $("table#tsd2 tr#" + x).show();
+			filter_tgl(x,start_time,end_time);
+        }
+        if (x == "Semua Bahasa") {
+             $("table#tsd2 tr").show();
+			 filter_tgl(x,start_time,end_time);
+        }
+		//set link
+		var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=cetak/CetakJurnal&status=sd2&bhs="+x +"&t1="+start_time +"&t2="+end_time;
+		$("a#downloadsd2").attr("href", link);
+    });
+  	
+	function filter_tgl(x,start_time,end_time){
+		$( "table#tsd2 tr.isi" ).filter(function() {
+			return (new Date($(this).attr("name")) < new Date(start_time));
+		}).hide();
+			
+		$( "table#tsd2 tr.isi" ).filter(function() {
+			return (new Date($(this).attr("name")) > new Date(end_time));
+		}).hide();
+	}
+
+});
+</script>
+
+
+<!-- script serial belum dibeli-->
+<script>
+	$(document).ready(function() {
+    	var x;
+		x = $("#selectbd3 option:selected").text();
+		var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=cetak/CetakSerial&status=bd3&bhs=" + x;
+		$("a#downloadbd3").attr("href", link);
+		
+        $("select#selectbd3").change(function() {
+			x = $("#selectbd3 option:selected").text();
+			if (x == "Indonesia") {
+				$("table#tbd3 tr:not(.heading)").hide();
+				$("table#tbd3 tr#" + x).show();
+			}
+			if (x == "Inggris") {
+				$("table#tbd3 tr:not(.heading)").hide();
+				$("table#tbd3 tr#" + x).show();
+			}
+			if (x == "Semua Bahasa") {
+				$("table#tbd3 tr").show();
+			}
+			var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=cetak/CetakJurnal&status=bd3&bhs=" + x;
+			$("a#downloadbd3").attr("href", link);
+   		});
+
+		$("a.glyphicon.glyphicon-list-alt").click(function() {
+            var a = $(this).attr("id");
+            var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=permintaan/viewdetail&det=" + a;
+			$(this).attr("href", link);
+        })
+
+        $("a.glyphicon.glyphicon-pencil").click(function() {
+            var a = $(this).attr("id");
+            var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=permintaan/editbuku&det=" + a;
+            $(this).attr("href", link);
+        })
+	});
+</script>
+
+<!-- script serial sudah dibeli -->
+<script>
+$(document).ready(function(){
+	var x = $("#selectsd3 option:selected").text();
+	var start_time  = $("#t1sd3").val();
+	var end_time    = $("#t2sd3").val();
+	var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=cetak/CetakSerial&status=sd3&bhs="+x +"&t1="+start_time +"&t2="+end_time;
+	$("a#downloadsd3").attr("href", link);
+		
+	$("input[name='tanggalsd3'],select#selectsd3").change(function() {
+        x = $("#selectsd3 option:selected").text();
+		start_time  = $("#t1sd3").val(); //2013-09-5
+		end_time    = $("#t2sd3").val(); //2013-09-10
+		
+        if (x == "Indonesia") {
+             $("table#tsd3 tr:not(.heading)").hide();
+             $("table#tsd3 tr#" + x).show();
+			 filter_tgl(x,start_time,end_time);
+        }
+        if (x == "Inggris") {
+            $("table#tsd3 tr:not(.heading)").hide();
+    	    $("table#tsd3 tr#" + x).show();
+			filter_tgl(x,start_time,end_time);
+        }
+        if (x == "Semua Bahasa") {
+             $("table#tsd3 tr").show();
+			 filter_tgl(x,start_time,end_time);
+        }
+		//set link
+		var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=cetak/CetakSerial&status=sd3&bhs="+x +"&t1="+start_time +"&t2="+end_time;
+		$("a#downloadsd3").attr("href", link);
+    });
+  	
+	function filter_tgl(x,start_time,end_time){
+		$( "table#tsd3 tr.isi" ).filter(function() {
+			return (new Date($(this).attr("name")) < new Date(start_time));
+		}).hide();
+			
+		$( "table#tsd3 tr.isi" ).filter(function() {
+			return (new Date($(this).attr("name")) > new Date(end_time));
+		}).hide();
+	}
+
+});
+</script>
+
+
+<!-- Script Tabel -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $('#bd1,#sd1,#tbd2,#tsd2,#tbd3,#tsd3').dataTable({
+            "bPaginate": true,
+            "bLengthChange": true,
+            "bFilter": false,
+            "bSort": true,
+            "bInfo": false,
+            "bAutoWidth": false
+        });
+    });
 </script>

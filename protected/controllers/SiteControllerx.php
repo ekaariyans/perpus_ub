@@ -137,7 +137,7 @@ class SiteController extends Controller
 
 			if($kenal==1){
 				if($passwd == 1){
-					Yii::app()->session['username'] = $userid;
+					//Yii::app()->session['username'] = $userid;
 					$this->redirect('index.php?r=permintaan');
 				}
 				else {

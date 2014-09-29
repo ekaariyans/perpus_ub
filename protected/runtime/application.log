@@ -15051,3 +15051,426 @@ in C:\xampp\htdocs\perpus_ub\index.php (13)
 2014/09/24 04:52:16 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
 in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (401)
 in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/24 05:51:37 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Incorrect syntax near 'Bahasa'.. The SQL statement executed was: [dbo].[lap_buku] @bahasa =Semua Bahasa .
+in C:\xampp\htdocs\perpus_ub\protected\controllers\CetakController.php (21)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/24 05:51:37 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Incorrect syntax near 'Bahasa'.. The SQL statement executed was: [dbo].[lap_buku] @bahasa =Semua Bahasa ' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\CetakController.php(21): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): CetakController->actionCetak()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('cetak')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('cetak/cetak')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=cetak/cetak&bhs=Semua%20Bahasa
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_laporan_p
+---
+2014/09/24 05:56:47 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Incorrect syntax near 'Bahasa'.. The SQL statement executed was: [dbo].[lap_buku] @bahasa =Semua Bahasa .
+in C:\xampp\htdocs\perpus_ub\protected\controllers\CetakController.php (21)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/24 05:56:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Incorrect syntax near 'Bahasa'.. The SQL statement executed was: [dbo].[lap_buku] @bahasa =Semua Bahasa ' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\CetakController.php(21): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): CetakController->actionCetak()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('cetak')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('cetak/cetak')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=cetak/cetak&bhs=Semua%20Bahasa
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_laporan_p
+---
+2014/09/24 08:18:21 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[22007]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Conversion failed when converting date and/or time from character string.. The SQL statement executed was: [dbo].[lap_buku_sd] @bahasa = 'Indonesia',@t1 = '1',@t2 = '1'.
+in C:\xampp\htdocs\perpus_ub\protected\controllers\CetakController.php (33)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/24 08:18:21 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[22007]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Conversion failed when converting date and/or time from character string.. The SQL statement executed was: [dbo].[lap_buku_sd] @bahasa = 'Indonesia',@t1 = '1',@t2 = '1'' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\CetakController.php(33): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): CetakController->actionCetak()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('cetak')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('cetak/cetak')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=cetak/cetak&status=sd1&bhs=Indonesia&t1=&t2=
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_laporan_p
+---
+2014/09/24 08:21:01 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[22007]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Conversion failed when converting date and/or time from character string.. The SQL statement executed was: [dbo].[lap_buku_sd] @bahasa = 'Indonesia',@t1 = '1',@t2 = '1'.
+in C:\xampp\htdocs\perpus_ub\protected\controllers\CetakController.php (33)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/24 08:21:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[22007]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Conversion failed when converting date and/or time from character string.. The SQL statement executed was: [dbo].[lap_buku_sd] @bahasa = 'Indonesia',@t1 = '1',@t2 = '1'' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\CetakController.php(33): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): CetakController->actionCetak()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('cetak')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('cetak/cetak')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=cetak/cetak&status=sd1&bhs=Indonesia&t1=2014-09-09&t2=2014-09-27
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_laporan_p
+---
+2014/09/24 09:01:07 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[22007]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Conversion failed when converting date and/or time from character string.. The SQL statement executed was: [dbo].[lap_buku_sd] @bahasa = 'Semua Bahasa',@t1 = '1',@t2 = '1'.
+in C:\xampp\htdocs\perpus_ub\protected\controllers\CetakController.php (33)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/24 09:01:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[22007]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Conversion failed when converting date and/or time from character string.. The SQL statement executed was: [dbo].[lap_buku_sd] @bahasa = 'Semua Bahasa',@t1 = '1',@t2 = '1'' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\CetakController.php(33): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): CetakController->actionCetak()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('cetak')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('cetak/cetak')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=cetak/cetak&status=sd1&bhs=Semua%20Bahasa&t1=2014-09-10&t2=
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_laporan_p
+---
+2014/09/24 09:04:46 [error] [php] Undefined variable: command (C:\xampp\htdocs\perpus_ub\protected\controllers\CetakController.php:34)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CetakController->runAction()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CetakController->runActionWithFilters()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CetakController->run()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=cetak/cetak&status=sd1&bhs=Semua%20Bahasa&t1=2014-09-10&t2=
+in C:\xampp\htdocs\perpus_ub\protected\controllers\CetakController.php (34)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/24 09:20:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "loginForm".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('loginForm')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('loginForm')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('site/loginForm')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=site/loginForm
+---
+2014/09/24 12:37:48 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (401)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/24 12:37:48 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (401)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/24 13:35:35 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (401)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/24 13:35:35 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (401)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/25 03:48:14 [error] [php] Undefined variable: status (C:\xampp\htdocs\perpus_ub\protected\views\cetak\cetak.php:17)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CBaseController.php(95): CetakController->renderInternal()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): CetakController->renderFile()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): CetakController->renderPartial()
+#3 C:\xampp\htdocs\perpus_ub\protected\controllers\CetakController.php(13): CetakController->render()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): CetakController->actionCetak()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CetakController->runAction()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CetakController->runActionWithFilters()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CetakController->run()
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=cetak/cetak&status=bd1&bhs=Semua%20Bahasa
+in C:\xampp\htdocs\perpus_ub\protected\views\cetak\cetak.php (17)
+in C:\xampp\htdocs\perpus_ub\protected\views\cetak\cetak.php (8)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\CetakController.php (13)
+2014/09/25 06:04:57 [error] [php] Undefined variable: command (C:\xampp\htdocs\perpus_ub\protected\controllers\CetakController.php:62)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CetakController->runAction()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CetakController->runActionWithFilters()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CetakController->run()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=cetak/CetakJurnal&status=sd1&bhs=Semua%20Bahasa&t1=2014-09-23&t2=
+in C:\xampp\htdocs\perpus_ub\protected\controllers\CetakController.php (62)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/25 06:11:16 [error] [php] Undefined index: NAMA_PEMINTA (C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_laporan_p.php:352)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): PermintaanController->renderFile()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): PermintaanController->renderPartial()
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(131): PermintaanController->render()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_laporan_p()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+in C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_laporan_p.php (352)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (131)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/25 06:18:32 [error] [php] Undefined index: PENERBIT (C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_laporan_p.php:356)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): PermintaanController->renderFile()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): PermintaanController->renderPartial()
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(131): PermintaanController->render()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_laporan_p()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+in C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_laporan_p.php (356)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (131)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/25 07:08:25 [error] [php] Undefined index: NAMA_PEMINTA (C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_laporan_p.php:424)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): PermintaanController->renderFile()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): PermintaanController->renderPartial()
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(131): PermintaanController->render()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_laporan_p()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+in C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_laporan_p.php (424)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (131)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/25 07:13:44 [error] [php] Undefined index: PENGARANG (C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_laporan_p.php:426)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): PermintaanController->renderFile()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): PermintaanController->renderPartial()
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(131): PermintaanController->render()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_laporan_p()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+in C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_laporan_p.php (426)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (131)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/25 07:15:23 [error] [php] Undefined index: PENGARANG (C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_laporan_p.php:426)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): PermintaanController->renderFile()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): PermintaanController->renderPartial()
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(131): PermintaanController->render()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_laporan_p()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+in C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_laporan_p.php (426)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (131)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/25 07:15:39 [error] [php] Undefined index: PENERBIT (C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_laporan_p.php:429)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): PermintaanController->renderFile()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): PermintaanController->renderPartial()
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(131): PermintaanController->render()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_laporan_p()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+in C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_laporan_p.php (429)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (131)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/25 08:45:28 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (401)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/25 08:45:28 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (401)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/25 08:45:28 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[22018]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Conversion failed when converting the nvarchar value 'Wajib' to data type int.. The SQL statement executed was: INSERT INTO [t_permintaan_serial] ([K_PERMINTAAN], [NAMA_PEMINTA], [JUDUL], [VOLUME], [TAHUN], [FREKWENSI], [JENIS], [BAHASA], [HARGA], [LINK_WEBSITE], [ID_STATUS], [ID_PRIORITAS]) VALUES (:K_PERMINTAAN, :NAMA_PEMINTA, :JUDUL, :VOLUME, :TAHUN, :FREKWENSI, :JENIS, :BAHASA, :HARGA, :LINK_WEBSITE, :ID_STATUS, :ID_PRIORITAS).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (386)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (442)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/25 08:45:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[22018]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Conversion failed when converting the nvarchar value 'Wajib' to data type int.. The SQL statement executed was: INSERT INTO [t_permintaan_serial] ([K_PERMINTAAN], [NAMA_PEMINTA], [JUDUL], [VOLUME], [TAHUN], [FREKWENSI], [JENIS], [BAHASA], [HARGA], [LINK_WEBSITE], [ID_STATUS], [ID_PRIORITAS]) VALUES (:K_PERMINTAAN, :NAMA_PEMINTA, :JUDUL, :VOLUME, :TAHUN, :FREKWENSI, :JENIS, :BAHASA, :HARGA, :LINK_WEBSITE, :ID_STATUS, :ID_PRIORITAS)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(1250): CDbCommand->execute(Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(386): CDbCommand->insert('t_permintaan_se...', Array)
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(442): PermintaanController->BacaPermintaanSerial('C:/xampp/htdocs...', 't_permintaan_se...', '149')
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan_f()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan_f')
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan_f
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan_f
+---
+2014/09/26 09:18:35 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (401)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/26 09:18:35 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (401)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/26 09:49:48 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (420)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/26 09:49:48 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (420)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/26 09:53:20 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (420)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/26 09:53:20 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (420)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/26 09:57:39 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (426)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/26 09:57:39 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (426)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/26 09:58:34 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (426)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/26 09:58:34 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (426)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/26 09:59:33 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (426)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/26 09:59:33 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (426)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/26 10:08:13 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (426)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/26 10:08:13 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (426)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/26 10:08:40 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (426)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/26 10:08:40 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (426)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/26 10:14:30 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (444)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/26 10:14:30 [warning] [application] Failed to set unsafe attribute "filee" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (444)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/26 10:19:38 [error] [exception.CDbException] exception 'CDbException' with message 'The table "permintaan" for active record class "Pengolahan" cannot be found in the database.' in C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php:2362
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Pengolahan))
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1350): CActiveRecord->getTableSchema()
+#3 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#4 C:\xampp\htdocs\perpus_ub\protected\controllers\PengolahanController.php(19): CActiveRecord->findAll()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PengolahanController->actionDaftarPermintaan()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('daftarpermintaa...')
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('pengolahan/daft...')
+#11 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/perpus_ub/index.php?r=pengolahan/daftarpermintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_laporan_p
+---
+2014/09/26 10:20:37 [error] [exception.CDbException] exception 'CDbException' with message 'The table "permintaan" for active record class "Pengolahan" cannot be found in the database.' in C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php:2362
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Pengolahan))
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1350): CActiveRecord->getTableSchema()
+#3 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#4 C:\xampp\htdocs\perpus_ub\protected\controllers\PengolahanController.php(19): CActiveRecord->findAll()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PengolahanController->actionDaftarPermintaan()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('daftarpermintaa...')
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('pengolahan/daft...')
+#11 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/perpus_ub/index.php?r=pengolahan/daftarpermintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_laporan_p
+---
+2014/09/26 11:22:57 [error] [php] Undefined index: ID_STATUS==0 (C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_laporan_p.php:77)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): PermintaanController->renderFile()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): PermintaanController->renderPartial()
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(131): PermintaanController->render()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_laporan_p()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+in C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_laporan_p.php (77)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (131)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/26 11:38:32 [error] [php] Undefined variable: data1 (C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php:129)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (129)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/26 11:52:26 [error] [php] Undefined index: ID_STATUS (C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_laporan_p.php:268)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): PermintaanController->renderFile()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): PermintaanController->renderPartial()
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(129): PermintaanController->render()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_laporan_p()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+in C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_laporan_p.php (268)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (129)
+in C:\xampp\htdocs\perpus_ub\index.php (13)

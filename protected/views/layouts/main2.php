@@ -61,7 +61,7 @@
                                 <li class="user-header bg-light-blue">
                                     <img src="<?php echo Yii::app()->request->baseUrl; ?>/assets/img/avatar5.png" class="img-circle" alt="User Image" />
                                     <p>
-                                        <?php echo Yii::app()->session['username'];?> - Web Developer
+                                        <?php echo Yii::app()->session['bagian'];?> - Web Developer
                                         <small>Member since jul. 2014</small>
                                     </p>
                                 </li>

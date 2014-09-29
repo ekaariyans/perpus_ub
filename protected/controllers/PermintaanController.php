@@ -117,18 +117,16 @@ class PermintaanController extends Controller {
 			$command = Yii::app()->db->createCommand("[dbo].[detailbuku] @k_permintaan=$k_permintaan");
 			$datadetail=$command->queryAll();
 		}
-        $command = Yii::app()->db->createCommand("[dbo].[show_lap_buku]  ");
+        $command = Yii::app()->db->createCommand("[dbo].[show_lap_buku]");
         $data=$command->queryAll();
-		$command = Yii::app()->db->createCommand("[dbo].[show_lap_buku1]  ");
-        $data1=$command->queryAll();
 		
-         $commandJur = Yii::app()->db->createCommand("[dbo].[permintaanJurnal] @id_anggota =$user ");
+         $commandJur = Yii::app()->db->createCommand("[dbo].[show_lap_jurnal]");
         $dataJur=$commandJur->queryAll();
         
-        $commandSer = Yii::app()->db->createCommand("[dbo].[permintaanSerial] @id_anggota =$user ");
+        $commandSer = Yii::app()->db->createCommand("[dbo].[show_lap_serial]");
         $dataSer=$commandSer->queryAll();
                 
-		$this->render('Permintaan/f_laporan_p', array('model'=>$model,  'modelBk'=>$modelBk, 'data'=>$data,'data1'=>$data1,'dataJur'=>$dataJur,'dataSer'=>$dataSer));
+		$this->render('Permintaan/f_laporan_p', array('model'=>$model,  'modelBk'=>$modelBk, 'data'=>$data,'dataJur'=>$dataJur,'dataSer'=>$dataSer));
 	}
     
 	
@@ -214,6 +212,7 @@ class PermintaanController extends Controller {
 		$model2->ID_STATUS=0;
 		$model2->ID_PRIORITAS=$_POST['TPermintaanBuku']['ID_PRIORITAS'];
 		$model2->save();
+		Yii::app()->user->setFlash('success',"Success input data");
 		return;
 	}
     
@@ -226,6 +225,7 @@ class PermintaanController extends Controller {
 		$model2->HARGA=$_POST['TPermintaanJurnal']['HARGA'];
 		$model2->LINK_WEBSITE=$_POST['TPermintaanJurnal']['LINK_WEBSITE'];
 		$model2->save();
+		Yii::app()->user->setFlash('success',"Success input data");
 		return;
 	}
     	
@@ -240,6 +240,7 @@ class PermintaanController extends Controller {
 		$model2->HARGA=$_POST['TPermintaanSerial']['HARGA'];
 		$model2->LINK_WEBSITE=$_POST['TPermintaanSerial']['LINK_WEBSITE'];
 		$model2->save();
+		Yii::app()->user->setFlash('success',"Success input data");
 		return;
 	}   	
     	
@@ -247,147 +248,187 @@ class PermintaanController extends Controller {
     public function BacaPermintaanBuku($path,$namaTabel,$k_permintaan){
     	if( !file_exists( $path ) ) die( 'File could not be found at: ' . $path );
 		$data=new JPhpExcelReader($path);
-
-		$baris = $data->rowcount($sheet_index=0);
-    	$sukses = 0;
-		$gagal = 0;
-				
-		//Baca File Excel
-		for ($i=2; $i<=$baris; $i++)
-		{
-			$peminta   =$data->val($i,1);
-			$judul     =$data->val($i,2);
-			$pengarang =$data->val($i,3);
-			$ISBN      =$data->val($i,4);
-			$jenis     =$data->val($i,5);
-			$bahasa    =$data->val($i,6);
-			$penerbit  =$data->val($i,7);
-			$tahun     =$data->val($i,8);
-			$harga     =$data->val($i,9);
-			$link      =$data->val($i,10);
-			$status    =0;
-			$prioritas =$data->val($i,11);
-			if($prioritas=='wajib'){
-			$prioritas =1;
-			}elseif($prioritas=='penunjang'){
-			$prioritas =2;
+		
+		$isTrue = false;
+		for($col=1; $col<12; $col++){
+			$kolom = $data->val(1,$col);
+			if(strtolower($kolom)=='isbn'){
+				$isTrue = true;	
 			}
-			//Input Data Excel Ke Database	
-			$command = Yii::app()->db->createCommand();
-			$command->insert($namaTabel, array(
-				 //'id_permintaan'=>'',
-				 'K_PERMINTAAN'=>$k_permintaan,
-				 'NAMA_PEMINTA'=>$peminta,
-				 'JUDUL'       =>$judul,
-				 'PENGARANG'   =>$pengarang,
-				 'ISBN'        =>$ISBN,
-				 'JENIS'       =>$jenis,
-				 'BAHASA'      =>$bahasa,
-				 'PENERBIT'    =>$penerbit,
-				 'TAHUN_TERBIT'=>$tahun,
-				 'HARGA'       =>$harga,
-				 'LINK_WEBSITE'=>$link,
-				 'ID_STATUS'   =>$status,
-				 'ID_PRIORITAS'=>$prioritas,
-			));
-		 	if ($command) $sukses++;
-		 	else $gagal++;
-		 }//for
-		 return;
+		}
+		
+		if($isTrue) {
+			$baris = $data->rowcount($sheet_index=0);
+			$sukses = 0;
+			$gagal = 0;
+					
+			//Baca File Excel
+			for ($i=2; $i<=$baris; $i++)
+			{
+				$peminta   =$data->val($i,1);
+				$judul     =$data->val($i,2);
+				$pengarang =$data->val($i,3);
+				$ISBN      =$data->val($i,4);
+				$jenis     =$data->val($i,5);
+				$bahasa    =$data->val($i,6);
+				$penerbit  =$data->val($i,7);
+				$tahun     =$data->val($i,8);
+				$harga     =$data->val($i,9);
+				$link      =$data->val($i,10);
+				$status    =0;
+				$prioritas =$data->val($i,11);
+				if($prioritas=='wajib'){
+				$prioritas =1;
+				}elseif($prioritas=='penunjang'){
+				$prioritas =2;
+				}
+				//Input Data Excel Ke Database	
+				$command = Yii::app()->db->createCommand();
+				$command->insert($namaTabel, array(
+					 //'id_permintaan'=>'',
+					 'K_PERMINTAAN'=>$k_permintaan,
+					 'NAMA_PEMINTA'=>$peminta,
+					 'JUDUL'       =>$judul,
+					 'PENGARANG'   =>$pengarang,
+					 'ISBN'        =>$ISBN,
+					 'JENIS'       =>$jenis,
+					 'BAHASA'      =>$bahasa,
+					 'PENERBIT'    =>$penerbit,
+					 'TAHUN_TERBIT'=>$tahun,
+					 'HARGA'       =>$harga,
+					 'LINK_WEBSITE'=>$link,
+					 'ID_STATUS'   =>$status,
+					 'ID_PRIORITAS'=>$prioritas,
+				));
+				if ($command) $sukses++;
+				else $gagal++;
+			 }//for
+			 Yii::app()->user->setFlash('success',"Success import $sukses failed $gagal");
+			 return;
+		}	
+		else {
+			Yii::app()->user->setFlash('error',"Form yang Diupload Salah!");
+		}
 	}
     
     public function BacaPermintaanJurnal($path,$namaTabel,$k_permintaan){
     	if( !file_exists( $path ) ) die( 'File could not be found at: ' . $path );
 		$data=new JPhpExcelReader($path);
-
-		$baris = $data->rowcount($sheet_index=0);
-    	$sukses = 0;
-		$gagal = 0;
-				
-		//Baca File Excel
-		for ($i=2; $i<=$baris; $i++)
-		{
-			$peminta   =$data->val($i,1);
-			$judul     =$data->val($i,2);
-			$pengarang =$data->val($i,3);
-			$jenis     =$data->val($i,4);
-			$bahasa    =$data->val($i,5);
-			$harga     =$data->val($i,6);
-			$link      =$data->val($i,7);
-			$status    =0;
-			$prioritas =$data->val($i,8);
-			if($prioritas=='wajib'){
-			$prioritas =1;
-			}elseif($prioritas=='penunjang'){
-			$prioritas =2;
+		$isTrue = false;
+		for($col=1; $col<12; $col++){
+			$kolom = $data->val(1,$col);
+			if(strtolower($kolom)!='isbn' && strtolower($kolom)!='frekuensi'){
+				$isTrue = true;	
 			}
-			//Input Data Excel Ke Database	
-			$command = Yii::app()->db->createCommand();
-			$command->insert($namaTabel, array(
-				 'K_PERMINTAAN'=>$k_permintaan,
-				 'NAMA_PEMINTA'=>$peminta,
-				 'JUDUL'       =>$judul,
-				 'PENGARANG'   =>$pengarang,
-				 'JENIS'       =>$jenis,
-				 'BAHASA'      =>$bahasa,
-				 'HARGA'       =>$harga,
-				 'LINK_WEBSITE'=>$link,
-				 'ID_STATUS'   =>$status,
-				 'ID_PRIORITAS'=>$prioritas,
-			));
-		 	if ($command) $sukses++;
-		 	else $gagal++;
-		 }//for
-		 return;
+		}
+		
+		if($isTrue) {
+			$baris = $data->rowcount($sheet_index=0);
+			$sukses = 0;
+			$gagal = 0;
+					
+			//Baca File Excel
+			for ($i=2; $i<=$baris; $i++)
+			{
+				$peminta   =$data->val($i,1);
+				$judul     =$data->val($i,2);
+				$pengarang =$data->val($i,3);
+				$jenis     =$data->val($i,4);
+				$bahasa    =$data->val($i,5);
+				$harga     =$data->val($i,6);
+				$link      =$data->val($i,7);
+				$status    =0;
+				$prioritas =$data->val($i,8);
+				if($prioritas=='wajib'){
+				$prioritas =1;
+				}elseif($prioritas=='penunjang'){
+				$prioritas =2;
+				}
+				//Input Data Excel Ke Database	
+				$command = Yii::app()->db->createCommand();
+				$command->insert($namaTabel, array(
+					 'K_PERMINTAAN'=>$k_permintaan,
+					 'NAMA_PEMINTA'=>$peminta,
+					 'JUDUL'       =>$judul,
+					 'PENGARANG'   =>$pengarang,
+					 'JENIS'       =>$jenis,
+					 'BAHASA'      =>$bahasa,
+					 'HARGA'       =>$harga,
+					 'LINK_WEBSITE'=>$link,
+					 'ID_STATUS'   =>$status,
+					 'ID_PRIORITAS'=>$prioritas,
+				));
+				if ($command) $sukses++;
+				else $gagal++;
+			 }//for
+			 Yii::app()->user->setFlash('success',"Success import $sukses failed $gagal");
+			 return;
+		}
+		else{
+			Yii::app()->user->setFlash('error',"Form yang Diupload Salah!");
+		}
 	}
     
     public function BacaPermintaanSerial($path,$namaTabel,$k_permintaan){
     	if( !file_exists( $path ) ) die( 'File could not be found at: ' . $path );
 		$data=new JPhpExcelReader($path);
-
-		$baris = $data->rowcount($sheet_index=0);
-    	$sukses = 0;
-		$gagal = 0;
-				
-		//Baca File Excel
-		for ($i=2; $i<=$baris; $i++)
-		{
-			$peminta   =$data->val($i,1);
-			$judul     =$data->val($i,2);
-			$volume    =$data->val($i,3);
-			$tahun     =$data->val($i,4);
-			$frekwensi=$data->val($i,5);
-			$jenis     =$data->val($i, 6);
-			$bahasa    =$data->val($i, 7);
-			$harga     =$data->val($i, 8);
-			$link      =$data->val($i, 9);
-			$status    =0;
-			$prioritas =$data->val($i,10);
-			if($prioritas=='wajib'){
-			$prioritas =1;
-			}elseif($prioritas=='penunjang'){
-			$prioritas =2;
+		$isTrue = false;
+		for($col=1; $col<12; $col++){
+			$kolom = $data->val(1,$col);
+			if(strtolower($kolom)=='frekuensi'){
+				$isTrue = true;	
 			}
-			//Input Data Excel Ke Database	
-			$command = Yii::app()->db->createCommand();
-			$command->insert($namaTabel, array(
-				 'K_PERMINTAAN'=>$k_permintaan,
-				 'NAMA_PEMINTA'=>$peminta,
-				 'JUDUL'       =>$judul,
-				 'VOLUME'      =>$volume,
-				 'TAHUN'       =>$tahun,
-				 'FREKWENSI'   =>$frekwensi,
-				 'JENIS'       =>$jenis,
-				 'BAHASA'      =>$bahasa,
-				 'HARGA'       =>$harga,
-				 'LINK_WEBSITE'=>$link,
-				 'ID_STATUS'   =>$status,
-				 'ID_PRIORITAS'=>$prioritas,
-			));
-		 	if ($command) $sukses++;
-		 	else $gagal++;
-		 }//for
-		 return;
+		}
+		
+		if($isTrue) {
+			$baris = $data->rowcount($sheet_index=0);
+			$sukses = 0;
+			$gagal = 0;
+					
+			//Baca File Excel
+			for ($i=2; $i<=$baris; $i++)
+			{
+				$peminta   =$data->val($i,1);
+				$judul     =$data->val($i,2);
+				$volume    =$data->val($i,3);
+				$tahun     =$data->val($i,4);
+				$frekwensi=$data->val($i,5);
+				$jenis     =$data->val($i, 6);
+				$bahasa    =$data->val($i, 7);
+				$harga     =$data->val($i, 8);
+				$link      =$data->val($i, 9);
+				$status    =0;
+				$prioritas =$data->val($i,10);
+				if($prioritas=='wajib'){
+				$prioritas =1;
+				}elseif($prioritas=='penunjang'){
+				$prioritas =2;
+				}
+				//Input Data Excel Ke Database	
+				$command = Yii::app()->db->createCommand();
+				$command->insert($namaTabel, array(
+					 'K_PERMINTAAN'=>$k_permintaan,
+					 'NAMA_PEMINTA'=>$peminta,
+					 'JUDUL'       =>$judul,
+					 'VOLUME'      =>$volume,
+					 'TAHUN'       =>$tahun,
+					 'FREKWENSI'   =>$frekwensi,
+					 'JENIS'       =>$jenis,
+					 'BAHASA'      =>$bahasa,
+					 'HARGA'       =>$harga,
+					 'LINK_WEBSITE'=>$link,
+					 'ID_STATUS'   =>$status,
+					 'ID_PRIORITAS'=>$prioritas,
+				));
+				if ($command) $sukses++;
+				else $gagal++;
+			 }//for
+			 Yii::app()->user->setFlash('success',"Success import $sukses failed $gagal");
+			 return;
+		}
+		else{
+			Yii::app()->user->setFlash('error',"Form yang Diupload Salah!");
+		}
 	}
     
     

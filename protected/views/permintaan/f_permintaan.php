@@ -1,3 +1,8 @@
+<?php
+    foreach(Yii::app()->user->getFlashes() as $key => $message) {
+        echo '<div class="alert alert-success" role="alert' . $key . '"> <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>' . $message . "</div>\n";
+    }
+?>
 <div class="form-horizontal" role="form">
 
     <?php

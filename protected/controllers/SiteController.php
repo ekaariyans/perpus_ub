@@ -135,6 +135,8 @@ class SiteController extends Controller
 		if($model->validate() && $model->login()){		
 			$userid = $_POST['UserWeb']['USERNAME'];
 			Yii::app()->session['username']=$userid;
+			//Yii::app()->session['bagian'] = "116";
+			//Yii::app()->session['level'] = "02";
 			$this->redirect('index.php?r=permintaan');
 		}
 		// display the login form
