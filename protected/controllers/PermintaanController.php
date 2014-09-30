@@ -59,7 +59,7 @@ class PermintaanController extends Controller {
 		if(isset($_GET['det'])&&($_GET['nama'])){
 		$id_permintaan_buku = $_GET['det'];
 		$aksi=($_GET['nama']);
-		$command = Yii::app()->db->createCommand("[dbo].[lap_buku_all]  ");
+		$command = Yii::app()->db->createCommand("[dbo].[show_lap_buku]  ");
         $data=$command->queryAll();
 				
 			if($aksi=='detailbuku'){
