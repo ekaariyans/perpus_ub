@@ -87,11 +87,11 @@
                             <td><?php echo $model['PENERBIT']; ?></td>
                             <td><?php echo $model['STATUS']; ?></td>
                             <td>
-                                <a href class="glyphicon glyphicon-list-alt" id="<?php echo $model['K_PERMINTAAN'] ?>"></a>
+                                <a href class="glyphicon glyphicon-list-alt" id="<?php echo $model['ID_PERMINTAAN_BUKU'] ?>" name="detailbuku"></a>
                                 &nbsp;&nbsp;&nbsp;
-                                <a href class="glyphicon glyphicon-pencil" id="<?php echo $model['K_PERMINTAAN'] ?>"></a>
+                                <a href class="glyphicon glyphicon-pencil" id="<?php echo $model['ID_PERMINTAAN_BUKU'] ?>" name="editbuku"></a>
                                 &nbsp;&nbsp;
-                                <a href class="glyphicon glyphicon-remove" id="<?php echo $model['K_PERMINTAAN'] ?>"></a>
+                                <a href class="glyphicon glyphicon-remove" id="<?php echo $model['ID_PERMINTAAN_BUKU'] ?>" name="hapusbuku" onclick="return confirm('Are you sure you want to delete this item?')"></a>
                             </td>
                             </tr>
 						<?php endif; endforeach; ?>
@@ -202,9 +202,14 @@
                         <td><?php echo $model['BAHASA']; ?></td>
                         <td><?php echo $model['PENERBIT']; ?></td>
                         <td><?php echo $model['STATUS']; ?></td>
-                        <td><span class="glyphicon glyphicon-list-alt"></span><span class="glyphicon glyphicon-pencil"></span>
-                            <span class="glyphicon glyphicon-remove"></span></td>
-                        </tr>
+                         <td>
+                                <a href class="glyphicon glyphicon-list-alt" id="<?php echo $model['ID_PERMINTAAN_BUKU'] ?>" name="detailbuku"></a>
+                                &nbsp;&nbsp;&nbsp;
+                                <a href class="glyphicon glyphicon-pencil" id="<?php echo $model['ID_PERMINTAAN_BUKU'] ?>" name="editbuku"></a>
+                                &nbsp;&nbsp;
+                                <a href class="glyphicon glyphicon-remove" id="<?php echo $model['ID_PERMINTAAN_BUKU'] ?>" name="hapusbuku"  onclick="return confirm('Are you sure you want to delete this item?')"></a>
+                            </td>
+                            </tr>
 					<?php endif; endforeach; ?>
                     </tbody>
                 </table>
@@ -278,12 +283,12 @@
                     <td><?php echo $modelJur['STATUS']; ?></td>
 					<td><?php echo $modelJur['PRIORITAS']; ?></td>
                     <td>
-						<a href class="glyphicon glyphicon-list-alt" id="<?php echo $model['K_PERMINTAAN'] ?>"></a>
-                        &nbsp;&nbsp;&nbsp;
-                        <a href class="glyphicon glyphicon-pencil" id="<?php echo $model['K_PERMINTAAN'] ?>"></a>
-                        &nbsp;&nbsp;
-                        <a href class="glyphicon glyphicon-remove" id="<?php echo $model['K_PERMINTAAN'] ?>"></a>
-                    </td>
+                                <a href class="glyphicon glyphicon-list-alt" id="<?php echo $modelJur['ID_PERMINTAAN_JURNAL'] ?>" name="detailbuku"></a>
+                                &nbsp;&nbsp;&nbsp;
+                                <a href class="glyphicon glyphicon-pencil" id="<?php echo $modelJur['ID_PERMINTAAN_JURNAL'] ?>" name="editbuku"></a>
+                                &nbsp;&nbsp;
+                                <a href class="glyphicon glyphicon-remove" id="<?php echo $modelJur['ID_PERMINTAAN_JURNAL'] ?>" name="hapusbuku" onclick="return confirm('Are you sure you want to delete this item?')"></a>
+                            </td>
                     </tr>
 				<?php endif; endforeach; ?>
             </tbody>
@@ -368,12 +373,12 @@
                     <td><?php echo $modelJur['STATUS']; ?></td>
 					<td><?php echo $modelJur['PRIORITAS']; ?></td>
                     <td>
-						<a href class="glyphicon glyphicon-list-alt" id="<?php echo $model['K_PERMINTAAN'] ?>"></a>
-                        &nbsp;&nbsp;&nbsp;
-                        <a href class="glyphicon glyphicon-pencil" id="<?php echo $model['K_PERMINTAAN'] ?>"></a>
-                        &nbsp;&nbsp;
-                        <a href class="glyphicon glyphicon-remove" id="<?php echo $model['K_PERMINTAAN'] ?>"></a>
-                    </td>
+                                <a href class="glyphicon glyphicon-list-alt" id="<?php echo $modelJur['ID_PERMINTAAN_JURNAL'] ?>" name="detailbuku"></a>
+                                &nbsp;&nbsp;&nbsp;
+                                <a href class="glyphicon glyphicon-pencil" id="<?php echo $modelJur['ID_PERMINTAAN_JURNAL'] ?>" name="editbuku"></a>
+                                &nbsp;&nbsp;
+                                <a href class="glyphicon glyphicon-remove" id="<?php echo $modelJur['ID_PERMINTAAN_JURNAL'] ?>" name="hapusbuku" onclick="return confirm('Are you sure you want to delete this item?')"></a>
+                            </td>
                 </tr>
 				<?php endif; endforeach; ?>
                 </tbody>
@@ -451,12 +456,12 @@
 				<td><?php echo $modelSer['PRIORITAS']; ?></td>
                 <td><?php echo $modelSer['STATUS']; ?></td>
                 <td>
-                    <a href class="glyphicon glyphicon-list-alt" id="<?php echo $model['K_PERMINTAAN'] ?>"></a>
-                    &nbsp;&nbsp;&nbsp;
-                    <a href class="glyphicon glyphicon-pencil" id="<?php echo $model['K_PERMINTAAN'] ?>"></a>
-                    &nbsp;&nbsp;
-                    <a href class="glyphicon glyphicon-remove" id="<?php echo $model['K_PERMINTAAN'] ?>"></a>
-                </td>
+                                <a href class="glyphicon glyphicon-list-alt" id="<?php echo $modelSer['ID_PERMINTAAN_SERIAL'] ?>" name="detailbuku"></a>
+                                &nbsp;&nbsp;&nbsp;
+                                <a href class="glyphicon glyphicon-pencil" id="<?php echo $modelSer['ID_PERMINTAAN_SERIAL'] ?>" name="editbuku"></a>
+                                &nbsp;&nbsp;
+                                <a href class="glyphicon glyphicon-remove" id="<?php echo $modelSer['ID_PERMINTAAN_SERIAL'] ?>" name="hapusbuku" onclick="return confirm('Are you sure you want to delete this item?')"></a>
+                            </td>
                 </tr>
 				<?php endif; endforeach; ?>
             </tbody>
@@ -542,12 +547,12 @@
 					<td><?php echo $modelSer['PRIORITAS']; ?></td>
 					<td><?php echo $modelSer['STATUS']; ?></td>
 					<td>
-						<a href class="glyphicon glyphicon-list-alt" id="<?php echo $model['K_PERMINTAAN'] ?>"></a>
-						&nbsp;&nbsp;&nbsp;
-						<a href class="glyphicon glyphicon-pencil" id="<?php echo $model['K_PERMINTAAN'] ?>"></a>
-						&nbsp;&nbsp;
-						<a href class="glyphicon glyphicon-remove" id="<?php echo $model['K_PERMINTAAN'] ?>"></a>
-					</td>
+                                <a href class="glyphicon glyphicon-list-alt" id="<?php echo $modelSer['ID_PERMINTAAN_SERIAL'] ?>" name="detailbuku"></a>
+                                &nbsp;&nbsp;&nbsp;
+                                <a href class="glyphicon glyphicon-pencil" id="<?php echo $modelSer['ID_PERMINTAAN_SERIAL'] ?>" name="editbuku"></a>
+                                &nbsp;&nbsp;
+                                <a href class="glyphicon glyphicon-remove" id="<?php echo $modelSer['ID_PERMINTAAN_SERIAL'] ?>" name="hapusbuku" onclick="return confirm('Are you sure you want to delete this item?')"></a>
+                            </td>
                     </tr>
 			<?php endif; endforeach; ?>
             </tbody>
@@ -845,17 +850,28 @@ $(document).ready(function(){
 			$("a#downloadbd3").attr("href", link);
    		});
 
-		$("a.glyphicon.glyphicon-list-alt").click(function() {
+		$("table#bd1 a.glyphicon.glyphicon-list-alt,table#bd1 a.glyphicon.glyphicon-pencil,table#bd1 a.glyphicon.glyphicon-remove,table#sd1 a.glyphicon.glyphicon-list-alt,table#sd1 a.glyphicon.glyphicon-pencil,table#sd1 a.glyphicon.glyphicon-remove").click(function() {
             var a = $(this).attr("id");
-            var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=permintaan/viewdetail&det=" + a;
+			var b = $(this).attr("name");
+            var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=permintaan/editbuku&det=" + a+"&nama="+b;
 			$(this).attr("href", link);
         })
-
-        $("a.glyphicon.glyphicon-pencil").click(function() {
+		
+		$("table#tbd2 a.glyphicon.glyphicon-list-alt,table#tbd2 a.glyphicon.glyphicon-pencil,table#tbd2 a.glyphicon.glyphicon-remove,table#tsd2 a.glyphicon.glyphicon-list-alt,table#tsd2 a.glyphicon.glyphicon-pencil,table#tsd2 a.glyphicon.glyphicon-remove").click(function() {
             var a = $(this).attr("id");
-            var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=permintaan/editbuku&det=" + a;
-            $(this).attr("href", link);
+			var b = $(this).attr("name");
+            var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=permintaan/editjurnal&det=" + a+"&nama="+b;
+			$(this).attr("href", link);
         })
+		
+		$("table#tbd3 a.glyphicon.glyphicon-list-alt,table#tbd3 a.glyphicon.glyphicon-pencil,table#tbd3 a.glyphicon.glyphicon-remove,table#tsd3 a.glyphicon.glyphicon-list-alt,table#tsd3 a.glyphicon.glyphicon-pencil,table#tsd3 a.glyphicon.glyphicon-remove").click(function() {
+            var a = $(this).attr("id");
+			var b = $(this).attr("name");
+            var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=permintaan/editserial&det=" + a+"&nama="+b;
+			$(this).attr("href", link);
+        })
+		
+		
 	});
 </script>
 

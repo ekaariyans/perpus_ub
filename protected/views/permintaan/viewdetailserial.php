@@ -6,7 +6,7 @@
                         <div class="panel-body">
                             <div class="table-responsive">
                                 <?php foreach ($data as $model): 
-								 if($model['ID_PERMINTAAN_BUKU'] == $id_permintaan_buku){?>
+								 if($model['ID_PERMINTAAN_SERIAL'] == $id_permintaan_serial){?>
                                  <table class="table">
                                  <tr>
                                  	<th>ID Anggota</th>
@@ -25,13 +25,18 @@
                                     <td><?php echo $model['JUDUL']; ?></td>
 								</tr>
                                 <tr>
-                                	<th>Pengarang</th>
-                                    <td><?php echo $model['PENGARANG']; ?></td>
+                                	<th>Volume</th>
+                                    <td><?php echo $model['VOLUME']; ?></td>
                                 </tr>
                                 <tr>
-                                	<th>ISBN</th>
-                                    <td><?php echo $model['ISBN']; ?></td>
+                                	<th>Frekwensi</th>
+                                    <td><?php echo $model['FREKWENSI']; ?></td>
                                 </tr>
+                                <tr>
+                                	<th>Tahun</th>
+                                    <td><?php echo $model['TAHUN']; ?></td>
+                                </tr>
+                                
                                 <tr>
                                 	<th>Jenis</th>
                                     <td><?php echo $model['JENIS']; ?></td>
@@ -39,14 +44,6 @@
                                 <tr>
                                 	<th>Bahasa</th>
                                     <td><?php echo $model['BAHASA']; ?></td>
-                                </tr>
-                                <tr>
-                                	<th>Penerbit</th> 
-                                    <td><?php echo $model['PENERBIT']; ?></td>
-                                </tr>
-                                <tr>
-                                	<th>Tahun Terbit</th>
-                                    <td><?php echo $model['TAHUN_TERBIT']; ?></td>
                                 </tr>
                                 <tr>
                                 	<th>Harga</th>

@@ -1,29 +1,29 @@
 <?php
-/* @var $this TPermintaanBukuController */
-/* @var $model TPermintaanBuku */
+/* @var $this TPermintaanSerialController */
+/* @var $model TPermintaanSerial */
 /* @var $form CActiveForm */
 ?>
 
 <div class="form">
 
 <?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'tpermintaan-buku-editbuku-form',
+	'id'=>'tpermintaan-serial-editserial-form',
 	// Please note: When you enable ajax validation, make sure the corresponding
 	// controller action is handling ajax validation correctly.
 	// See class documentation of CActiveForm for details on this,
 	// you need to use the performAjaxValidation()-method described there.
 	'enableAjaxValidation'=>false,
 )); ?>
-	
+
 	<div class="col-md-6">
     <div class="panel panel-default">
     <div class="panel-heading">
-    EDIT INFORMASI BUKU
+    EDIT INFORMASI JURNAL
     </div>
     <div class="panel-body">
     <div class="table-responsive">
 	<?php foreach ($data as $model): 
-	if($model['ID_PERMINTAAN_BUKU'] == $id_permintaan_buku){?>
+	if($model['ID_PERMINTAAN_SERIAL'] == $id_permintaan_serial){?>
 
 	<?php echo $form->errorSummary($model1); ?>
 	<table class="table">
@@ -51,19 +51,26 @@
 	</tr>
 
 	<tr>
-		<th><?php echo $form->labelEx($model1,'PENGARANG'); ?></th>
-		<td><?php echo $form->textField($model1,'PENGARANG', 
-		array('class'=>'form-control', 'value'=>$model['PENGARANG'])); ?></td>
-		<?php echo $form->error($model1,'PENGARANG'); ?>
+		<th><?php echo $form->labelEx($model1,'VOLUME'); ?></th>
+		<td><?php echo $form->textField($model1,'VOLUME', 
+		array('class'=>'form-control', 'value'=>$model['VOLUME'])); ?></td>
+		<?php echo $form->error($model1,'VOLUME'); ?>
+	</tr>
+
+	<tr>
+		<th><?php echo $form->labelEx($model1,'TAHUN'); ?></th>
+		<td><?php echo $form->textField($model1,'TAHUN', 
+		array('class'=>'form-control', 'value'=>$model['TAHUN'])); ?></td>
+		<?php echo $form->error($model1,'TAHUN'); ?>
 	</tr>
     
     <tr>
-		<th><?php echo $form->labelEx($model1,'ISBN'); ?></th>
-		<td><?php echo $form->textField($model1,'ISBN', 
-		array('class'=>'form-control', 'value'=>$model['ISBN'])); ?></td>
-		<?php echo $form->error($model1,'ISBN'); ?>
+		<th><?php echo $form->labelEx($model1,'FREKWENSI'); ?></th>
+		<td><?php echo $form->textField($model1,'FREKWENSI', 
+		array('class'=>'form-control', 'value'=>$model['FREKWENSI'])); ?></td>
+		<?php echo $form->error($model1,'FREKWENSI'); ?>
 	</tr>
-
+    
 	<tr>
 		<th><?php echo $form->labelEx($model1,'JENIS'); ?></th>
 		<td><?php echo $form->textField($model1,'JENIS', 
@@ -78,19 +85,6 @@
 		<?php echo $form->error($model1,'BAHASA'); ?>
 	</tr>
 
-	<tr>
-		<th><?php echo $form->labelEx($model1,'PENERBIT'); ?></th>
-		<td><?php echo $form->textField($model1,'PENERBIT', 
-		array('class'=>'form-control', 'value'=>$model['PENERBIT'])); ?></td>
-		<?php echo $form->error($model1,'PENERBIT'); ?>
-	</tr>
-
-	<tr>
-		<th><?php echo $form->labelEx($model1,'TAHUN_TERBIT'); ?></th>
-		<td><?php echo $form->textField($model1,'TAHUN_TERBIT', 
-		array('class'=>'form-control', 'value'=>$model['TAHUN_TERBIT'])); ?></td>
-		<?php echo $form->error($model1,'TAHUN_TERBIT'); ?>
-	</tr>
 
 	<tr>
 		<th><?php echo $form->labelEx($model1,'ID_PRIORITAS'); ?></th>

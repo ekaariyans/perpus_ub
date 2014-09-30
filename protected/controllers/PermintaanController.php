@@ -52,56 +52,215 @@ class PermintaanController extends Controller {
      	}
 	}
 	
- 	public function actionViewdetail(){
+ 	public function actionEditbuku(){
 		
-		
-		if(isset($_GET['det'])){
-		$k_permintaan = $_GET['det'];
-		
-		}
-		
-		$command = Yii::app()->db->createCommand("[dbo].[show_lap_buku]  ");
-        $data=$command->queryAll();
-		
-		$this->render('permintaan/viewdetail', array('data'=>$data,'k_permintaan'=>$k_permintaan));
-	}
-	
-	
-	public function actionEditbuku() 
-	{ 
 		$model1=new TPermintaanBuku; 
-	
-		// uncomment the following code to enable ajax-based validation 
-		/* 
-		if(isset($_POST['ajax']) && $_POST['ajax']==='tpermintaan-buku-editbuku-form') 
-		{ 
-			echo CActiveForm::validate($model); 
-			Yii::app()->end(); 
-		} 
-		*/ 
-	
-		if(isset($_POST['TPermintaanBuku'])) 
-		{ 
-			$model1->attributes=$_POST['TPermintaanBuku']; 
-			if($model1->validate()) 
-			{ 
-				// form inputs are valid, do something here 
-				return; 
-			} 
-		} 
 		
-		if(isset($_GET['det'])){
-			$k_permintaan = $_GET['det'];
-			
+		if(isset($_GET['det'])&&($_GET['nama'])){
+		$id_permintaan_buku = $_GET['det'];
+		$aksi=($_GET['nama']);
+		$command = Yii::app()->db->createCommand("[dbo].[lap_buku_all]  ");
+        $data=$command->queryAll();
+				
+			if($aksi=='detailbuku'){
+				
+				$this->render('permintaan/viewdetail', array('data'=>$data,'id_permintaan_buku'=>$id_permintaan_buku));
 			}
-			
-			$command = Yii::app()->db->createCommand("[dbo].[show_lap_buku]  ");
-			$data=$command->queryAll();
-			
-		$this->render('permintaan/editbuku',array('model1'=>$model1, 'data'=>$data, 'k_permintaan'=>$k_permintaan)); 
+			else if($aksi=='editbuku'){
+				
+					if(isset($_POST['TPermintaanBuku'])) 
+					{ 
+						$model1->attributes=$_POST['TPermintaanBuku']; 
+						
+						
+							$ID_PERMINTAAN_BUKU	=$id_permintaan_buku;
+							$NAMA_PEMINTA	=$_POST['TPermintaanBuku']['NAMA_PEMINTA'];
+							$JUDUL			=$_POST['TPermintaanBuku']['JUDUL'];
+							$PENGARANG		=$_POST['TPermintaanBuku']['PENGARANG'];
+							$ISBN			=$_POST['TPermintaanBuku']['ISBN'];
+							$JENIS			=$_POST['TPermintaanBuku']['JENIS'];
+							$BAHASA			=$_POST['TPermintaanBuku']['BAHASA'];
+							$PENERBIT		=$_POST['TPermintaanBuku']['PENERBIT'];
+							$TAHUN_TERBIT	=$_POST['TPermintaanBuku']['TAHUN_TERBIT'];
+							$HARGA			=$_POST['TPermintaanBuku']['HARGA'];
+							$ID_STATUS		=$_POST['TPermintaanBuku']['ID_STATUS'];
+							$LINK_WEBSITE	=$_POST['TPermintaanBuku']['LINK_WEBSITE'];
+							$ID_PRIORITAS	=$_POST['TPermintaanBuku']['ID_PRIORITAS'];
+						
+						
+						$command = Yii::app()->db->createCommand("[dbo].[editbuku]  
+						@ID_PERMINTAAN_BUKU	='$ID_PERMINTAAN_BUKU',
+						@NAMA_PEMINTA	='$NAMA_PEMINTA',
+						@JUDUL			='$JUDUL',
+						@PENGARANG		='$PENGARANG',
+						@ISBN			='$ISBN',
+						@JENIS			='$JENIS',
+						@BAHASA			='$BAHASA',
+						@PENERBIT		='$PENERBIT',
+						@TAHUN_TERBIT	='$TAHUN_TERBIT',
+						@HARGA			='$HARGA',
+						@ID_STATUS		='$ID_STATUS',
+						@LINK_WEBSITE	='$LINK_WEBSITE',
+						@ID_PRIORITAS	='$ID_PRIORITAS'
+						");
+       					
+						$data=$command->queryAll();
+						
+						$this->render('permintaan/viewdetail', array('data'=>$data,'id_permintaan_buku'=>$id_permintaan_buku));
+					} 
+		
+		
+					else{
+						$this->render('permintaan/editbuku',array('model1'=>$model1, 'data'=>$data, 'id_permintaan_buku'=>$id_permintaan_buku));
+					}
+		
+			}
+			else{
+				//echo $k_permintaan;
+				$query = "delete from t_permintaan_buku where ID_PERMINTAAN_BUKU = $id_permintaan_buku";
+				$command = Yii::app()->db->createCommand($query);
+				$command->execute();
+				
+				
+				$this->redirect('index.php?r=permintaan/f_laporan_p');
+			}
+		}
 	}
-
- 	
+	
+	public function actionEditjurnal() 
+	{ 
+		$model1=new TPermintaanJurnal; 
+		if(isset($_GET['det'])&&($_GET['nama'])){
+		$id_permintaan_jurnal = $_GET['det'];
+		$aksi=($_GET['nama']);
+		$command = Yii::app()->db->createCommand("[dbo].[show_lap_jurnal]  ");
+        $data=$command->queryAll();
+				
+			if($aksi=='detailbuku'){
+				
+				$this->render('permintaan/viewdetailjurnal', array('data'=>$data,'id_permintaan_jurnal'=>$id_permintaan_jurnal));
+			}
+			else if($aksi=='editbuku'){
+	
+				if(isset($_POST['TPermintaanJurnal'])) 
+				{ 
+					$model1->attributes=$_POST['TPermintaanJurnal']; 
+							$ID_PERMINTAAN_JURNAL	=$id_permintaan_jurnal;
+							$NAMA_PEMINTA	=$_POST['TPermintaanJurnal']['NAMA_PEMINTA'];
+							$JUDUL			=$_POST['TPermintaanJurnal']['JUDUL'];
+							$PENGARANG		=$_POST['TPermintaanJurnal']['PENGARANG'];
+							$JENIS			=$_POST['TPermintaanJurnal']['JENIS'];
+							$BAHASA			=$_POST['TPermintaanJurnal']['BAHASA'];
+							$HARGA			=$_POST['TPermintaanJurnal']['HARGA'];
+							$ID_STATUS		=$_POST['TPermintaanJurnal']['ID_STATUS'];
+							$LINK_WEBSITE	=$_POST['TPermintaanJurnal']['LINK_WEBSITE'];
+							$ID_PRIORITAS	=$_POST['TPermintaanJurnal']['ID_PRIORITAS'];
+							
+							$command = Yii::app()->db->createCommand("[dbo].[editjurnal]  
+						@ID_PERMINTAAN_JURNAL	='$ID_PERMINTAAN_JURNAL',
+						@NAMA_PEMINTA	='$NAMA_PEMINTA',
+						@JUDUL			='$JUDUL',
+						@PENGARANG		='$PENGARANG',
+						@JENIS			='$JENIS',
+						@BAHASA			='$BAHASA',
+						@HARGA			='$HARGA',
+						@ID_STATUS		='$ID_STATUS',
+						@LINK_WEBSITE	='$LINK_WEBSITE',
+						@ID_PRIORITAS	='$ID_PRIORITAS'
+						");
+       					
+						$data=$command->queryAll();
+						
+						$this->render('permintaan/viewdetailjurnal', array('data'=>$data,'id_permintaan_jurnal'=>$id_permintaan_jurnal));
+					} 
+		
+		
+				else{
+						$this->render('permintaan/editjurnal',array('model1'=>$model1, 'data'=>$data, 'id_permintaan_jurnal'=>$id_permintaan_jurnal));
+				}
+		}
+		else{
+				//echo $k_permintaan;
+				$query = "delete from t_permintaan_jurnal where ID_PERMINTAAN_JURNAL = $id_permintaan_jurnal";
+				$command = Yii::app()->db->createCommand($query);
+				$command->execute();
+				
+				
+				$this->redirect('index.php?r=permintaan/f_laporan_p');
+			}
+	 
+		}
+	}
+	
+	public function actionEditserial() 
+	{ 
+		$model1=new TPermintaanSerial; 
+	
+		if(isset($_GET['det'])&&($_GET['nama'])){
+		$id_permintaan_serial = $_GET['det'];
+		$aksi=($_GET['nama']);
+		$command = Yii::app()->db->createCommand("[dbo].[show_lap_serial]  ");
+        $data=$command->queryAll();
+				
+			if($aksi=='detailbuku'){
+				
+				$this->render('permintaan/viewdetailserial', array('data'=>$data,'id_permintaan_serial'=>$id_permintaan_serial));
+			}
+			else if($aksi=='editbuku'){
+				
+	
+		if(isset($_POST['TPermintaanSerial'])) 
+		{ 
+			$model1->attributes=$_POST['TPermintaanSerial']; 
+							$ID_PERMINTAAN_SERIAL	=$id_permintaan_serial;
+							$NAMA_PEMINTA	=$_POST['TPermintaanSerial']['NAMA_PEMINTA'];
+							$JUDUL			=$_POST['TPermintaanSerial']['JUDUL'];
+							$VOLUME			=$_POST['TPermintaanSerial']['VOLUME'];
+							$TAHUN			=$_POST['TPermintaanSerial']['TAHUN'];
+							$FREKWENSI		=$_POST['TPermintaanSerial']['FREKWENSI'];
+							$JENIS			=$_POST['TPermintaanSerial']['JENIS'];
+							$BAHASA			=$_POST['TPermintaanSerial']['BAHASA'];
+							$HARGA			=$_POST['TPermintaanSerial']['HARGA'];
+							$ID_STATUS		=$_POST['TPermintaanSerial']['ID_STATUS'];
+							$LINK_WEBSITE	=$_POST['TPermintaanSerial']['LINK_WEBSITE'];
+							$ID_PRIORITAS	=$_POST['TPermintaanSerial']['ID_PRIORITAS'];
+							
+							$command = Yii::app()->db->createCommand("[dbo].[editserial]  
+						@ID_PERMINTAAN_SERIAL	='$ID_PERMINTAAN_SERIAL',
+						@NAMA_PEMINTA	='$NAMA_PEMINTA',
+						@JUDUL			='$JUDUL',
+						@VOLUME			='$VOLUME',
+						@TAHUN			='$TAHUN',
+						@FREKWENSI		='$FREKWENSI',
+						@JENIS			='$JENIS',
+						@BAHASA			='$BAHASA',
+						@HARGA			='$HARGA',
+						@ID_STATUS		='$ID_STATUS',
+						@LINK_WEBSITE	='$LINK_WEBSITE',
+						@ID_PRIORITAS	='$ID_PRIORITAS'
+						");
+       					
+						$data=$command->queryAll();
+						
+						$this->render('permintaan/viewdetailserial', array('data'=>$data,'id_permintaan_serial'=>$id_permintaan_serial));
+		}
+		else{
+						$this->render('permintaan/editserial',array('model1'=>$model1, 'data'=>$data, 'id_permintaan_serial'=>$id_permintaan_serial));
+				}
+		}
+		else{
+				//echo $k_permintaan;
+				$query = "delete from t_permintaan_serial where ID_PERMINTAAN_SERIAL = $id_permintaan_serial";
+				$command = Yii::app()->db->createCommand($query);
+				$command->execute();
+				
+				
+				$this->redirect('index.php?r=permintaan/f_laporan_p');
+			}
+		} 
+		 
+	}
+		
  	public function actionF_laporan_p()
 	{
 		
@@ -112,11 +271,7 @@ class PermintaanController extends Controller {
 		
 		$user= Yii::app()->session['username'];
         
-		if(isset($_GET['kpermintaan'])){
-			$k_permintaan = $_GET['kpermintaan'];
-			$command = Yii::app()->db->createCommand("[dbo].[detailbuku] @k_permintaan=$k_permintaan");
-			$datadetail=$command->queryAll();
-		}
+		
         $command = Yii::app()->db->createCommand("[dbo].[show_lap_buku]");
         $data=$command->queryAll();
 		
