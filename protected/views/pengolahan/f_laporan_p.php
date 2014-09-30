@@ -59,7 +59,7 @@
                     <table id="bd1" class="table table-bordered table-striped">
                         <thead>
                             <tr class="heading">
-                            	<th></th>
+                            	<th><input type="checkbox" id="selectallbd1"/></th>
                                 <th>ID Anggota</th>
                                 <th>Tgl.Permintaan</th>
                                 <th>Nama Peminta</th>
@@ -77,7 +77,7 @@
 							if($model['ID_STATUS']==0):
                                 echo "<tr id=" . $model['BAHASA'] . ">";
                             ?>
-                            <td><input type="checkbox" name="del" value="Yes" /></td>
+                            <td><input class="cbx" type="checkbox" name="cbxbd1[]" value="<?php echo $model['ID_PERMINTAAN_BUKU'] ?>"></td>
                             <td><?php echo $model['ID_ANGGOTA']; ?></td>
                             <td><?php echo $model['TGL_PERMINTAAN']; ?></td>
                             <td><?php echo $model['NAMA_PEMINTA']; ?></td>
@@ -678,13 +678,13 @@
 
 		$("a.glyphicon.glyphicon-list-alt").click(function() {
             var a = $(this).attr("id");
-            var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=permintaan/viewdetail&det=" + a;
+            var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=pengolahan/viewdetail&det=" + a;
 			$(this).attr("href", link);
         })
 
         $("a.glyphicon.glyphicon-pencil").click(function() {
             var a = $(this).attr("id");
-            var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=permintaan/editbuku&det=" + a;
+            var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=pengolahan/editbuku&det=" + a;
             $(this).attr("href", link);
         })
 	});
@@ -766,13 +766,13 @@ $(document).ready(function(){
 
 		$("a.glyphicon.glyphicon-list-alt").click(function() {
             var a = $(this).attr("id");
-            var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=permintaan/viewdetail&det=" + a;
+            var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=pengolahan/viewdetail&det=" + a;
 			$(this).attr("href", link);
         })
 
         $("a.glyphicon.glyphicon-pencil").click(function() {
             var a = $(this).attr("id");
-            var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=permintaan/editbuku&det=" + a;
+            var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=pengolahan/editbuku&det=" + a;
             $(this).attr("href", link);
         })
 	});
@@ -853,21 +853,21 @@ $(document).ready(function(){
 		$("table#bd1 a.glyphicon.glyphicon-list-alt,table#bd1 a.glyphicon.glyphicon-pencil,table#bd1 a.glyphicon.glyphicon-remove,table#sd1 a.glyphicon.glyphicon-list-alt,table#sd1 a.glyphicon.glyphicon-pencil,table#sd1 a.glyphicon.glyphicon-remove").click(function() {
             var a = $(this).attr("id");
 			var b = $(this).attr("name");
-            var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=permintaan/editbuku&det=" + a+"&nama="+b;
+            var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=pengolahan/editbuku&det=" + a+"&nama="+b;
 			$(this).attr("href", link);
         })
 		
 		$("table#tbd2 a.glyphicon.glyphicon-list-alt,table#tbd2 a.glyphicon.glyphicon-pencil,table#tbd2 a.glyphicon.glyphicon-remove,table#tsd2 a.glyphicon.glyphicon-list-alt,table#tsd2 a.glyphicon.glyphicon-pencil,table#tsd2 a.glyphicon.glyphicon-remove").click(function() {
             var a = $(this).attr("id");
 			var b = $(this).attr("name");
-            var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=permintaan/editjurnal&det=" + a+"&nama="+b;
+            var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=pengolahan/editjurnal&det=" + a+"&nama="+b;
 			$(this).attr("href", link);
         })
 		
 		$("table#tbd3 a.glyphicon.glyphicon-list-alt,table#tbd3 a.glyphicon.glyphicon-pencil,table#tbd3 a.glyphicon.glyphicon-remove,table#tsd3 a.glyphicon.glyphicon-list-alt,table#tsd3 a.glyphicon.glyphicon-pencil,table#tsd3 a.glyphicon.glyphicon-remove").click(function() {
             var a = $(this).attr("id");
 			var b = $(this).attr("name");
-            var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=permintaan/editserial&det=" + a+"&nama="+b;
+            var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=pengolahan/editserial&det=" + a+"&nama="+b;
 			$(this).attr("href", link);
         })
 		
@@ -935,4 +935,21 @@ $(document).ready(function(){
             "bAutoWidth": false
         });
     });
+</script>
+
+
+<script>
+$(document).ready(function() {
+    $('#selectallbd1').click(function(event) {  //on click 
+        if(this.checked) { // check select status
+            $('.cbx').each(function() { //loop through each checkbox
+                this.checked = true;  //select all checkboxes with class "checkbox1"               
+            });
+        }else{
+            $('.cbx').each(function() { //loop through each checkbox
+                this.checked = false; //deselect all checkboxes with class "checkbox1"                       
+            });         
+        }
+    });
+});
 </script>

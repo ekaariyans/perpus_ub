@@ -135,9 +135,20 @@ class SiteController extends Controller
 		if($model->validate() && $model->login()){		
 			$userid = $_POST['UserWeb']['USERNAME'];
 			Yii::app()->session['username']=$userid;
-			//Yii::app()->session['bagian'] = "116";
-			//Yii::app()->session['level'] = "02";
-			$this->redirect('index.php?r=permintaan');
+			$bagian = Yii::app()->session['bagian'];
+			if($bagian=='01'||$bagian=='999'){
+				$contr= 'Pengolahan';
+			}
+			else if($bagian=='02'){
+				$contr= 'Sirkulasi';
+			}
+			else if($bagian=='03'){
+				$contr= 'Anggota';
+			}
+			else{
+				$contr= 'Permintaan';
+			}
+			$this->redirect('index.php?r='.$contr);
 		}
 		// display the login form
 		else $this->render('login',array('model'=>$model, 'data'=>$data)); 

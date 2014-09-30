@@ -1,7 +1,7 @@
 						<div class="col-md-6">
                         <div class="panel panel-default">
                         <div class="panel-heading">
-                            Detail Buku
+                            Detail Serial
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
@@ -67,7 +67,7 @@
                                 <?php endforeach; ?>
                            
                         </div>
-                        <?php echo CHtml::link('Kembali', $this->createUrl('permintaan/f_laporan_p'), array('class'=>"btn btn-primary"));?>
+                        <?php echo CHtml::link('Kembali', $this->createUrl('pengolahan/f_laporan_p'), array('class'=>"btn btn-primary"));?>
                         </div>
                         
                         </div>

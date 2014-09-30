@@ -61,7 +61,7 @@
                                 <li class="user-header bg-light-blue">
                                     <img src="<?php echo Yii::app()->request->baseUrl; ?>/assets/img/avatar5.png" class="img-circle" alt="User Image" />
                                     <p>
-                                        <?php echo Yii::app()->session['bagian'];?> - Web Developer
+                                        <?php echo Yii::app()->session['username'];?> - Web Developer
                                         <small>Member since jul. 2014</small>
                                     </p>
                                 </li>
@@ -120,9 +120,24 @@
                     </form> -->
                     <!-- /.search form -->
                     <!-- sidebar menu: : style can be found in sidebar.less -->
+                    <?php
+                    $bagian = Yii::app()->session['bagian'];
+                    if($bagian=='01'||$bagian=='999'){
+                        $contr= 'Pengolahan';
+                    }
+                    else if($bagian=='02'){
+                        $contr= 'Sirkulasi';
+                    }
+                    else if($bagian=='03'){
+                        $contr= 'Anggota';
+                    }
+                    else{
+                        $contr= 'Permintaan';
+                    }
+					?>
                     <ul class="sidebar-menu">
                         <li class="active">
-                            <a href="index.html">
+                            <a href="index.php?r=<?php echo $contr; ?>">
                                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                             </a>
                         </li>
@@ -181,7 +196,7 @@
                                 <?php
                                 $this->widget('zii.widgets.CMenu', array(
                                     'items' => array(
-                                        array('label' => 'Daftar Permintaan Buku', 'url' => array('/pengolahan/daftarpermintaan')),
+                                        array('label' => 'Daftar Permintaan Buku', 'url' => array('/pengolahan/f_laporan_p')),
                                         array('label' => 'Registrasi dan Pemlabelan', 'url' => array('/pengolahan/barangdatang')),
                                         array('label' => 'Validasi Buku', 'url' => array('/pengolahan/validasi')),
                                         array('label' => 'Laporan', 'url' => array('/pengolahan/laporan')),
@@ -206,7 +221,6 @@
                                 $this->widget('zii.widgets.CMenu', array(
                                     'items' => array(
                                         array('label' => 'KOLEKTIF', 'url' => array('/permintaan/f_permintaan_f')),
-                                        array('label' => 'LAPORAN', 'url' => array('/permintaan/f_laporan_p')),
                                     ),
                                 ));
                                 endif;

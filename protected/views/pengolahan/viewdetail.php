@@ -1,12 +1,12 @@
 						<div class="col-md-6">
                         <div class="panel panel-default">
                         <div class="panel-heading">
-                            Detail Jurnal
+                            Detail Buku
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
                                 <?php foreach ($data as $model): 
-								 if($model['ID_PERMINTAAN_JURNAL'] == $id_permintaan_jurnal){?>
+								 if($model['ID_PERMINTAAN_BUKU'] == $id_permintaan_buku){?>
                                  <table class="table">
                                  <tr>
                                  	<th>ID Anggota</th>
@@ -29,12 +29,24 @@
                                     <td><?php echo $model['PENGARANG']; ?></td>
                                 </tr>
                                 <tr>
+                                	<th>ISBN</th>
+                                    <td><?php echo $model['ISBN']; ?></td>
+                                </tr>
+                                <tr>
                                 	<th>Jenis</th>
                                     <td><?php echo $model['JENIS']; ?></td>
                                 </tr>
                                 <tr>
                                 	<th>Bahasa</th>
                                     <td><?php echo $model['BAHASA']; ?></td>
+                                </tr>
+                                <tr>
+                                	<th>Penerbit</th> 
+                                    <td><?php echo $model['PENERBIT']; ?></td>
+                                </tr>
+                                <tr>
+                                	<th>Tahun Terbit</th>
+                                    <td><?php echo $model['TAHUN_TERBIT']; ?></td>
                                 </tr>
                                 <tr>
                                 	<th>Harga</th>
@@ -58,7 +70,7 @@
                                 <?php endforeach; ?>
                            
                         </div>
-                        <?php echo CHtml::link('Kembali', $this->createUrl('permintaan/f_laporan_p'), array('class'=>"btn btn-primary"));?>
+                        <?php echo CHtml::link('Kembali', $this->createUrl('pengolahan/f_laporan_p'), array('class'=>"btn btn-primary"));?>
                         </div>
                         
                         </div>

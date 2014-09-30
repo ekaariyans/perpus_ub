@@ -16105,3 +16105,216 @@ in C:\xampp\htdocs\perpus_ub\index.php (13)
 2014/09/30 05:47:11 [warning] [application] Failed to set unsafe attribute "ID_STATUS" of "TPermintaanSerial".
 in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (214)
 in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/30 06:10:38 [warning] [application] Failed to set unsafe attribute "ID_STATUS" of "TPermintaanBuku".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (73)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/30 07:08:27 [error] [exception.CDbException] exception 'CDbException' with message 'The table "permintaan" for active record class "Pengolahan" cannot be found in the database.' in C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php:2362
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(Pengolahan))
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(658): CActiveRecord->getMetaData()
+#2 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1350): CActiveRecord->getTableSchema()
+#3 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1470): CActiveRecord->query(Object(CDbCriteria), true)
+#4 C:\xampp\htdocs\perpus_ub\protected\controllers\PengolahanController.php(19): CActiveRecord->findAll()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PengolahanController->actionDaftarPermintaan()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('daftarpermintaa...')
+#10 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('pengolahan/daft...')
+#11 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/perpus_ub/index.php?r=pengolahan/daftarpermintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_laporan_p
+---
+2014/09/30 07:17:24 [warning] [application] Failed to set unsafe attribute "ID_STATUS" of "TPermintaanBuku".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (73)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/30 07:18:00 [warning] [application] Failed to set unsafe attribute "ID_STATUS" of "TPermintaanBuku".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (73)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/30 07:20:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "f_laporan_p".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('f_laporan_p')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_laporan_p')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_la...')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/editbuku&det=3&nama=editbuku
+---
+2014/09/30 07:20:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "f_laporan_p".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('f_laporan_p')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_laporan_p')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_la...')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/editbuku&det=3&nama=editbuku
+---
+2014/09/30 07:20:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "f_laporan_p".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('f_laporan_p')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_laporan_p')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_la...')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/editbuku&det=3&nama=editbuku
+---
+2014/09/30 07:21:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "editjurnal".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('editjurnal')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('editjurnal')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/edit...')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/editjurnal&det=2&nama=editbuku
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=pengolahan/f_laporan_p
+---
+2014/09/30 07:24:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "editjurnal".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('editjurnal')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('editjurnal')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/edit...')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/editjurnal&det=2&nama=editbuku
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=pengolahan/f_laporan_p
+---
+2014/09/30 07:24:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "editjurnal".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('editjurnal')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('editjurnal')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/edit...')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/editjurnal&det=2&nama=editbuku
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=pengolahan/f_laporan_p
+---
+2014/09/30 07:24:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "editbuku".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('editbuku')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('editbuku')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/edit...')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/editbuku&det=2&nama=detailbuku
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=pengolahan/f_laporan_p
+---
+2014/09/30 07:25:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "editbuku".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('editbuku')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('editbuku')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/edit...')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/editbuku&det=2&nama=detailbuku
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=pengolahan/f_laporan_p
+---
+2014/09/30 07:26:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "editbuku".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('editbuku')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('editbuku')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/edit...')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/editbuku&det=2&nama=detailbuku
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=pengolahan/f_laporan_p
+---
+2014/09/30 07:32:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "editbuku".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('editbuku')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('editbuku')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/edit...')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/editbuku&det=2&nama=detailbuku
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=pengolahan/f_laporan_p
+---
+2014/09/30 07:42:54 [warning] [application] Failed to set unsafe attribute "ID_STATUS" of "TPermintaanBuku".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PengolahanController.php (107)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/30 07:44:03 [warning] [application] Failed to set unsafe attribute "ID_STATUS" of "TPermintaanBuku".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PengolahanController.php (107)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/30 10:06:54 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (54)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/30 10:06:54 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__t_permint__ID_AN__0C85DE4D". The conflict occurred in database "perpus_yii", table "dbo.t_user_request", column 'ID_ANGGOTA'.. The SQL statement executed was: INSERT INTO [dbo].[t_permintaan] ([ID_ANGGOTA], [K_JENIS], [TGL_PERMINTAAN]) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (74)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/30 10:06:54 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "FK__t_permint__ID_AN__0C85DE4D". The conflict occurred in database "perpus_yii", table "dbo.t_user_request", column 'ID_ANGGOTA'.. The SQL statement executed was: INSERT INTO [dbo].[t_permintaan] ([ID_ANGGOTA], [K_JENIS], [TGL_PERMINTAAN]) VALUES (:yp0, :yp1, :yp2)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(74): CActiveRecord->save()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan')
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan
+---
+2014/09/30 10:14:11 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (54)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/30 10:15:57 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (54)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/30 10:19:06 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (54)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/30 10:21:06 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (54)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/30 10:58:28 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (54)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/30 11:01:40 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (54)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/30 11:04:27 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (54)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/30 11:26:39 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (54)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/30 11:26:39 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Procedure permintaanJurnal has no parameters and arguments were supplied.. The SQL statement executed was: [dbo].[permintaanJurnal] @id_anggota =eka .
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (101)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/30 11:26:39 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]Procedure permintaanJurnal has no parameters and arguments were supplied.. The SQL statement executed was: [dbo].[permintaanJurnal] @id_anggota =eka ' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:543
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(101): CDbCommand->queryAll()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan')
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('Permintaan/f_pe...')
+#8 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/perpus_ub/index.php?r=Permintaan/f_permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=Permintaan/f_permintaan
+---
+2014/09/30 11:29:05 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (54)
+in C:\xampp\htdocs\perpus_ub\index.php (13)

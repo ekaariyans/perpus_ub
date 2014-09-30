@@ -283,7 +283,6 @@
                                     <table id="example2" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
-                                                <th>ID Anggota</th>
                                                 <th>Tgl.Permintaan</th>
                                                 <th>Judul</th>
                                                 <th>Pengarang</th>
@@ -293,12 +292,12 @@
                                                 <th>Tahun Terbit</th>
                                                 <th>Harga</th>
                                                 <th>Link Website</th>
+                                                <td>Status</td>
                                             </tr>
                                         </thead>
                                         <tbody>
 <?php foreach ($data as $model): ?>
                                                 <tr>
-                                                    <td><?php echo $model['ID_ANGGOTA']; ?></td>
                                                     <td><?php echo $model['TGL_PERMINTAAN']; ?></td>
                                                     <td><?php echo $model['JUDUL']; ?></td>
                                                     <td><?php echo $model['PENGARANG']; ?></td>
@@ -308,6 +307,7 @@
                                                     <td><?php echo $model['TAHUN_TERBIT']; ?></td>
                                                     <td><?php echo $model['HARGA']; ?></td>
                                                     <td><?php echo $model['LINK_WEBSITE']; ?></td>
+                                                    <td><?php echo $model['STATUS']; ?></td>
                                                 </tr>
 <?php endforeach; ?>
                                         </tbody>
