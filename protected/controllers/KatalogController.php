@@ -6,6 +6,30 @@ class KatalogController extends Controller
 	{
 		$this->render('index');
 	}
+	public function actionF_katalog()
+{
+    $model=new TBkMain;
+
+    // uncomment the following code to enable ajax-based validation
+    /*
+    if(isset($_POST['ajax']) && $_POST['ajax']==='tbk-main-f_katalog-form')
+    {
+        echo CActiveForm::validate($model);
+        Yii::app()->end();
+    }
+    */
+
+    if(isset($_POST['TBkMain']))
+    {
+        $model->attributes=$_POST['TBkMain'];
+        if($model->validate())
+        {
+            // form inputs are valid, do something here
+            return;
+        }
+    }
+    $this->render('f_katalog',array('model'=>$model));
+}
 
 	// Uncomment the following methods and override them if needed
 	/*
