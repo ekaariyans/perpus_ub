@@ -24,7 +24,15 @@
 
     <!-- Tab panes -->
     <div class="tab-content">
-        <div class="tab-pane active" id="Form"><?php echo $form->errorSummary($modelJur); ?>
+        <div class="tab-pane active" id="Form">
+		 <?php if($form->errorSummary($modelBk)){
+            echo " <div class='alert alert-warning' role='alert'>".$form->errorSummary($modelBk)." </div>\n"; 
+			}elseif($form->errorSummary($modelJur)){
+             echo " <div class='alert alert-warning' role='alert'>".$form->errorSummary($modelJur)." </div>\n"; 
+			}elseif($form->errorSummary($modelSer)){
+			echo " <div class='alert alert-warning' role='alert'>".$form->errorSummary($modelSer)." </div>\n"; 
+			}
+             ?>
             <div class="box box-primary" style="padding:15px;">
                 <div class="box-header">
                     <h4 class="box-title">Form Permintaan Katalog</h4>
