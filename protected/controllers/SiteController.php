@@ -101,6 +101,7 @@ class SiteController extends Controller
 				if($kenal==1){
 					if($passwd == 1){
 						Yii::app()->session['username'] = $userid;
+						Yii::app()->session['akun']= $userid;
 						Yii::app()->session['bagian'] = "116";
 						Yii::app()->session['level'] = "02";
 						
@@ -147,7 +148,7 @@ class SiteController extends Controller
 		// validate user input and redirect to the previous page if valid
 		if($model->validate() && $model->login()){		
 			$userid = $_POST['UserWeb']['USERNAME'];
-			Yii::app()->session['username']=$userid;
+			Yii::app()->session['akun']=$userid;
 			$bagian = Yii::app()->session['bagian'];
 			if($bagian=='01'||$bagian=='999'){
 				$contr= 'Pengolahan';

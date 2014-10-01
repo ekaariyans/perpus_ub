@@ -191,10 +191,10 @@ class PermintaanController extends Controller {
 				$link      =$data->val($i,10);
 				$status    =0;
 				$prioritas =$data->val($i,11);
-				if($prioritas=='wajib'){
-				$prioritas =1;
-				}elseif($prioritas=='penunjang'){
-				$prioritas =2;
+				if(strtolower($prioritas)=='wajib'){
+					$idprioritas =1;
+				}elseif(strtolower($prioritas)=='penunjang'){
+					$idprioritas =2;
 				}
 				//Input Data Excel Ke Database	
 				$command = Yii::app()->db->createCommand();
@@ -212,7 +212,7 @@ class PermintaanController extends Controller {
 					 'HARGA'       =>$harga,
 					 'LINK_WEBSITE'=>$link,
 					 'ID_STATUS'   =>$status,
-					 'ID_PRIORITAS'=>$prioritas,
+					 'ID_PRIORITAS'=>$idprioritas,
 				));
 				if ($command) $sukses++;
 				else $gagal++;
@@ -229,11 +229,19 @@ class PermintaanController extends Controller {
     	if( !file_exists( $path ) ) die( 'File could not be found at: ' . $path );
 		$data=new JPhpExcelReader($path);
 		$isTrue = false;
+		$isBuku = false;
+		$isSerial = false;
 		for($col=1; $col<12; $col++){
 			$kolom = $data->val(1,$col);
-			if(strtolower($kolom)!='isbn' && strtolower($kolom)!='frekuensi'){
-				$isTrue = true;	
+			if(strtolower($kolom)=='isbn'){
+				$isBuku = true;
 			}
+			if(strtolower($kolom)=='frekuensi'){
+				$isSerial = true;
+			}
+		}
+		if(!$isBuku && !$isSerial){
+			$isTrue = true;
 		}
 		
 		if($isTrue) {
@@ -253,10 +261,10 @@ class PermintaanController extends Controller {
 				$link      =$data->val($i,7);
 				$status    =0;
 				$prioritas =$data->val($i,8);
-				if($prioritas=='wajib'){
-				$prioritas =1;
-				}elseif($prioritas=='penunjang'){
-				$prioritas =2;
+				if(strtolower($prioritas)=='wajib'){
+					$idprioritas =1;
+				}elseif(strtolower($prioritas)=='penunjang'){
+					$idprioritas =2;
 				}
 				//Input Data Excel Ke Database	
 				$command = Yii::app()->db->createCommand();
@@ -270,7 +278,7 @@ class PermintaanController extends Controller {
 					 'HARGA'       =>$harga,
 					 'LINK_WEBSITE'=>$link,
 					 'ID_STATUS'   =>$status,
-					 'ID_PRIORITAS'=>$prioritas,
+					 'ID_PRIORITAS'=>$idprioritas,
 				));
 				if ($command) $sukses++;
 				else $gagal++;
@@ -313,10 +321,10 @@ class PermintaanController extends Controller {
 				$link      =$data->val($i, 9);
 				$status    =0;
 				$prioritas =$data->val($i,10);
-				if($prioritas=='wajib'){
-				$prioritas =1;
-				}elseif($prioritas=='penunjang'){
-				$prioritas =2;
+				if(strtolower($prioritas)=='wajib'){
+					$idprioritas =1;
+				}elseif(strtolower($prioritas)=='penunjang'){
+					$idprioritas =2;
 				}
 				//Input Data Excel Ke Database	
 				$command = Yii::app()->db->createCommand();
@@ -332,7 +340,7 @@ class PermintaanController extends Controller {
 					 'HARGA'       =>$harga,
 					 'LINK_WEBSITE'=>$link,
 					 'ID_STATUS'   =>$status,
-					 'ID_PRIORITAS'=>$prioritas,
+					 'ID_PRIORITAS'=>$idprioritas,
 				));
 				if ($command) $sukses++;
 				else $gagal++;

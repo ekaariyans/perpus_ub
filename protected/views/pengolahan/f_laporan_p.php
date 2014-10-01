@@ -19,7 +19,7 @@
 </ul>
 <!-- Menu Tab Utama -->
 
-<div class="box box-primary">
+<div class="box box-primary" style="padding:15px">
     <div class="box-header">
 	</div>
         
@@ -133,7 +133,7 @@
                                     <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
                                     </div>
-                                    <input name="tanggalsd1" id="t1sd1" type="date" class="form-control" />
+                                    <input name="tanggalsd1" id="t1sd1" type="date" class="form-control" style="width:30%" />
                                     <!--
                                     <input name="tanggalsd1" id="t1sd1" type="date" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
                                     -->
@@ -146,7 +146,7 @@
                                     <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
                                     </div>
-                                    <input name="tanggalsd1" id="t2sd1" type="date" class="form-control" />
+                                    <input name="tanggalsd1" id="t2sd1" type="date" class="form-control" style="width:30%" />
                                     <!--
                                     <input name="tanggalsd1" id="t2sd1" type="date" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
  									-->                               
@@ -156,7 +156,6 @@
                             <div class="form-group">
                                 <label>Bahasa</label>
                                 <div class="input-group">
-                                    <!--<?php //echo $form->dropDownList($modelBk, 'BAHASA', array('prompt'=>'----- Pilih Bahasa -----','1'=>'Indonesia', '2'=>'Inggris', '3'=>'Lainnya'), array('class'=>'form-control'));  ?>-->
 
                                     <select id="selectsd1" class="form-control">
                                         <option value="0">Semua Bahasa</option>
@@ -308,7 +307,7 @@
                                     <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
                                     </div>
-                                    <input name="tanggalsd2" id="t1sd2" type="date" class="form-control" />
+                                    <input name="tanggalsd2" id="t1sd2" type="date" class="form-control" style="width:30%" />
                                 </div><!-- /.input group -->
                             </div><!-- /.form group -->
                             <!-- Date dd/mm/yyyy -->
@@ -318,7 +317,7 @@
                                     <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
                                     </div>
-                                    <input name="tanggalsd2" id="t2sd2" type="date" class="form-control" />                               
+                                    <input name="tanggalsd2" id="t2sd2" type="date" class="form-control" style="width:30%" />                               
                                 </div><!-- /.input group -->
                             </div><!-- /.form group -->
                     
@@ -480,7 +479,7 @@
                             <div class="input-group-addon">
 								<i class="fa fa-calendar"></i>
                             </div>
-                            <input name="tanggalsd3" id="t1sd3" type="date" class="form-control" />
+                            <input name="tanggalsd3" id="t1sd3" type="date" class="form-control" style="width:30%" />
                         </div><!-- /.input group -->
                     </div><!-- /.form group -->
    
@@ -490,7 +489,7 @@
                             <div class="input-group-addon">
                                 <i class="fa fa-calendar"></i>
                              </div>
-                            <input name="tanggalsd3" id="t2sd3" type="date" class="form-control" />                               
+                            <input name="tanggalsd3" id="t2sd3" type="date" class="form-control" style="width:30%" />                               
                         </div><!-- /.input group -->
                     </div><!-- /.form group -->
                     

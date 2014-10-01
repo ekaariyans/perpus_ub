@@ -25,6 +25,7 @@ class UserIdentity extends CUserIdentity
 					$this->errorCode=self::ERROR_PASSWORD_INVALID;
 				}else{
 					$this->_id= $user->ID_ANGGOTA;
+					Yii::app()->session['username'] = $user->ID_ANGGOTA;
 					Yii::app()->session['level'] = $user->ID_PRIVILEGE;
 					Yii::app()->session['bagian'] = $user->ID_BAGIAN;
 					$this->errorCode=self::ERROR_NONE;

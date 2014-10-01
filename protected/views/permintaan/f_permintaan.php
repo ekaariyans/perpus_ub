@@ -25,7 +25,7 @@
     <!-- Tab panes -->
     <div class="tab-content">
         <div class="tab-pane active" id="Form"><?php echo $form->errorSummary($modelJur); ?>
-            <div class="box box-primary">
+            <div class="box box-primary" style="padding:15px;">
                 <div class="box-header">
                     <h4 class="box-title">Form Permintaan Katalog</h4>
                 </div>
@@ -296,7 +296,7 @@
                     </ul>
 
                     <!-- Tab panes -->
-                    <div class="tab-content">
+                    <div class="tab-content" style="padding:15px;"> 
                         <div class="tab-pane active" id="bk">
                             <div class="box-header">
                                 <h4 class="box-title">DAFTAR PERMINTAAN BUKU</h4>
@@ -364,7 +364,6 @@
                                     <table id="example3" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
-                                                <th>ID Anggota</th>
                                                 <th>Tgl.Permintaan</th>
                                                 <th>Judul</th>
                                                 <th>Pengarang</th>
@@ -378,7 +377,6 @@
                                         <tbody>
 <?php foreach ($dataJur as $modelJur): ?>
                                                 <tr>
-                                                    <td><?php echo $modelJur['ID_ANGGOTA']; ?></td>
                                                     <td><?php echo $modelJur['TGL_PERMINTAAN']; ?></td>
                                                     <td><?php echo $modelJur['JUDUL']; ?></td>
                                                     <td><?php echo $modelJur['PENGARANG']; ?></td>
@@ -420,7 +418,6 @@
                                     <table id="example4" class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
-                                                <th>ID Anggota</th>
                                                 <th>Tgl.Permintaan</th>
                                                 <th>Judul</th>
                                                 <th>Volume</th>
@@ -435,7 +432,6 @@
                                         <tbody>
 <?php foreach ($dataSer as $modelSer): ?>
                                                 <tr>
-                                                    <td><?php echo $modelSer['ID_ANGGOTA']; ?></td>
                                                     <td><?php echo $modelSer['TGL_PERMINTAAN']; ?></td>
                                                     <td><?php echo $modelSer['JUDUL']; ?></td>
                                                     <td><?php echo $modelSer['VOLUME']; ?></td>

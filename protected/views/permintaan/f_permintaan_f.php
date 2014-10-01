@@ -21,7 +21,7 @@
     <div class="tab-pane active" id="form">
 	 <div class="box box-primary">
 		<div class="box-header">
-        
+        <br />
         <div class="col-md-6">
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -73,7 +73,8 @@
                 // you need to use the performAjaxValidation()-method described there.
                 'enableAjaxValidation' => false,
             ));
-            ?>
+            ?><br />
+
         <div class="col-md-6">
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -129,7 +130,7 @@
 
 
 <!-- Tab panes -->
-<div class="tab-content">
+<div class="tab-content" style="padding:15px;">
   <div class="tab-pane active" id="bk">
    <div class="box-header">
             <h4 class="box-title">DAFTAR PERMINTAAN BUKU</h4>

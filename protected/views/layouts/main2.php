@@ -54,14 +54,14 @@
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="glyphicon glyphicon-user"></i>
-                                <span><?php echo Yii::app()->session['username'];?><i class="caret"></i></span>
+                                <span><?php echo Yii::app()->session['akun'];?><i class="caret"></i></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header bg-light-blue">
                                     <img src="<?php echo Yii::app()->request->baseUrl; ?>/assets/img/avatar5.png" class="img-circle" alt="User Image" />
                                     <p>
-                                        <?php echo Yii::app()->session['username'];?> - Web Developer
+                                        <?php echo Yii::app()->session['akun'];?> - Web Developer
                                         <small>Member since jul. 2014</small>
                                     </p>
                                 </li>
@@ -104,7 +104,7 @@
                             <img src="<?php echo Yii::app()->request->baseUrl; ?>/assets/img/avatar5.png" class="img-circle" alt="User Image" />
                         </div>
                         <div class="pull-left info">
-                            <p>Hello, <?php echo Yii::app()->session['username'];?></p>
+                            <p>Hello, <?php echo Yii::app()->session['akun'];?></p>
 
                             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                         </div>
