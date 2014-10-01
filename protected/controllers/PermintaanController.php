@@ -134,6 +134,8 @@ class PermintaanController extends Controller {
 		$model2->BAHASA=$_POST['TPermintaanJurnal']['BAHASA'];
 		$model2->HARGA=$_POST['TPermintaanJurnal']['HARGA'];
 		$model2->LINK_WEBSITE=$_POST['TPermintaanJurnal']['LINK_WEBSITE'];
+		$model2->ID_STATUS=0;
+		$model2->ID_PRIORITAS=$_POST['TPermintaanJurnal']['ID_PRIORITAS'];
 		$model2->save();
 		Yii::app()->user->setFlash('success',"Success input data");
 		return;
@@ -149,6 +151,8 @@ class PermintaanController extends Controller {
 		$model2->BAHASA=$_POST['TPermintaanSerial']['BAHASA'];
 		$model2->HARGA=$_POST['TPermintaanSerial']['HARGA'];
 		$model2->LINK_WEBSITE=$_POST['TPermintaanSerial']['LINK_WEBSITE'];
+		$model2->ID_STATUS=0;
+		$model2->ID_PRIORITAS=$_POST['TPermintaanSerial']['ID_PRIORITAS'];
 		$model2->save();
 		Yii::app()->user->setFlash('success',"Success input data");
 		return;

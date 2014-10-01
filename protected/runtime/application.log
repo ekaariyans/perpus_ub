@@ -16318,3 +16318,131 @@ HTTP_REFERER=http://localhost/perpus_ub/index.php?r=Permintaan/f_permintaan
 2014/09/30 11:29:05 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
 in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (54)
 in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/30 11:39:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "f_laporan_p".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('f_laporan_p')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_laporan_p')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_la...')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_laporan_p
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan
+---
+2014/09/30 11:40:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "laporan".' in C:\xampp\htdocs\perpus_ub\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(270): CController->missingAction('laporan')
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('laporan')
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('pengolahan/lapo...')
+#3 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/perpus_ub/index.php?r=pengolahan/laporan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=Pengolahan
+---
+2014/09/30 11:42:20 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (54)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/30 11:44:30 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (54)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/30 11:46:29 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (54)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/30 11:46:29 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "anggota". The conflict occurred in database "perpus_yii", table "dbo.t_user_request", column 'ID_ANGGOTA'.. The SQL statement executed was: INSERT INTO [dbo].[t_permintaan] ([ID_ANGGOTA], [K_JENIS], [TGL_PERMINTAAN]) VALUES (:yp0, :yp1, :yp2).
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (74)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/09/30 11:46:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: [Microsoft][SQL Server Native Client 11.0][SQL Server]The INSERT statement conflicted with the FOREIGN KEY constraint "anggota". The conflict occurred in database "perpus_yii", table "dbo.t_user_request", column 'ID_ANGGOTA'.. The SQL statement executed was: INSERT INTO [dbo].[t_permintaan] ([ID_ANGGOTA], [K_JENIS], [TGL_PERMINTAAN]) VALUES (:yp0, :yp1, :yp2)' in C:\xampp\htdocs\perpus_ub\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 C:\xampp\htdocs\perpus_ub\framework\db\ar\CActiveRecord.php(806): CActiveRecord->insert(NULL)
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(74): CActiveRecord->save()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): CController->run('f_permintaan')
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('permintaan/f_pe...')
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan
+---
+2014/10/01 04:03:12 [error] [php] Undefined index: STATUS (C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_permintaan.php:367)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): PermintaanController->renderFile()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): PermintaanController->renderPartial()
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(106): PermintaanController->render()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan
+in C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_permintaan.php (367)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (106)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/10/01 04:03:46 [error] [php] Undefined index: STATUS (C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_permintaan.php:367)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(869): PermintaanController->renderFile()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(782): PermintaanController->renderPartial()
+#2 C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php(106): PermintaanController->render()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\actions\CInlineAction.php(49): PermintaanController->actionF_permintaan()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#6 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#7 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#8 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan
+in C:\xampp\htdocs\perpus_ub\protected\views\permintaan\f_permintaan.php (367)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (106)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/10/01 04:21:34 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (54)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/10/01 04:23:28 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (54)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/10/01 04:36:18 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (54)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/10/01 04:36:18 [error] [php] Undefined index: ID_PRIORITAS (C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php:138)
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(286): PermintaanController->runAction()
+#2 C:\xampp\htdocs\perpus_ub\framework\web\CController.php(265): PermintaanController->runActionWithFilters()
+#3 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(282): PermintaanController->run()
+#4 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 C:\xampp\htdocs\perpus_ub\index.php(13): CWebApplication->run()
+REQUEST_URI=/perpus_ub/index.php?r=permintaan/f_permintaan
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (138)
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (86)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/10/01 04:39:21 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (54)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/10/01 04:39:21 [warning] [application] Failed to set unsafe attribute "ID_PRIORITAS" of "TPermintaanJurnal".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (77)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/10/01 04:39:37 [warning] [application] Failed to set unsafe attribute "K_JENIS" of "TPermintaan".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (54)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/10/01 04:39:37 [warning] [application] Failed to set unsafe attribute "ID_PRIORITAS" of "TPermintaanSerial".
+in C:\xampp\htdocs\perpus_ub\protected\controllers\PermintaanController.php (77)
+in C:\xampp\htdocs\perpus_ub\index.php (13)
+2014/10/01 05:29:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sirkulasi/rfid".' in C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\perpus_ub\framework\web\CWebApplication.php(141): CWebApplication->runController('sirkulasi/rfid')
+#1 C:\xampp\htdocs\perpus_ub\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\perpus_ub\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/perpus_ub/index.php?r=sirkulasi/rfid
+HTTP_REFERER=http://localhost/perpus_ub/index.php?r=permintaan/f_permintaan
+---

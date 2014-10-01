@@ -31,9 +31,12 @@
                 </div>
                     <?php echo $form->errorSummary($model); ?>
                 <div class="form-group">
+                <div class="col-md-4">
+                <div class="panel panel-default">
+                        <div class="panel-heading">
                     <label class="col-sm-1 control-label"></label>
                     <?php
-                    echo $form->dropDownList($model, 'K_JENIS', array('prompt' => '----- Jenis Permintaan -----', '1' => 'Buku', '2' => 'Jurnal', '3' => 'Serial'), array(
+                    echo $form->dropDownList($model, 'K_JENIS', array('prompt' => 'Jenis Permintaan', '1' => 'Buku', '2' => 'Jurnal', '3' => 'Serial'), array('class'=>'form-control',
                         'onchange' => '	
                   							 if(this.value==1)
 											{ 	
@@ -61,6 +64,9 @@
                     ?>
 
                 </div>     
+                </div>
+                </div>
+                </div>
 
                 <div id="buku">
                     <div class="form-group">
@@ -98,7 +104,7 @@
                     <div class="form-group">
                             <?php echo $form->labelEx($modelBk, 'JENIS', array('class' => 'col-sm-2 control-label')); ?>
                         <div class="col-sm-10">
-<?php echo $form->dropDownList($modelBk, 'JENIS', array('Cetak' => 'Cetak', 'Elektronik' => 'Elektronik')); ?>
+<?php echo $form->dropDownList($modelBk, 'JENIS', array('Cetak' => 'Cetak', 'Elektronik' => 'Elektronik'), array('class' => 'form-control')); ?>
 <?php echo CHtml::error($modelBk, 'JENIS'); ?>
                         </div>
                     </div>
@@ -146,7 +152,7 @@
                     <div class="form-group">
                             <?php echo $form->labelEx($modelBk, 'PRIORITAS', array('class' => 'col-sm-2 control-label')); ?>
                         <div class="col-sm-10">
-<?php echo $form->dropDownList($modelBk, 'ID_PRIORITAS', array('1' => 'WAJIB', '2' => 'PENUMJANG')); ?>
+<?php echo $form->dropDownList($modelBk, 'ID_PRIORITAS', array('1' => 'WAJIB', '2' => 'PENUMJANG'), array('class' => 'form-control')); ?>
 <?php echo CHtml::error($modelBk, 'ID_PRIORITAS'); ?>
                         </div>
                     </div>
@@ -170,7 +176,7 @@
                     <div class="form-group">
                             <?php echo $form->labelEx($modelJur, 'JENIS', array('class' => 'col-sm-2 control-label')); ?>
                         <div class="col-sm-10">
-<?php echo $form->dropDownList($modelJur, 'JENIS', array('Cetak' => 'Cetak', 'Elektronik' => 'Elektronik')); ?>
+<?php echo $form->dropDownList($modelJur, 'JENIS', array('Cetak' => 'Cetak', 'Elektronik' => 'Elektronik'), array('class' => 'form-control')); ?>
                         <?php echo $form->error($modelJur, 'JENIS'); ?>
                         </div>
                     </div>
@@ -195,6 +201,14 @@
 <?php echo $form->error($modelJur, 'LINK_WEBSITE'); ?>
                         </div>
                     </div>
+                    
+                    <div class="form-group">
+                            <?php echo $form->labelEx($modelJur, 'PRIORITAS', array('class' => 'col-sm-2 control-label')); ?>
+                        <div class="col-sm-10">
+<?php echo $form->dropDownList($modelJur, 'ID_PRIORITAS', array('1' => 'WAJIB', '2' => 'PENUMJANG'), array('class' => 'form-control')); ?>
+<?php echo CHtml::error($modelJur, 'ID_PRIORITAS'); ?>
+                        </div>
+                        </div>
                 </div> <!--Jurnal-->
                 
                 <div id="serial">
@@ -229,7 +243,7 @@
                     <div class="form-group">
                             <?php echo $form->labelEx($modelSer, 'JENIS', array('class' => 'col-sm-2 control-label')); ?>
                         <div class="col-sm-10">
-<?php echo $form->dropDownList($modelSer, 'JENIS', array('Cetak' => 'Cetak', 'Elektronik' => 'Elektronik')); ?>
+<?php echo $form->dropDownList($modelSer, 'JENIS', array('Cetak' => 'Cetak', 'Elektronik' => 'Elektronik'), array('class' => 'form-control')); ?>
                         <?php echo $form->error($modelSer, 'JENIS'); ?>
                         </div>
                     </div>
@@ -254,6 +268,13 @@
 <?php echo $form->error($modelSer, 'LINK_WEBSITE'); ?>
                         </div>
                     </div>
+                    <div class="form-group">
+                            <?php echo $form->labelEx($modelSer, 'PRIORITAS', array('class' => 'col-sm-2 control-label')); ?>
+                        <div class="col-sm-10">
+<?php echo $form->dropDownList($modelSer, 'ID_PRIORITAS', array('1' => 'WAJIB', '2' => 'PENUMJANG'), array('class' => 'form-control')); ?>
+<?php echo CHtml::error($modelSer, 'ID_PRIORITAS'); ?>
+                        </div>
+                        </div>
                 </div> <!--serial-->
 
                 <div class="form-group" id="button">
@@ -267,6 +288,7 @@
         <div class="tab-pane" id="Permintaan">
             <div class="box box-primary">
                 <div class="box-header">
+                </div>
                     <ul class="nav nav-tabs" role="tablist">
                         <li class="active"><a href="#bk" role="tab" data-toggle="tab">Buku </a></li>
                         <li><a href="#jr" role="tab" data-toggle="tab">Jurnal</a></li>
@@ -350,6 +372,7 @@
                                                 <th>Bahasa</th>
                                                 <th>Harga</th>
                                                 <th>Link Website</th>
+                                                <td>Status</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -363,6 +386,7 @@
                                                     <td><?php echo $modelJur['BAHASA']; ?></td>
                                                     <td><?php echo $modelJur['HARGA']; ?></td>
                                                     <td><?php echo $modelJur['LINK_WEBSITE']; ?></td>
+                                                    <td><?php echo $modelJur['STATUS']; ?></td>
                                                 </tr>
 <?php endforeach; ?>
                                         </tbody>
@@ -405,6 +429,7 @@
                                                 <th>Bahasa</th>
                                                 <th>Harga</th>
                                                 <th>Link Website</th>
+                                                <td>Status</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -419,6 +444,7 @@
                                                     <td><?php echo $modelSer['BAHASA']; ?></td>
                                                     <td><?php echo $modelSer['HARGA']; ?></td>
                                                     <td><?php echo $modelSer['LINK_WEBSITE']; ?></td>
+                                                    <td><?php echo $modelSer['STATUS']; ?></td>
                                                 </tr>
 <?php endforeach; ?>
                                         </tbody>

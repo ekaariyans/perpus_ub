@@ -16,23 +16,52 @@
 </ul>
 
 <!-- Tab panes -->
-<div class="tab-content">
+
+	<div class="tab-content">
     <div class="tab-pane active" id="form">
-      <h4 class="box-title">Form Permintaan Secara Kolektif</h4>
-       <br/>
-	Form Permintaan Buku Secara Kolektif :
-	<a href="<?php echo Yii::app()->request->baseUrl.'/assets/TemplateForm/FormReqBuku.xls'; ?>" class="btn btn-default btn-flat">Download</a>	
-	<br/><br/>
-	Form Permintaan Jurnal Secara Kolektif :
-	<a href="<?php echo Yii::app()->request->baseUrl.'/assets/TemplateForm/FormReqJurnal.xls'; ?>" class="btn btn-default btn-flat">Download</a>
-    <br/><br/>
-	Form Permintaan Serial Secara Kolektif :
-	<a href="<?php echo Yii::app()->request->baseUrl.'/assets/TemplateForm/FormReqSerial.xls'; ?>" class="btn btn-default btn-flat">Download</a>
-    </div><!--TAB FORM-->
+	 <div class="box box-primary">
+		<div class="box-header">
+        
+        <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+            <b>Form Permintaan Secara Kolektif</b>
+            </div>
+        <div class="panel-body">
+        <div class="table-responsive">
+      
+       <table class="table">
+       <tr height="50">
+           <td>Form Permintaan Buku Secara Kolektif</td>
+           <td>:</td>
+           <td><a href="<?php echo Yii::app()->request->baseUrl.'/assets/TemplateForm/FormReqBuku.xls'; ?>" class="btn btn-default btn-flat">Download</a></td>
+    	</tr>
+        
+        <tr height="50">
+        	<td>Form Permintaan Jurnal Secara Kolektif</td>
+        	<td>:</td>
+			<td><a href="<?php echo Yii::app()->request->baseUrl.'/assets/TemplateForm/FormReqJurnal.xls'; ?>" class="btn btn-default btn-flat">Download</a></td>
+        </tr>
+        
+        <tr height="50">
+            <td>Form Permintaan Serial Secara Kolektif</td>
+            <td>:</td>
+            <td><a href="<?php echo Yii::app()->request->baseUrl.'/assets/TemplateForm/FormReqSerial.xls'; ?>" class="btn btn-default btn-flat">Download</a></td>
+        </tr>
+    </table>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!--TAB FORM-->
 
-
+ 
     <div class="tab-pane" id="upload">
-        <div class="form">
+			<div class="box box-primary">
+			<div class="box-header">
             <?php
             $form = $this->beginWidget('CActiveForm', array(
                 'id' => 'upload-upload-form',
@@ -45,39 +74,59 @@
                 'enableAjaxValidation' => false,
             ));
             ?>
-          <h4 class="box-title">Upload Form Permintaan Secara Kolektif</h4>
-		<br>		
+        <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+            <b>Upload Form Permintaan Secara Kolektif</b>
+            </div>
+        <div class="panel-body">
+        <div class="table-responsive">
+          	
 			<?php echo $form->errorSummary($model); ?>
-            	<div class="form-group">
-                <label class="col-sm-2 control-label">Kategori      :</label>
-                  	<?php echo $form->dropDownList($model, 'K_JENIS', array('1'=>'Buku', '2'=>'Jurnal', '3'=>'Serial')); ?>
+            <table class="table">
+            	<tr>
+            		<td>Kategori</td>
+                    <td>:</td>
+                    <td>
+                  	<?php echo $form->dropDownList($model, 'K_JENIS', array('1'=>'Buku', '2'=>'Jurnal', '3'=>'Serial'), 
+					array('class'=>'form-control')); ?>
                   	<?php echo $form->error($model, 'K_JENIS'); ?>
-             </div>
-			<div class="form-group">
-                <label class="col-sm-2 control-label">Masukkan Data Excel :</label>
-                <br /><br />
-                	<?php echo $form->fileField($model, 'filee', array('maxlength' => 200)); ?>
-            </div>
-            <br>
-            <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-                <?php echo CHtml::submitButton('Submit', array('class' => 'btn btn-default')); ?>
-            </div>
-        </div>
+                    </td>
+                </tr>
+                 
+                <tr>
+                     <td>Masukkan Data Excel</td>
+                     <td>:</td>
+                     <td><?php echo $form->fileField($model, 'filee', array('maxlength' => 200, 'class' => 'btn btn-default')); ?></td>
+            	</tr>
+                
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><?php echo CHtml::submitButton('Submit', array('class' => 'btn btn-default')); ?></td>
+                </tr>
+            </table>
             <?php $this->endWidget(); ?>
 
-        </div><!-- form -->
-    </div><!--UPLOAD-->
+   	 </div><!--UPLOAD-->
+     </div>
+     </div>
+     </div>
+     </div>
+    </div>
+    </div>
 
 
     <div class="tab-pane" id="list">
           <div class="box box-primary">
         <div class="box-header">
-            <ul class="nav nav-tabs" role="tablist">
+        </div>
+<ul class="nav nav-tabs" role="tablist">
   <li class="active"><a href="#bk" role="tab" data-toggle="tab">Buku </a></li>
   <li><a href="#jr" role="tab" data-toggle="tab">Jurnal</a></li>
   <li><a href="#sr" role="tab" data-toggle="tab">Serial</a></li>
 </ul>
+
 
 <!-- Tab panes -->
 <div class="tab-content">
@@ -99,6 +148,7 @@
                                 <th>Tahun Terbit</th>
                 				<th>Harga</th>
                             	<th>Link Website</th>
+                                <th>Status</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -114,6 +164,7 @@
                                 	<td><?php echo $model['TAHUN_TERBIT']; ?></td>
                                 	<td><?php echo $model['HARGA']; ?></td>
                                 	<td><?php echo $model['LINK_WEBSITE']; ?></td>
+                                    <td><?php echo $model['STATUS']; ?></td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
@@ -155,6 +206,7 @@
                                 <th>Bahasa</th>
                 				<th>Harga</th>
                             	<th>Link Website</th>
+                                <th>Status</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -168,6 +220,7 @@
                                     <td><?php echo $modelJur['BAHASA']; ?></td>
                                 	<td><?php echo $modelJur['HARGA']; ?></td>
                                 	<td><?php echo $modelJur['LINK_WEBSITE']; ?></td>
+                                    <td><?php echo $modelJur['STATUS']; ?></td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
@@ -209,6 +262,7 @@
                                 <th>Bahasa</th>
                 				<th>Harga</th>
                             	<th>Link Website</th>
+                                <th>Status</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -223,6 +277,7 @@
                                 	<td><?php echo $modelSer['BAHASA']; ?></td>
                                 	<td><?php echo $modelSer['HARGA']; ?></td>
                                 	<td><?php echo $modelSer['LINK_WEBSITE']; ?></td>
+                                    <td><?php echo $modelSer['STATUS']; ?></td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
@@ -255,5 +310,5 @@
   </div>
 
     </div>
+	</div>
 
-</div><!--LIST-->
