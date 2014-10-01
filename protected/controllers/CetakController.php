@@ -15,6 +15,9 @@ class CetakController extends Controller
 		//untuk laporan buku belum dibeli
 		if($status=='bd1'){
 			$command = Yii::app()->db->createCommand("[dbo].[lap_buku] @bahasa = '$bahasa'");
+			$data=$command->queryAll();
+			//print_r($data);
+	   		$this->render('cetak',array('status'=>$status,'data'=>$data));
 		}
 		
 		//untuk laporan buku sudah dibeli
@@ -58,6 +61,33 @@ class CetakController extends Controller
 			else $t2 = 'null';
 			
 			$command = Yii::app()->db->createCommand("[dbo].[lap_jurnal_sd] @bahasa = '$bahasa',@t1 = '$t1',@t2 = '$t2'");
+		}
+       $data=$command->queryAll();
+	   $this->render('cetak',array('status'=>$status,'data'=>$data));
+	}
+	
+	public function actionCetakSerial(){
+		$bahasa = $_GET['bhs'];
+		$status = $_GET['status'];
+
+		//untuk laporan jurnal belum dibeli
+		if($status=='bd3'){
+			$command = Yii::app()->db->createCommand("[dbo].[lap_serial] @bahasa = '$bahasa'");
+		}
+		
+		//untuk laporan jurnal sudah dibeli
+		else if($status=='sd3'){
+			if($_GET['t1']!=''){
+				$t1 = $_GET['t1'];
+			}
+			else $t1 = 'null';
+			
+			if($_GET['t2']!=''){
+				$t2 = $_GET['t2'];
+			}
+			else $t2 = 'null';
+			
+			$command = Yii::app()->db->createCommand("[dbo].[lap_serial_sd] @bahasa = '$bahasa',@t1 = '$t1',@t2 = '$t2'");
 		}
        $data=$command->queryAll();
 	   $this->render('cetak',array('status'=>$status,'data'=>$data));

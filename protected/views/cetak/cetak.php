@@ -1,5 +1,6 @@
 	<?php 
 	$tanggal=date("Ymd");
+	
 	header("Content-type: application/ms-excel");
 	
 	//jika buku
@@ -62,4 +63,33 @@
 	
 	//jika serial 
 	else if($status == 'bd3' || $status == 'sd3'){
+		if($status=='bd3'){
+			header("Content-Disposition: attachment; filename=Rekap Permintaan Jurnal ".$tanggal.".xls");
+			$judul = "Daftar Permintaan Serial\n";
+		}
+		else{
+			header("Content-Disposition: attachment; filename=Rekap Permintaan Jural Sudah Dibeli ".$tanggal.".xls");
+			$judul = "Daftar Permintaan Jurnal Sudah Dibeli\n";
+		}
+		
+		$header="ID Anggota \t Nama Peminta \t Judul \t Volume \t Tahun \t Harga \t Frekuensi \t Jenis \t Bahasa \t Harga \t Link Website \t Status \t Prioritas \n";
+		echo $judul;
+		echo $header;
+		foreach ($data as $model): 
+		$content= 	$model['ID_ANGGOTA'] ."\t". 
+					$model['NAMA_PEMINTA'] ."\t". 
+					$model['JUDUL'] ."\t". 
+					$model['VOLUME'] ."\t".  
+					$model['TAHUN'] ."\t".
+					$model['HARGA'] ."\t". 
+					$model['FREKWENSI'] ."\t".					
+					$model['JENIS'] ."\t".
+					$model['BAHASA'] ."\t".
+					$model['HARGA'] ."\t".
+					$model['LINK_WEBSITE'] ."\t".
+					$model['STATUS'] ."\t".
+					$model['PRIORITAS'] ."\n";
+		echo $content;
+		endforeach;
 	}
+	

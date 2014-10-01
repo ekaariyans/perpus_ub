@@ -103,6 +103,19 @@ class SiteController extends Controller
 						Yii::app()->session['username'] = $userid;
 						Yii::app()->session['bagian'] = "116";
 						Yii::app()->session['level'] = "02";
+						
+						$query = "select USERNAME from t_user_request where USERNAME = '$userid'";
+						$command = Yii::app()->db->createCommand($query);
+						$data=$command->execute();
+						
+						if(empty($data)){						
+							$model->ID_ANGGOTA=$userid;
+							$model->ID_PRIVILEGE="02";
+							$model->USERNAME = $userid;
+							$model->PASSWORD = md5($password);
+							$model->ID_BAGIAN = "116";
+							$model->save();
+						}
 						$this->redirect('index.php?r=permintaan');
 					}
 					else {
