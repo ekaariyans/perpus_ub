@@ -15,9 +15,6 @@ class CetakController extends Controller
 		//untuk laporan buku belum dibeli
 		if($status=='bd1'){
 			$command = Yii::app()->db->createCommand("[dbo].[lap_buku] @bahasa = '$bahasa'");
-			$data=$command->queryAll();
-			//print_r($data);
-	   		$this->render('cetak',array('status'=>$status,'data'=>$data));
 		}
 		
 		//untuk laporan buku sudah dibeli
