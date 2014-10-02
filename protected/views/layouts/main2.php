@@ -61,27 +61,12 @@
                                 <li class="user-header bg-light-blue">
                                     <img src="<?php echo Yii::app()->request->baseUrl; ?>/assets/img/avatar5.png" class="img-circle" alt="User Image" />
                                     <p>
-                                        <?php echo Yii::app()->session['akun'];?> - Web Developer
-                                        <small>Member since jul. 2014</small>
+                                        <?php echo Yii::app()->session['akun'];?>
                                     </p>
                                 </li>
                                 <!-- Menu Body -->
-                                <li class="user-body">
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Followers</a>
-                                    </div>
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Sales</a>
-                                    </div>
-                                    <div class="col-xs-4 text-center">
-                                        <a href="#">Friends</a>
-                                    </div>
-                                </li>
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
-                                    <div class="pull-left">
-                                        <a href="#" class="btn btn-default btn-flat">Profile</a>
-                                    </div>
                                     <div class="pull-right">
                                         <a href="index.php?r=site/logout" class="btn btn-default btn-flat">Sign out</a>
                                     </div>
@@ -196,7 +181,7 @@
                                 <?php
                                 $this->widget('zii.widgets.CMenu', array(
                                     'items' => array(
-                                        array('label' => 'Daftar Permintaan Buku', 'url' => array('/pengolahan/f_laporan_p')),
+                                        array('label' => 'Permintaan Katalog', 'url' => array('/pengolahan/f_laporan_p')),
                                         array('label' => 'Registrasi dan Pelabelan', 'url' => array('/katalog/f_katalog')),
                                         array('label' => 'Validasi Buku', 'url' => array('/pengolahan/validasi')),
                                         array('label' => 'Laporan', 'url' => array('/pengolahan/laporan')),
@@ -208,7 +193,7 @@
                         </li>
                         <?php endif; ?>
                         
-                        <?php if(Yii::app()->session['bagian'] == '01' || Yii::app()->session['bagian'] == '116' || Yii::app()->session['bagian'] == '999'): ?>
+                        <?php if(Yii::app()->session['bagian'] == '04' || Yii::app()->session['bagian'] == '01' || Yii::app()->session['bagian'] == '116' || Yii::app()->session['bagian'] == '999'): ?>
                         <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-folder"></i>
@@ -311,24 +296,14 @@
                 <section class="content-header">
                     <h1>
                         Dashboard
-                        <small>Control panel</small>
                     </h1>
-                    <ol class="breadcrumb">
-                        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                        <li class="active">Dashboard</li>
-                    </ol>
                 </section>
-
-
                 <!-- Main content -->
-                <section class="content">
-
-<?php echo $content; ?>    
-                </section><!-- /.content -->
+				<?php echo $content; ?>    
+              <!-- /.content -->
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
-        <div class="panel-footer"> <center>&copy; PENGEMBANGAN IT PERPUSTAKAAN UNIVERSITAS BRAWIJAYA</center>
-
+         <div class="panel-footer" > <center>&copy; PENGEMBANGAN IT PERPUSTAKAAN UNIVERSITAS BRAWIJAYA</center></div>
         <!-- add new calendar event modal -->
 
 
