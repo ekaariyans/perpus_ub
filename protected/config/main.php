@@ -64,10 +64,10 @@ return array(
 		*/
 		'db'=>array(
 			//'connectionString' => 'mysql:host=localhost;dbname=library',
-			'connectionString' => 'sqlsrv:Server=YOGA\SQLEXPRESS;Database=perpus_yii',
+			'connectionString' => 'sqlsrv:Server=EKA;Database=perpus_yii',
 			//'emulatePrepare' => true,
 			'username' => 'sa',
-			'password' => 'kangkungpait21',
+			'password' => 'akupapua',
 			'charset' => 'GB2312',
       		'tablePrefix' => 'tbl_',
 			//'connectionString' => 'mysql:host=localhost;dbname=library',
@@ -76,6 +76,15 @@ return array(
 			//'password' => '',
 			//'charset' => 'utf8',
 			//'charset' => 'utf8',
+		),
+		
+		'dblentera'=>array(
+			'connectionString' => 'sqlsrv:Server=EKA;Database=lentera',
+			'username' => 'sa',
+			'password' => 'akupapua',
+			'charset' => 'GB2312',
+      		'tablePrefix' => 'tbl_',
+			'class'  => 'CDbConnection',
 		),
 		
 		'errorHandler'=>array(

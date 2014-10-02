@@ -197,7 +197,7 @@
                                 $this->widget('zii.widgets.CMenu', array(
                                     'items' => array(
                                         array('label' => 'Daftar Permintaan Buku', 'url' => array('/pengolahan/f_laporan_p')),
-                                        array('label' => 'Registrasi dan Pemlabelan', 'url' => array('/pengolahan/barangdatang')),
+                                        array('label' => 'Registrasi dan Pelabelan', 'url' => array('/pengolahan/barangdatang')),
                                         array('label' => 'Validasi Buku', 'url' => array('/pengolahan/validasi')),
                                         array('label' => 'Laporan', 'url' => array('/pengolahan/laporan')),
                                         array('label' => 'Inventarisasi', 'url' => array('/pengolahan/inventarisasi')),
