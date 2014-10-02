@@ -124,35 +124,38 @@
 
                 <div class="tab-pane" id="sd">
                     <div class="span6">
-                        <form class="well form-inline">
+                         <div class="well well-sm" >
 							<!-- Date range -->
                             <!-- Date dd/mm/yyyy -->
                             <div class="form-group">
-                                <label>Dari Tanggal:</label>
+                            	<table>
+                                <tr>
+                                <td><label>Dari Tanggal:</label></td>
+                                <td colspan="3"><label>Sampai Tanggal:</label></td>
+                                </tr>
+                                
+                                <tr>
                                 <div class="input-group">
+                                <td>
                                     <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
                                     </div>
-                                    <input name="tanggalsd1" id="t1sd1" type="date" class="form-control" style="width:30%" />
-                                    <!--
-                                    <input name="tanggalsd1" id="t1sd1" type="date" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
-                                    -->
-                                </div><!-- /.input group -->
-                            </div><!-- /.form group -->
-                            <!-- Date dd/mm/yyyy -->
-                            <div class="form-group">
-                                <label>Sampai Tanggal:</label>
-                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                    <input name="tanggalsd1" id="t1sd1" type="date" class="form-control" style="width:350px" />
+                                    </div>
+                                </td>
+                                <td>
                                     <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
                                     </div>
-                                    <input name="tanggalsd1" id="t2sd1" type="date" class="form-control" style="width:30%" />
-                                    <!--
-                                    <input name="tanggalsd1" id="t2sd1" type="date" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask/>
- 									-->                               
+                                	<div class="input-group-addon">
+                                    <input name="tanggalsd1" id="t2sd1" type="date" class="form-control" style="width:350px" />
+                                    </div>
+                                </td>                              
                                 </div><!-- /.input group -->
+                                </tr>
+                                </table>
                             </div><!-- /.form group -->
-                    
                             <div class="form-group">
                                 <label>Bahasa</label>
                                 <div class="input-group">
@@ -168,9 +171,8 @@
                                 <div class="form-group">
 
                                     <a id="downloadsd1" class="btn btn-default btn-flat">Download</a>
-
-                                </div>
-                        </form>
+						</div>
+                        </div>
 
                     </div>	
                 </div>                    	
@@ -298,32 +300,43 @@
          <!-- Tab Pane sd2 -->
          <div class="tab-pane" id="sd2">
              <div class="span6"><!-- span6 sd2 -->
-				<form class="well form-inline">
+             
+             <div class="well well-sm" >
 							<!-- Date range -->
                             <!-- Date dd/mm/yyyy -->
                             <div class="form-group">
-                                <label>Dari Tanggal:</label>
+                            	<table>
+                                <tr>
+                                <td><label>Dari Tanggal:</label></td>
+                                <td colspan="3"><label>Sampai Tanggal:</label></td>
+                                </tr>
+                                
+                                <tr>
                                 <div class="input-group">
+                                <td>
                                     <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
                                     </div>
-                                    <input name="tanggalsd2" id="t1sd2" type="date" class="form-control" style="width:30%" />
-                                </div><!-- /.input group -->
-                            </div><!-- /.form group -->
-                            <!-- Date dd/mm/yyyy -->
-                            <div class="form-group">
-                                <label>Sampai Tanggal:</label>
-                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                    <input name="tanggalsd1" id="t1sd2" type="date" class="form-control" style="width:350px" />
+                                    </div>
+                                </td>
+                                <td>
                                     <div class="input-group-addon">
                                         <i class="fa fa-calendar"></i>
                                     </div>
-                                    <input name="tanggalsd2" id="t2sd2" type="date" class="form-control" style="width:30%" />                               
+                                	<div class="input-group-addon">
+                                    <input name="tanggalsd1" id="t2sd2" type="date" class="form-control" style="width:350px" />
+                                    </div>
+                                </td>                              
                                 </div><!-- /.input group -->
+                                </tr>
+                                </table>
                             </div><!-- /.form group -->
-                    
                             <div class="form-group">
                                 <label>Bahasa</label>
                                 <div class="input-group">
+
                                     <select id="selectsd2" class="form-control">
                                         <option value="0">Semua Bahasa</option>
                                         <option value="1">Indonesia</option>
@@ -335,11 +348,12 @@
                                 <div class="form-group">
 
                                     <a id="downloadsd2" class="btn btn-default btn-flat">Download</a>
+						</div>
+                        </div>
 
-                                </div>
-							</div>
-                        </form>
-             </div><!-- span6 sd2 -->
+                    </div>	
+                </div>           
+             
 			 
 			 <table id="tsd2" class="table table-bordered table-striped">
                 <thead>
@@ -472,45 +486,61 @@
 		
 		<div class="tab-pane" id="sd3">
             <div class="span6">
-                <form class="well form-inline">
-				    <div class="form-group">
-					<label>Dari Tanggal:</label>
-                        <div class="input-group">
-                            <div class="input-group-addon">
-								<i class="fa fa-calendar"></i>
-                            </div>
-                            <input name="tanggalsd3" id="t1sd3" type="date" class="form-control" style="width:30%" />
-                        </div><!-- /.input group -->
-                    </div><!-- /.form group -->
-   
-                    <div class="form-group">
-                    <label>Sampai Tanggal:</label>
-                        <div class="input-group">
-                            <div class="input-group-addon">
-                                <i class="fa fa-calendar"></i>
-                             </div>
-                            <input name="tanggalsd3" id="t2sd3" type="date" class="form-control" style="width:30%" />                               
-                        </div><!-- /.input group -->
-                    </div><!-- /.form group -->
-                    
-                    <div class="form-group">
-                    <label>Bahasa</label>
-                        <div class="input-group">
-                            <select id="selectsd3" class="form-control">
-                                <option value="0">Semua Bahasa</option>
-                                <option value="1">Indonesia</option>
-                                <option value="2">Inggris</option>
-                                <option value="3">Lainnya</option>
-                            </select>
+            
+             <div class="well well-sm" >
+							<!-- Date range -->
+                            <!-- Date dd/mm/yyyy -->
+                            <div class="form-group">
+                            	<table>
+                                <tr>
+                                <td><label>Dari Tanggal:</label></td>
+                                <td colspan="3"><label>Sampai Tanggal:</label></td>
+                                </tr>
+                                
+                                <tr>
+                                <div class="input-group">
+                                <td>
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                    <div class="input-group-addon">
+                                    <input name="tanggalsd3" id="t1sd3" type="date" class="form-control" style="width:350px" />
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                	<div class="input-group-addon">
+                                    <input name="tanggalsd3" id="t2sd3" type="date" class="form-control" style="width:350px" />
+                                    </div>
+                                </td>                              
+                                </div><!-- /.input group -->
+                                </tr>
+                                </table>
+                            </div><!-- /.form group -->
+                            <div class="form-group">
+                                <label>Bahasa</label>
+                                <div class="input-group">
+
+                                    <select id="selectsd3" class="form-control">
+                                        <option value="0">Semua Bahasa</option>
+                                        <option value="1">Indonesia</option>
+                                        <option value="2">Inggris</option>
+                                        <option value="3">Lainnya</option>
+                                    </select>
+                                </div>
+                                <br>
+                                <div class="form-group">
+
+                                    <a id="downloadsd3" class="btn btn-default btn-flat">Download</a>
+						</div>
                         </div>
-                        <br>
-                        <div class="form-group">
-							<a id="downloadsd3" class="btn btn-default btn-flat">Download</a>
-                        </div>
-					</div>
-                </form>
-            </div>	<!-- span6 -->
-			
+
+                    </div>	
+                </div>      
+            
+                
 			<table id="tsd3" class="table table-bordered table-striped">
             <thead>
                 <tr class="heading">

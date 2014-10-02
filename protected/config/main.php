@@ -64,10 +64,10 @@ return array(
 		*/
 		'db'=>array(
 			//'connectionString' => 'mysql:host=localhost;dbname=library',
-			'connectionString' => 'sqlsrv:Server=EKA;Database=perpus_yii',
+			'connectionString' => 'sqlsrv:Server=YOGA\SQLEXPRESS;Database=perpus_yii',
 			//'emulatePrepare' => true,
 			'username' => 'sa',
-			'password' => 'akupapua',
+			'password' => 'kangkungpait21',
 			'charset' => 'GB2312',
       		'tablePrefix' => 'tbl_',
 			//'connectionString' => 'mysql:host=localhost;dbname=library',

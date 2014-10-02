@@ -120,7 +120,7 @@
                     <div class="form-group">
                             <?php echo $form->labelEx($modelBk, 'BAHASA', array('class' => 'col-sm-2 control-label')); ?>
                         <div class="col-sm-10">
-<?php echo $form->textField($modelBk, 'BAHASA', array('class' => 'form-control', 'placeholder' => 'Bahasa yang Digunakan Buku')); ?>
+<?php echo $form->dropDownList($modelBk, 'BAHASA', array('Indonesia' => 'Indonesia', 'Inggris' => 'Inggris', 'Lainnya'=>'Lainnya'), array('class' => 'form-control')); ?>
 <?php echo CHtml::error($modelBk, 'BAHASA'); ?>
                         </div>
                     </div>
@@ -191,7 +191,7 @@
                     <div class="form-group">
                             <?php echo $form->labelEx($modelJur, 'BAHASA', array('class' => 'col-sm-2 control-label')); ?>
                         <div class="col-sm-10">
-<?php echo $form->textField($modelJur, 'BAHASA', array('class' => 'form-control', 'placeholder' => 'Bahasa yang Digunakan')); ?>
+<?php echo $form->dropDownList($modelJur, 'BAHASA', array('Indonesia' => 'Indonesia', 'Inggris' => 'Inggris', 'Lainnya'=>'Lainnya'), array('class' => 'form-control')); ?>
                         <?php echo $form->error($modelJur, 'BAHASA'); ?>
                         </div>
                     </div>
@@ -258,7 +258,7 @@
                     <div class="form-group">
                             <?php echo $form->labelEx($modelSer, 'BAHASA', array('class' => 'col-sm-2 control-label')); ?>
                         <div class="col-sm-10">
-<?php echo $form->textField($modelSer, 'BAHASA', array('class' => 'form-control', 'placeholder' => 'Bahasa yang Digunakan')); ?>
+<?php echo $form->dropDownList($modelSer, 'BAHASA', array('Indonesia' => 'Indonesia', 'Inggris' => 'Inggris', 'Lainnya'=>'Lainnya'), array('class' => 'form-control')); ?>
                         <?php echo $form->error($modelSer, 'BAHASA'); ?>
                         </div>
                     </div>
