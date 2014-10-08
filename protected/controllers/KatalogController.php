@@ -15,6 +15,7 @@ class KatalogController extends Controller
 		$modFund = new TFunding;
 		$modTbk = new TBkType;
 		$modTMedia = new TMediaType;
+		
 
 		if(isset($_POST['TBkMain']))
 		{
@@ -29,6 +30,7 @@ class KatalogController extends Controller
 				{
 					$model->OPERATOR_CODE = Yii::app()->session['username'];
 					$model->REGISTER = $_POST['TBkMain']['REGISTER'];
+					$model->ISBN = $_POST['TBkMain']['ISBN'];
 					$model->TITLE = $_POST['TBkMain']['TITLE'];
 					$model->VOLUME = $_POST['TBkMain']['VOLUME'];
 					$model->PRINTING = $_POST['TBkMain']['PRINTING'];
@@ -55,14 +57,16 @@ class KatalogController extends Controller
 					$model->DATA_ENTRY = $_POST['DATA_ENTRY'];
 					
 					$model->save();
+					$model->unsetAttributes();
 					Yii::app()->user->setFlash('success',"Proses Input Data Berhasil!");
+					$this->redirect(array('Katalog/F_katalog'));
 				}
 				else {
 					Yii::app()->user->setFlash('error',"Proses Input Gagal!");
 				}
 			}
 		}
-		$this->render('f_katalog',array('model'=>$model,
+		else $this->render('f_katalog',array('model'=>$model,
 							'modSpecLoc'=>$modSpecLoc,
 							'modLoc'=>$modLoc,
 							'modFund'=>$modFund,
@@ -85,7 +89,7 @@ class KatalogController extends Controller
 			
 			$baris = $data->rowcount($sheet_index=0);
 			
-		for($col=1; $col<12; $col++){
+		for($col=1; $col<24; $col++){
 			$kolom = $data->val(5,$col);
 			if(strtolower($kolom)=='isbn'){
 				$isTrue = true;	
@@ -99,78 +103,62 @@ class KatalogController extends Controller
 			//Baca File Excel
 			for ($i=6; $i<=$baris; $i++)
 			{
-				$register   	=$data->val($i,1);
-				$ISBN     		=$data->val($i,2);
-				$title 			=$data->val($i,3);
-				$volume     	=$data->val($i,4);
-				$printing   	=$data->val($i,5);
-				$edition    	=$data->val($i,6);
-				$language  		=$data->val($i,7);
-				$copies     	=$data->val($i,8);
 				$media_type 	=$data->val($i,9);
 				$media_code		= strstr($media_type, ' ', true);
 				$type_bk      	=$data->val($i,10);
 				$type_code		=strstr($type_bk, ' ', true);
-				$dewey_no    	=$data->val($i,11);
-				$author_code	=$data->val($i,12);
-				$title_code		=$data->val($i,13);
-				$year_pub		=$data->val($i,14);
-				$city_pub		=$data->val($i,15);
-				$pub_name		=$data->val($i,16);
-				$phys_desc		=$data->val($i,17);
-				$index			=$data->val($i,18);
-				$bibliography	=$data->val($i,19);			
 				$loc			=$data->val($i,20);
 				$loc_code		=strstr($loc, ' ', true);
 				$spec			=$data->val($i,21);
 				$spec_loc		=strstr($spec, ' ', true);
-				$price			=$data->val($i,22);
 				$fund			=$data->val($i,23);
 				$fund_code		=strstr($fund, ' ', true);
-				$fund_note		=$data->val($i,24);
 				$date			= date('Y-m-d');
-	
-				//Input Data Excel Ke Database	
-				$command = Yii::app()->dblentera->createCommand();
-				$command->insert('t_bk_main', array(
-
-					'OPERATOR_CODE' 	=> Yii::app()->session['username'],
-					'REGISTER'			=> $register,
-					'ISBN' 				=> $ISBN,
-					'TITLE' 			=> $title,
-					'VOLUME'			=> $volume,
-					'PRINTING' 			=> $printing,
-					'EDITION' 			=> $edition,
-					'LANGUAGE' 			=> $language,
-					'COPIES'			=> $copies,
-					'MEDIA_CODE' 		=> $media_code,
-					'TYPE_CODE' 		=> $type_code,
-					'DEWEY_NO' 			=> $dewey_no,
-					'AUTHOR_CODE' 		=> $author_code,
-					'TITLE_CODE' 		=> $title_code,
-					'YEAR_PUB' 			=> $year_pub,
-					'CITY_PUB' 			=> $city_pub,
-					'PUB_NAME' 			=> $pub_name,
-					'PHYS_DESCRIPTION' 	=> $phys_desc,
-					'INDEX_' 			=> $index,
-					'BIBLIOGRAPHY' 		=> $bibliography,
-					'LOCATION_CODE' 	=> $loc_code,
-					'SPEC_LOCATION' 	=> $spec_loc,
-					'PRICE'				=> $price,
-					'FUND_CODE' 		=> $fund_code,
-					'FUND_NOTE'			=> $fund_note,
-					'ACCEPT_DATE' 		=> $date,
-					'DATA_ENTRY'		=> $date
-				));
-				if ($command) $sukses++;
-				else $gagal++;
+				
+				$model->OPERATOR_CODE = Yii::app()->session['username'];
+				$model->REGISTER = $data->val($i,1);
+				$model->ISBN = $data->val($i,2);
+				$model->TITLE = $data->val($i,3);
+				$model->VOLUME = $data->val($i,4);
+				$model->PRINTING = $data->val($i,5);
+				$model->EDITION = $data->val($i,6);
+				$model->LANGUAGE = $data->val($i,7);
+				$model->COPIES = $data->val($i,8);
+				$model->MEDIA_CODE = $media_code;
+				$model->TYPE_CODE = $type_code;
+				$model->DEWEY_NO = $data->val($i,11);
+				$model->AUTHOR_CODE = $data->val($i,12);
+				$model->TITLE_CODE = $data->val($i,13);
+				$model->YEAR_PUB = $data->val($i,14);
+				$model->CITY_PUB = $data->val($i,15);
+				$model->PUB_NAME = $data->val($i,16);
+				$model->PHYS_DESCRIPTION = $data->val($i,17);
+				$model->INDEX_ = $data->val($i,18);
+				$model->BIBLIOGRAPHY = $data->val($i,19);
+				$model->LOCATION_CODE = $loc_code;
+				$model->SPEC_LOCATION = $spec_loc;
+				$model->PRICE = $data->val($i,22);
+				$model->FUND_CODE = $fund_code;
+				$model->FUND_NOTE = $data->val($i,24);
+				$model->ACCEPT_DATE = $date;
+				$model->DATA_ENTRY = $date;
+					
+				if($model->validate()){
+					$model->save();
+					$sukses++;
+				}
+				else{
+					$gagal++;
+				}
 			}//for
+			//$model->unsetAttributes();
 			Yii::app()->user->setFlash('success',"Success import $sukses failed $gagal");
-			return;
-			unlink($path);
+			$this->redirect(array('Katalog/F_katalog'));
 		}
 		else {
+			//$model->unsetAttributes();
 			Yii::app()->user->setFlash('error',"Form yang Diupload Salah!");
+			$this->redirect(array('Katalog/F_katalog'));
 		}
 		unlink($path);
 	}

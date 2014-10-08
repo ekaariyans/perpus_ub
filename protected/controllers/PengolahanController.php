@@ -154,8 +154,6 @@ class PengolahanController extends Controller
 				$query = "delete from t_permintaan_buku where ID_PERMINTAAN_BUKU = $id_permintaan_buku";
 				$command = Yii::app()->db->createCommand($query);
 				$command->execute();
-				
-				
 				$this->redirect('index.php?r=pengolahan/f_laporan_p');
 			}
 		}
