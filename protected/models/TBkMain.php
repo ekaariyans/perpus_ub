@@ -37,6 +37,7 @@ class TBkMain extends CActiveRecord
 	/**
 	 * @return string the associated database table name
 	 */
+	 public $filee;
 	public function tableName()
 	{
 		return 't_bk_main';
@@ -65,6 +66,8 @@ class TBkMain extends CActiveRecord
 			array('LOCATION_CODE', 'length', 'max'=>7),
 			array('PRICE', 'length', 'max'=>19),
 			array('ACCEPT_DATE, DATA_ENTRY', 'safe'),
+			array('filee','file','types'=>'xls,xlsx','allowEmpty' => true),
+			array('filee','safe','on'=>'excel'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('REGISTER, ISBN, TITLE, VOLUME, PRINTING, EDITION, LANGUAGE, COPIES, MEDIA_CODE, TYPE_CODE, DEWEY_NO, AUTHOR_CODE, TITLE_CODE, YEAR_PUB, CITY_PUB, PUB_NAME, PHYS_DESCRIPTION, INDEX_, BIBLIOGRAPHY, LOCATION_CODE, SPEC_LOCATION, PRICE, FUND_CODE, FUND_NOTE, ACCEPT_DATE, DATA_ENTRY, OPERATOR_CODE', 'safe', 'on'=>'search'),

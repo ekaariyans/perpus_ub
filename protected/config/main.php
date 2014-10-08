@@ -64,17 +64,17 @@ return array(
 		*/
 		'db'=>array(
 			//'connectionString' => 'mysql:host=localhost;dbname=library',
-			'connectionString' => 'sqlsrv:Server=DINANTAKA;Database=perpus_yii',
+			'connectionString' => 'sqlsrv:Server=EKA;Database=perpus_yii',
 			'username' => 'sa',
-			'password' => 'kangkungpait21',
+			'password' => 'akupapua',
 			'charset' => 'GB2312',
       		'tablePrefix' => 'tbl_',
 		),
 		
 		'dblentera'=>array(
-			'connectionString' => 'sqlsrv:Server=DINANTAKA;Database=lentera',
+			'connectionString' => 'sqlsrv:Server=EKA;Database=lentera',
 			'username' => 'sa',
-			'password' => 'kangkungpait21',
+			'password' => 'akupapua',
 			'charset' => 'GB2312',
       		'tablePrefix' => 'tbl_',
 			'class'  => 'CDbConnection',

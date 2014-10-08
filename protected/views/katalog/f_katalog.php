@@ -8,220 +8,409 @@
 
 <!-- Mulai Isi Tab -->
 <div class="tab-content no-padding">
+
+
+
 <div class="tab-pane active" id="tambah">
-								<div class="nav-tabs-custom">
-                                <!-- Tabs within a box -->
-                                <ul class="nav nav-tabs role="tablist"">
-                                    <li class="active"><a href="#individu" data-toggle="tab">INDIVIDU</a></li>
-                                    <li><a href="#kolektif" data-toggle="tab">KOLEKTIF</a></li>
-                                </ul>
-                                <div class="tab-content no-padding">
-                                    <!-- Morris chart - Sales -->
-                                    <div class="tab-pane active" id="individu">
-                                    	<div class="box box-primary" style="padding:15px 15px 15px 50px;">
-                <div class="box-header">
-                    <h4 class="box-title">Tambah Katalog</h4>
-                </div>
-                                    	<div class="form">
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'tbk-main-f_katalog-form',
-	// Please note: When you enable ajax validation, make sure the corresponding
-	// controller action is handling ajax validation correctly.
-	// See class documentation of CActiveForm for details on this,
-	// you need to use the performAjaxValidation()-method described there.
-	'enableAjaxValidation'=>false,
-)); ?>
+	<div class="nav-tabs-custom">
+		<!-- Tabs within a box -->
+		<ul class="nav nav-tabs role="tablist"">
+			<li class="active"><a href="#individu" data-toggle="tab">INDIVIDU</a></li>
+			<li><a href="#kolektif" data-toggle="tab">KOLEKTIF</a></li>
+		</ul>
+        
+		<div class="tab-content no-padding">
+            <!-- Morris chart - Sales -->
+            <div class="tab-pane active" id="individu">
+                <div class="box box-primary" style="padding:15px 15px 15px 50px;">
+					<div class="box-header">
+						<h4 class="box-title">Tambah Katalog</h4>
+					</div>
+					
+                    <div class="form">
+					<?php $form=$this->beginWidget('CActiveForm', array(
+						'id'=>'tbk-main-f_katalog-form',
+						// Please note: When you enable ajax validation, make sure the corresponding
+						// controller action is handling ajax validation correctly.
+						// See class documentation of CActiveForm for details on this,
+						// you need to use the performAjaxValidation()-method described there.
+						'enableAjaxValidation'=>false,
+					)); ?>
+                    
+					<?php 	foreach(Yii::app()->user->getFlashes() as $key => $message) {
+								if($key == 'success'){
+								echo '<div class="alert alert-success" role="alert' . $key . '"> 
+									<button type="button" class="close" data-dismiss="alert">
+									<span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>' . $message ."</div>\n";
+								}
+								elseif($key == 'error'){
+								echo '<div class="alert alert-danger" role="alert' . $key . '"> 
+									<button type="button" class="close" data-dismiss="alert">
+									<span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>' . $message . "\n".
+									$form->errorSummary($model)."</div>\n";
+								}
+							}
+					?>
+						<p class="note">Fields bertanda <span class="required">*</span> harus diisi.</p>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
+						<?php //echo $form->errorSummary($model); ?>
+                        
+                        <div class="col-lg-12">
+                        	<div class="form-group" style="margin-bottom:40px;">
+									<?php echo $form->labelEx($model, 'REGISTER', array('class' => 'col-sm-2 control-label')); ?>
+									<div class="col-sm-10">
+									<?php echo $form->textField($model, 'REGISTER', array('class' => 'form-control', 'placeholder' => 'Register Buku')); ?>
+									<?php echo $form->error($model,'REGISTER'); ?>
+									</div>
+							</div>
+							<div class="form-group">
+								<?php echo $form->labelEx($model, 'TITLE', array('class' => 'col-sm-2 control-label')); ?>
+								<div class="col-sm-10">
+								<?php echo $form->textField($model, 'TITLE', array('class' => 'form-control', 'placeholder' => 'Judul Buku')); ?>
+								<?php echo $form->error($model,'TITLE'); ?>
+								</div>
+							</div>
+                        </div>
+						
+                        <div class="col-lg-12">
+							<div class="form-group">
+									<h4>Identifier Item</h4>
+							</div>
+							
+							<div class="col-lg-6">
+								<div class="form-group">
+									<?php echo $form->labelEx($model, 'VOLUME', array('class' => 'col-sm-2 control-label')); ?>
+									<div class="col-sm-10"  style="margin-bottom:10px">
+									<?php echo $form->textField($model, 'VOLUME', array('class' => 'form-control', 'placeholder' => 'Volume Buku')); ?>
+									<?php echo $form->error($model,'VOLUME'); ?>
+									</div>
+								</div>
 
-	<?php echo $form->errorSummary($model); ?>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'REGISTER'); ?>
-		<?php echo $form->textField($model,'REGISTER'); ?>
-		<?php echo $form->error($model,'REGISTER'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'TITLE'); ?>
-		<?php echo $form->textField($model,'TITLE'); ?>
-		<?php echo $form->error($model,'TITLE'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'COPIES'); ?>
-		<?php echo $form->textField($model,'COPIES'); ?>
-		<?php echo $form->error($model,'COPIES'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'ISBN'); ?>
-		<?php echo $form->textField($model,'ISBN'); ?>
-		<?php echo $form->error($model,'ISBN'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'VOLUME'); ?>
-		<?php echo $form->textField($model,'VOLUME'); ?>
-		<?php echo $form->error($model,'VOLUME'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'PRINTING'); ?>
-		<?php echo $form->textField($model,'PRINTING'); ?>
-		<?php echo $form->error($model,'PRINTING'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'EDITION'); ?>
-		<?php echo $form->textField($model,'EDITION'); ?>
-		<?php echo $form->error($model,'EDITION'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'SPEC_LOCATION'); ?>
-		<?php echo $form->textField($model,'SPEC_LOCATION'); ?>
-		<?php echo $form->error($model,'SPEC_LOCATION'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'PUB_NAME'); ?>
-		<?php echo $form->textField($model,'PUB_NAME'); ?>
-		<?php echo $form->error($model,'PUB_NAME'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'LANGUAGE'); ?>
-		<?php echo $form->textField($model,'LANGUAGE'); ?>
-		<?php echo $form->error($model,'LANGUAGE'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'DEWEY_NO'); ?>
-		<?php echo $form->textField($model,'DEWEY_NO'); ?>
-		<?php echo $form->error($model,'DEWEY_NO'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'INDEX_'); ?>
-		<?php echo $form->textField($model,'INDEX_'); ?>
-		<?php echo $form->error($model,'INDEX_'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'MEDIA_CODE'); ?>
-		<?php echo $form->textField($model,'MEDIA_CODE'); ?>
-		<?php echo $form->error($model,'MEDIA_CODE'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'TYPE_CODE'); ?>
-		<?php echo $form->textField($model,'TYPE_CODE'); ?>
-		<?php echo $form->error($model,'TYPE_CODE'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'FUND_CODE'); ?>
-		<?php echo $form->textField($model,'FUND_CODE'); ?>
-		<?php echo $form->error($model,'FUND_CODE'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'OPERATOR_CODE'); ?>
-		<?php echo $form->textField($model,'OPERATOR_CODE'); ?>
-		<?php echo $form->error($model,'OPERATOR_CODE'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'AUTHOR_CODE'); ?>
-		<?php echo $form->textField($model,'AUTHOR_CODE'); ?>
-		<?php echo $form->error($model,'AUTHOR_CODE'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'TITLE_CODE'); ?>
-		<?php echo $form->textField($model,'TITLE_CODE'); ?>
-		<?php echo $form->error($model,'TITLE_CODE'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'YEAR_PUB'); ?>
-		<?php echo $form->textField($model,'YEAR_PUB'); ?>
-		<?php echo $form->error($model,'YEAR_PUB'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'CITY_PUB'); ?>
-		<?php echo $form->textField($model,'CITY_PUB'); ?>
-		<?php echo $form->error($model,'CITY_PUB'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'FUND_NOTE'); ?>
-		<?php echo $form->textField($model,'FUND_NOTE'); ?>
-		<?php echo $form->error($model,'FUND_NOTE'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'PHYS_DESCRIPTION'); ?>
-		<?php echo $form->textField($model,'PHYS_DESCRIPTION'); ?>
-		<?php echo $form->error($model,'PHYS_DESCRIPTION'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'BIBLIOGRAPHY'); ?>
-		<?php echo $form->textField($model,'BIBLIOGRAPHY'); ?>
-		<?php echo $form->error($model,'BIBLIOGRAPHY'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'LOCATION_CODE'); ?>
-		<?php echo $form->textField($model,'LOCATION_CODE'); ?>
-		<?php echo $form->error($model,'LOCATION_CODE'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'PRICE'); ?>
-		<?php echo $form->textField($model,'PRICE'); ?>
-		<?php echo $form->error($model,'PRICE'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'ACCEPT_DATE'); ?>
-		<?php echo $form->textField($model,'ACCEPT_DATE'); ?>
-		<?php echo $form->error($model,'ACCEPT_DATE'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'DATA_ENTRY'); ?>
-		<?php echo $form->textField($model,'DATA_ENTRY'); ?>
-		<?php echo $form->error($model,'DATA_ENTRY'); ?>
-	</div>
-
-
-	<div class="row buttons">
-		<?php echo CHtml::submitButton('Submit'); ?>
-	</div>
-
-<?php $this->endWidget(); ?>
-
-</div><!-- form -->
-                                    	</div>
-                                    	
-                                    	
-	
+								<div class="form-group">
+									<?php echo $form->labelEx($model, 'PRINTING', array('class' => 'col-sm-2 control-label')); ?>
+									<div class="col-sm-10" style="margin-bottom:10px">
+									<?php echo $form->textField($model, 'PRINTING', array('class' => 'form-control', 'placeholder' => 'Printing Buku')); ?>
+									<?php echo $form->error($model,'PRINTING'); ?>
+									</div>
+								</div>
+								
+								<div class="form-group" >
+									<?php echo $form->labelEx($model, 'EDITION', array('class' => 'col-sm-2 control-label')); ?>
+									<div class="col-sm-10">
+									<?php echo $form->textField($model, 'EDITION', array('class' => 'form-control', 'placeholder' => 'Edisi Buku')); ?>
+									<?php echo $form->error($model,'EDITION'); ?>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-lg-6">
+								<div class="form-group">
+									<?php echo $form->labelEx($model, 'ISBN', array('class' => 'col-sm-2 control-label')); ?>
+									<div class="col-sm-10" style="margin-bottom:10px">
+									<?php echo $form->textField($model, 'ISBN', array('class' => 'form-control', 'placeholder' => 'ISBN Buku')); ?>
+									<?php echo $form->error($model,'ISBN'); ?>
+									</div>
+								</div>
+                             
+                                <div class="form-group">
+                                <label class="col-sm-2 control-label">Bahasa</label>
+                                    <div class="col-sm-10" style="margin-bottom:10px">
+                                        <select name="selectbhs" class="form-control">
+                                         	<option value="" disabled selected>--Bahasa--</option>
+                                            <option value="Indonesia">Indonesia</option>
+                                            <option value="Inggris">Inggris</option>
+                                            <option value="Lainnya">Lainnya</option>
+                                        </select>
                                     </div>
-                                    
-                                    <div class="tab-pane" id="kolektif" style="position: relative; height: 300px;"></div>
                                 </div>
-                            </div><!-- /.nav-tabs-custom -->
-</div>
+                                
+                                <div class="form-group">
+									<label class="col-sm-2 control-label">Media Type</label>
+                                    <div class="col-sm-10" style="margin-bottom:10px">
+	           						 <?php
+										echo $form->dropDownList(
+											$modTMedia,
+											'MEDIA_CODE',
+											CHtml::listData(TMediaType::model()->findAll(),
+											'MEDIA_CODE','MEDIA_NAME'),
+											array('empty'=>'--Media Buku--','class' => 'form-control'));
+									 ?>
+                                    </div>
+                                </div>
+							</div>
+							
+						</div>
+						
+						<div class="col-lg-12">
+							<div class="form-group">
+									<h4>Local Call Number</h4>
+							</div>
+							
+							<div class="col-lg-6">
+								<div class="form-group">
+                                <label class="col-sm-2 control-label">Tipe Buku</label>
+                                    <div class="col-sm-10" style="margin-bottom:11px">
+	           						 <?php
+										echo $form->dropDownList(
+											$modTbk,
+											'TYPE_CODE',
+											CHtml::listData(TBkType::model()->findAll(),
+											'TYPE_CODE','TYPE_NAME'),
+											array('empty'=>'--Tipe Buku--','class' => 'form-control'));
+									 ?>
+                                    </div>
+                                </div>
+								<div class="form-group">
+									<?php echo $form->labelEx($model, 'DEWEY_NO', array('class' => 'col-sm-2 control-label')); ?>
+									<div class="col-sm-10" style="margin-bottom:11px">
+									<?php echo $form->textField($model, 'DEWEY_NO', array('class' => 'form-control', 'placeholder' => 'No. Dewey Buku')); ?>
+									<?php echo $form->error($model,'DEWEY_NO'); ?>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-lg-6">
+								<div class="form-group">
+									<?php echo $form->labelEx($model, 'AUTHOR_CODE', array('class' => 'col-sm-2 control-label')); ?>
+									<div class="col-sm-10" style="margin-bottom:11px">
+									<?php echo $form->textField($model, 'AUTHOR_CODE', array('class' => 'form-control', 'placeholder' => 'Author Abrev')); ?>
+									<?php echo $form->error($model,'AUTHOR_CODE'); ?>
+									</div>
+								</div>
+								<div class="form-group">
+									<?php echo $form->labelEx($model, 'TITLE_CODE', array('class' => 'col-sm-2 control-label')); ?>
+									<div class="col-sm-10" style="margin-bottom:11px">
+									<?php echo $form->textField($model, 'TITLE_CODE', array('class' => 'form-control', 'placeholder' => 'Title Abrev')); ?>
+									<?php echo $form->error($model,'TITLE_CODE'); ?>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						
+						<div class="col-lg-12">
+							<div class="form-group">
+									<h4>Publication Data</h4>
+							</div>
+							
+							<div class="col-lg-6">
+								<div class="form-group">
+									<?php echo $form->labelEx($model, 'CITY_PUB', array('class' => 'col-sm-2 control-label')); ?>
+									<div class="col-sm-10" style="margin-bottom:11px">
+									<?php echo $form->textField($model, 'CITY_PUB', array('class' => 'form-control', 'placeholder' => 'City Publication')); ?>
+									<?php echo $form->error($model,'CITY_PUB'); ?>
+									</div>
+								</div>
+								<div class="form-group">
+									<?php echo $form->labelEx($model, 'PUB_NAME', array('class' => 'col-sm-2 control-label')); ?>
+									<div class="col-sm-10" style="margin-bottom:11px">
+									<?php echo $form->textField($model, 'PUB_NAME', array('class' => 'form-control', 'placeholder' => 'Publisher Buku')); ?>
+									<?php echo $form->error($model,'PUB_NAME'); ?>
+									</div>
+								</div>
+								<div class="form-group">
+									<?php echo $form->labelEx($model, 'YEAR_PUB', array('class' => 'col-sm-2 control-label')); ?>
+									<div class="col-sm-10" style="margin-bottom:11px">
+									<?php echo $form->textField($model, 'YEAR_PUB', array('class' => 'form-control', 'placeholder' => 'Tahun Publish Buku')); ?>
+									<?php echo $form->error($model,'YEAR_PUB'); ?>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						
+						<div class="col-lg-12">
+							<div class="form-group">
+									<h4>Description</h4>
+							</div>
+							<div class="col-lg-6">
+								<div class="form-group">
+									<?php echo $form->labelEx($model, 'PHYS_DESCRIPTION', array('class' => 'col-sm-2 control-label')); ?>
+									<div class="col-sm-10" style="margin-bottom:11px">
+									<?php echo $form->textField($model, 'PHYS_DESCRIPTION', array('class' => 'form-control', 'placeholder' => 'Deskripsi/ Informasi Buku')); ?>
+									<?php echo $form->error($model,'PHYS_DESCRIPTION'); ?>
+									</div>
+								</div>
+								<div class="form-group">
+									<?php echo $form->labelEx($model, 'INDEX_', array('class' => 'col-sm-2 control-label')); ?>
+									<div class="col-sm-10" style="margin-bottom:11px">
+									<?php echo $form->textField($model, 'INDEX_', array('class' => 'form-control', 'placeholder' => 'Indeks Buku')); ?>
+									<?php echo $form->error($model,'INDEX_'); ?>
+									</div>
+								</div>
+								<div class="form-group">
+									<?php echo $form->labelEx($model, 'COPIES', array('class' => 'col-sm-2 control-label')); ?>
+									<div class="col-sm-10" style="margin-bottom:11px">
+									<?php echo $form->textField($model, 'COPIES', array('class' => 'form-control', 'placeholder' => 'Exemplar Buku')); ?>
+									<?php echo $form->error($model,'COPIES'); ?>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-lg-6">
+								<div class="form-group">
+									<?php echo $form->labelEx($model, 'BIBLIOGRAPHY', array('class' => 'col-sm-2 control-label')); ?>
+									<div class="col-sm-10" style="margin-bottom:11px">
+									<?php echo $form->textField($model, 'BIBLIOGRAPHY', array('class' => 'form-control', 'placeholder' => 'Bibliografi Buku')); ?>
+									<?php echo $form->error($model,'BIBLIOGRAPHY'); ?>
+									</div>
+								</div>
+								<div class="form-group">
+                                <label class="col-sm-2 control-label">Lokasi</label>
+                                    <div class="col-sm-10" style="margin-bottom:10px">
+	           						 <?php
+										echo $form->dropDownList(
+											$modLoc,
+											'LOCATION_CODE',
+											CHtml::listData(TLocation::model()->findAll(),
+											'LOCATION_CODE','LOCATION_NAME'),
+											array('empty'=>'--Lokasi Buku--','class' => 'form-control'));
+									 ?>
+                                    </div>
+                                </div>
+								<div class="form-group">
+                                <label class="col-sm-2 control-label">Detail Lokasi</label>
+                                    <div class="col-sm-10" style="margin-bottom:10px">
+	           						 <?php
+										echo $form->dropDownList(
+											$modSpecLoc,
+											'SPEC_LOCATION',
+											CHtml::listData(TSpecLocation::model()->findAll(),
+											'SPEC_LOCATION','NAME'),
+											array('empty'=>'--Detail Lokasi--','class' => 'form-control'));
+									 ?>
+                                    </div>
+                                </div>
+							</div>
+							
+						</div>
+						
+						<div class="col-lg-12">
+							<div class="form-group">
+									<h4>Others</h4>
+							</div>
+							<div class="col-lg-6">
+								<div class="form-group">
+									<?php echo $form->labelEx($model, 'PRICE', array('class' => 'col-sm-2 control-label')); ?>
+									<div class="col-sm-10" style="margin-bottom:11px">
+									<?php echo $form->textField($model, 'PRICE', array('class' => 'form-control', 'placeholder' => 'Harga Buku')); ?>
+									<?php echo $form->error($model,'PRICE'); ?>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label">Funding</label>
+                                    <div class="col-sm-10" style="margin-bottom:10px">
+	           						 <?php
+										echo $form->dropDownList(
+											$modFund,
+											'FUND_CODE',
+											CHtml::listData(TFunding::model()->findAll(),
+											'FUND_CODE','FUND_NAME'),
+											array('empty'=>'--Funding--','class' => 'form-control'));
+									 ?>
+                                    </div>
+                                </div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label">Processed On</label>
+									<div class="col-sm-10" style="margin-bottom:10px">
+										<div class="input-group-addon">
+											<i class="fa fa-calendar"></i>
+										</div>
+										<div class="input-group-addon">
+											<?php //echo $form->textField($model, 'DATA_ENTRY', array('class' => 'form-control','type'=>'date')); ?>
+											<input name="DATA_ENTRY" id="DATA_ENTRY" type="date" class="form-control" style="width:280px" /> 
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-lg-6">
+								<div class="form-group">
+									<?php echo $form->labelEx($model, 'FUND_NOTE', array('class' => 'col-sm-2 control-label')); ?>
+									<div class="col-sm-10" style="margin-bottom:90px">
+									<?php echo $form->textArea($model, 'FUND_NOTE', array('class' => 'form-control', 'placeholder' => 'Catatan', 'rows'=>'3')); ?>
+									<?php echo $form->error($model,'FUND_NOTE'); ?>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						
+						<div class="form-group" style="margin-left:120px;">
+							<?php echo CHtml::submitButton('Submit', array('class' => 'btn btn-default')); ?>
+						</div>
+						
+					<?php $this->endWidget(); ?>
+
+					</div><!-- form -->
+                </div>
+            </div><!-- individu -->
+                                    
+            
+			<!-- kolektif -->
+			<div class="tab-pane" id="kolektif" style="position: relative; height: 300px;">
+			<?php $form=$this->beginWidget('CActiveForm', array(
+						'id'=>'tbk-main-f_katalog-form',
+						'enableAjaxValidation'=>false,
+					)); ?>
+				<div class="col-md-6" style="padding: 20px 0px 0px 20px">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+						<b>Register Buku Secara Kolektif</b>
+						</div>
+						<div class="panel-body">
+							<div class="table-responsive">
+							<table class="table">
+							<tr height="50">
+								<td>Form Register Buku</td>
+								<td>:</td>
+								<td><a href="<?php echo Yii::app()->request->baseUrl.'/assets/TemplateForm/FormRegisterBuku.xls'; ?>" class="btn btn-default btn-flat">Download</a></td>
+							</tr>
+								
+							<tr>
+								 <td>Masukkan Data Excel</td>
+								 <td>:</td>
+								 <td><?php echo $form->fileField($model, 'filee', array('maxlength' => 200, 'class' => 'btn btn-default')); ?></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td><?php echo CHtml::submitButton('Submit', array('class' => 'btn btn-default')); ?></td>
+							</tr>
+							</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<?php $this->endWidget(); ?>
+			</div><!-- kolektif -->
+        
+		
+		
+		</div><!-- tab-content -->
+    </div><!-- /.nav-tabs-custom -->
+</div><!-- tambah -->
+
+
+
+
+
+
+
 
 
 
 
 <div class="tab-pane active" id="daftar">
 </div>
+
+
+
+
+
+
+
+
 </div>
 <!-- akhir Isi Tab -->
 
