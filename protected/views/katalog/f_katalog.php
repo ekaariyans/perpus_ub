@@ -352,6 +352,7 @@
 			<?php $form=$this->beginWidget('CActiveForm', array(
 						'id'=>'tbk-main-f_katalog-form',
 						'enableAjaxValidation'=>false,
+						'htmlOptions' => array('enctype' => 'multipart/form-data'),
 					)); ?>
 				<div class="col-md-6" style="padding: 20px 0px 0px 20px">
 					<div class="panel panel-default">

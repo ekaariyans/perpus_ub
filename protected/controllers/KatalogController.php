@@ -6,7 +6,7 @@ class KatalogController extends Controller
 	{
 		$this->render('index');
 	}
-	
+
 	public function actionF_katalog()
 	{
 		$model=new TBkMain;
@@ -22,10 +22,9 @@ class KatalogController extends Controller
 			
 			//cek jika kolektif
 			if(isset($_POST['TBkMain']['filee'])){
-				echo "oke";
+				$this->regBukuKolektif($model);
 			}
-			else echo "no";
-				/*
+			else {
 				if($model->validate())
 				{
 					$model->OPERATOR_CODE = Yii::app()->session['username'];
@@ -60,9 +59,10 @@ class KatalogController extends Controller
 				}
 				else {
 					Yii::app()->user->setFlash('error',"Proses Input Gagal!");
-				}*/
+				}
+			}
 		}
-		else $this->render('f_katalog',array('model'=>$model,
+		$this->render('f_katalog',array('model'=>$model,
 							'modSpecLoc'=>$modSpecLoc,
 							'modLoc'=>$modLoc,
 							'modFund'=>$modFund,
@@ -71,65 +71,107 @@ class KatalogController extends Controller
 	}
 
 
-	public function regBukuKolektif(){
+	public function regBukuKolektif($model){
 		Yii::import('ext.phpexcelreader.JPhpExcelReader');
 		
+		$isTrue = false;
 		//upload file excel			
-		$fileUpload=CUploadedFile::getInstance($model,'filee');
-		$path=Yii::getPathOfAlias('webroot').'/upload/'.$fileUpload;
-		$fileUpload->saveAs($path);
+			$fileUpload=CUploadedFile::getInstance($model,'filee');
+			$path=Yii::getPathOfAlias('webroot').'/upload/'.$fileUpload;
+			$fileUpload->saveAs($path);
+			
+			if( !file_exists( $path ) ) die( 'File could not be found at: ' . $path );
+			$data=new JPhpExcelReader($path);
+			
+			$baris = $data->rowcount($sheet_index=0);
+			
+		for($col=1; $col<12; $col++){
+			$kolom = $data->val(5,$col);
+			if(strtolower($kolom)=='isbn'){
+				$isTrue = true;	
+			}
+		}
 		
-		if( !file_exists( $path ) ) die( 'File could not be found at: ' . $path );
-		$data=new JPhpExcelReader($path);
-		
-		$baris = $data->rowcount($sheet_index=0);
-		$sukses = 0;
-		$gagal = 0;
-		
-		//Baca File Excel
-			for ($i=2; $i<=$baris; $i++)
+		if($isTrue) {
+			$sukses = 0;
+			$gagal = 0;
+			
+			//Baca File Excel
+			for ($i=6; $i<=$baris; $i++)
 			{
-				$peminta   =$data->val($i,1);
-				$judul     =$data->val($i,2);
-				$pengarang =$data->val($i,3);
-				$ISBN      =$data->val($i,4);
-				$jenis     =$data->val($i,5);
-				$bahasa    =$data->val($i,6);
-				$penerbit  =$data->val($i,7);
-				$tahun     =$data->val($i,8);
-				$harga     =$data->val($i,9);
-				$link      =$data->val($i,10);
-				$status    =0;
-				$prioritas =$data->val($i,11);
-				if(strtolower($prioritas)=='wajib'){
-					$idprioritas =1;
-				}elseif(strtolower($prioritas)=='penunjang'){
-					$idprioritas =2;
-				}
+				$register   	=$data->val($i,1);
+				$ISBN     		=$data->val($i,2);
+				$title 			=$data->val($i,3);
+				$volume     	=$data->val($i,4);
+				$printing   	=$data->val($i,5);
+				$edition    	=$data->val($i,6);
+				$language  		=$data->val($i,7);
+				$copies     	=$data->val($i,8);
+				$media_type 	=$data->val($i,9);
+				$media_code		= strstr($media_type, ' ', true);
+				$type_bk      	=$data->val($i,10);
+				$type_code		=strstr($type_bk, ' ', true);
+				$dewey_no    	=$data->val($i,11);
+				$author_code	=$data->val($i,12);
+				$title_code		=$data->val($i,13);
+				$year_pub		=$data->val($i,14);
+				$city_pub		=$data->val($i,15);
+				$pub_name		=$data->val($i,16);
+				$phys_desc		=$data->val($i,17);
+				$index			=$data->val($i,18);
+				$bibliography	=$data->val($i,19);			
+				$loc			=$data->val($i,20);
+				$loc_code		=strstr($loc, ' ', true);
+				$spec			=$data->val($i,21);
+				$spec_loc		=strstr($spec, ' ', true);
+				$price			=$data->val($i,22);
+				$fund			=$data->val($i,23);
+				$fund_code		=strstr($fund, ' ', true);
+				$fund_note		=$data->val($i,24);
+				$date			= date('Y-m-d');
+	
 				//Input Data Excel Ke Database	
-				$command = Yii::app()->db->createCommand();
+				$command = Yii::app()->dblentera->createCommand();
 				$command->insert('t_bk_main', array(
-					 //'id_permintaan'=>'',
-					 'K_PERMINTAAN'=>$k_permintaan,
-					 'NAMA_PEMINTA'=>$peminta,
-					 'JUDUL'       =>$judul,
-					 'PENGARANG'   =>$pengarang,
-					 'ISBN'        =>$ISBN,
-					 'JENIS'       =>$jenis,
-					 'BAHASA'      =>$bahasa,
-					 'PENERBIT'    =>$penerbit,
-					 'TAHUN_TERBIT'=>$tahun,
-					 'HARGA'       =>$harga,
-					 'LINK_WEBSITE'=>$link,
-					 'ID_STATUS'   =>$status,
-					 'ID_PRIORITAS'=>$idprioritas,
+
+					'OPERATOR_CODE' 	=> Yii::app()->session['username'],
+					'REGISTER'			=> $register,
+					'ISBN' 				=> $ISBN,
+					'TITLE' 			=> $title,
+					'VOLUME'			=> $volume,
+					'PRINTING' 			=> $printing,
+					'EDITION' 			=> $edition,
+					'LANGUAGE' 			=> $language,
+					'COPIES'			=> $copies,
+					'MEDIA_CODE' 		=> $media_code,
+					'TYPE_CODE' 		=> $type_code,
+					'DEWEY_NO' 			=> $dewey_no,
+					'AUTHOR_CODE' 		=> $author_code,
+					'TITLE_CODE' 		=> $title_code,
+					'YEAR_PUB' 			=> $year_pub,
+					'CITY_PUB' 			=> $city_pub,
+					'PUB_NAME' 			=> $pub_name,
+					'PHYS_DESCRIPTION' 	=> $phys_desc,
+					'INDEX_' 			=> $index,
+					'BIBLIOGRAPHY' 		=> $bibliography,
+					'LOCATION_CODE' 	=> $loc_code,
+					'SPEC_LOCATION' 	=> $spec_loc,
+					'PRICE'				=> $price,
+					'FUND_CODE' 		=> $fund_code,
+					'FUND_NOTE'			=> $fund_note,
+					'ACCEPT_DATE' 		=> $date,
+					'DATA_ENTRY'		=> $date
 				));
 				if ($command) $sukses++;
 				else $gagal++;
-			 }//for
-			 Yii::app()->user->setFlash('success',"Success import $sukses failed $gagal");
-			 return;
-		
+			}//for
+			Yii::app()->user->setFlash('success',"Success import $sukses failed $gagal");
+			return;
+			unlink($path);
+		}
+		else {
+			Yii::app()->user->setFlash('error',"Form yang Diupload Salah!");
+		}
 		unlink($path);
 	}
 
