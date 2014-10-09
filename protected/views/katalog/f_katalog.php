@@ -403,18 +403,184 @@
 
 
 <div class="tab-pane active" id="daftar">
-</div>
+<?php $form=$this->beginWidget('CActiveForm', array(
+						'id'=>'tbk-main-f_katalog-form',
+						'enableAjaxValidation'=>false,
+						'action'=>array('/katalog/f_katalog'),
+						'htmlOptions' => array('enctype' => 'multipart/form-data'),
+					)); ?>
+	<div class="tab-content no-padding">
+        <div class="tab-pane active">
+            <div class="box box-primary" style="padding:15px 15px 15px 15px;">
+					
+                    
+                <div class="form-group">
+                <div class="col-md-4">
+                <div class="panel panel-default">
+                <div class="panel-heading">
+                    <label class="col-sm-1 control-label"></label>
+                    <?php
+                    echo $form->dropDownList($model, 'TITLE', array('prompt' => 'Pencarian Berdasarkan', '1' => 'Register', '2' => 'Tanggal'), array('class'=>'form-control',
+                        'onchange' => '	
+                  							 if(this.value==1)
+											{ 	
+                  								document.getElementById("kotak").style.display="block";
+                  								document.getElementById("register").style.display="block";
+                  								document.getElementById("button").style.display="block";
+                  								document.getElementById("tanggal").style.display="none";
+                  								document.getElementById("button").style.visibility="visible";
+                  								}
+                  							else if(this.value==2)
+											{ 
+                  								document.getElementById("kotak").style.display="block";
+                  								document.getElementById("register").style.display="none";
+                  								document.getElementById("button").style.display="block";
+                  								document.getElementById("tanggal").style.display="block";
+                  								document.getElementById("button").style.visibility="visible";
+                  								}
+												else if(this.value=="prompt")
+											{ 
+                  								document.getElementById("kotak").style.display="none";
+                  								document.getElementById("register").style.display="none";
+                  								document.getElementById("tanggal").style.display="none";
+                  								}
+                  							
+                  							'
+                    ));
+                    ?>
 
+                </div>     
+                </div>
+                </div>
+                </div>
+                
+                <br /><br /><br /><br />
+                 <div class="well well-sm" id="kotak">
+					<div id="tanggal">
+                        <div class="form-group">
+                            	<table>
+                                <tr>
+                                <td><label>Dari Tanggal:</label></td>
+                                <td colspan="3"><label>Sampai Tanggal:</label></td>
+                                </tr>
+                                
+                                <tr>
+                                <div class="input-group">
+                                <td>
+                                    <div class="input-group-addon"><i class="fa fa-calendar"></i>
+                                    </div>
+                                    <div class="input-group-addon">
+                                    <input name="tanggal1" id="tanggal1" type="date" class="form-control" style="width:350px" />
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                	<div class="input-group-addon">
+                                    <input name="tanggal2" id="tanggal2" type="date" class="form-control" style="width:350px" />
+                                    </div>
+                                </td>                              
+                                </div><!-- /.input group -->
+                                </tr>
+                                </table>
+                        </div><!-- /.form group -->
+                    </div>
+                            
+                            
+                    <div id="register">
+                        <div class="form-group">
+                            <label>Register</label>
+                            <div class="input-group">
+                                    <input type="text" name="register" id="register" />
+                            </div>
+                        </div>
+                    </div>
+					
+						<div class="form-group" id="button">
+							<?php echo CHtml::submitButton('Submit', array('class' => 'btn btn-default')); ?>
+						</div>
+                    
 
-
-
-
-
+                </div>	
+					
+				
+                
+                <div class="box-header">
+						<h4 class="box-title">Daftar Katalog</h4>
+					</div>
+            <table id="daftartbl" class="table table-bordered table-striped">
+            <thead>
+                <tr class="heading">
+                    <th>REGISTER</th>
+                    <th>ISBN</th>
+                    <th width="25%">JUDUL</th>
+                    <th>BAHASA</th>
+                    <th>TAHUN</th>
+					<th>PENERBIT</th>
+					<th>TANGGAL MASUK</th>
+                    <th>HARGA</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    foreach ($data as $model):
+                ?>
+                    <td><?php echo $model['REGISTER']; ?></td>
+					<td><?php echo $model['ISBN']; ?></td>
+					<td><?php echo $model['TITLE']; ?></td>
+					<td><?php echo $model['LANGUAGE']; ?></td>
+					<td><?php echo $model['YEAR_PUB']; ?></td>
+					<td><?php echo $model['PUB_NAME']; ?></td>
+					<td><?php echo $model['DATA_ENTRY']; ?></td>
+					<td><?php echo $model['PRICE']; ?></td>
+					<td>
+                                <a href class="glyphicon glyphicon-list-alt" id="<?php echo $model['REGISTER'] ?>" name="detailbuku"></a>
+                                &nbsp;&nbsp;&nbsp;
+                                <a href class="glyphicon glyphicon-pencil" id="<?php echo $model['REGISTER'] ?>" name="editbuku"></a>
+                                &nbsp;&nbsp;
+                                <a href class="glyphicon glyphicon-remove" id="<?php echo $model['REGISTER'] ?>" name="hapusbuku" onclick="return confirm('Are you sure you want to delete this item?')"></a>
+                            </td>
+                    </tr>
+			<?php endforeach; ?>
+            </tbody>
+			</table>
+            
+							</div>
+						</div>
+				</div>
+				<?php $this->endWidget(); ?>
+			
 
 
 </div>
 <!-- akhir Isi Tab -->
 
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+                                    $(document).ready(function() {
 
+                                        $("div#tanggal").hide();
+                                        $("div#register").hide();
+                                        $("div#kotak").hide();
+                                        $("div#button").hide();
+
+                                    });
+    </script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        $('#daftartbl').dataTable({
+            "bPaginate": true,
+            "bLengthChange": true,
+            "bFilter": false,
+            "bSort": true,
+            "bInfo": false,
+            "bAutoWidth": false
+        });
+    });
+</script>
 

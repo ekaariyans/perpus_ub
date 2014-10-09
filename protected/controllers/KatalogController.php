@@ -6,7 +6,13 @@ class KatalogController extends Controller
 	{
 		$this->render('index');
 	}
-
+	
+	public function actionDaftar_katalog(){
+		
+		//$this->f_katalog($data);
+	}
+	
+	
 	public function actionF_katalog()
 	{
 		$model=new TBkMain;
@@ -66,12 +72,31 @@ class KatalogController extends Controller
 				}
 			}
 		}
-		else $this->render('f_katalog',array('model'=>$model,
+		
+		
+		else {
+		
+		if(isset($_POST['register']))
+		{
+		
+			$register = $_POST['register'];
+			$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_main] @register=$register ");
+			$data=$command->queryAll();	
+		}
+		
+		else {
+			$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_main_all] ");
+			$data=$command->queryAll();	
+		}
+		
+		$this->render('f_katalog',array('model'=>$model,
 							'modSpecLoc'=>$modSpecLoc,
 							'modLoc'=>$modLoc,
 							'modFund'=>$modFund,
 							'modTbk'=>$modTbk,
-							'modTMedia'=>$modTMedia));
+							'modTMedia'=>$modTMedia,
+							'data'=>$data));
+		}
 	}
 
 
