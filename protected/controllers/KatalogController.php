@@ -7,11 +7,6 @@ class KatalogController extends Controller
 		$this->render('index');
 	}
 	
-	public function actionDaftar_katalog(){
-		
-		//$this->f_katalog($data);
-	}
-	
 	
 	public function actionF_katalog()
 	{
@@ -31,6 +26,7 @@ class KatalogController extends Controller
 			if(isset($_POST['TBkMain']['filee'])){
 				$this->regBukuKolektif($model);
 			}
+			
 			else {
 				if($model->validate())
 				{
@@ -70,33 +66,45 @@ class KatalogController extends Controller
 				else {
 					Yii::app()->user->setFlash('error',"Proses Input Gagal!");
 				}
+				
 			}
-		}
 		
 		
-		else {
-		
-		if(isset($_POST['register']))
-		{
-		
-			$register = $_POST['register'];
-			$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_main] @register=$register ");
-			$data=$command->queryAll();	
-		}
-		
-		else {
-			$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_main_all] ");
-			$data=$command->queryAll();	
-		}
-		
-		$this->render('f_katalog',array('model'=>$model,
+			}
+			if(isset($_POST['register']))
+			{
+				$register = $_POST['register'];
+				$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_main] @register='$register' ");
+				$data=$command->queryAll();
+					
+			}
+			
+			if(isset($_POST['tanggal1'])&&($_POST['tanggal2']))
+			{
+				$tanggal1 = $_POST['tanggal1'];
+				$tanggal2 = $_POST['tanggal2'];
+				$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_main_date] @tanggal1='$tanggal1',@tanggal2='$tanggal2' ");
+				$data=$command->queryAll();
+					
+			}
+			
+			else if(!isset($_POST['register'])&&!isset($_POST['tanggal1'])&&!isset($_POST['tanggal2']))
+			{
+				$register=0;
+				$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_main_all]");
+				$data=$command->queryAll();
+					
+			}
+			
+			$this->render('f_katalog',array('model'=>$model,
 							'modSpecLoc'=>$modSpecLoc,
 							'modLoc'=>$modLoc,
 							'modFund'=>$modFund,
 							'modTbk'=>$modTbk,
 							'modTMedia'=>$modTMedia,
-							'data'=>$data));
-		}
+							'data'=>$data,
+							'register'=>$register));
+		
 	}
 
 

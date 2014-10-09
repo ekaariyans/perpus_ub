@@ -2,7 +2,6 @@
 <ul class="nav nav-tabs" role="tablist no-padding">
     <li class="active"><a href="#tambah" role="tab" data-toggle="tab">TAMBAH KATALOG</a></li>
     <li><a href="#daftar" role="tab" data-toggle="tab">DAFTAR KATALOG</a></li>
-    <li><a href="#label" role="tab" data-toggle="tab">BARCODE DAN LABEL</a></li>
 </ul>
 <!-- End Nav tabs -->
 
@@ -406,7 +405,6 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
 						'id'=>'tbk-main-f_katalog-form',
 						'enableAjaxValidation'=>false,
-						'action'=>array('/katalog/f_katalog'),
 						'htmlOptions' => array('enctype' => 'multipart/form-data'),
 					)); ?>
 	<div class="tab-content no-padding">
@@ -420,9 +418,13 @@
                 <div class="panel-heading">
                     <label class="col-sm-1 control-label"></label>
                     <?php
-                    echo $form->dropDownList($model, 'TITLE', array('prompt' => 'Pencarian Berdasarkan', '1' => 'Register', '2' => 'Tanggal'), array('class'=>'form-control',
+                    echo $form->dropDownList($model, 'TITLE', array('prompt' => 'Pencarian Berdasarkan', '0'=>'50 Data Terbaru', '1' => 'Register', '2' => 'Tanggal'), array('class'=>'form-control',
                         'onchange' => '	
-                  							 if(this.value==1)
+											if(this.value==0)
+											{ 
+												window.location="index.php?r=katalog/f_katalog";
+											}
+                  							else if(this.value==1)
 											{ 	
                   								document.getElementById("kotak").style.display="block";
                   								document.getElementById("register").style.display="block";
@@ -455,6 +457,7 @@
                 </div>
                 
                 <br /><br /><br /><br />
+                <div id="all"> <?php //echo Yii::app()->runController('katalog/f_katalog'); ?> </div>
                  <div class="well well-sm" id="kotak">
 					<div id="tanggal">
                         <div class="form-group">
