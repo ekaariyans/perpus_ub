@@ -58,7 +58,8 @@
                         	<div class="form-group" style="margin-bottom:40px;">
 									<?php echo $form->labelEx($model, 'REGISTER', array('class' => 'col-sm-2 control-label')); ?>
 									<div class="col-sm-10">
-									<?php echo $form->textField($model, 'REGISTER', array('class' => 'form-control', 'placeholder' => 'Register Buku')); ?>
+									<?php echo $form->textField($model, 'REGISTER', array('class' => 'form-control', 
+												'placeholder' => $newreg,'readOnly'=>true)); ?>
 									<?php echo $form->error($model,'REGISTER'); ?>
 									</div>
 							</div>
@@ -400,8 +401,7 @@
 
 
 
-
-<div class="tab-pane active" id="daftar">
+<div class="tab-pane" id="daftar">
 <?php $form=$this->beginWidget('CActiveForm', array(
 						'id'=>'tbk-main-f_katalog-form',
 						'enableAjaxValidation'=>false,
@@ -409,9 +409,7 @@
 					)); ?>
 	<div class="tab-content no-padding">
         <div class="tab-pane active">
-            <div class="box box-primary" style="padding:15px 15px 15px 15px;">
-					
-                    
+            <div class="box box-primary" style="padding:15px 15px 15px 15px;">   
                 <div class="form-group">
                 <div class="col-md-4">
                 <div class="panel panel-default">
@@ -512,53 +510,55 @@
                 <div class="box-header">
 						<h4 class="box-title">Daftar Katalog</h4>
 					</div>
-            <table id="daftartbl" class="table table-bordered table-striped">
-            <thead>
-                <tr class="heading">
-                    <th>REGISTER</th>
-                    <th>ISBN</th>
-                    <th width="25%">JUDUL</th>
-                    <th>BAHASA</th>
-                    <th>TAHUN</th>
-					<th>PENERBIT</th>
-					<th>TANGGAL MASUK</th>
-                    <th>HARGA</th>
-                    <th>Aksi</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                    foreach ($data as $model):
-                ?>
-                    <td><?php echo $model['REGISTER']; ?></td>
-					<td><?php echo $model['ISBN']; ?></td>
-					<td><?php echo $model['TITLE']; ?></td>
-					<td><?php echo $model['LANGUAGE']; ?></td>
-					<td><?php echo $model['YEAR_PUB']; ?></td>
-					<td><?php echo $model['PUB_NAME']; ?></td>
-					<td><?php echo $model['DATA_ENTRY']; ?></td>
-					<td><?php echo $model['PRICE']; ?></td>
-					<td>
-                                <a href class="glyphicon glyphicon-list-alt" id="<?php echo $model['REGISTER'] ?>" name="detailbuku"></a>
-                                &nbsp;&nbsp;&nbsp;
-                                <a href class="glyphicon glyphicon-pencil" id="<?php echo $model['REGISTER'] ?>" name="editbuku"></a>
-                                &nbsp;&nbsp;
-                                <a href class="glyphicon glyphicon-remove" id="<?php echo $model['REGISTER'] ?>" name="hapusbuku" onclick="return confirm('Are you sure you want to delete this item?')"></a>
-                            </td>
-                    </tr>
-			<?php endforeach; ?>
-            </tbody>
-			</table>
+				<table id="daftartbl" class="table table-bordered table-striped">
+				<thead>
+					<tr class="heading">
+						<th>REGISTER</th>
+						<th>ISBN</th>
+						<th width="25%">JUDUL</th>
+						<th>BAHASA</th>
+						<th>TAHUN</th>
+						<th>PENERBIT</th>
+						<th>TANGGAL MASUK</th>
+						<th>HARGA</th>
+						<th>Aksi</th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php
+						foreach ($data as $model):
+					?>
+						<td><?php echo $model['REGISTER']; ?></td>
+						<td><?php echo $model['ISBN']; ?></td>
+						<td><?php echo $model['TITLE']; ?></td>
+						<td><?php echo $model['LANGUAGE']; ?></td>
+						<td><?php echo $model['YEAR_PUB']; ?></td>
+						<td><?php echo $model['PUB_NAME']; ?></td>
+						<td><?php echo $model['DATA_ENTRY']; ?></td>
+						<td><?php echo $model['PRICE']; ?></td>
+						<td>
+									<a href class="glyphicon glyphicon-list-alt" id="<?php echo $model['REGISTER'] ?>" name="detailbuku"></a>
+									&nbsp;&nbsp;&nbsp;
+									<a href class="glyphicon glyphicon-pencil" id="<?php echo $model['REGISTER'] ?>" name="editbuku"></a>
+									&nbsp;&nbsp;
+									<a href class="glyphicon glyphicon-remove" id="<?php echo $model['REGISTER'] ?>" name="hapusbuku" onclick="return confirm('Are you sure you want to delete this item?')"></a>
+								</td>
+						</tr>
+				<?php endforeach; ?>
+				</tbody>
+				</table>
             
-							</div>
-						</div>
-				</div>
+			</div>
+		</div>
+	</div><!-- tab-content -->
 				<?php $this->endWidget(); ?>
 			
 
-
 </div>
-<!-- akhir Isi Tab -->
+
+			
+			
+</div><!-- akhir Isi Tab -->
 
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

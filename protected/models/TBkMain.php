@@ -51,9 +51,9 @@ class TBkMain extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('REGISTER, TITLE', 'required'),
+			array('TITLE', 'required'),
 			array('COPIES', 'numerical', 'integerOnly'=>true),
-			array('REGISTER, ISBN, VOLUME, PRINTING, EDITION, SPEC_LOCATION', 'length', 'max'=>10),
+			array('REGISTER, ISBN, VOLUME, PRINTING, EDITION, SPEC_LOCATION', 'length', 'max'=>12),
 			array('TITLE, PUB_NAME', 'length', 'max'=>255),
 			array('LANGUAGE, DEWEY_NO, INDEX_', 'length', 'max'=>15),
 			array('MEDIA_CODE, TYPE_CODE, FUND_CODE, OPERATOR_CODE', 'length', 'max'=>5),

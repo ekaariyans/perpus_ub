@@ -7,7 +7,6 @@ class KatalogController extends Controller
 		$this->render('index');
 	}
 	
-	
 	public function actionF_katalog()
 	{
 		$model=new TBkMain;
@@ -17,7 +16,6 @@ class KatalogController extends Controller
 		$modTbk = new TBkType;
 		$modTMedia = new TMediaType;
 		
-
 		if(isset($_POST['TBkMain']))
 		{
 			$model->attributes=$_POST['TBkMain'];
@@ -25,13 +23,13 @@ class KatalogController extends Controller
 			//cek jika kolektif
 			if(isset($_POST['TBkMain']['filee'])){
 				$this->regBukuKolektif($model);
-			}
-			
+			}	
 			else {
 				if($model->validate())
 				{
+					$newreg = $this->generateRegister();
 					$model->OPERATOR_CODE = Yii::app()->session['username'];
-					$model->REGISTER = $_POST['TBkMain']['REGISTER'];
+					$model->REGISTER = $newreg;
 					$model->ISBN = $_POST['TBkMain']['ISBN'];
 					$model->TITLE = $_POST['TBkMain']['TITLE'];
 					$model->VOLUME = $_POST['TBkMain']['VOLUME'];
@@ -56,73 +54,96 @@ class KatalogController extends Controller
 					$model->FUND_CODE = $_POST['TFunding']['FUND_CODE'];
 					$model->FUND_NOTE = $_POST['TBkMain']['FUND_NOTE'];
 					$model->ACCEPT_DATE = $_POST['DATA_ENTRY'];
-					$model->DATA_ENTRY = $_POST['DATA_ENTRY'];
+					$model->DATA_ENTRY = date('Y-m-d');;
 					
 					$model->save();
-					$model->unsetAttributes();
 					Yii::app()->user->setFlash('success',"Proses Input Data Berhasil!");
+					$newreg = $this->generateRegister();
 					$this->redirect(array('Katalog/F_katalog'));
 				}
 				else {
 					Yii::app()->user->setFlash('error',"Proses Input Gagal!");
+					$this->redirect(array('Katalog/F_katalog'));
 				}
-				
 			}
-		
-		
-			}
+		}
+		else{
 			if(isset($_POST['register']))
 			{
 				$register = $_POST['register'];
-				$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_main] @register='$register' ");
-				$data=$command->queryAll();
-					
+				//$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_main] @register='$register' ");
+				$data=$command->queryAll();		
 			}
-			
+				
 			if(isset($_POST['tanggal1'])&&($_POST['tanggal2']))
 			{
 				$tanggal1 = $_POST['tanggal1'];
 				$tanggal2 = $_POST['tanggal2'];
-				$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_main_date] @tanggal1='$tanggal1',@tanggal2='$tanggal2' ");
+				//$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_main_date] @tanggal1='$tanggal1',@tanggal2='$tanggal2' ");
 				$data=$command->queryAll();
-					
 			}
-			
 			else if(!isset($_POST['register'])&&!isset($_POST['tanggal1'])&&!isset($_POST['tanggal2']))
 			{
 				$register=0;
 				$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_main_all]");
 				$data=$command->queryAll();
-					
 			}
 			
+			$newreg = $this->generateRegister();
 			$this->render('f_katalog',array('model'=>$model,
-							'modSpecLoc'=>$modSpecLoc,
-							'modLoc'=>$modLoc,
-							'modFund'=>$modFund,
-							'modTbk'=>$modTbk,
-							'modTMedia'=>$modTMedia,
-							'data'=>$data,
-							'register'=>$register));
-		
+				'modSpecLoc'=>$modSpecLoc,
+				'modLoc'=>$modLoc,
+				'modFund'=>$modFund,
+				'modTbk'=>$modTbk,
+				'modTMedia'=>$modTMedia,
+				'data'=>$data,
+				'newreg' => $newreg));
+		}
+	}
+	
+	
+	public function generateRegister(){
+		$newreg = null;
+		//generate register
+		$sql = Yii::app()->db->createCommand()
+			->select('REGISTER')
+			->from('lentera.dbo.t_bk_main')
+			->where("OPERATOR_CODE = '".Yii::app()->session['username']."'")
+			->order('REGISTER desc')
+			//->text;
+			->queryRow();	
+			
+		if(!empty($sql)){
+			$reg = $sql['REGISTER'];
+			$numb = (int)substr($reg,6);
+			$newnum = str_pad($numb+1, 6, "0", STR_PAD_LEFT);	
+		}
+		else{
+			$newnum = '000001';
+		}	
+		$r_baca = substr(Yii::app()->session['bagian'], -2);
+		$tahun  = substr(date("Y"), -2);
+		//register baru
+		$newreg = "01".$r_baca.$tahun.$newnum;
+		return $newreg;
 	}
 
 
 	public function regBukuKolektif($model){
 		Yii::import('ext.phpexcelreader.JPhpExcelReader');
-		
+		$register = null;
 		$isTrue = false;
 		//upload file excel			
-			$fileUpload=CUploadedFile::getInstance($model,'filee');
-			$path=Yii::getPathOfAlias('webroot').'/upload/'.$fileUpload;
-			$fileUpload->saveAs($path);
+		$fileUpload=CUploadedFile::getInstance($model,'filee');
+		$path=Yii::getPathOfAlias('webroot').'/upload/'.$fileUpload;
+		$fileUpload->saveAs($path);
 			
-			if( !file_exists( $path ) ) die( 'File could not be found at: ' . $path );
-			$data=new JPhpExcelReader($path);
+		if( !file_exists( $path ) ) die( 'File could not be found at: ' . $path );
+		$data=new JPhpExcelReader($path);
 			
-			$baris = $data->rowcount($sheet_index=0);
+		$baris = $data->rowcount($sheet_index=0);
 			
-		for($col=1; $col<24; $col++){
+		for($col=1; $col<23; $col++){
 			$kolom = $data->val(5,$col);
 			if(strtolower($kolom)=='isbn'){
 				$isTrue = true;	
@@ -136,53 +157,61 @@ class KatalogController extends Controller
 			//Baca File Excel
 			for ($i=6; $i<=$baris; $i++)
 			{
-				$media_type 	=$data->val($i,9);
+				if(!empty($register)){
+					$register = (float)$register+1;
+					$newreg = str_pad($register, 12, "0", STR_PAD_LEFT);
+					//echo "gak empty".$newreg;
+				}
+				else {
+					$register = $this->generateRegister();
+					$newreg = $register;
+					//echo "empty".$register;
+				}
+				
+				$media_type 	=$data->val($i,8);
 				$media_code		= strstr($media_type, ' ', true);
-				$type_bk      	=$data->val($i,10);
+				$type_bk      	=$data->val($i,9);
 				$type_code		=strstr($type_bk, ' ', true);
-				$loc			=$data->val($i,20);
+				$loc			=$data->val($i,19);
 				$loc_code		=strstr($loc, ' ', true);
-				$spec			=$data->val($i,21);
+				$spec			=$data->val($i,20);
 				$spec_loc		=strstr($spec, ' ', true);
-				$fund			=$data->val($i,23);
+				$fund			=$data->val($i,22);
 				$fund_code		=strstr($fund, ' ', true);
 				$date			= date('Y-m-d');
 				
-				$model->OPERATOR_CODE = Yii::app()->session['username'];
-				$model->REGISTER = $data->val($i,1);
-				$model->ISBN = $data->val($i,2);
-				$model->TITLE = $data->val($i,3);
-				$model->VOLUME = $data->val($i,4);
-				$model->PRINTING = $data->val($i,5);
-				$model->EDITION = $data->val($i,6);
-				$model->LANGUAGE = $data->val($i,7);
-				$model->COPIES = $data->val($i,8);
-				$model->MEDIA_CODE = $media_code;
-				$model->TYPE_CODE = $type_code;
-				$model->DEWEY_NO = $data->val($i,11);
-				$model->AUTHOR_CODE = $data->val($i,12);
-				$model->TITLE_CODE = $data->val($i,13);
-				$model->YEAR_PUB = $data->val($i,14);
-				$model->CITY_PUB = $data->val($i,15);
-				$model->PUB_NAME = $data->val($i,16);
-				$model->PHYS_DESCRIPTION = $data->val($i,17);
-				$model->INDEX_ = $data->val($i,18);
-				$model->BIBLIOGRAPHY = $data->val($i,19);
-				$model->LOCATION_CODE = $loc_code;
-				$model->SPEC_LOCATION = $spec_loc;
-				$model->PRICE = $data->val($i,22);
-				$model->FUND_CODE = $fund_code;
-				$model->FUND_NOTE = $data->val($i,24);
-				$model->ACCEPT_DATE = $date;
-				$model->DATA_ENTRY = $date;
-					
-				if($model->validate()){
-					$model->save();
-					$sukses++;
-				}
-				else{
-					$gagal++;
-				}
+				$command = Yii::app()->dblentera->createCommand()
+				->insert('t_bk_main', array(
+					'OPERATOR_CODE' => Yii::app()->session['username'],
+					'REGISTER' => $newreg,
+					'ISBN' => $data->val($i,1),
+					'TITLE' => $data->val($i,2),
+					'VOLUME' => $data->val($i,3),
+					'PRINTING' => $data->val($i,4),
+					'EDITION' => $data->val($i,5),
+					'LANGUAGE' => $data->val($i,6),
+					'COPIES' => $data->val($i,7),
+					'MEDIA_CODE' => $media_code,
+					'TYPE_CODE' => $type_code,
+					'DEWEY_NO' => $data->val($i,10),
+					'AUTHOR_CODE' => $data->val($i,11),
+					'TITLE_CODE' => $data->val($i,12),
+					'YEAR_PUB' => $data->val($i,13),
+					'CITY_PUB' => $data->val($i,14),
+					'PUB_NAME' => $data->val($i,15),
+					'PHYS_DESCRIPTION' => $data->val($i,16),
+					'INDEX_' => $data->val($i,17),
+					'BIBLIOGRAPHY' => $data->val($i,18),
+					'LOCATION_CODE' => $loc_code,
+					'SPEC_LOCATION' => $spec_loc,
+					'PRICE' => $data->val($i,21),
+					'FUND_CODE' => $fund_code,
+					'FUND_NOTE' => $data->val($i,23),
+					'ACCEPT_DATE' => $date,
+					'DATA_ENTRY' => $date,
+				));
+				if ($command) $sukses++;
+				else $gagal++;
 			}//for
 			//$model->unsetAttributes();
 			Yii::app()->user->setFlash('success',"Success import $sukses failed $gagal");

@@ -107,7 +107,7 @@
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <?php
                     $bagian = Yii::app()->session['bagian'];
-                    if($bagian=='01'||$bagian=='999'){
+                    if($bagian=='01'||$bagian=='999'||$bagian=='BRA021'){
                         $contr= 'Pengolahan';
                     }
                     else if($bagian=='02'){
@@ -170,7 +170,7 @@
                         </li>
                         <?php endif; ?>
                         
-                        <?php if(Yii::app()->session['bagian'] == '01' || Yii::app()->session['bagian'] == '999'): ?>
+                        <?php if(Yii::app()->session['bagian'] == '01' || Yii::app()->session['bagian'] == '999' || Yii::app()->session['bagian'] == 'BRA021'): ?>
                         <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-folder"></i>
@@ -193,7 +193,7 @@
                         </li>
                         <?php endif; ?>
                         
-                        <?php if(Yii::app()->session['bagian'] == '04' || Yii::app()->session['bagian'] == '01' || Yii::app()->session['bagian'] == '116' || Yii::app()->session['bagian'] == '999'): ?>
+                        <?php if(Yii::app()->session['bagian'] == '04' || Yii::app()->session['bagian'] == '01' || Yii::app()->session['bagian'] == '116' || Yii::app()->session['bagian'] == '999' || Yii::app()->session['bagian'] == 'BRA021'): ?>
                         <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-folder"></i>
@@ -202,7 +202,7 @@
                             </a>
                             <ul class="treeview-menu">
                                 <?php
-                                if(Yii::app()->session['level'] == '01' || Yii::app()->session['level'] == '999'):
+                                if(Yii::app()->session['level'] == '01' || Yii::app()->session['level'] == '999'|| Yii::app()->session['bagian'] == 'BRA021'):
                                 $this->widget('zii.widgets.CMenu', array(
                                     'items' => array(
                                         array('label' => 'KOLEKTIF', 'url' => array('/permintaan/f_permintaan_f')),
