@@ -305,8 +305,8 @@
         </div><!-- ./wrapper -->
          <div class="panel-footer" > <center>&copy; PENGEMBANGAN IT PERPUSTAKAAN UNIVERSITAS BRAWIJAYA</center></div>
         <!-- add new calendar event modal -->
-
-
+	<script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/js/jquery-barcode.min.js" type="text/javascript"></script>
+	
         <!-- jQuery 2.0.2 -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         <!-- jQuery UI 1.10.3 -->

@@ -421,6 +421,7 @@
 											if(this.value==0)
 											{ 
 												window.location="index.php?r=katalog/f_katalog";
+												//document.getElementById("daftar").className += "tab-pane active";
 											}
                   							else if(this.value==1)
 											{ 	
@@ -501,18 +502,25 @@
 						<div class="form-group" id="button">
 							<?php echo CHtml::submitButton('Submit', array('class' => 'btn btn-default')); ?>
 						</div>
-                    
-
                 </div>	
-					
+				<?php $this->endWidget(); ?>
 				
                 
+				<?php $form=$this->beginWidget('CActiveForm', array(
+						'id'=>'tbk-main-f_katalog-form',
+						'enableAjaxValidation'=>false,
+						'action'=>Yii::app()->createUrl('Cetak/CetakBarcode'),
+					)); ?>
                 <div class="box-header">
 						<h4 class="box-title">Daftar Katalog</h4>
-					</div>
+				</div>
+
+					<p><?php echo CHtml::submitButton('Cetak Barcode', array('class' => 'btn btn-default')); ?></p>
+					
 				<table id="daftartbl" class="table table-bordered table-striped">
 				<thead>
 					<tr class="heading">
+						<th><input id="checkall" type="checkbox" /></th>
 						<th>REGISTER</th>
 						<th>ISBN</th>
 						<th width="25%">JUDUL</th>
@@ -528,6 +536,7 @@
 					<?php
 						foreach ($data as $model):
 					?>
+						<td><input class="check" type="checkbox" name="checkbk[]" value="<?php echo $model['REGISTER'] ?>"></td>
 						<td><?php echo $model['REGISTER']; ?></td>
 						<td><?php echo $model['ISBN']; ?></td>
 						<td><?php echo $model['TITLE']; ?></td>
@@ -561,19 +570,31 @@
 </div><!-- akhir Isi Tab -->
 
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script>
-                                    $(document).ready(function() {
-
-                                        $("div#tanggal").hide();
-                                        $("div#register").hide();
-                                        $("div#kotak").hide();
-                                        $("div#button").hide();
-
-                                    });
-    </script>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+	$("div#tanggal").hide();
+    $("div#register").hide();
+    $("div#kotak").hide();
+    $("div#button").hide();
+    
+	$('#checkall').click(function(event) {  //on click 
+	alert("clicked");
+	/*
+        if(this.checked) { // check select status
+            $('input.check').each(function() { //loop through each checkbox
+                this.checked = true;  //select all checkboxes with class "checkbox1"               
+            });
+        }else{
+            $('input.check').each(function() { //loop through each checkbox
+                this.checked = false; //deselect all checkboxes with class "checkbox1"                       
+            });         
+        }*/
+    });
+});
+</script>
+
 <script type="text/javascript">
     $(function() {
         $('#daftartbl').dataTable({
@@ -586,4 +607,5 @@
         });
     });
 </script>
+
 

@@ -15,6 +15,28 @@ class KatalogController extends Controller
 		$modFund = new TFunding;
 		$modTbk = new TBkType;
 		$modTMedia = new TMediaType;
+		/*
+					if(isset($_POST['register']))
+					{
+						$register = $_POST['register'];
+						$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_main] @register='$register' ");
+						$data=$command->queryAll();		
+					}
+						
+					if(isset($_POST['tanggal1'])&&($_POST['tanggal2']))
+					{
+						$tanggal1 = $_POST['tanggal1'];
+						$tanggal2 = $_POST['tanggal2'];
+						$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_main_date] @tanggal1='$tanggal1',@tanggal2='$tanggal2' ");
+						$data=$command->queryAll();
+					}
+					else if(!isset($_POST['register'])&&!isset($_POST['tanggal1'])&&!isset($_POST['tanggal2']))
+					{
+						$register=0;
+						$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_main_all]");
+						$data=$command->queryAll();
+					}
+		*/
 		
 		if(isset($_POST['TBkMain']))
 		{
@@ -62,32 +84,48 @@ class KatalogController extends Controller
 					$this->redirect(array('Katalog/F_katalog'));
 				}
 				else {
-					Yii::app()->user->setFlash('error',"Proses Input Gagal!");
-					$this->redirect(array('Katalog/F_katalog'));
+					if(isset($_POST['register']))
+					{
+						$register = $_POST['register'];
+						$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_main] @register='$register' ");
+						$data=$command->queryAll();
+						$newreg = $this->generateRegister();
+						$this->render('f_katalog',array('model'=>$model,
+							'modSpecLoc'=>$modSpecLoc,
+							'modLoc'=>$modLoc,
+							'modFund'=>$modFund,
+							'modTbk'=>$modTbk,
+							'modTMedia'=>$modTMedia,
+							'data'=>$data,
+							'newreg' => $newreg));						
+					}
+					else if(isset($_POST['tanggal1'])&&($_POST['tanggal2']))
+					{
+						$tanggal1 = $_POST['tanggal1'];
+						$tanggal2 = $_POST['tanggal2'];
+						$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_main_date] @tanggal1='$tanggal1',@tanggal2='$tanggal2' ");
+						$data=$command->queryAll();
+						$newreg = $this->generateRegister();
+						$this->render('f_katalog',array('model'=>$model,
+							'modSpecLoc'=>$modSpecLoc,
+							'modLoc'=>$modLoc,
+							'modFund'=>$modFund,
+							'modTbk'=>$modTbk,
+							'modTMedia'=>$modTMedia,
+							'data'=>$data,
+							'newreg' => $newreg));
+					}
+					else if(!$model->validate()){
+						Yii::app()->user->setFlash('error',"Proses Input Gagal!");
+						$this->redirect(array('Katalog/F_katalog'));
+					}
 				}
 			}
 		}
 		else{
-			if(isset($_POST['register']))
-			{
-				$register = $_POST['register'];
-				//$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_main] @register='$register' ");
-				$data=$command->queryAll();		
-			}
-				
-			if(isset($_POST['tanggal1'])&&($_POST['tanggal2']))
-			{
-				$tanggal1 = $_POST['tanggal1'];
-				$tanggal2 = $_POST['tanggal2'];
-				//$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_main_date] @tanggal1='$tanggal1',@tanggal2='$tanggal2' ");
-				$data=$command->queryAll();
-			}
-			else if(!isset($_POST['register'])&&!isset($_POST['tanggal1'])&&!isset($_POST['tanggal2']))
-			{
-				$register=0;
-				$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_main_all]");
-				$data=$command->queryAll();
-			}
+			$register=0;
+			$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_main_all]");
+			$data=$command->queryAll();
 			
 			$newreg = $this->generateRegister();
 			$this->render('f_katalog',array('model'=>$model,

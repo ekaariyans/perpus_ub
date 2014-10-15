@@ -7,6 +7,14 @@ class CetakController extends Controller
 	{
 		$this->render('index');
 	}
+	
+	public function actionCetakBarcode(){
+		if(isset($_POST['checkbk'])){
+			$register = $_POST['checkbk'];
+		}
+		$this->render('barcode',array('register'=>$register));
+	}
+	
 	public function actionCetak(){
 		$bahasa = $_GET['bhs'];
 		$status = $_GET['status'];
