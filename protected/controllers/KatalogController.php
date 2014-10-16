@@ -7,6 +7,113 @@ class KatalogController extends Controller
 		$this->render('index');
 	}
 	
+	public function actionAksi()
+	{
+		$model1=new TBkMain; 
+		$modLoc = new TLocation;
+		$modSpecLoc = new TSpecLocation;
+		$modFund = new TFunding;
+		$modTbk = new TBkType;
+		$modTMedia = new TMediaType;
+		
+		if(isset($_GET['det'])&&($_GET['nama'])){
+		$register = $_GET['det'];
+		$aksi=($_GET['nama']);
+		$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_main_all]");
+        $data=$command->queryAll();
+				
+			if($aksi=='detailbuku'){
+				
+				$this->render('view', array('data'=>$data,'register'=>$register));
+			}
+			else if($aksi=='editbuku'){
+				
+					if(isset($_POST['TBkMain'])) 
+					{ 
+						$model1->attributes=$_POST['TBkMain']; 
+						
+						
+						$OPERATOR_CODE = Yii::app()->session['username'];
+						$REGISTER = $_POST['TBkMain']['REGISTER'];
+						$ISBN = $_POST['TBkMain']['ISBN'];
+						$TITLE = $_POST['TBkMain']['TITLE'];
+						$VOLUME = $_POST['TBkMain']['VOLUME'];
+						$PRINTING = $_POST['TBkMain']['PRINTING'];
+						$EDITION = $_POST['TBkMain']['EDITION'];
+						$LANGUAGE = $_POST['TBkMain']['LANGUAGE'];
+						$COPIES = $_POST['TBkMain']['COPIES'];
+						$MEDIA_CODE = $_POST['TMediaType']['MEDIA_CODE'];
+						$TYPE_CODE = $_POST['TBkType']['TYPE_CODE'];
+						$DEWEY_NO = $_POST['TBkMain']['DEWEY_NO'];
+						$AUTHOR_CODE = $_POST['TBkMain']['AUTHOR_CODE'];
+						$TITLE_CODE = $_POST['TBkMain']['TITLE_CODE'];
+						$YEAR_PUB = $_POST['TBkMain']['YEAR_PUB'];
+						$CITY_PUB = $_POST['TBkMain']['CITY_PUB'];
+						$PUB_NAME = $_POST['TBkMain']['PUB_NAME'];
+						$PHYS_DESCRIPTION = $_POST['TBkMain']['PHYS_DESCRIPTION'];
+						$INDEX_ = $_POST['TBkMain']['INDEX_'];
+						$BIBLIOGRAPHY = $_POST['TBkMain']['BIBLIOGRAPHY'];
+						$LOCATION_CODE = $_POST['TLocation']['LOCATION_CODE'];
+						$SPEC_LOCATION = $_POST['TSpecLocation']['SPEC_LOCATION'];
+						$PRICE = $_POST['TBkMain']['PRICE'];
+						$FUND_CODE = $_POST['TFunding']['FUND_CODE'];
+						$FUND_NOTE = $_POST['TBkMain']['FUND_NOTE'];
+						$ACCEPT_DATE = $_POST['DATA_ENTRY'];
+						$DATA_ENTRY = date('Y-m-d');;
+							
+						
+						
+						$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_editbuku]  
+						@OPERATOR_CODE		='$OPERATOR_CODE',
+						@REGISTER			='$REGISTER',
+						@ISBN				='$ISBN',
+						@TITLE				='$TITLE',
+						@VOLUME				='$VOLUME',
+						@PRINTING			='$PRINTING',
+						@EDITION			='$EDITION',
+						@LANGUAGE			='$LANGUAGE',
+						@COPIES				='$COPIES',
+						@MEDIA_CODE			='$MEDIA_CODE',
+						@TYPE_CODE			='$TYPE_CODE',
+						@DEWEY_NO			='$DEWEY_NO',
+						@AUTHOR_CODE		='$AUTHOR_CODE',
+						@TITLE_CODE			='$TITLE_CODE',
+						@YEAR_PUB			='$YEAR_PUB',
+						@CITY_PUB			='$CITY_PUB',
+						@PUB_NAME			='$PUB_NAME',
+						@PHYS_DESCRIPTION	='$PHYS_DESCRIPTION',
+						@INDEX_				='$INDEX_',
+						@BIBLIOGRAPHY		='$BIBLIOGRAPHY',
+						@LOCATION_CODE		='$LOCATION_CODE',
+						@SPEC_LOCATION		='$SPEC_LOCATION',
+						@PRICE				='$PRICE',
+						@FUND_CODE			='$FUND_CODE',
+						@FUND_NOTE			='$FUND_NOTE',
+						@ACCEPT_DATE		='$ACCEPT_DATE',
+						@DATA_ENTRY			='$DATA_ENTRY'
+						");
+       					
+						$data=$command->execute();
+						
+						$this->redirect('katalog/f_katalog', array('data'=>$data,'register'=>$register));
+					} 
+		
+		
+					else{
+						$this->render('edit',array('model1'=>$model1, 
+													'data'=>$data, 
+													'modSpecLoc'=>$modSpecLoc,
+													'modLoc'=>$modLoc,
+													'modFund'=>$modFund,
+													'modTbk'=>$modTbk,
+													'modTMedia'=>$modTMedia,
+													'register'=>$register));
+					}
+		
+			}
+		}
+	}
+	
 	public function actionF_katalog()
 	{
 		$model=new TBkMain;

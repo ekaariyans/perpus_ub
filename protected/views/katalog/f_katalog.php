@@ -549,8 +549,6 @@
 									<a href class="glyphicon glyphicon-list-alt" id="<?php echo $model['REGISTER'] ?>" name="detailbuku"></a>
 									&nbsp;&nbsp;&nbsp;
 									<a href class="glyphicon glyphicon-pencil" id="<?php echo $model['REGISTER'] ?>" name="editbuku"></a>
-									&nbsp;&nbsp;
-									<a href class="glyphicon glyphicon-remove" id="<?php echo $model['REGISTER'] ?>" name="hapusbuku" onclick="return confirm('Are you sure you want to delete this item?')"></a>
 								</td>
 						</tr>
 				<?php endforeach; ?>
@@ -608,4 +606,17 @@ $(document).ready(function() {
     });
 </script>
 
+<script>
+$(document).ready(function() {
+	
+	$("a.glyphicon.glyphicon-list-alt,a.glyphicon.glyphicon-pencil").click(function() {
+            var a = $(this).attr("id");
+			var b = $(this).attr("name");
+            var link = "<?php echo Yii::app()->getBaseUrl(); ?>/index.php?r=katalog/aksi&det=" + a+"&nama="+b;
+			$(this).attr("href", link);
+        })
+		
+		
+	});
+</script>
 
