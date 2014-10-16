@@ -5,13 +5,11 @@
         <title>PERPUSTAKAAN UNIVERSITAS BRAWIJAYA | Dashboard</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
-        <link href="<?php echo Yii::app()->request->baseUrl; ?>/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo Yii::app()->request->baseUrl; ?>/assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
         <!-- font Awesome -->
         <link href="<?php echo Yii::app()->request->baseUrl; ?>/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <!-- Ionicons -->
         <link href="<?php echo Yii::app()->request->baseUrl; ?>/assets/css/ionicons.min.css" rel="stylesheet" type="text/css" />
-        <!-- Morris chart -->
-        <link href="<?php echo Yii::app()->request->baseUrl; ?>/assets/css/morris/morris.css" rel="stylesheet" type="text/css" />
         <!-- jvectormap -->
         <link href="<?php echo Yii::app()->request->baseUrl; ?>/assets/css/jvectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
         <!-- fullCalendar -->
@@ -24,7 +22,9 @@
         <link href="<?php echo Yii::app()->request->baseUrl; ?>/assets/css/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
         <!-- Theme style -->
         <link href="<?php echo Yii::app()->request->baseUrl; ?>/assets/css/AdminLTE.css" rel="stylesheet" type="text/css" />
-
+		<link href="<?php echo Yii::app()->request->baseUrl; ?>/assets/css/jquery.fancybox.css" rel="stylesheet" >
+		<link href="<?php echo Yii::app()->request->baseUrl; ?>/assets/css/styles.css" rel="stylesheet" >
+		<link href="<?php echo Yii::app()->request->baseUrl; ?>/assets/css/main-no.css" rel="stylesheet" >
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -34,11 +34,33 @@
     </head>
     <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
-        <header class="header">
-            <a href="index.html" class="logo">
-                <!-- Add the class icon to your logo image or logo icon to add the margining -->
-                Perpustakan UB
-            </a>
+        
+        <table border="0" cellpadding="0" cellspacing="0" width="100%" class="wrapper">
+		<tr>
+			<!-- Header -->
+			<div id="header">
+				<!-- banner -->
+				<div id="banner">
+
+					<!-- logo -->
+					<div id="logo-wrapper">
+						<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets/img/ublogo.png" />
+					</div>
+					<!-- end logo -->
+
+					<div style="float:right;margin:5px 10pt 0;">
+						<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets/img/ukas.jpg" style="border:1px solid #000;padding:1px;background:white"/>
+						<img src="<?php echo Yii::app()->request->baseUrl; ?>/assets/img/logo_UBx60.png" width="57" class="img-polaroid" style="border:1px solid #000;padding:1px;background:white"/>
+					</div>
+
+				</div>
+				<!-- end banner -->
+			</div>
+		</tr>
+	</table>
+        
+        <header class="header" >
+           
             <!-- Header Navbar: style can be found in header.less -->
             <nav class="navbar navbar-static-top" role="navigation">
                 <!-- Sidebar toggle button-->
@@ -78,36 +100,15 @@
             </nav>
         </header>
 
-        <div class="wrapper row-offcanvas row-offcanvas-left">
+        <div class="wrapper row-offcanvas row-offcanvas-left" >
             <!-- Left side column. contains the logo and sidebar -->
-            <aside class="left-side sidebar-offcanvas">
+            <aside class="left-side sidebar-offcanvas" style="padding-top:50px; margin-top:25px">
                 <!-- sidebar: style can be found in sidebar.less -->
-                <section class="sidebar">
-                    <!-- Sidebar user panel -->
-                    <div class="user-panel">
-                        <div class="pull-left image">
-                            <img src="<?php echo Yii::app()->request->baseUrl; ?>/assets/img/avatar5.png" class="img-circle" alt="User Image" />
-                        </div>
-                        <div class="pull-left info">
-                            <p>Hello, <?php echo Yii::app()->session['akun'];?></p>
-
-                            <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-                        </div>
-                    </div>
-                    <!-- search form 
-                    <form action="#" method="get" class="sidebar-form">
-                        <div class="input-group">
-                            <input type="text" name="q" class="form-control" placeholder="Search..."/>
-                            <span class="input-group-btn">
-                                <button type='submit' name='seach' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i></button>
-                            </span>
-                        </div>
-                    </form> -->
-                    <!-- /.search form -->
+                <section class="sidebar" >
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <?php
                     $bagian = Yii::app()->session['bagian'];
-                    if($bagian=='01'||$bagian=='999'||$bagian=='BRA021'){
+                    if($bagian=='01'||$bagian=='999'){
                         $contr= 'Pengolahan';
                     }
                     else if($bagian=='02'){
@@ -120,13 +121,13 @@
                         $contr= 'Permintaan';
                     }
 					?>
-                    <ul class="sidebar-menu">
+                    <ul class="sidebar-menu" >
                         <li class="active">
                             <a href="index.php?r=<?php echo $contr; ?>">
                                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                             </a>
                         </li>
-
+						
 						<?php if(Yii::app()->session['bagian'] == '03' || Yii::app()->session['bagian'] == '999'): ?>
                         <li class="treeview">
                             <a href="#">
@@ -170,7 +171,7 @@
                         </li>
                         <?php endif; ?>
                         
-                        <?php if(Yii::app()->session['bagian'] == '01' || Yii::app()->session['bagian'] == '999' || Yii::app()->session['bagian'] == 'BRA021'): ?>
+                        <?php if(Yii::app()->session['bagian'] == '01' || Yii::app()->session['bagian'] == '999'): ?>
                         <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-folder"></i>
@@ -193,7 +194,7 @@
                         </li>
                         <?php endif; ?>
                         
-                        <?php if(Yii::app()->session['bagian'] == '04' || Yii::app()->session['bagian'] == '01' || Yii::app()->session['bagian'] == '116' || Yii::app()->session['bagian'] == '999' || Yii::app()->session['bagian'] == 'BRA021'): ?>
+                        <?php if(Yii::app()->session['bagian'] == '04' || Yii::app()->session['bagian'] == '01' || Yii::app()->session['bagian'] == '116' || Yii::app()->session['bagian'] == '999'): ?>
                         <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-folder"></i>
@@ -202,7 +203,7 @@
                             </a>
                             <ul class="treeview-menu">
                                 <?php
-                                if(Yii::app()->session['level'] == '01' || Yii::app()->session['level'] == '999'|| Yii::app()->session['bagian'] == 'BRA021'):
+                                if(Yii::app()->session['level'] == '01' || Yii::app()->session['level'] == '999'):
                                 $this->widget('zii.widgets.CMenu', array(
                                     'items' => array(
                                         array('label' => 'KOLEKTIF', 'url' => array('/permintaan/f_permintaan_f')),
@@ -293,20 +294,15 @@
             <!-- Right side column. Contains the navbar and content of the page -->
             <aside class="right-side">
                 <!-- Content Header (Page header) -->
-                <section class="content-header">
-                    <h1>
-                        Dashboard
-                    </h1>
-                </section>
                 <!-- Main content -->
 				<?php echo $content; ?>    
               <!-- /.content -->
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
-         <div class="panel-footer" > <center>&copy; PENGEMBANGAN IT PERPUSTAKAAN UNIVERSITAS BRAWIJAYA</center></div>
+         <div id="footer" > <center>&copy; PENGEMBANGAN IT PERPUSTAKAAN UNIVERSITAS BRAWIJAYA</center></div>
         <!-- add new calendar event modal -->
-	<script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/js/jquery-barcode.min.js" type="text/javascript"></script>
-	
+
+
         <!-- jQuery 2.0.2 -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
         <!-- jQuery UI 1.10.3 -->

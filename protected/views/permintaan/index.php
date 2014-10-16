@@ -6,29 +6,51 @@
 </head>
 
 <body>
-<h2>PERMINTAAN</h2>
-<h4>Selamat Datang!</h4>
+<div class="row">
+                        <div class="col-md-12">
+                            <div class="box box-solid">
+                                <div class="box-header">
+                                    <i class="fa fa-text-width"></i>
+                                    <h3 class="box-title">PERMINTAAN KATALOG</h3>
+                                </div><!-- /.box-header -->
+                                <div class="box-body">
+                                    <blockquote>
+                                        <h4>Selamat Datang!</h4>
 <p align="justify">
 Website ini merupakan salah satu layanan Perpustakaan Universitas Brawijaya yang dapat digunakan untuk melakukan Permintaan Bahan Pustaka (Buku, Jurnal, Serial). Pengajuan permintaan bahan pustaka dapat dilakukan secara individu, maupun secara kolektif oleh petugas Fakultas, Jurusan, atau Program Studi.
 </p><br />
-
-<h4><b>Alur Permintaan Bahan Pustaka</b></h4>
+                                    </blockquote>
+                                     <blockquote>
+                                     	<h4><b><p>Alur Permintaan Bahan Pustaka</p></b></h4>
 <ol>
-  <li>Individu</li>
+  <li><p>Individu</p></li>
   	<ul>
-    <li>Memilih Jenis Permintaan (buku, jurnal, serial).</li>
-    <li>Mengisi dan mengirim Form Permintaan.</li>
-    <li>Menunggu pemberitahuan tersedianya bahan pustaka via email/ SMS.</li>
-    <li>Pengecekan status permintaan bahan pustaka juga dapat dilakukan di website ini pada bagian daftar permintaan.</li>
+    <li><p>Memilih Jenis Permintaan (buku, jurnal, serial).</p></li>
+    <li><p>Mengisi dan mengirim Form Permintaan.</p></li>
+    <li><p>Menunggu pemberitahuan tersedianya bahan pustaka via email/ SMS.</p></li>
+    <li><p>Pengecekan status permintaan bahan pustaka juga dapat dilakukan di website ini pada bagian daftar permintaan.</p></li>
     </ul>
-  <li>Kolektif</li>
+  <li><p>Kolektif</p></li>
     <ul>
-    <li>Petugas Fakultas/ Jurusan/ Program Studi mendownload Form Permintaan sesuai dengan jenis permintaan.</li>
-    <li>Petugas Fakultas/ Jurusan/ Program Studi memilih kategori permintaan, </li>
-    <li>Kemudian mengupload Form Permintan yang sudah diisi sesuai dengan kategori yang dipilih pada poin sebelumnya.</li>
-    <li>Menunggu pemberitahuan tersedianya bahan pustaka via email/ SMS.</li>
-    <li>Pengecekan status permintaan bahan pustaka juga dapat dilakukan di website ini pada bagian daftar permintaan.</li>
+    <li><p>Petugas Fakultas/ Jurusan/ Program Studi mendownload Form Permintaan sesuai dengan jenis permintaan.</p></li>
+    <li><p>Petugas Fakultas/ Jurusan/ Program Studi memilih kategori permintaan, </p></li>
+    <li><p>Kemudian mengupload Form Permintan yang sudah diisi sesuai dengan kategori yang dipilih pada poin sebelumnya.</p></li>
+    <li><p>Menunggu pemberitahuan tersedianya bahan pustaka via email/ SMS.</li>
+    <li><p>Pengecekan status permintaan bahan pustaka juga dapat dilakukan di website ini pada bagian daftar permintaan.</p></li>
     </ul>
 </ol>
+                                     	
+                                     </blockquote>
+                                </div><!-- /.box-body -->
+                            </div><!-- /.box -->
+                        </div><!-- ./col -->
+                        
+
+
 </body>
 </html>
+
+
+
+
+		

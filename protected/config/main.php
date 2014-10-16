@@ -64,7 +64,7 @@ return array(
 		*/
 		'db'=>array(
 			//'connectionString' => 'mysql:host=localhost;dbname=library',
-			'connectionString' => 'sqlsrv:Server=YOGA\SQLEXPRESS;Database=perpus_yii',
+			'connectionString' => 'sqlsrv:Server=DINANTAKA;Database=perpus_yii',
 			'username' => 'sa',
 			'password' => 'kangkungpait21',
 			'charset' => 'GB2312',
@@ -72,7 +72,7 @@ return array(
 		),
 		
 		'dblentera'=>array(
-			'connectionString' => 'sqlsrv:Server=YOGA\SQLEXPRESS;Database=lentera',
+			'connectionString' => 'sqlsrv:Server=DINANTAKA;Database=lentera',
 			'username' => 'sa',
 			'password' => 'kangkungpait21',
 			'charset' => 'GB2312',
