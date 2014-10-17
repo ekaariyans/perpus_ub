@@ -311,6 +311,7 @@
 endforeach; ?>
 	</div>
 		<?php echo CHtml::submitButton('Submit', array('class'=>"btn btn-primary")); ?>
+        <?php echo CHtml::link('Kembali', $this->createUrl('katalog/f_katalog'), array('class'=>"btn btn-default"));?>
 	
 <?php $this->endWidget(); ?>
 

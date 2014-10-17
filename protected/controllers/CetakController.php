@@ -11,8 +11,13 @@ class CetakController extends Controller
 	public function actionCetakBarcode(){
 		if(isset($_POST['checkbk'])){
 			$register = $_POST['checkbk'];
+			$this->render('barcode',array('register'=>$register));
 		}
-		$this->render('barcode',array('register'=>$register));
+		else{
+			Yii::app()->user->setFlash('error',"Harap pilih buku yang akan dicetak register dan labelnya");
+			$this->redirect(array('Katalog/f_katalog'));
+		}
+		
 	}
 	
 	public function actionCetak(){

@@ -93,9 +93,9 @@ class KatalogController extends Controller
 						@DATA_ENTRY			='$DATA_ENTRY'
 						");
        					
-						$data=$command->execute();
-						
-						$this->redirect('katalog/f_katalog', array('data'=>$data,'register'=>$register));
+						$data=$command->queryAll();
+						Yii::app()->user->setFlash('success',"Data Berhasil Diperbarui!");
+						$this->render('view', array('data'=>$data,'register'=>$register));
 					} 
 		
 		

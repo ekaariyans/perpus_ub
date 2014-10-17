@@ -1,7 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+@media print {
+    div #header{
+        background-color:#000; 
+		color:#FFF;
+    }
+	button,p { display:none; }
+	
+}
+@media screen {
+    div #header{
+        background-color:#000; 
+		color:#FFF;
+    }
+} 
+</style>
+<script>
+function goBack() {
+    window.history.back()
+}
+</script>
+</head>
+<body>
+<button onclick="goBack()">Kembali</button>
+<p>Tekan Ctrl+P pada keyboard untuk mencetak halaman ini. </p>
 <?php
 //ref: http://www.yiiframework.com/extension/yii-barcode-generator-8-types/#hh2
 	$i=0;
 	foreach($register as $reg):
+		$command = Yii::app()->db->createCommand("[lentera].[dbo].[sp_get_specloc] @register = '$reg'");
+		$specloc=$command->queryRow();
+		
+		$query = Yii::app()->db->createCommand("[lentera].[dbo].[sp_get_label] @register = '$reg'");
+		$label=$query->queryRow();
+		
 	$optionsArray = array(
 		'elementId'=>'showBarcode'.$i,
 		'value'=>$reg,
@@ -15,21 +49,44 @@
 		   /* */
 		   //'bgColor'=>'#00FF00', /*background color*/
 		   //'color' => '#000000', /*"1" Bars color*/
-		   'barWidth' => 2,
+		   'barWidth' => 1,
 		   'barHeight' => 50,   
 		   /*-----------below settings only for datamatrix--------------------*/
-		   //'moduleSize' => 5,
+		   //7120N38-3
+		   'moduleSize' => 5,
 		   //'addQuietZone' => 0, /*Quiet Zone Modules */
 		 ),
 		//'rectangular'=> true /* true or false*/
 		 /* */
 		);
 	$this->widget('ext.Yii-Barcode-Generator.Barcode', $optionsArray);
-?>
-    <?php echo "<div style=\"width:23%; text-align:center; font-size:9px; margin:15px;\" >
-				UPT. PERPUSTAKAAN PUSAT
+?>	
+	<table>
+    <tr>
+    <td>
+    <?php echo "<div style=\"width:160px; text-align:center; font-size:8px; margin:15px; border:double; padding:10px;\" >
+				".strtoupper($specloc['NAME'])."
 				<div id=\"showBarcode".$i."\" ></div>
 				UNIVERSITAS BRAWIJAYA MALANG
-				<br />
-				</div>" ?>
+				</div>";
+		echo "</td><td>";		
+		echo "<div style=\"width:210px; margin:15px; border:double; padding:2px;\" >
+				<div id=\"header\" style=\"text-align:center; font-size:8px; padding:4px;\" >
+				".strtoupper($specloc['NAME'])."<br />
+				UNIVERSITAS BRAWIJAYA MALANG<br />
+				</div>
+				<div style=\"width:160px; text-align:left; font-size:15px; padding-left:15px; padding-bottom: 7px;\">
+				<b>".$label['TYPE_CODE']."</b><br />
+				<b>".$label['DEWEY_NO']."</b><br />
+				<div style=\"font-size:10px;\"><b>".$label['AUTHOR_CODE']."</b><br />
+				<b>".$label['TITLE_CODE']."</b><br />
+				<b>k".$label['COPIES']."</b></div>
+			  	</div>
+			 </div>";
+	?>
+    </td>
+    </tr>
+    </table>
     <?php $i=$i+1; endforeach; ?>
+ </body>
+ </html>

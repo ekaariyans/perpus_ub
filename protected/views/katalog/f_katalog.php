@@ -515,12 +515,12 @@
 						<h4 class="box-title">Daftar Katalog</h4>
 				</div>
 
-					<p><?php echo CHtml::submitButton('Cetak Barcode', array('class' => 'btn btn-default')); ?></p>
+					<p><?php echo CHtml::submitButton('Cetak Barcode dan Label Buku', array('class' => 'btn btn-primary')); ?></p>
 					
 				<table id="daftartbl" class="table table-bordered table-striped">
 				<thead>
 					<tr class="heading">
-						<th><input id="checkall" type="checkbox" /></th>
+						<th><input id="selectall" type="checkbox" /></th>
 						<th>REGISTER</th>
 						<th>ISBN</th>
 						<th width="25%">JUDUL</th>
@@ -577,18 +577,16 @@ $(document).ready(function() {
     $("div#kotak").hide();
     $("div#button").hide();
     
-	$('#checkall').click(function(event) {  //on click 
-	alert("clicked");
-	/*
+    $('#selectall').click(function(event) {  //on click 
         if(this.checked) { // check select status
-            $('input.check').each(function() { //loop through each checkbox
+            $('.check').each(function() { //loop through each checkbox
                 this.checked = true;  //select all checkboxes with class "checkbox1"               
             });
         }else{
-            $('input.check').each(function() { //loop through each checkbox
+            $('.check').each(function() { //loop through each checkbox
                 this.checked = false; //deselect all checkboxes with class "checkbox1"                       
             });         
-        }*/
+        }
     });
 });
 </script>
