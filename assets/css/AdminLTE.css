@@ -52,17 +52,19 @@ body > .header {
 /* Define 2 column template */
 .right-side,
 .left-side {
-  min-height: 100%;
   display: block;
 }
 /*right side - contins main content*/
 .right-side {
   background-color: #f9f9f9;
   margin-left: 220px;
+  position: relative;
+  margin-top: 120px;
+  min-height:auto;
 }
 /*left side - contains sidebar*/
 .left-side {
-  position: absolute;
+  position: fixed;
   width: 220px;
   top: 0;
 }
@@ -113,6 +115,7 @@ body.fixed .wrapper {
 .content {
   padding: 20px 15px;
   background: #f9f9f9;
+position: relative;
 }
 /* Utility */
 /* H1 - H6 font */
@@ -331,9 +334,10 @@ table.text-center th {
 -------------------------------------------------
 */
 body > .header {
-  position: relative;
+  position: fixed;
   max-height: 100px;
   z-index: 1030;
+  margin-top: 75px;
 }
 body > .header .navbar {
   height: 50px;

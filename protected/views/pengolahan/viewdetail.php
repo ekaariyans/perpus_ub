@@ -1,9 +1,9 @@
-						<div class="col-md-6">
+						<div class="col-md-6" style="position:relative">
                         <div class="panel panel-default">
                         <div class="panel-heading">
                             Detail Buku
                         </div>
-                        <div class="panel-body">
+                        <div class="panel-body" style="padding-bottom:50px;">
                             <div class="table-responsive">
                                 <?php foreach ($data as $model): 
 								 if($model['ID_PERMINTAAN_BUKU'] == $id_permintaan_buku){?>

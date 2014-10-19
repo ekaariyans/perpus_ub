@@ -128,7 +128,10 @@ class SiteController extends Controller
 					$data = "User Tidak Dikenal!";
 					$this->LogiDb($data);
 				}
-			} 
+			}else 
+			{
+					$this->LogiDb($data);
+				}
 		}//isset
 		else $this->render('login',array('model'=>$model, 'data'=>$data)); 
     
