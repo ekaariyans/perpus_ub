@@ -8,13 +8,40 @@ class CetakController extends Controller
 		$this->render('index');
 	}
 	
+	public function hapus($register){
+		$n = count($register);
+		for($i=0; $i<$n; $i++){
+			//belum bisa delete banyak
+			$reg = $register[$i];
+			$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_del] @REGISTER = '$reg'");
+			$command->execute();
+			if($command->execute()){
+				Yii::app()->user->setFlash('success',"Data berhasil dihapus!");
+			}
+			else{
+				Yii::app()->user->setFlash('error',"Gagal menghapus data!");
+			}
+			//$url = Yii::app()->createUrl(array('Katalog/f_katalog','#'=>'daftar'));
+			//$this->redirect($url);
+			$this->redirect(array('Katalog/f_katalog'));
+		}
+	}
+	
 	public function actionCetakBarcode(){
 		if(isset($_POST['checkbk'])){
 			$register = $_POST['checkbk'];
-			$this->render('barcode',array('register'=>$register));
+		  	if(isset($_POST['label'])){
+				$this->render('barcode',array('register'=>$register));
+			}
+			if(isset($_POST['hapus'])){
+				$this->hapus($register);		
+			}
+			if(isset($_POST['addcopy'])){
+				$this->redirect(array('Katalog/CopyList','register'=>$register));
+			}
 		}
 		else{
-			Yii::app()->user->setFlash('error',"Harap pilih buku yang akan dicetak register dan labelnya");
+			Yii::app()->user->setFlash('error',"Harap pilih buku yang akan dicetak register dan labelnya/ add copy/ ingin dihapus!");
 			$this->redirect(array('Katalog/f_katalog'));
 		}
 		

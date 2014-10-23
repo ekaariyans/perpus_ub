@@ -64,7 +64,7 @@ function goBack() {
 	<table>
     <tr>
     <td>
-    <?php echo "<div style=\"width:160px; text-align:center; font-size:8px; margin:15px; border:double; padding:10px;\" >
+    <?php echo "<div style=\"width:180px; text-align:center; font-size:8px; margin:15px; border:double; padding:10px;\" >
 				".strtoupper($specloc['NAME'])."
 				<div id=\"showBarcode".$i."\" ></div>
 				UNIVERSITAS BRAWIJAYA MALANG

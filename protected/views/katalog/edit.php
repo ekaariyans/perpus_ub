@@ -22,8 +22,6 @@
     </div>
     <div class="panel-body">
     <div class="table-responsive">
-	<?php foreach ($data as $model): 
-	if($model['REGISTER'] == $register){?>
 
 	<div class="col-lg-12">
                         	<div class="form-group" style="margin-bottom:40px;">
@@ -37,7 +35,7 @@
 							<div class="form-group">
 								<?php echo $form->labelEx($model1, 'TITLE', array('class' => 'col-sm-2 control-label')); ?>
 								<div class="col-sm-10">
-								<?php echo $form->textField($model1, 'TITLE', array('class' => 'form-control', 'value' => $model['TITLE'])); ?>
+								<?php echo $form->textField($model1, 'TITLE', array('class' => 'form-control', 'value' => $data['TITLE'])); ?>
 								<?php echo $form->error($model1,'TITLE'); ?>
 								</div>
 							</div>
@@ -52,7 +50,7 @@
 								<div class="form-group">
 									<?php echo $form->labelEx($model1, 'VOLUME', array('class' => 'col-sm-2 control-label')); ?>
 									<div class="col-sm-10"  style="margin-bottom:10px">
-									<?php echo $form->textField($model1, 'VOLUME', array('class' => 'form-control', 'value' => $model['VOLUME'])); ?>
+									<?php echo $form->textField($model1, 'VOLUME', array('class' => 'form-control', 'value' => $data['VOLUME'])); ?>
 									<?php echo $form->error($model1,'VOLUME'); ?>
 									</div>
 								</div>
@@ -60,7 +58,7 @@
 								<div class="form-group">
 									<?php echo $form->labelEx($model1, 'PRINTING', array('class' => 'col-sm-2 control-label')); ?>
 									<div class="col-sm-10" style="margin-bottom:10px">
-									<?php echo $form->textField($model1, 'PRINTING', array('class' => 'form-control', 'value' => $model['PRINTING'])); ?>
+									<?php echo $form->textField($model1, 'PRINTING', array('class' => 'form-control', 'value' => $data['PRINTING'])); ?>
 									<?php echo $form->error($model1,'PRINTING'); ?>
 									</div>
 								</div>
@@ -68,7 +66,7 @@
 								<div class="form-group" >
 									<?php echo $form->labelEx($model1, 'EDITION', array('class' => 'col-sm-2 control-label')); ?>
 									<div class="col-sm-10">
-									<?php echo $form->textField($model1, 'EDITION', array('class' => 'form-control', 'value' => $model['EDITION'])); ?>
+									<?php echo $form->textField($model1, 'EDITION', array('class' => 'form-control', 'value' => $data['EDITION'])); ?>
 									<?php echo $form->error($model1,'EDITION'); ?>
 									</div>
 								</div>
@@ -78,7 +76,7 @@
 								<div class="form-group">
 									<?php echo $form->labelEx($model1, 'ISBN', array('class' => 'col-sm-2 control-label')); ?>
 									<div class="col-sm-10" style="margin-bottom:10px">
-									<?php echo $form->textField($model1, 'ISBN', array('class' => 'form-control', 'value' => $model['ISBN'])); ?>
+									<?php echo $form->textField($model1, 'ISBN', array('class' => 'form-control', 'value' => $data['ISBN'])); ?>
 									<?php echo $form->error($model1,'ISBN'); ?>
 									</div>
 								</div>
@@ -88,8 +86,8 @@
                                     <div class="col-sm-10" style="margin-bottom:10px">
                                                                                
 		 <?php echo $form->dropDownList($model1, 'LANGUAGE', 
-									array($model['LANGUAGE']=>$model['LANGUAGE'],'Indonesia'=>'Indonesia', 'Inggris'=>'Inggris', 'Lainnya'=>'Lainnya'), 
-									array('class'=>'form-control', 'value'=>$model['LANGUAGE'])); ?>
+									array($data['LANGUAGE']=>$data['LANGUAGE'],'Indonesia'=>'Indonesia', 'Inggris'=>'Inggris', 'Lainnya'=>'Lainnya'), 
+									array('class'=>'form-control', 'value'=>$data['LANGUAGE'])); ?>
 		<?php echo $form->error($model1,'ID_STATUS'); ?>
                                     </div>
                                 </div>
@@ -103,7 +101,7 @@
 											'MEDIA_CODE',
 											CHtml::listData(TMediaType::model()->findAll(),
 											'MEDIA_CODE','MEDIA_NAME'),
-											array($model['MEDIA_CODE']=>'--Media Type--','class' => 'form-control', 'value'=>$model['MEDIA_CODE']));
+											array($data['MEDIA_CODE']=>'--Media Type--','class' => 'form-control', 'value'=>$data['MEDIA_CODE']));
 									 ?>
                                     </div>
                                 </div>
@@ -126,14 +124,14 @@
 											'TYPE_CODE',
 											CHtml::listData(TBkType::model()->findAll(),
 											'TYPE_CODE','TYPE_NAME'),
-											array($model['TYPE_CODE']=>'--Tipe Buku--','class' => 'form-control', 'value'=>$model['TYPE_CODE']));
+											array($data['TYPE_CODE']=>'--Tipe Buku--','class' => 'form-control', 'value'=>$data['TYPE_CODE']));
 									 ?>
                                     </div>
                                 </div>
 								<div class="form-group">
 									<?php echo $form->labelEx($model1, 'DEWEY_NO', array('class' => 'col-sm-2 control-label')); ?>
 									<div class="col-sm-10" style="margin-bottom:11px">
-									<?php echo $form->textField($model1, 'DEWEY_NO', array('class' => 'form-control', 'value' => $model['DEWEY_NO'])); ?>
+									<?php echo $form->textField($model1, 'DEWEY_NO', array('class' => 'form-control', 'value' => $data['DEWEY_NO'])); ?>
 									<?php echo $form->error($model1,'DEWEY_NO'); ?>
 									</div>
 								</div>
@@ -143,14 +141,14 @@
 								<div class="form-group">
 									<?php echo $form->labelEx($model1, 'AUTHOR_CODE', array('class' => 'col-sm-2 control-label')); ?>
 									<div class="col-sm-10" style="margin-bottom:11px">
-									<?php echo $form->textField($model1, 'AUTHOR_CODE', array('class' => 'form-control', 'value' => $model['AUTHOR_CODE'])); ?>
+									<?php echo $form->textField($model1, 'AUTHOR_CODE', array('class' => 'form-control', 'value' => $data['AUTHOR_CODE'])); ?>
 									<?php echo $form->error($model1,'AUTHOR_CODE'); ?>
 									</div>
 								</div>
 								<div class="form-group">
 									<?php echo $form->labelEx($model1, 'TITLE_CODE', array('class' => 'col-sm-2 control-label')); ?>
 									<div class="col-sm-10" style="margin-bottom:11px">
-									<?php echo $form->textField($model1, 'TITLE_CODE', array('class' => 'form-control', 'value' => $model['TITLE_CODE'])); ?>
+									<?php echo $form->textField($model1, 'TITLE_CODE', array('class' => 'form-control', 'value' => $data['TITLE_CODE'])); ?>
 									<?php echo $form->error($model1,'TITLE_CODE'); ?>
 									</div>
 								</div>
@@ -167,21 +165,21 @@
 								<div class="form-group">
 									<?php echo $form->labelEx($model1, 'CITY_PUB', array('class' => 'col-sm-2 control-label')); ?>
 									<div class="col-sm-10" style="margin-bottom:11px">
-									<?php echo $form->textField($model1, 'CITY_PUB', array('class' => 'form-control', 'value' => $model['CITY_PUB'])); ?>
+									<?php echo $form->textField($model1, 'CITY_PUB', array('class' => 'form-control', 'value' => $data['CITY_PUB'])); ?>
 									<?php echo $form->error($model1,'CITY_PUB'); ?>
 									</div>
 								</div>
 								<div class="form-group">
 									<?php echo $form->labelEx($model1, 'PUB_NAME', array('class' => 'col-sm-2 control-label')); ?>
 									<div class="col-sm-10" style="margin-bottom:11px">
-									<?php echo $form->textField($model1, 'PUB_NAME', array('class' => 'form-control', 'value' => $model['PUB_NAME'])); ?>
+									<?php echo $form->textField($model1, 'PUB_NAME', array('class' => 'form-control', 'value' => $data['PUB_NAME'])); ?>
 									<?php echo $form->error($model1,'PUB_NAME'); ?>
 									</div>
 								</div>
 								<div class="form-group">
 									<?php echo $form->labelEx($model1, 'YEAR_PUB', array('class' => 'col-sm-2 control-label')); ?>
 									<div class="col-sm-10" style="margin-bottom:11px">
-									<?php echo $form->textField($model1, 'YEAR_PUB', array('class' => 'form-control', 'value' => $model['YEAR_PUB'])); ?>
+									<?php echo $form->textField($model1, 'YEAR_PUB', array('class' => 'form-control', 'value' => $data['YEAR_PUB'])); ?>
 									<?php echo $form->error($model1,'YEAR_PUB'); ?>
 									</div>
 								</div>
@@ -197,21 +195,21 @@
 								<div class="form-group">
 									<?php echo $form->labelEx($model1, 'PHYS_DESCRIPTION', array('class' => 'col-sm-2 control-label')); ?>
 									<div class="col-sm-10" style="margin-bottom:11px">
-									<?php echo $form->textField($model1, 'PHYS_DESCRIPTION', array('class' => 'form-control', 'value' => $model['PHYS_DESCRIPTION'])); ?>
+									<?php echo $form->textField($model1, 'PHYS_DESCRIPTION', array('class' => 'form-control', 'value' => $data['PHYS_DESCRIPTION'])); ?>
 									<?php echo $form->error($model1,'PHYS_DESCRIPTION'); ?>
 									</div>
 								</div>
 								<div class="form-group">
 									<?php echo $form->labelEx($model1, 'INDEX_', array('class' => 'col-sm-2 control-label')); ?>
 									<div class="col-sm-10" style="margin-bottom:11px">
-									<?php echo $form->textField($model1, 'INDEX_', array('class' => 'form-control', 'value' => $model['INDEX_'])); ?>
+									<?php echo $form->textField($model1, 'INDEX_', array('class' => 'form-control', 'value' => $data['INDEX_'])); ?>
 									<?php echo $form->error($model1,'INDEX_'); ?>
 									</div>
 								</div>
 								<div class="form-group">
 									<?php echo $form->labelEx($model1, 'COPIES', array('class' => 'col-sm-2 control-label')); ?>
 									<div class="col-sm-10" style="margin-bottom:11px">
-									<?php echo $form->textField($model1, 'COPIES', array('class' => 'form-control', 'value' => $model['COPIES'])); ?>
+									<?php echo $form->textField($model1, 'COPIES', array('class' => 'form-control', 'value' => $data['COPIES'])); ?>
 									<?php echo $form->error($model1,'COPIES'); ?>
 									</div>
 								</div>
@@ -221,7 +219,7 @@
 								<div class="form-group">
 									<?php echo $form->labelEx($model1, 'BIBLIOGRAPHY', array('class' => 'col-sm-2 control-label')); ?>
 									<div class="col-sm-10" style="margin-bottom:11px">
-									<?php echo $form->textField($model1, 'BIBLIOGRAPHY', array('class' => 'form-control', 'value' => $model['BIBLIOGRAPHY'])); ?>
+									<?php echo $form->textField($model1, 'BIBLIOGRAPHY', array('class' => 'form-control', 'value' => $data['BIBLIOGRAPHY'])); ?>
 									<?php echo $form->error($model1,'BIBLIOGRAPHY'); ?>
 									</div>
 								</div>
@@ -234,7 +232,7 @@
 											'LOCATION_CODE',
 											CHtml::listData(TLocation::model()->findAll(),
 											'LOCATION_CODE','LOCATION_NAME'),
-											array($model['LOCATION_CODE']=>'--Lokasi Buku--','class' => 'form-control','value'=>$model['LOCATION_CODE']));
+											array($data['LOCATION_CODE']=>'--Lokasi Buku--','class' => 'form-control','value'=>$data['LOCATION_CODE']));
 									 ?>
                                     </div>
                                 </div>
@@ -247,7 +245,7 @@
 											'SPEC_LOCATION',
 											CHtml::listData(TSpecLocation::model()->findAll(),
 											'SPEC_LOCATION','NAME'),
-											array($model['SPEC_LOCATION']=>'--Detail Lokasi--','class' => 'form-control','value'=>$model['SPEC_LOCATION']));
+											array($data['SPEC_LOCATION']=>'--Detail Lokasi--','class' => 'form-control','value'=>$data['SPEC_LOCATION']));
 									 ?>
                                     </div>
                                 </div>
@@ -263,7 +261,7 @@
 								<div class="form-group">
 									<?php echo $form->labelEx($model1, 'PRICE', array('class' => 'col-sm-2 control-label')); ?>
 									<div class="col-sm-10" style="margin-bottom:11px">
-									<?php echo $form->textField($model1, 'PRICE', array('class' => 'form-control', 'value' => $model['PRICE'])); ?>
+									<?php echo $form->textField($model1, 'PRICE', array('class' => 'form-control', 'value' => $data['PRICE'])); ?>
 									<?php echo $form->error($model1,'PRICE'); ?>
 									</div>
 								</div>
@@ -276,7 +274,7 @@
 											'FUND_CODE',
 											CHtml::listData(TFunding::model()->findAll(),
 											'FUND_CODE','FUND_NAME'),
-											array($model['FUND_CODE']=>'--Funding--','class' => 'form-control','value'=>$model['FUND_CODE']));
+											array($data['FUND_CODE']=>'--Funding--','class' => 'form-control','value'=>$data['FUND_CODE']));
 									 ?>
                                     </div>
                                 </div>
@@ -298,7 +296,7 @@
 								<div class="form-group">
 									<?php echo $form->labelEx($model1, 'FUND_NOTE', array('class' => 'col-sm-2 control-label')); ?>
 									<div class="col-sm-10" style="margin-bottom:90px">
-									<?php echo $form->textArea($model1, 'FUND_NOTE', array('class' => 'form-control', 'value' => $model['FUND_NOTE'], 'rows'=>'3')); ?>
+									<?php echo $form->textArea($model1, 'FUND_NOTE', array('class' => 'form-control', 'value' => $data['FUND_NOTE'], 'rows'=>'3')); ?>
 									<?php echo $form->error($model1,'FUND_NOTE'); ?>
 									</div>
 								</div>
@@ -307,8 +305,6 @@
 						</div>
 						
 						
-<?php }
-endforeach; ?>
 	</div>
 		<?php echo CHtml::submitButton('Submit', array('class'=>"btn btn-primary")); ?>
         <?php echo CHtml::link('Kembali', $this->createUrl('katalog/f_katalog'), array('class'=>"btn btn-default"));?>

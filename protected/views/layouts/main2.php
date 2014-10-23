@@ -29,25 +29,7 @@
           <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
           <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
-         <!-- jQuery 2.0.2 -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-        <!-- jQuery UI 1.10.3 -->
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/js/jquery-ui-1.10.3.min.js" type="text/javascript"></script>
-        <!-- Bootstrap -->
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/js/bootstrap.min.js" type="text/javascript"></script>
-        <!-- Morris.js charts -->
-        <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/js/plugins/morris/morris.min.js" type="text/javascript"></script>
-                <!-- AdminLTE App -->
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/js/AdminLTE/app.js" type="text/javascript"></script>
-
-        <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/js/AdminLTE/dashboard.js" type="text/javascript"></script>     
-
-        <!-- AdminLTE for demo purposes -->
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/js/AdminLTE/demo.js" type="text/javascript"></script>
-         <!-- alert -->
-        <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/js/alert.js" type="text/javascript"></script>
+        
     </head>
     <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
@@ -198,7 +180,7 @@
                                 <?php
                                 $this->widget('zii.widgets.CMenu', array(
                                     'items' => array(
-                                        array('label' => 'Permintaan Katalog', 'url' => array('/pengolahan/f_laporan_p')),
+                                        array('label' => 'Permintaan Bahan Pustaka', 'url' => array('/pengolahan/f_laporan_p')),
                                         array('label' => 'Registrasi dan Pelabelan', 'url' => array('/katalog/f_katalog')),
                                         array('label' => 'Validasi Buku', 'url' => array('/pengolahan/validasi')),
                                         array('label' => 'Laporan', 'url' => array('/pengolahan/laporan')),
@@ -256,7 +238,25 @@
         </div><!-- ./wrapper -->
          <div class="panel-footer" > <center>&copy; PENGEMBANGAN IT PERPUSTAKAAN UNIVERSITAS BRAWIJAYA</center></div>
         <!-- add new calendar event modal -->
+ <!-- jQuery 2.0.2 -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <!-- jQuery UI 1.10.3 -->
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/js/jquery-ui-1.10.3.min.js" type="text/javascript"></script>
+        <!-- Bootstrap -->
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/js/bootstrap.min.js" type="text/javascript"></script>
+        <!-- Morris.js charts -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/js/plugins/morris/morris.min.js" type="text/javascript"></script>
+                <!-- AdminLTE App -->
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/js/AdminLTE/app.js" type="text/javascript"></script>
 
+        <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/js/AdminLTE/dashboard.js" type="text/javascript"></script>     
+
+        <!-- AdminLTE for demo purposes -->
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/js/AdminLTE/demo.js" type="text/javascript"></script>
+         <!-- alert -->
+        <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/js/alert.js" type="text/javascript"></script>
        
         <!-- Sparkline -->
         <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/js/plugins/sparkline/jquery.sparkline.min.js" type="text/javascript"></script>

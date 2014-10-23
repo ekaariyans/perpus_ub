@@ -7,6 +7,74 @@ class KatalogController extends Controller
 		$this->render('index');
 	}
 	
+	public function actionAdd_copy() 
+	{ 
+		$model=new BkAddCopy;
+		$modLoc = new TLocation;
+		$modSpecLoc = new TSpecLocation;
+		$modFund = new TFunding;
+
+		//echo $data_grup['COPY_NO'];
+		// uncomment the following code to enable ajax-based validation 
+		/* 
+		if(isset($_POST['ajax']) && $_POST['ajax']==='bk-add-copy-add_copy-form') 
+		{ 
+			echo CActiveForm::validate($model); 
+			Yii::app()->end(); 
+		} 
+		*/ 
+		
+		if(isset($_POST['BkAddCopy'])) 
+		{ 
+			$model->attributes=$_POST['BkAddCopy']; 
+			if($model->validate()) 
+			{ 
+				$model->OPERATOR_CODE = Yii::app()->session['username'];
+				$model->REGISTER = $_POST['BkAddCopy']['REGISTER'];
+				$model->GROUP_NO = $_POST['BkAddCopy']['GROUP_NO'];
+				$model->PRINTING = $_POST['BkAddCopy']['PRINTING'];
+				$model->YEAR_PUB = $_POST['BkAddCopy']['YEAR_PUB'];
+				$model->COPY_NO = $_POST['BkAddCopy']['COPY_NO'];
+				$model->STATUS = $_POST['BkAddCopy']['STATUS'];
+				$model->PRICE = $_POST['BkAddCopy']['PRICE'];
+				$model->FUND_CODE = $_POST['TFunding']['FUND_CODE'];
+				$model->FUND_NOTE = $_POST['BkAddCopy']['FUND_NOTE'];
+				$model->LOCATION_CODE = $_POST['TLocation']['LOCATION_CODE'];
+				$model->SPEC_LOCATION = $_POST['TSpecLocation']['SPEC_LOCATION'];
+				$model->ACCEPT_DATE = $_POST['ACCEPT_DATE'];
+				$model->DATA_ENTRY = date('Y-m-d');
+				//save copy
+				$model->save();
+				//update copies+1 berdasar register di t_bk_main
+				$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_update_copies] @GROUP_NO='$model->GROUP_NO'");
+				$command->execute();
+	
+				Yii::app()->user->setFlash('success',"Proses Input Data Berhasil!");
+				//$newreg = $this->generateRegister();
+				$this->redirect(array('Katalog/F_katalog'));
+			} 
+		}
+		else {
+			$newreg  = $this->generateRegister(); 
+			$groupno = $_POST['groupno'];
+			$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_get_lastcopy] @GROUP_NO = '$groupno'");
+			$data_grup = $command->queryRow();
+		}
+		$this->render('add_copy',array('model'=>$model,
+				'modSpecLoc'=>$modSpecLoc,
+				'modLoc'=>$modLoc,
+				'modFund'=>$modFund,
+				'data_grup'=>$data_grup,
+				'newreg'=>$newreg));
+	}
+	
+	public function actionCopyList(){
+		$register = $_GET['register'][0];
+		$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_get_group] @REGISTER = '$register'");
+		$data = $command->queryAll();
+		$this->render('copy-list',array('data'=>$data,'register'=>$register)); 
+	}
+	
 	public function actionAksi()
 	{
 		$model1=new TBkMain; 
@@ -19,12 +87,14 @@ class KatalogController extends Controller
 		if(isset($_GET['det'])&&($_GET['nama'])){
 		$register = $_GET['det'];
 		$aksi=($_GET['nama']);
-		$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_main_all]");
-        $data=$command->queryAll();
-				
+		//echo "reg".$reg;
+		
+		$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_main_aksi] @REGISTER='$register'");
+		$data=$command->queryRow();
+	
 			if($aksi=='detailbuku'){
 				
-				$this->render('view', array('data'=>$data,'register'=>$register));
+				$this->render('view', array('data'=>$data));
 			}
 			else if($aksi=='editbuku'){
 				
@@ -59,7 +129,7 @@ class KatalogController extends Controller
 						$FUND_CODE = $_POST['TFunding']['FUND_CODE'];
 						$FUND_NOTE = $_POST['TBkMain']['FUND_NOTE'];
 						$ACCEPT_DATE = $_POST['DATA_ENTRY'];
-						$DATA_ENTRY = date('Y-m-d');;
+						$DATA_ENTRY = date('Y-m-d');
 							
 						
 						
@@ -93,9 +163,9 @@ class KatalogController extends Controller
 						@DATA_ENTRY			='$DATA_ENTRY'
 						");
        					
-						$data=$command->queryAll();
+						$data=$command->queryRow();
 						Yii::app()->user->setFlash('success',"Data Berhasil Diperbarui!");
-						$this->render('view', array('data'=>$data,'register'=>$register));
+						$this->render('view', array('data'=>$data));
 					} 
 		
 		
@@ -107,7 +177,7 @@ class KatalogController extends Controller
 													'modFund'=>$modFund,
 													'modTbk'=>$modTbk,
 													'modTMedia'=>$modTMedia,
-													'register'=>$register));
+													'register'=>$register,));
 					}
 		
 			}
@@ -122,6 +192,8 @@ class KatalogController extends Controller
 		$modFund = new TFunding;
 		$modTbk = new TBkType;
 		$modTMedia = new TMediaType;
+		
+		$reg = '01'.substr(Yii::app()->session['bagian'],-2).'%';
 		/*
 					if(isset($_POST['register']))
 					{
@@ -231,7 +303,7 @@ class KatalogController extends Controller
 		}
 		else{
 			$register=0;
-			$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_main_all]");
+			$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_main_all]  @REG = '$reg' ");
 			$data=$command->queryAll();
 			
 			$newreg = $this->generateRegister();

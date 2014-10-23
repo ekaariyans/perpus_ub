@@ -1,7 +1,7 @@
 <!-- Start Nav tabs -->
 <ul class="nav nav-tabs" role="tablist no-padding">
-    <li class="active"><a href="#tambah" role="tab" data-toggle="tab">TAMBAH KATALOG</a></li>
-    <li><a href="#daftar" role="tab" data-toggle="tab">DAFTAR KATALOG</a></li>
+    <li class="active"><a href="#tambah" role="tab" data-toggle="tab">TAMBAH BAHAN PUSTAKA</a></li>
+    <li><a href="#daftar" role="tab" data-toggle="tab">DAFTAR BAHAN PUSTAKA</a></li>
 </ul>
 <!-- End Nav tabs -->
 
@@ -23,7 +23,7 @@
             <div class="tab-pane active" id="individu">
                 <div class="box box-primary" style="padding:15px 15px 15px 50px;">
 					<div class="box-header">
-						<h4 class="box-title">Tambah Katalog</h4>
+						<h4 class="box-title">Tambah Bahan Pustaka</h4>
 					</div>
 					
                     <div class="form">
@@ -512,10 +512,24 @@
 						'action'=>Yii::app()->createUrl('Cetak/CetakBarcode'),
 					)); ?>
                 <div class="box-header">
-						<h4 class="box-title">Daftar Katalog</h4>
+						<h4 class="box-title">Daftar Bahan Pustaka</h4>
 				</div>
 
-					<p><?php echo CHtml::submitButton('Cetak Barcode dan Label Buku', array('class' => 'btn btn-primary')); ?></p>
+					<p>
+                    <button type="submit" class="btn btn-primary" name="label" id="label">
+                      <span class="glyphicon glyphicon-barcode"></span> Cetak Barcode dan Label Buku
+                    </button>
+                    <?php echo "&nbsp&nbsp&nbsp&nbsp"; ?>
+                    
+                    <button type="submit" class="btn btn-success" name="addcopy" id="addcopy">
+                      <span class="glyphicon glyphicon-plus"></span> Proses Add Copy
+                    </button>
+                    <!--<a id="addcopy" class="btn btn-success" href=""><span class="glyphicon glyphicon-plus"></span> Add Copy</a>-->
+					<?php echo "&nbsp&nbsp&nbsp&nbsp"; ?>
+                    <button type="submit" class="btn btn-danger" name="hapus" id="hapus">
+                      <span class="glyphicon glyphicon-remove"></span> Hapus
+                    </button></p>
+                    
 					
 				<table id="daftartbl" class="table table-bordered table-striped">
 				<thead>
@@ -534,6 +548,7 @@
 				</thead>
 				<tbody>
 					<?php
+					//echo $reg;
 						foreach ($data as $model):
 					?>
 						<td><input class="check" type="checkbox" name="checkbk[]" value="<?php echo $model['REGISTER'] ?>"></td>
@@ -571,6 +586,8 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 <script>
+(function($){
+	
 $(document).ready(function() {
 	$("div#tanggal").hide();
     $("div#register").hide();
@@ -580,15 +597,20 @@ $(document).ready(function() {
     $('#selectall').click(function(event) {  //on click 
         if(this.checked) { // check select status
             $('.check').each(function() { //loop through each checkbox
-                this.checked = true;  //select all checkboxes with class "checkbox1"               
+                this.checked = true;  //select all checkboxes with class "checkbox1"
+				//$(".check").attr("checked","true");               
             });
         }else{
             $('.check').each(function() { //loop through each checkbox
                 this.checked = false; //deselect all checkboxes with class "checkbox1"                       
+				//$(".check").attr("checked","false");
             });         
         }
     });
+	
 });
+
+})(jQuery);
 </script>
 
 <script type="text/javascript">
@@ -616,5 +638,7 @@ $(document).ready(function() {
 		
 		
 	});
+	
+	
 </script>
 

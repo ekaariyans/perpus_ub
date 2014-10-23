@@ -59,7 +59,6 @@
                     <table id="bd1" class="table table-bordered table-striped">
                         <thead>
                             <tr class="heading">
-                            	<th><input type="checkbox" id="selectallbd1"/></th>
                                 <th>ID Anggota</th>
                                 <th>Tgl.Permintaan</th>
                                 <th>Nama Peminta</th>
@@ -77,7 +76,6 @@
 							if($model['ID_STATUS']==0):
                                 echo "<tr id=" . $model['BAHASA'] . ">";
                             ?>
-                            <td><input class="cbx" type="checkbox" name="cbxbd1[]" value="<?php echo $model['ID_PERMINTAAN_BUKU'] ?>"></td>
                             <td><?php echo $model['ID_ANGGOTA']; ?></td>
                             <td><?php echo $model['TGL_PERMINTAAN']; ?></td>
                             <td><?php echo $model['NAMA_PEMINTA']; ?></td>
@@ -584,6 +582,7 @@
                             </td>
                     </tr>
 			<?php endif; endforeach; ?>
+            
             </tbody>
 			</table>
 		</div><!-- tab pane sd3 -->
