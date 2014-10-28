@@ -15,7 +15,7 @@
                                 </div><!-- /.box-header -->
                                 <div class="box-body">
                                     <blockquote>
-                                        <h4>Selamat Datang!</h4>
+                                        <h4>Selamat Datang! </h4>
 <p align="justify">
 Website ini merupakan salah satu layanan Perpustakaan Universitas Brawijaya yang dapat digunakan untuk melakukan Permintaan Bahan Pustaka (Buku, Jurnal, Serial). Pengajuan permintaan bahan pustaka dapat dilakukan secara individu, maupun secara kolektif oleh petugas Fakultas, Jurusan, atau Program Studi.
 </p><br />

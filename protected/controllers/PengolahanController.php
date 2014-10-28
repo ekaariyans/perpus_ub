@@ -2,6 +2,7 @@
 
 class PengolahanController extends Controller
 {
+
 	public function __construct()
     {
         if (empty(Yii::app()->session['username'])){
@@ -12,6 +13,7 @@ class PengolahanController extends Controller
 	public function actionIndex()
 	{
 		$this->render('/index');
+			
 	}
 	
 	public function actionDaftarPermintaan(){

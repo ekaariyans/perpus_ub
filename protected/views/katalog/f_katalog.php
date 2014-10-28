@@ -405,6 +405,7 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
 						'id'=>'tbk-main-f_katalog-form',
 						'enableAjaxValidation'=>false,
+						'action'=>Yii::app()->createUrl('Katalog/search'),
 						'htmlOptions' => array('enctype' => 'multipart/form-data'),
 					)); ?>
 	<div class="tab-content no-padding">
@@ -414,9 +415,10 @@
                 <div class="col-md-4">
                 <div class="panel panel-default">
                 <div class="panel-heading">
+                
                     <label class="col-sm-1 control-label"></label>
                     <?php
-                    echo $form->dropDownList($model, 'TITLE', array('prompt' => 'Pencarian Berdasarkan', '0'=>'50 Data Terbaru', '1' => 'Register', '2' => 'Tanggal'), array('class'=>'form-control',
+                    echo $form->dropDownList($model, 'TITLE', array('prompt' => 'Pencarian Berdasarkan', '0'=>'50 Data Terbaru', '1' => 'Register', '2' => 'Tanggal', '3' => 'Judul', '4' => 'Pengarang', '5' => 'ISBN'), array('class'=>'form-control',
                         'onchange' => '	
 											if(this.value==0)
 											{ 
@@ -427,6 +429,9 @@
 											{ 	
                   								document.getElementById("kotak").style.display="block";
                   								document.getElementById("register").style.display="block";
+                  								document.getElementById("judul").style.display="none";
+                  								document.getElementById("pengarang").style.display="none";
+                  								document.getElementById("isbn").style.display="none";
                   								document.getElementById("button").style.display="block";
                   								document.getElementById("tanggal").style.display="none";
                   								document.getElementById("button").style.visibility="visible";
@@ -435,11 +440,47 @@
 											{ 
                   								document.getElementById("kotak").style.display="block";
                   								document.getElementById("register").style.display="none";
+                  								document.getElementById("judul").style.display="none";
+                  								document.getElementById("pengarang").style.display="none";
+                  								document.getElementById("isbn").style.display="none";
                   								document.getElementById("button").style.display="block";
                   								document.getElementById("tanggal").style.display="block";
                   								document.getElementById("button").style.visibility="visible";
                   								}
-												else if(this.value=="prompt")
+											else if(this.value==3)
+											{ 
+                  								document.getElementById("kotak").style.display="block";
+                  								document.getElementById("register").style.display="none";
+                  								document.getElementById("judul").style.display="block";
+                  								document.getElementById("pengarang").style.display="none";
+                  								document.getElementById("isbn").style.display="none";
+                  								document.getElementById("button").style.display="block";
+                  								document.getElementById("tanggal").style.display="none";
+                  								document.getElementById("button").style.visibility="visible";
+                  								}
+											else if(this.value==4)
+											{ 
+                  								document.getElementById("kotak").style.display="block";
+                  								document.getElementById("register").style.display="none";
+                  								document.getElementById("judul").style.display="none";
+                  								document.getElementById("pengarang").style.display="block";
+                  								document.getElementById("isbn").style.display="none";
+                  								document.getElementById("button").style.display="block";
+                  								document.getElementById("tanggal").style.display="none";
+                  								document.getElementById("button").style.visibility="visible";
+                  								}
+											else if(this.value==5)
+											{ 
+                  								document.getElementById("kotak").style.display="block";
+                  								document.getElementById("register").style.display="none";
+                  								document.getElementById("judul").style.display="none";
+                  								document.getElementById("pengarang").style.display="none";
+                  								document.getElementById("isbn").style.display="block";
+                  								document.getElementById("button").style.display="block";
+                  								document.getElementById("tanggal").style.display="none";
+                  								document.getElementById("button").style.visibility="visible";
+                  								}
+											else if(this.value=="prompt")
 											{ 
                   								document.getElementById("kotak").style.display="none";
                   								document.getElementById("register").style.display="none";
@@ -494,7 +535,34 @@
                         <div class="form-group">
                             <label>Register</label>
                             <div class="input-group">
-                                    <input type="text" name="register" id="register" />
+                                    <input type="text" name="register" id="register" class="form-control" style="width:350px"/>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="judul">
+                        <div class="form-group">
+                            <label>Judul</label>
+                            <div class="input-group">
+                                    <input type="text" name="judul" id="judul" class="form-control" style="width:350px"/>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="pengarang">
+                        <div class="form-group">
+                            <label>Pengarang</label>
+                            <div class="input-group">
+                                    <input type="text" name="pengarang" id="pengarang" class="form-control" style="width:350px"/>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="isbn">
+                        <div class="form-group">
+                            <label>ISBN</label>
+                            <div class="input-group">
+                                    <input type="text" name="isbn" id="isbn" class="form-control" style="width:350px"/>
                             </div>
                         </div>
                     </div>
@@ -589,8 +657,6 @@
 (function($){
 	
 $(document).ready(function() {
-	$("div#tanggal").hide();
-    $("div#register").hide();
     $("div#kotak").hide();
     $("div#button").hide();
     

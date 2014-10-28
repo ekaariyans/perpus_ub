@@ -193,6 +193,9 @@ class KatalogController extends Controller
 		$modTbk = new TBkType;
 		$modTMedia = new TMediaType;
 		
+		//inisialisasi searching
+		
+		
 		$reg = '01'.substr(Yii::app()->session['bagian'],-2).'%';
 		/*
 					if(isset($_POST['register']))
@@ -262,48 +265,19 @@ class KatalogController extends Controller
 					$newreg = $this->generateRegister();
 					$this->redirect(array('Katalog/F_katalog'));
 				}
-				else {
-					if(isset($_POST['register']))
-					{
-						$register = $_POST['register'];
-						$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_main] @register='$register' ");
-						$data=$command->queryAll();
-						$newreg = $this->generateRegister();
-						$this->render('f_katalog',array('model'=>$model,
-							'modSpecLoc'=>$modSpecLoc,
-							'modLoc'=>$modLoc,
-							'modFund'=>$modFund,
-							'modTbk'=>$modTbk,
-							'modTMedia'=>$modTMedia,
-							'data'=>$data,
-							'newreg' => $newreg));						
-					}
-					else if(isset($_POST['tanggal1'])&&($_POST['tanggal2']))
-					{
-						$tanggal1 = $_POST['tanggal1'];
-						$tanggal2 = $_POST['tanggal2'];
-						$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_main_date] @tanggal1='$tanggal1',@tanggal2='$tanggal2' ");
-						$data=$command->queryAll();
-						$newreg = $this->generateRegister();
-						$this->render('f_katalog',array('model'=>$model,
-							'modSpecLoc'=>$modSpecLoc,
-							'modLoc'=>$modLoc,
-							'modFund'=>$modFund,
-							'modTbk'=>$modTbk,
-							'modTMedia'=>$modTMedia,
-							'data'=>$data,
-							'newreg' => $newreg));
-					}
-					else if(!$model->validate()){
-						Yii::app()->user->setFlash('error',"Proses Input Gagal!");
-						$this->redirect(array('Katalog/F_katalog'));
-					}
+				else if(!$model->validate()){
+				Yii::app()->user->setFlash('error',"Proses Input Gagal!");
+				$this->redirect(array('Katalog/F_katalog'));
 				}
-			}
+				
+				
+				
+			}	
 		}
+		
 		else{
 			$register=0;
-			$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_main_all]  @REG = '$reg' ");
+			$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_main_all] @REG='$reg'");
 			$data=$command->queryAll();
 			
 			$newreg = $this->generateRegister();
@@ -318,6 +292,65 @@ class KatalogController extends Controller
 		}
 	}
 	
+	
+	public function actionSearch(){
+		$model=new TBkMain;
+		$modLoc = new TLocation;
+		$modSpecLoc = new TSpecLocation;
+		$modFund = new TFunding;
+		$modTbk = new TBkType;
+		$modTMedia = new TMediaType;
+		$reg = '01'.substr(Yii::app()->session['bagian'],-2).'%';
+
+						if(!empty($_POST['register'])){
+							$register=$_POST['register'];
+							echo $register;
+							$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_cari_register] 
+							@register='$register',
+							@REG='$reg'");
+							$data=$command->queryAll();
+						}
+						else if (!empty($_POST['judul'])){
+							$judul='%'.$_POST['judul'].'%';
+							$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_cari_judul] 
+							@judul='$judul',
+							@REG='$reg'");
+							$data=$command->queryAll();
+						}
+						else if (!empty($_POST['pengarang'])){
+							$pengarang=$_POST['pengarang'];
+							$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_cari_pengarang] 
+							@pengarang='$pengarang',
+							@REG='$reg'");
+							$data=$command->queryAll();
+						}
+						else if (!empty($_POST['isbn'])){
+							$isbn=$_POST['isbn'];
+							$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_cari_isbn] 
+							@isbn='$isbn',
+							@REG='$reg'");
+							$data=$command->queryAll();
+						}
+						else if(!empty($_POST['tanggal1'])&&($_POST['tanggal2'])){
+							$tanggal1 = $_POST['tanggal1'];
+							$tanggal2 = $_POST['tanggal2'];
+							$command = Yii::app()->dblentera->createCommand("[dbo].[sp_bk_cari_date] 
+							@tanggal1='$tanggal1',
+							@tanggal2='$tanggal2',
+							@REG='$reg'");
+							$data=$command->queryAll();
+						}
+							$newreg = $this->generateRegister();
+							$this->render('f_katalog',array('model'=>$model,
+								'modSpecLoc'=>$modSpecLoc,
+								'modLoc'=>$modLoc,
+								'modFund'=>$modFund,
+								'modTbk'=>$modTbk,
+								'modTMedia'=>$modTMedia,
+								'data'=>$data,
+								'newreg' => $newreg));
+						
+	}
 	
 	public function generateRegister(){
 		$newreg = null;
